@@ -1,0 +1,466 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "18Ghosting_Connector14ViewControllerC"
+provides-member:
+- ["18Ghosting_Connector14ViewControllerC", ""]
+provides-dynamic-lookup:
+- "lightImage"
+- "mainToggle"
+- "mqttClient"
+- "toggle"
+- "viewDidDisappear"
+- "viewDidLoad"
+depends-top-level:
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CocoaMQTT"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "StringLiteralType"
+- !private "UIImage"
+- "UIImageView"
+- "UISwitch"
+- "UIViewController"
+- "ViewController"
+depends-member:
+- !private ["So15CALayerDelegateP", "image"]
+- !private ["So15CALayerDelegateP", "isOn"]
+- !private ["So15CALayerDelegateP", "setOn"]
+- ["s7CVarArgP", "CocoaMQTT"]
+- !private ["s7CVarArgP", "UIImage"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "disconnect"]
+- !private ["s7CVarArgP", "image"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isOn"]
+- !private ["s7CVarArgP", "lightImage"]
+- !private ["s7CVarArgP", "mainToggle"]
+- !private ["s7CVarArgP", "mqttClient"]
+- !private ["s7CVarArgP", "publish"]
+- !private ["s7CVarArgP", "setOn"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["9CocoaMQTTAAC", "connect"]
+- !private ["9CocoaMQTTAAC", "disconnect"]
+- ["9CocoaMQTTAAC", "init"]
+- !private ["9CocoaMQTTAAC", "publish"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "connect"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "disconnect"]
+- ["9CocoaMQTT0A10MQTTClientP", "init"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "publish"]
+- !private ["9CocoaMQTT0A19MQTTDeliverProtocolP", "connect"]
+- !private ["9CocoaMQTT0A19MQTTDeliverProtocolP", "disconnect"]
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", "init"]
+- !private ["9CocoaMQTT0A19MQTTDeliverProtocolP", "publish"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "connect"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "disconnect"]
+- ["9CocoaMQTT0A18MQTTReaderDelegateP", "init"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "publish"]
+- ["s28CustomDebugStringConvertibleP", "CocoaMQTT"]
+- !private ["s28CustomDebugStringConvertibleP", "UIImage"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "disconnect"]
+- !private ["s28CustomDebugStringConvertibleP", "image"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isOn"]
+- !private ["s28CustomDebugStringConvertibleP", "lightImage"]
+- !private ["s28CustomDebugStringConvertibleP", "mainToggle"]
+- !private ["s28CustomDebugStringConvertibleP", "mqttClient"]
+- !private ["s28CustomDebugStringConvertibleP", "publish"]
+- !private ["s28CustomDebugStringConvertibleP", "setOn"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s17CustomReflectableP", "image"]
+- !private ["s17CustomReflectableP", "isOn"]
+- !private ["s17CustomReflectableP", "setOn"]
+- ["s23CustomStringConvertibleP", "CocoaMQTT"]
+- !private ["s23CustomStringConvertibleP", "UIImage"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "disconnect"]
+- !private ["s23CustomStringConvertibleP", "image"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isOn"]
+- !private ["s23CustomStringConvertibleP", "lightImage"]
+- !private ["s23CustomStringConvertibleP", "mainToggle"]
+- !private ["s23CustomStringConvertibleP", "mqttClient"]
+- !private ["s23CustomStringConvertibleP", "publish"]
+- !private ["s23CustomStringConvertibleP", "setOn"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["Se", "image"]
+- !private ["Se", "isOn"]
+- !private ["Se", "setOn"]
+- !private ["SE", "image"]
+- !private ["SE", "isOn"]
+- !private ["SE", "setOn"]
+- ["SQ", "CocoaMQTT"]
+- !private ["SQ", "UIImage"]
+- ["SQ", ""]
+- !private ["SQ", "connect"]
+- !private ["SQ", "disconnect"]
+- !private ["SQ", "image"]
+- ["SQ", "init"]
+- !private ["SQ", "isOn"]
+- !private ["SQ", "lightImage"]
+- !private ["SQ", "mainToggle"]
+- !private ["SQ", "mqttClient"]
+- !private ["SQ", "publish"]
+- !private ["SQ", "setOn"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["s23ExpressibleByNilLiteralP", "image"]
+- !private ["s23ExpressibleByNilLiteralP", "isOn"]
+- !private ["s23ExpressibleByNilLiteralP", "setOn"]
+- !private ["So22GCDAsyncSocketDelegateP", "connect"]
+- !private ["So22GCDAsyncSocketDelegateP", "disconnect"]
+- ["So22GCDAsyncSocketDelegateP", "init"]
+- !private ["So22GCDAsyncSocketDelegateP", "publish"]
+- ["SH", "CocoaMQTT"]
+- !private ["SH", "UIImage"]
+- ["SH", ""]
+- !private ["SH", "connect"]
+- !private ["SH", "disconnect"]
+- !private ["SH", "image"]
+- ["SH", "init"]
+- !private ["SH", "isOn"]
+- !private ["SH", "lightImage"]
+- !private ["SH", "mainToggle"]
+- !private ["SH", "mqttClient"]
+- !private ["SH", "publish"]
+- !private ["SH", "setOn"]
+- !private ["SH", "viewDidLoad"]
+- ["So8NSCodingP", "CocoaMQTT"]
+- !private ["So8NSCodingP", "UIImage"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "image"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isOn"]
+- !private ["So8NSCodingP", "lightImage"]
+- !private ["So8NSCodingP", "mainToggle"]
+- !private ["So8NSCodingP", "mqttClient"]
+- !private ["So8NSCodingP", "setOn"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", "CocoaMQTT"]
+- !private ["So26NSExtensionRequestHandlingP", "UIImage"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "lightImage"]
+- !private ["So26NSExtensionRequestHandlingP", "mainToggle"]
+- !private ["So26NSExtensionRequestHandlingP", "mqttClient"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CocoaMQTT"]
+- !private ["So8NSObjectC", "UIImage"]
+- ["So8NSObjectC", "UIImageView"]
+- ["So8NSObjectC", "UISwitch"]
+- !private ["So8NSObjectC", "connect"]
+- !private ["So8NSObjectC", "disconnect"]
+- !private ["So8NSObjectC", "image"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isOn"]
+- ["So8NSObjectC", "lightImage"]
+- ["So8NSObjectC", "mainToggle"]
+- ["So8NSObjectC", "mqttClient"]
+- !private ["So8NSObjectC", "publish"]
+- !private ["So8NSObjectC", "setOn"]
+- ["So8NSObjectC", "toggle"]
+- ["So8NSObjectC", "viewDidDisappear"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So8NSObjectP", "CocoaMQTT"]
+- !private ["So8NSObjectP", "UIImage"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "connect"]
+- !private ["So8NSObjectP", "disconnect"]
+- !private ["So8NSObjectP", "image"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isOn"]
+- !private ["So8NSObjectP", "lightImage"]
+- !private ["So8NSObjectP", "mainToggle"]
+- !private ["So8NSObjectP", "mqttClient"]
+- !private ["So8NSObjectP", "publish"]
+- !private ["So8NSObjectP", "setOn"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["Sq", "image"]
+- !private ["Sq", "isOn"]
+- !private ["Sq", "setOn"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "isOn"]
+- !private ["So29UIAccessibilityIdentificationP", "setOn"]
+- !private ["So12UIAppearanceP", "image"]
+- !private ["So12UIAppearanceP", "isOn"]
+- !private ["So12UIAppearanceP", "setOn"]
+- ["So21UIAppearanceContainerP", "CocoaMQTT"]
+- !private ["So21UIAppearanceContainerP", "UIImage"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "image"]
+- !private ["So21UIAppearanceContainerP", "isOn"]
+- !private ["So21UIAppearanceContainerP", "lightImage"]
+- !private ["So21UIAppearanceContainerP", "mainToggle"]
+- !private ["So21UIAppearanceContainerP", "mqttClient"]
+- !private ["So21UIAppearanceContainerP", "setOn"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", "CocoaMQTT"]
+- !private ["So18UIContentContainerP", "UIImage"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "lightImage"]
+- !private ["So18UIContentContainerP", "mainToggle"]
+- !private ["So18UIContentContainerP", "mqttClient"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So9UIControlC", "isOn"]
+- !private ["So9UIControlC", "setOn"]
+- !private ["So17UICoordinateSpaceP", "image"]
+- !private ["So17UICoordinateSpaceP", "isOn"]
+- !private ["So17UICoordinateSpaceP", "setOn"]
+- !private ["So13UIDynamicItemP", "image"]
+- !private ["So13UIDynamicItemP", "isOn"]
+- !private ["So13UIDynamicItemP", "setOn"]
+- ["So18UIFocusEnvironmentP", "CocoaMQTT"]
+- !private ["So18UIFocusEnvironmentP", "UIImage"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "image"]
+- !private ["So18UIFocusEnvironmentP", "isOn"]
+- !private ["So18UIFocusEnvironmentP", "lightImage"]
+- !private ["So18UIFocusEnvironmentP", "mainToggle"]
+- !private ["So18UIFocusEnvironmentP", "mqttClient"]
+- !private ["So18UIFocusEnvironmentP", "setOn"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "image"]
+- !private ["So11UIFocusItemP", "isOn"]
+- !private ["So11UIFocusItemP", "setOn"]
+- !private ["So20UIFocusItemContainerP", "image"]
+- !private ["So20UIFocusItemContainerP", "isOn"]
+- !private ["So20UIFocusItemContainerP", "setOn"]
+- !private ["So7UIImageC", "init"]
+- !private ["So11UIImageViewC", "image"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
+- !private ["So24UILargeContentViewerItemP", "image"]
+- !private ["So24UILargeContentViewerItemP", "isOn"]
+- !private ["So24UILargeContentViewerItemP", "setOn"]
+- ["So30UIPasteConfigurationSupportingP", "CocoaMQTT"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIImage"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "image"]
+- !private ["So30UIPasteConfigurationSupportingP", "isOn"]
+- !private ["So30UIPasteConfigurationSupportingP", "lightImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "mainToggle"]
+- !private ["So30UIPasteConfigurationSupportingP", "mqttClient"]
+- !private ["So30UIPasteConfigurationSupportingP", "setOn"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "CocoaMQTT"]
+- !private ["So11UIResponderC", "UIImage"]
+- ["So11UIResponderC", "UIImageView"]
+- ["So11UIResponderC", "UISwitch"]
+- !private ["So11UIResponderC", "image"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "isOn"]
+- ["So11UIResponderC", "lightImage"]
+- ["So11UIResponderC", "mainToggle"]
+- ["So11UIResponderC", "mqttClient"]
+- !private ["So11UIResponderC", "setOn"]
+- ["So11UIResponderC", "toggle"]
+- ["So11UIResponderC", "viewDidDisappear"]
+- ["So11UIResponderC", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", "CocoaMQTT"]
+- !private ["So30UIResponderStandardEditActionsP", "UIImage"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "image"]
+- !private ["So30UIResponderStandardEditActionsP", "isOn"]
+- !private ["So30UIResponderStandardEditActionsP", "lightImage"]
+- !private ["So30UIResponderStandardEditActionsP", "mainToggle"]
+- !private ["So30UIResponderStandardEditActionsP", "mqttClient"]
+- !private ["So30UIResponderStandardEditActionsP", "setOn"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So16UIStateRestoringP", "CocoaMQTT"]
+- !private ["So16UIStateRestoringP", "UIImage"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "lightImage"]
+- !private ["So16UIStateRestoringP", "mainToggle"]
+- !private ["So16UIStateRestoringP", "mqttClient"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So8UISwitchC", "isOn"]
+- !private ["So8UISwitchC", "setOn"]
+- ["So18UITraitEnvironmentP", "CocoaMQTT"]
+- !private ["So18UITraitEnvironmentP", "UIImage"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "image"]
+- !private ["So18UITraitEnvironmentP", "isOn"]
+- !private ["So18UITraitEnvironmentP", "lightImage"]
+- !private ["So18UITraitEnvironmentP", "mainToggle"]
+- !private ["So18UITraitEnvironmentP", "mqttClient"]
+- !private ["So18UITraitEnvironmentP", "setOn"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So23UIUserActivityRestoringP", "CocoaMQTT"]
+- !private ["So23UIUserActivityRestoringP", "UIImage"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "image"]
+- !private ["So23UIUserActivityRestoringP", "isOn"]
+- !private ["So23UIUserActivityRestoringP", "lightImage"]
+- !private ["So23UIUserActivityRestoringP", "mainToggle"]
+- !private ["So23UIUserActivityRestoringP", "mqttClient"]
+- !private ["So23UIUserActivityRestoringP", "setOn"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "image"]
+- !private ["So6UIViewC", "isOn"]
+- !private ["So6UIViewC", "setOn"]
+- ["So16UIViewControllerC", "Bool"]
+- ["So16UIViewControllerC", "CocoaMQTT"]
+- !private ["So16UIViewControllerC", "UIImage"]
+- ["So16UIViewControllerC", "UIImageView"]
+- ["So16UIViewControllerC", "UISwitch"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "lightImage"]
+- ["So16UIViewControllerC", "mainToggle"]
+- ["So16UIViewControllerC", "mqttClient"]
+- ["So16UIViewControllerC", "toggle"]
+- ["So16UIViewControllerC", "viewDidDisappear"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["18Ghosting_Connector14ViewControllerC", "Bool"]
+- ["18Ghosting_Connector14ViewControllerC", "CocoaMQTT"]
+- !private ["18Ghosting_Connector14ViewControllerC", "UIImage"]
+- ["18Ghosting_Connector14ViewControllerC", "UIImageView"]
+- ["18Ghosting_Connector14ViewControllerC", "UISwitch"]
+- ["18Ghosting_Connector14ViewControllerC", "deinit"]
+- ["18Ghosting_Connector14ViewControllerC", "init"]
+- ["18Ghosting_Connector14ViewControllerC", "lightImage"]
+- ["18Ghosting_Connector14ViewControllerC", "mainToggle"]
+- ["18Ghosting_Connector14ViewControllerC", "mqttClient"]
+- ["18Ghosting_Connector14ViewControllerC", "toggle"]
+- ["18Ghosting_Connector14ViewControllerC", "viewDidDisappear"]
+- ["18Ghosting_Connector14ViewControllerC", "viewDidLoad"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CocoaMQTT"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImage"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "disconnect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isOn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "lightImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mainToggle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mqttClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "publish"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setOn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CocoaMQTT"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImage"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "connect"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "disconnect"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isOn"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "lightImage"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mainToggle"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mqttClient"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "publish"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setOn"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "image"]
+- !private ["s21_ObjectiveCBridgeableP", "isOn"]
+- !private ["s21_ObjectiveCBridgeableP", "setOn"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isOn"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setOn"]
+depends-nominal:
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "9CocoaMQTTAAC"
+- "9CocoaMQTT0A10MQTTClientP"
+- "9CocoaMQTT0A19MQTTDeliverProtocolP"
+- "9CocoaMQTT0A18MQTTReaderDelegateP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- "So22GCDAsyncSocketDelegateP"
+- "SH"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sq"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So7UIImageC"
+- !private "So11UIImageViewC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So8UISwitchC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- "18Ghosting_Connector14ViewControllerC"
+- !private "s26_ExpressibleByImageLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreData.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Modules/module.modulemap"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "b80aa0d73b8da66d3488e3994044f0de"

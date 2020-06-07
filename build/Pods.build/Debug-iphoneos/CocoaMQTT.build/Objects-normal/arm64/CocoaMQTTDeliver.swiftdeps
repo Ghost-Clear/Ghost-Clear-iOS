@@ -1,0 +1,725 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CocoaMQTTDeliverProtocol"
+- "CocoaMQTTDeliver"
+provides-nominal:
+- "9CocoaMQTT0A19MQTTDeliverProtocolP"
+- "9CocoaMQTT0A11MQTTDeliverC"
+provides-member:
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", ""]
+- ["9CocoaMQTT0A11MQTTDeliverC", ""]
+provides-dynamic-lookup:
+- "add"
+- "awaitingTimer"
+- "cleanAll"
+- "delegate"
+- "deliver"
+- "deliverQueue"
+- "inflight"
+- "inflightWindowSize"
+- "isInflightEmpty"
+- "isInflightFull"
+- "isQueueEmpty"
+- "isQueueFull"
+- "mqueue"
+- "mqueueSize"
+- "redeliver"
+- "removeFrameFromInflight"
+- "retryTimeInterval"
+- "sendSuccess"
+- "tryTransport"
+depends-top-level:
+- !private "!"
+- !private "-"
+- !private "/"
+- !private "=="
+- !private ">"
+- !private ">="
+- "AnyObject"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CocoaMQTTDeliver"
+- "CocoaMQTTDeliverProtocol"
+- "CocoaMQTTFramePublish"
+- !private "CocoaMQTTQOS"
+- "CocoaMQTTTimer"
+- !private "Date"
+- "DispatchQueue"
+- "Double"
+- "FloatLiteralType"
+- "InflightFrame"
+- "IntegerLiteralType"
+- "NSObject"
+- !private "String"
+- "StringLiteralType"
+- "TimeInterval"
+- "UInt"
+- "UInt16"
+- !private "printDebug"
+- !private "printError"
+- !private "printInfo"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "enumerated"]
+- ["Sa", "init"]
+- !private ["Sa", "isEmpty"]
+- !private ["Sa", "remove"]
+- !private ["Sa", "removeAll"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "enumerated"]
+- ["SK", "init"]
+- !private ["SK", "isEmpty"]
+- !private ["SK", "remove"]
+- !private ["SK", "removeAll"]
+- !private ["SK", "subscript"]
+- ["s7CVarArgP", "CocoaMQTTFramePublish"]
+- !private ["s7CVarArgP", "CocoaMQTTQOS"]
+- !private ["s7CVarArgP", "CocoaMQTTTimer"]
+- !private ["s7CVarArgP", "Date"]
+- ["s7CVarArgP", "DispatchQueue"]
+- ["s7CVarArgP", "InflightFrame"]
+- !private ["s7CVarArgP", "String"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "awaitingTimer"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "deliver"]
+- !private ["s7CVarArgP", "deliverQueue"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "inflight"]
+- !private ["s7CVarArgP", "inflightWindowSize"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "isInflightEmpty"]
+- !private ["s7CVarArgP", "isInflightFull"]
+- !private ["s7CVarArgP", "isQueueEmpty"]
+- !private ["s7CVarArgP", "isQueueFull"]
+- !private ["s7CVarArgP", "mqueue"]
+- !private ["s7CVarArgP", "mqueueSize"]
+- !private ["s7CVarArgP", "printDebug"]
+- !private ["s7CVarArgP", "printError"]
+- !private ["s7CVarArgP", "printInfo"]
+- !private ["s7CVarArgP", "redeliver"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "removeFrameFromInflight"]
+- !private ["s7CVarArgP", "retryTimeInterval"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "tryTransport"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "Bool"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "CocoaMQTTDeliverProtocol"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "CocoaMQTTFramePublish"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "CocoaMQTTQOS"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "CocoaMQTTTimer"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "Date"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "DispatchQueue"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "Double"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "InflightFrame"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "String"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "UInt"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "UInt16"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "add"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "awaitingTimer"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "cleanAll"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "deinit"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "delegate"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "deliver"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "deliverQueue"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "inflight"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "inflightWindowSize"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "init"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "isInflightEmpty"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "isInflightFull"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "isQueueEmpty"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "isQueueFull"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "mqueue"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "mqueueSize"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "printDebug"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "printError"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "printInfo"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "redeliver"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "removeFrameFromInflight"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "retryTimeInterval"]
+- ["9CocoaMQTT0A11MQTTDeliverC", "sendSuccess"]
+- !private ["9CocoaMQTT0A11MQTTDeliverC", "tryTransport"]
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", "CocoaMQTTDeliver"]
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", "CocoaMQTTFramePublish"]
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", "DispatchQueue"]
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", "deliver"]
+- ["9CocoaMQTT0A19MQTTDeliverProtocolP", "dispatchQueue"]
+- !private ["9CocoaMQTT0A9MQTTFrameP", "dup"]
+- !private ["9CocoaMQTT0A9MQTTFrameP", "msgid"]
+- !private ["9CocoaMQTT0A9MQTTFrameP", "qos"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "deinit"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "dup"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "msgid"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "qos"]
+- !private ["9CocoaMQTT0A7MQTTQOSO", "deinit"]
+- !private ["9CocoaMQTT0A7MQTTQOSO", "qos0"]
+- !private ["9CocoaMQTT0A7MQTTQOSO", "rawValue"]
+- !private ["9CocoaMQTT0A9MQTTTimerC", "every"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "enumerated"]
+- ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "remove"]
+- !private ["Sl", "removeAll"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["SL", "timeIntervalSince1970"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "enumerated"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "isEmpty"]
+- !private ["10Foundation15ContiguousBytesP", "remove"]
+- !private ["10Foundation15ContiguousBytesP", "removeAll"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "CocoaMQTTFramePublish"]
+- !private ["s28CustomDebugStringConvertibleP", "CocoaMQTTQOS"]
+- !private ["s28CustomDebugStringConvertibleP", "CocoaMQTTTimer"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- ["s28CustomDebugStringConvertibleP", "InflightFrame"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "awaitingTimer"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "deliver"]
+- !private ["s28CustomDebugStringConvertibleP", "deliverQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "inflight"]
+- !private ["s28CustomDebugStringConvertibleP", "inflightWindowSize"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "isInflightEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "isInflightFull"]
+- !private ["s28CustomDebugStringConvertibleP", "isQueueEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "isQueueFull"]
+- !private ["s28CustomDebugStringConvertibleP", "mqueue"]
+- !private ["s28CustomDebugStringConvertibleP", "mqueueSize"]
+- !private ["s28CustomDebugStringConvertibleP", "printDebug"]
+- !private ["s28CustomDebugStringConvertibleP", "printError"]
+- !private ["s28CustomDebugStringConvertibleP", "printInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "redeliver"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "removeFrameFromInflight"]
+- !private ["s28CustomDebugStringConvertibleP", "retryTimeInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "timeIntervalSince1970"]
+- !private ["s28CustomDebugStringConvertibleP", "tryTransport"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "timeIntervalSince1970"]
+- ["s23CustomStringConvertibleP", "CocoaMQTTFramePublish"]
+- !private ["s23CustomStringConvertibleP", "CocoaMQTTQOS"]
+- !private ["s23CustomStringConvertibleP", "CocoaMQTTTimer"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- ["s23CustomStringConvertibleP", "DispatchQueue"]
+- ["s23CustomStringConvertibleP", "InflightFrame"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "awaitingTimer"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "deliver"]
+- !private ["s23CustomStringConvertibleP", "deliverQueue"]
+- !private ["s23CustomStringConvertibleP", "dup"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "inflight"]
+- !private ["s23CustomStringConvertibleP", "inflightWindowSize"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "isInflightEmpty"]
+- !private ["s23CustomStringConvertibleP", "isInflightFull"]
+- !private ["s23CustomStringConvertibleP", "isQueueEmpty"]
+- !private ["s23CustomStringConvertibleP", "isQueueFull"]
+- !private ["s23CustomStringConvertibleP", "mqueue"]
+- !private ["s23CustomStringConvertibleP", "mqueueSize"]
+- !private ["s23CustomStringConvertibleP", "msgid"]
+- !private ["s23CustomStringConvertibleP", "printDebug"]
+- !private ["s23CustomStringConvertibleP", "printError"]
+- !private ["s23CustomStringConvertibleP", "printInfo"]
+- !private ["s23CustomStringConvertibleP", "qos"]
+- !private ["s23CustomStringConvertibleP", "qos0"]
+- !private ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "redeliver"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "removeFrameFromInflight"]
+- !private ["s23CustomStringConvertibleP", "retryTimeInterval"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "timeIntervalSince1970"]
+- !private ["s23CustomStringConvertibleP", "tryTransport"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "enumerated"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "isEmpty"]
+- !private ["10Foundation12DataProtocolP", "remove"]
+- !private ["10Foundation12DataProtocolP", "removeAll"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation4DateV", "timeIntervalSince1970"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "enumerated"]
+- ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "remove"]
+- !private ["Se", "removeAll"]
+- !private ["Se", "subscript"]
+- !private ["Se", "timeIntervalSince1970"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- ["So18OS_dispatch_objectC", "init"]
+- ["8Dispatch0A3QoSV", "default"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- ["So17OS_dispatch_queueC", "init"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "enumerated"]
+- ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "remove"]
+- !private ["SE", "removeAll"]
+- !private ["SE", "subscript"]
+- !private ["SE", "timeIntervalSince1970"]
+- ["SQ", "CocoaMQTTFramePublish"]
+- !private ["SQ", "CocoaMQTTQOS"]
+- !private ["SQ", "CocoaMQTTTimer"]
+- !private ["SQ", "Date"]
+- ["SQ", "DispatchQueue"]
+- ["SQ", "InflightFrame"]
+- !private ["SQ", "String"]
+- ["SQ", ""]
+- !private ["SQ", "append"]
+- !private ["SQ", "async"]
+- !private ["SQ", "awaitingTimer"]
+- !private ["SQ", "count"]
+- ["SQ", "default"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "deliver"]
+- !private ["SQ", "deliverQueue"]
+- !private ["SQ", "enumerated"]
+- !private ["SQ", "inflight"]
+- !private ["SQ", "inflightWindowSize"]
+- ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "isInflightEmpty"]
+- !private ["SQ", "isInflightFull"]
+- !private ["SQ", "isQueueEmpty"]
+- !private ["SQ", "isQueueFull"]
+- !private ["SQ", "mqueue"]
+- !private ["SQ", "mqueueSize"]
+- !private ["SQ", "printDebug"]
+- !private ["SQ", "printError"]
+- !private ["SQ", "printInfo"]
+- !private ["SQ", "qos0"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "redeliver"]
+- !private ["SQ", "remove"]
+- !private ["SQ", "removeAll"]
+- !private ["SQ", "removeFrameFromInflight"]
+- !private ["SQ", "retryTimeInterval"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "timeIntervalSince1970"]
+- !private ["SQ", "tryTransport"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s32ExpressibleByStringInterpolationP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["SH", "CocoaMQTTFramePublish"]
+- !private ["SH", "CocoaMQTTQOS"]
+- !private ["SH", "CocoaMQTTTimer"]
+- !private ["SH", "Date"]
+- ["SH", "DispatchQueue"]
+- ["SH", "InflightFrame"]
+- !private ["SH", "String"]
+- ["SH", ""]
+- !private ["SH", "append"]
+- !private ["SH", "async"]
+- !private ["SH", "awaitingTimer"]
+- !private ["SH", "count"]
+- !private ["SH", "delegate"]
+- !private ["SH", "deliver"]
+- !private ["SH", "deliverQueue"]
+- !private ["SH", "enumerated"]
+- !private ["SH", "inflight"]
+- !private ["SH", "inflightWindowSize"]
+- ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "isInflightEmpty"]
+- !private ["SH", "isInflightFull"]
+- !private ["SH", "isQueueEmpty"]
+- !private ["SH", "isQueueFull"]
+- !private ["SH", "mqueue"]
+- !private ["SH", "mqueueSize"]
+- !private ["SH", "printDebug"]
+- !private ["SH", "printError"]
+- !private ["SH", "printInfo"]
+- !private ["SH", "qos0"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "redeliver"]
+- !private ["SH", "remove"]
+- !private ["SH", "removeAll"]
+- !private ["SH", "removeFrameFromInflight"]
+- !private ["SH", "retryTimeInterval"]
+- !private ["SH", "subscript"]
+- !private ["SH", "timeIntervalSince1970"]
+- !private ["SH", "tryTransport"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "enumerated"]
+- ["SM", "init"]
+- !private ["SM", "isEmpty"]
+- !private ["SM", "remove"]
+- !private ["SM", "removeAll"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "enumerated"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "isEmpty"]
+- !private ["10Foundation19MutableDataProtocolP", "remove"]
+- !private ["10Foundation19MutableDataProtocolP", "removeAll"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CocoaMQTTDeliverProtocol"]
+- ["So8NSObjectC", "CocoaMQTTFramePublish"]
+- !private ["So8NSObjectC", "CocoaMQTTQOS"]
+- ["So8NSObjectC", "CocoaMQTTTimer"]
+- !private ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "InflightFrame"]
+- !private ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UInt"]
+- ["So8NSObjectC", "UInt16"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "add"]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "awaitingTimer"]
+- ["So8NSObjectC", "cleanAll"]
+- ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "deliver"]
+- ["So8NSObjectC", "deliverQueue"]
+- ["So8NSObjectC", "inflight"]
+- ["So8NSObjectC", "inflightWindowSize"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isInflightEmpty"]
+- ["So8NSObjectC", "isInflightFull"]
+- ["So8NSObjectC", "isQueueEmpty"]
+- ["So8NSObjectC", "isQueueFull"]
+- ["So8NSObjectC", "mqueue"]
+- ["So8NSObjectC", "mqueueSize"]
+- !private ["So8NSObjectC", "printDebug"]
+- !private ["So8NSObjectC", "printError"]
+- !private ["So8NSObjectC", "printInfo"]
+- ["So8NSObjectC", "redeliver"]
+- ["So8NSObjectC", "removeFrameFromInflight"]
+- ["So8NSObjectC", "retryTimeInterval"]
+- ["So8NSObjectC", "sendSuccess"]
+- ["So8NSObjectC", "tryTransport"]
+- ["So8NSObjectP", "CocoaMQTTFramePublish"]
+- !private ["So8NSObjectP", "CocoaMQTTQOS"]
+- !private ["So8NSObjectP", "CocoaMQTTTimer"]
+- !private ["So8NSObjectP", "Date"]
+- ["So8NSObjectP", "DispatchQueue"]
+- ["So8NSObjectP", "InflightFrame"]
+- !private ["So8NSObjectP", "String"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "awaitingTimer"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "deliver"]
+- !private ["So8NSObjectP", "deliverQueue"]
+- !private ["So8NSObjectP", "inflight"]
+- !private ["So8NSObjectP", "inflightWindowSize"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isInflightEmpty"]
+- !private ["So8NSObjectP", "isInflightFull"]
+- !private ["So8NSObjectP", "isQueueEmpty"]
+- !private ["So8NSObjectP", "isQueueFull"]
+- !private ["So8NSObjectP", "mqueue"]
+- !private ["So8NSObjectP", "mqueueSize"]
+- !private ["So8NSObjectP", "printDebug"]
+- !private ["So8NSObjectP", "printError"]
+- !private ["So8NSObjectP", "printInfo"]
+- !private ["So8NSObjectP", "redeliver"]
+- !private ["So8NSObjectP", "removeFrameFromInflight"]
+- !private ["So8NSObjectP", "retryTimeInterval"]
+- !private ["So8NSObjectP", "tryTransport"]
+- !private ["So9OS_objectC", "async"]
+- ["So9OS_objectC", "init"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "enumerated"]
+- ["Sk", "init"]
+- !private ["Sk", "isEmpty"]
+- !private ["Sk", "remove"]
+- !private ["Sk", "removeAll"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "enumerated"]
+- ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- !private ["Sm", "remove"]
+- !private ["Sm", "removeAll"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "qos0"]
+- !private ["SY", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "timeIntervalSince1970"]
+- !private ["7Combine9SchedulerP", "async"]
+- ["7Combine9SchedulerP", "init"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "enumerated"]
+- ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "remove"]
+- !private ["ST", "removeAll"]
+- !private ["ST", "subscript"]
+- !private ["SS", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "enumerated"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "isEmpty"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s14_ArrayProtocolP", "removeAll"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince1970"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "enumerated"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "isEmpty"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "removeAll"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "enumerated"]
+- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "isEmpty"]
+- !private ["s19_HasContiguousBytesP", "remove"]
+- !private ["s19_HasContiguousBytesP", "removeAll"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "enumerated"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CocoaMQTTFramePublish"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CocoaMQTTQOS"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CocoaMQTTTimer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "InflightFrame"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "awaitingTimer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deliver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deliverQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "inflight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "inflightWindowSize"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInflightEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInflightFull"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isQueueEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isQueueFull"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mqueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mqueueSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "printDebug"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "printError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "printInfo"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "redeliver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeFrameFromInflight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retryTimeInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tryTransport"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CocoaMQTTFramePublish"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CocoaMQTTQOS"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CocoaMQTTTimer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Date"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "InflightFrame"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "awaitingTimer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "deliver"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "deliverQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "inflight"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "inflightWindowSize"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isInflightEmpty"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isInflightFull"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isQueueEmpty"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isQueueFull"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mqueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mqueueSize"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "printDebug"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "printError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "printInfo"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "redeliver"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeFrameFromInflight"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retryTimeInterval"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tryTransport"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
+depends-nominal:
+- "Sa"
+- "SK"
+- "s7CVarArgP"
+- "9CocoaMQTT0A11MQTTDeliverC"
+- "9CocoaMQTT0A19MQTTDeliverProtocolP"
+- !private "9CocoaMQTT0A9MQTTFrameP"
+- !private "9CocoaMQTT0A16MQTTFramePublishV"
+- !private "9CocoaMQTT0A7MQTTQOSO"
+- !private "9CocoaMQTT0A9MQTTTimerC"
+- "Sl"
+- !private "SL"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
+- !private "10Foundation4DateV"
+- "Se"
+- !private "s26DefaultStringInterpolationV"
+- "So18OS_dispatch_objectC"
+- "8Dispatch0A3QoSV"
+- "So17OS_dispatch_queueC"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So9OS_objectC"
+- "Sk"
+- "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "7Combine9SchedulerP"
+- "ST"
+- !private "SS"
+- !private "s27StringInterpolationProtocolP"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaMQTT/Source/CocoaMQTT.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/CocoaMQTT/CocoaMQTT-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/CocoaMQTT.build/unextended-module.modulemap"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/CocoaAsyncSocket.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "901f5a4f9341b3067d5d4fe43e086e62"

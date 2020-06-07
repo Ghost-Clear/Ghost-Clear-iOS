@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -21,21 +21,33 @@
                                     <action selector="toggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="HP5-on-z15"/>
                                 </connections>
                             </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u37-OK-qM0">
+                                <rect key="frame" x="87" y="195" width="240" height="152"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="yeq-Zh-zi1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ZZ-lQ-jDL"/>
+                            <constraint firstItem="u37-OK-qM0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152.5" id="58Y-Pb-cbK"/>
+                            <constraint firstItem="u37-OK-qM0" firstAttribute="centerX" secondItem="yeq-Zh-zi1" secondAttribute="centerX" id="NBJ-mX-ooT"/>
                             <constraint firstItem="yeq-Zh-zi1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cN4-2U-uSL"/>
+                            <constraint firstItem="u37-OK-qM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="i7b-0g-iIL"/>
+                            <constraint firstItem="yeq-Zh-zi1" firstAttribute="top" secondItem="u37-OK-qM0" secondAttribute="bottom" constant="85.5" id="zd1-Jw-Ifr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="lightImage" destination="u37-OK-qM0" id="bcG-h3-Lco"/>
                         <outlet property="mainToggle" destination="yeq-Zh-zi1" id="Mdo-Y7-9dz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lightbulb" catalog="system" width="113" height="128"/>
+    </resources>
 </document>

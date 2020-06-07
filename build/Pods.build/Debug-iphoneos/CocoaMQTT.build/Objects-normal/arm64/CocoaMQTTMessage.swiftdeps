@@ -1,0 +1,510 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CocoaMQTTMessage"
+- "CocoaMQTTWill"
+provides-nominal:
+- "9CocoaMQTT0A11MQTTMessageC"
+- "9CocoaMQTT0A8MQTTWillC"
+provides-member:
+- ["9CocoaMQTT0A11MQTTMessageC", ""]
+- ["9CocoaMQTT0A8MQTTWillC", ""]
+provides-dynamic-lookup:
+- "convertToFrame"
+- "dup"
+- "payload"
+- "qos"
+- "retained"
+- "string"
+- "topic"
+depends-top-level:
+- !private "+"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "CocoaMQTTFramePublish"
+- "CocoaMQTTMessage"
+- "CocoaMQTTQOS"
+- "CocoaMQTTWill"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "NSObject"
+- !private "NSString"
+- "String"
+- !private "UInt16"
+- "UInt8"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "hlBytes"]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "count"]
+- !private ["Sa", "init"]
+- !private ["SK", "Encoding"]
+- !private ["SK", "bytesWithLength"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "utf8"]
+- !private ["Sz", "hlBytes"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "CocoaMQTTFramePublish"]
+- ["s7CVarArgP", "CocoaMQTTQOS"]
+- !private ["s7CVarArgP", "Encoding"]
+- !private ["s7CVarArgP", "NSString"]
+- !private ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "UInt16"]
+- !private ["s7CVarArgP", "UInt8"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "bytesWithLength"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dup"]
+- !private ["s7CVarArgP", "hlBytes"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "payload"]
+- !private ["s7CVarArgP", "qos"]
+- !private ["s7CVarArgP", "retained"]
+- !private ["s7CVarArgP", "topic"]
+- !private ["s7CVarArgP", "utf8"]
+- !private ["9CocoaMQTT0A9MQTTFrameP", "init"]
+- !private ["9CocoaMQTT0A9MQTTFrameP", "qos"]
+- !private ["9CocoaMQTT0A9MQTTFrameP", "retained"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "deinit"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "init"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "qos"]
+- !private ["9CocoaMQTT0A16MQTTFramePublishV", "retained"]
+- ["9CocoaMQTT0A11MQTTMessageC", "Bool"]
+- ["9CocoaMQTT0A11MQTTMessageC", "CocoaMQTTFramePublish"]
+- ["9CocoaMQTT0A11MQTTMessageC", "CocoaMQTTQOS"]
+- !private ["9CocoaMQTT0A11MQTTMessageC", "NSString"]
+- ["9CocoaMQTT0A11MQTTMessageC", "String"]
+- !private ["9CocoaMQTT0A11MQTTMessageC", "UInt16"]
+- ["9CocoaMQTT0A11MQTTMessageC", "UInt8"]
+- ["9CocoaMQTT0A11MQTTMessageC", ""]
+- ["9CocoaMQTT0A11MQTTMessageC", "convertToFrame"]
+- ["9CocoaMQTT0A11MQTTMessageC", "deinit"]
+- ["9CocoaMQTT0A11MQTTMessageC", "dup"]
+- ["9CocoaMQTT0A11MQTTMessageC", "init"]
+- ["9CocoaMQTT0A11MQTTMessageC", "payload"]
+- ["9CocoaMQTT0A11MQTTMessageC", "qos"]
+- ["9CocoaMQTT0A11MQTTMessageC", "retained"]
+- ["9CocoaMQTT0A11MQTTMessageC", "string"]
+- ["9CocoaMQTT0A11MQTTMessageC", "topic"]
+- !private ["9CocoaMQTT0A7MQTTQOSO", "deinit"]
+- ["9CocoaMQTT0A7MQTTQOSO", "qos1"]
+- !private ["9CocoaMQTT0A7MQTTQOSO", "rawValue"]
+- ["9CocoaMQTT0A8MQTTWillC", "String"]
+- !private ["9CocoaMQTT0A8MQTTWillC", "UInt16"]
+- ["9CocoaMQTT0A8MQTTWillC", "UInt8"]
+- ["9CocoaMQTT0A8MQTTWillC", "deinit"]
+- ["9CocoaMQTT0A8MQTTWillC", "init"]
+- !private ["Sl", "Encoding"]
+- !private ["Sl", "bytesWithLength"]
+- !private ["Sl", "count"]
+- !private ["Sl", "init"]
+- !private ["Sl", "utf8"]
+- !private ["SL", "Encoding"]
+- !private ["SL", "bytesWithLength"]
+- !private ["SL", "hlBytes"]
+- !private ["SL", "init"]
+- !private ["SL", "utf8"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CocoaMQTTFramePublish"]
+- ["s28CustomDebugStringConvertibleP", "CocoaMQTTQOS"]
+- !private ["s28CustomDebugStringConvertibleP", "Encoding"]
+- !private ["s28CustomDebugStringConvertibleP", "NSString"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "UInt16"]
+- !private ["s28CustomDebugStringConvertibleP", "UInt8"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "bytesWithLength"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dup"]
+- !private ["s28CustomDebugStringConvertibleP", "hlBytes"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "payload"]
+- !private ["s28CustomDebugStringConvertibleP", "qos"]
+- !private ["s28CustomDebugStringConvertibleP", "retained"]
+- !private ["s28CustomDebugStringConvertibleP", "topic"]
+- !private ["s28CustomDebugStringConvertibleP", "utf8"]
+- !private ["s17CustomReflectableP", "Encoding"]
+- !private ["s17CustomReflectableP", "bytesWithLength"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "hlBytes"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "utf8"]
+- !private ["s23CustomStringConvertibleP", "CocoaMQTTFramePublish"]
+- ["s23CustomStringConvertibleP", "CocoaMQTTQOS"]
+- !private ["s23CustomStringConvertibleP", "Encoding"]
+- !private ["s23CustomStringConvertibleP", "NSString"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "UInt16"]
+- !private ["s23CustomStringConvertibleP", "UInt8"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "bytesWithLength"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "dup"]
+- !private ["s23CustomStringConvertibleP", "hlBytes"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "payload"]
+- !private ["s23CustomStringConvertibleP", "qos"]
+- ["s23CustomStringConvertibleP", "qos1"]
+- !private ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "retained"]
+- !private ["s23CustomStringConvertibleP", "topic"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["Se", "Encoding"]
+- !private ["Se", "bytesWithLength"]
+- !private ["Se", "count"]
+- !private ["Se", "hlBytes"]
+- !private ["Se", "init"]
+- !private ["Se", "utf8"]
+- !private ["SE", "Encoding"]
+- !private ["SE", "bytesWithLength"]
+- !private ["SE", "count"]
+- !private ["SE", "hlBytes"]
+- !private ["SE", "init"]
+- !private ["SE", "utf8"]
+- !private ["SS10FoundationE8EncodingV", "rawValue"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["SQ", "CocoaMQTTFramePublish"]
+- ["SQ", "CocoaMQTTQOS"]
+- !private ["SQ", "Encoding"]
+- !private ["SQ", "NSString"]
+- !private ["SQ", "String"]
+- !private ["SQ", "UInt16"]
+- !private ["SQ", "UInt8"]
+- ["SQ", ""]
+- !private ["SQ", "bytesWithLength"]
+- !private ["SQ", "count"]
+- !private ["SQ", "dup"]
+- !private ["SQ", "hlBytes"]
+- !private ["SQ", "init"]
+- !private ["SQ", "payload"]
+- !private ["SQ", "qos"]
+- ["SQ", "qos1"]
+- !private ["SQ", "rawValue"]
+- !private ["SQ", "retained"]
+- !private ["SQ", "topic"]
+- !private ["SQ", "utf8"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "bytesWithLength"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "utf8"]
+- !private ["s27ExpressibleByIntegerLiteralP", "hlBytes"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "hlBytes"]
+- !private ["s32ExpressibleByStringInterpolationP", "Encoding"]
+- !private ["s32ExpressibleByStringInterpolationP", "bytesWithLength"]
+- !private ["s32ExpressibleByStringInterpolationP", "utf8"]
+- !private ["s26ExpressibleByStringLiteralP", "Encoding"]
+- !private ["s26ExpressibleByStringLiteralP", "bytesWithLength"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "utf8"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "Encoding"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "bytesWithLength"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "utf8"]
+- !private ["s17FixedWidthIntegerP", "hlBytes"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "CocoaMQTTFramePublish"]
+- ["SH", "CocoaMQTTQOS"]
+- !private ["SH", "Encoding"]
+- !private ["SH", "NSString"]
+- !private ["SH", "String"]
+- !private ["SH", "UInt16"]
+- !private ["SH", "UInt8"]
+- ["SH", ""]
+- !private ["SH", "bytesWithLength"]
+- !private ["SH", "count"]
+- !private ["SH", "dup"]
+- !private ["SH", "hlBytes"]
+- !private ["SH", "init"]
+- !private ["SH", "payload"]
+- !private ["SH", "qos"]
+- ["SH", "qos1"]
+- !private ["SH", "rawValue"]
+- !private ["SH", "retained"]
+- !private ["SH", "topic"]
+- !private ["SH", "utf8"]
+- !private ["s25LosslessStringConvertibleP", "Encoding"]
+- !private ["s25LosslessStringConvertibleP", "bytesWithLength"]
+- !private ["s25LosslessStringConvertibleP", "hlBytes"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "utf8"]
+- !private ["s10MirrorPathP", "Encoding"]
+- !private ["s10MirrorPathP", "bytesWithLength"]
+- !private ["s10MirrorPathP", "utf8"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["So8NSCodingP", "bytesWithLength"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "utf8"]
+- !private ["So9NSCopyingP", "bytesWithLength"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "utf8"]
+- !private ["So21NSItemProviderReadingP", "bytesWithLength"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "utf8"]
+- !private ["So21NSItemProviderWritingP", "bytesWithLength"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "utf8"]
+- !private ["So16NSMutableCopyingP", "bytesWithLength"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "utf8"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CocoaMQTTFramePublish"]
+- ["So8NSObjectC", "CocoaMQTTQOS"]
+- !private ["So8NSObjectC", "NSString"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UInt16"]
+- ["So8NSObjectC", "UInt8"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "bytesWithLength"]
+- ["So8NSObjectC", "convertToFrame"]
+- ["So8NSObjectC", "dup"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "payload"]
+- ["So8NSObjectC", "qos"]
+- ["So8NSObjectC", "retained"]
+- ["So8NSObjectC", "string"]
+- ["So8NSObjectC", "topic"]
+- !private ["So8NSObjectC", "utf8"]
+- !private ["So8NSObjectP", "CocoaMQTTFramePublish"]
+- ["So8NSObjectP", "CocoaMQTTQOS"]
+- !private ["So8NSObjectP", "NSString"]
+- !private ["So8NSObjectP", "String"]
+- !private ["So8NSObjectP", "UInt16"]
+- !private ["So8NSObjectP", "UInt8"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "bytesWithLength"]
+- !private ["So8NSObjectP", "dup"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "payload"]
+- !private ["So8NSObjectP", "qos"]
+- !private ["So8NSObjectP", "retained"]
+- !private ["So8NSObjectP", "topic"]
+- !private ["So8NSObjectP", "utf8"]
+- !private ["So14NSSecureCodingP", "bytesWithLength"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "utf8"]
+- !private ["So8NSStringC", "bytesWithLength"]
+- !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "utf8"]
+- !private ["Sj", "hlBytes"]
+- !private ["Sj", "init"]
+- !private ["Sq", "hlBytes"]
+- !private ["Sk", "count"]
+- !private ["Sk", "init"]
+- !private ["Sm", "Encoding"]
+- !private ["Sm", "bytesWithLength"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "utf8"]
+- ["SY", "qos1"]
+- !private ["SY", "rawValue"]
+- !private ["SY", "utf8"]
+- !private ["s10SIMDScalarP", "hlBytes"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "Encoding"]
+- !private ["ST", "bytesWithLength"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "utf8"]
+- !private ["Sx", "hlBytes"]
+- !private ["Sx", "init"]
+- !private ["SS", "Encoding"]
+- !private ["SS", "bytesWithLength"]
+- !private ["SS", "utf8"]
+- !private ["Sy", "Encoding"]
+- !private ["Sy", "bytesWithLength"]
+- !private ["Sy", "utf8"]
+- !private ["s16TextOutputStreamP", "Encoding"]
+- !private ["s16TextOutputStreamP", "bytesWithLength"]
+- !private ["s16TextOutputStreamP", "utf8"]
+- !private ["s20TextOutputStreamableP", "Encoding"]
+- !private ["s20TextOutputStreamableP", "bytesWithLength"]
+- !private ["s20TextOutputStreamableP", "utf8"]
+- !private ["s6UInt16V", "hlBytes"]
+- !private ["s6UInt16V", "init"]
+- !private ["SU", "hlBytes"]
+- !private ["SU", "init"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Encoding"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "bytesWithLength"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "hlBytes"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "utf8"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "Encoding"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "bytesWithLength"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "utf8"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "hlBytes"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "Encoding"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "bytesWithLength"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "utf8"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "Encoding"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "bytesWithLength"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "utf8"]
+- !private ["s19_HasContiguousBytesP", "Encoding"]
+- !private ["s19_HasContiguousBytesP", "bytesWithLength"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "utf8"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "bytesWithLength"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "hlBytes"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "utf8"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CocoaMQTTFramePublish"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CocoaMQTTQOS"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UInt16"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UInt8"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bytesWithLength"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dup"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "payload"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "qos"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "retained"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "topic"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "utf8"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CocoaMQTTFramePublish"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CocoaMQTTQOS"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "String"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UInt16"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UInt8"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bytesWithLength"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dup"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "payload"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "qos"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "retained"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "topic"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "utf8"]
+- !private ["s21_ObjectiveCBridgeableP", "Encoding"]
+- !private ["s21_ObjectiveCBridgeableP", "bytesWithLength"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "hlBytes"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "utf8"]
+- !private ["s14_StringElementP", "hlBytes"]
+- !private ["s14_StringElementP", "init"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "Sz"
+- "s7CVarArgP"
+- !private "9CocoaMQTT0A9MQTTFrameP"
+- !private "9CocoaMQTT0A16MQTTFramePublishV"
+- "9CocoaMQTT0A11MQTTMessageC"
+- "9CocoaMQTT0A7MQTTQOSO"
+- "9CocoaMQTT0A8MQTTWillC"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- !private "SS10FoundationE8EncodingV"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "s6UInt16V"
+- !private "SU"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s14_StringElementP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaMQTT/Source/CocoaMQTT.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/CocoaMQTT/CocoaMQTT-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/CocoaMQTT.build/unextended-module.modulemap"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/CocoaAsyncSocket.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8be6b97799a62d766d0e7c30343b208b"

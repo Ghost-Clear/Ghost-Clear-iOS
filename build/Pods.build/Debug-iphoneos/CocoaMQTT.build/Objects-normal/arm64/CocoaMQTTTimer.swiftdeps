@@ -1,0 +1,258 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CocoaMQTTTimer"
+provides-nominal:
+- "9CocoaMQTT0A9MQTTTimerC"
+provides-member:
+- ["9CocoaMQTT0A9MQTTTimerC", ""]
+provides-dynamic-lookup:
+- "$__lazy_storage_$_timer"
+- "after"
+- "cancel"
+- "eventHandler"
+- "every"
+- "resume"
+- "startDelay"
+- "state"
+- "suspend"
+- "timeInterval"
+- "timer"
+depends-top-level:
+- "+"
+- "=="
+- ">"
+- "AssignmentPrecedence"
+- "CocoaMQTTTimer"
+- "DispatchSource"
+- "DispatchSourceTimer"
+- "Double"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "TernaryPrecedence"
+- "TimeInterval"
+- "Void"
+depends-member:
+- ["s18AdditiveArithmeticP", "infinity"]
+- ["s18AdditiveArithmeticP", "init"]
+- ["SB", "infinity"]
+- ["SB", "init"]
+- ["s7CVarArgP", "infinity"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "makeTimerSource"]
+- !private ["9CocoaMQTT0A9MQTTTimerC", "$__lazy_storage_$_timer"]
+- ["9CocoaMQTT0A9MQTTTimerC", "CocoaMQTTTimer"]
+- ["9CocoaMQTT0A9MQTTTimerC", "DispatchSource"]
+- ["9CocoaMQTT0A9MQTTTimerC", "DispatchSourceTimer"]
+- ["9CocoaMQTT0A9MQTTTimerC", "Double"]
+- ["9CocoaMQTT0A9MQTTTimerC", "State"]
+- ["9CocoaMQTT0A9MQTTTimerC", "TimeInterval"]
+- ["9CocoaMQTT0A9MQTTTimerC", "Void"]
+- ["9CocoaMQTT0A9MQTTTimerC", "after"]
+- ["9CocoaMQTT0A9MQTTTimerC", "cancel"]
+- ["9CocoaMQTT0A9MQTTTimerC", "deinit"]
+- ["9CocoaMQTT0A9MQTTTimerC", "eventHandler"]
+- ["9CocoaMQTT0A9MQTTTimerC", "every"]
+- ["9CocoaMQTT0A9MQTTTimerC", "init"]
+- ["9CocoaMQTT0A9MQTTTimerC", "resume"]
+- ["9CocoaMQTT0A9MQTTTimerC", "startDelay"]
+- !private ["9CocoaMQTT0A9MQTTTimerC", "state"]
+- ["9CocoaMQTT0A9MQTTTimerC", "suspend"]
+- ["9CocoaMQTT0A9MQTTTimerC", "timeInterval"]
+- !private ["9CocoaMQTT0A9MQTTTimerC", "timer"]
+- ["SL", "infinity"]
+- ["SL", "init"]
+- ["SL", "now"]
+- ["s28CustomDebugStringConvertibleP", "infinity"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "makeTimerSource"]
+- ["s17CustomReflectableP", "infinity"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "infinity"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "makeTimerSource"]
+- ["Se", "infinity"]
+- ["Se", "init"]
+- ["So18OS_dispatch_objectC", "makeTimerSource"]
+- ["So18OS_dispatch_sourceC", "makeTimerSource"]
+- ["So24OS_dispatch_source_vnodeP", "makeTimerSource"]
+- ["So28OS_dispatch_source_mach_recvP", "makeTimerSource"]
+- ["So28OS_dispatch_source_mach_sendP", "makeTimerSource"]
+- ["So33OS_dispatch_source_memorypressureP", "makeTimerSource"]
+- ["So23OS_dispatch_source_procP", "makeTimerSource"]
+- !private ["So18OS_dispatch_sourceP", "cancel"]
+- ["So18OS_dispatch_sourceP", "makeTimerSource"]
+- !private ["So18OS_dispatch_sourceP", "resume"]
+- ["So18OS_dispatch_sourceP", "schedule"]
+- ["So18OS_dispatch_sourceP", "setEventHandler"]
+- !private ["So18OS_dispatch_sourceP", "suspend"]
+- ["So23OS_dispatch_source_readP", "makeTimerSource"]
+- ["So25OS_dispatch_source_signalP", "makeTimerSource"]
+- !private ["So24OS_dispatch_source_timerP", "cancel"]
+- ["So24OS_dispatch_source_timerP", "makeTimerSource"]
+- !private ["So24OS_dispatch_source_timerP", "resume"]
+- ["So24OS_dispatch_source_timerP", "schedule"]
+- ["So24OS_dispatch_source_timerP", "setEventHandler"]
+- !private ["So24OS_dispatch_source_timerP", "suspend"]
+- ["So27OS_dispatch_source_data_addP", "makeTimerSource"]
+- ["So26OS_dispatch_source_data_orP", "makeTimerSource"]
+- ["So31OS_dispatch_source_data_replaceP", "makeTimerSource"]
+- ["So24OS_dispatch_source_writeP", "makeTimerSource"]
+- ["8Dispatch0A4TimeV", "now"]
+- ["Sd", "infinity"]
+- ["Sd", "init"]
+- ["SE", "infinity"]
+- ["SE", "init"]
+- ["SQ", "=="]
+- !private ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "canceled"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "infinity"]
+- ["SQ", "init"]
+- ["SQ", "makeTimerSource"]
+- ["SQ", "now"]
+- !private ["SQ", "resumed"]
+- ["SQ", "suspended"]
+- ["s25ExpressibleByFloatLiteralP", "infinity"]
+- ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "infinity"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["SF", "infinity"]
+- ["SF", "init"]
+- ["SH", "=="]
+- !private ["SH", ""]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "canceled"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "infinity"]
+- ["SH", "init"]
+- ["SH", "makeTimerSource"]
+- !private ["SH", "resumed"]
+- ["SH", "suspended"]
+- !private ["s6HasherV", "combine"]
+- ["s25LosslessStringConvertibleP", "infinity"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["So8NSObjectC", "makeTimerSource"]
+- !private ["So8NSObjectP", "cancel"]
+- ["So8NSObjectP", "makeTimerSource"]
+- !private ["So8NSObjectP", "resume"]
+- ["So8NSObjectP", "schedule"]
+- ["So8NSObjectP", "setEventHandler"]
+- !private ["So8NSObjectP", "suspend"]
+- ["Sj", "infinity"]
+- ["Sj", "init"]
+- ["So9OS_objectC", "makeTimerSource"]
+- ["s10SIMDScalarP", "infinity"]
+- ["s10SIMDScalarP", "init"]
+- ["s13SignedNumericP", "infinity"]
+- ["s13SignedNumericP", "init"]
+- ["Sx", "infinity"]
+- ["Sx", "init"]
+- ["s20TextOutputStreamableP", "infinity"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s15_CVarArgAlignedP", "infinity"]
+- ["s15_CVarArgAlignedP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "infinity"]
+- ["s22_CVarArgPassedAsDoubleP", "init"]
+- ["s30_CustomPlaygroundQuickLookableP", "infinity"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "infinity"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "infinity"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "infinity"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "makeTimerSource"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "makeTimerSource"]
+- ["s21_ObjectiveCBridgeableP", "infinity"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- "SB"
+- "s7CVarArgP"
+- "9CocoaMQTT0A9MQTTTimerC"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "So18OS_dispatch_objectC"
+- "So18OS_dispatch_sourceC"
+- "So24OS_dispatch_source_vnodeP"
+- "So28OS_dispatch_source_mach_recvP"
+- "So28OS_dispatch_source_mach_sendP"
+- "So33OS_dispatch_source_memorypressureP"
+- "So23OS_dispatch_source_procP"
+- "So18OS_dispatch_sourceP"
+- "So23OS_dispatch_source_readP"
+- "So25OS_dispatch_source_signalP"
+- "So24OS_dispatch_source_timerP"
+- "So27OS_dispatch_source_data_addP"
+- "So26OS_dispatch_source_data_orP"
+- "So31OS_dispatch_source_data_replaceP"
+- "So24OS_dispatch_source_writeP"
+- "8Dispatch0A4TimeV"
+- "Sd"
+- "SE"
+- "SQ"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "SF"
+- "SH"
+- !private "s6HasherV"
+- "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "Sj"
+- "So9OS_objectC"
+- "s10SIMDScalarP"
+- "s13SignedNumericP"
+- "Sx"
+- "s20TextOutputStreamableP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "s30_CustomPlaygroundQuickLookableP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaMQTT/Source/CocoaMQTT.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/CocoaMQTT/CocoaMQTT-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/CocoaMQTT.build/unextended-module.modulemap"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/CocoaAsyncSocket.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "6b967e8a0a3d3f34ecc78c40aae6e688"
