@@ -186,6 +186,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreBluetooth;
+@import CoreData;
+@import CoreGraphics;
+@import Foundation;
 @import UIKit;
 #endif
 
@@ -204,6 +208,27 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UITextField;
+@class UITapGestureRecognizer;
+@class NSNotification;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC18Ghosting_Connector21AddGoalViewController")
+@interface AddGoalViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numGhostsField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numMinutesField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numSecondsField;
+- (void)viewDidLoad;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)dismissKeyboard:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)keyboardWillShowWithNotification:(NSNotification * _Nonnull)notification;
+- (void)keyboardWillHideWithNotification:(NSNotification * _Nonnull)notification;
+- (IBAction)addGoal:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIApplication;
 @class UISceneSession;
 @class UISceneConnectionOptions;
@@ -215,6 +240,184 @@ SWIFT_CLASS("_TtC18Ghosting_Connector11AppDelegate")
 - (UISceneConfiguration * _Nonnull)application:(UIApplication * _Nonnull)application configurationForConnectingSceneSession:(UISceneSession * _Nonnull)connectingSceneSession options:(UISceneConnectionOptions * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
 - (void)application:(UIApplication * _Nonnull)application didDiscardSceneSessions:(NSSet<UISceneSession *> * _Nonnull)sceneSessions;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+@class UITableViewCell;
+
+SWIFT_CLASS("_TtC18Ghosting_Connector30CreateGoalsTableViewController")
+@interface CreateGoalsTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18Ghosting_Connector32CreateSingularGoalViewController")
+@interface CreateSingularGoalViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numGhostsField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numMinutesField;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified numSecondsField;
+- (void)viewDidLoad;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)dismissKeyboard:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)keyboardWillShowWithNotification:(NSNotification * _Nonnull)notification;
+- (void)keyboardWillHideWithNotification:(NSNotification * _Nonnull)notification;
+- (IBAction)addGoal:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIButton;
+@class CBPeripheralManager;
+@class CBCentral;
+@class CBCharacteristic;
+@class CBCentralManager;
+@class CBPeripheral;
+@class NSNumber;
+@class CBService;
+@class CBDescriptor;
+
+SWIFT_CLASS("_TtC18Ghosting_Connector28DoTimedWorkoutViewController")
+@interface DoTimedWorkoutViewController : UIViewController <CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate>
+- (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified helloButton;
+- (void)peripheralManagerDidUpdateState:(CBPeripheralManager * _Nonnull)peripheral;
+- (void)peripheralManager:(CBPeripheralManager * _Nonnull)peripheral central:(CBCentral * _Nonnull)central didSubscribeToCharacteristic:(CBCharacteristic * _Nonnull)characteristic;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didConnectPeripheral:(CBPeripheral * _Nonnull)peripheral;
+- (IBAction)sayHello:(id _Nonnull)sender;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didFailToConnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverServices:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverCharacteristicsForService:(CBService * _Nonnull)service error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateValueForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverDescriptorsForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didDisconnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didWriteValueForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didWriteValueForDescriptor:(CBDescriptor * _Nonnull)descriptor error:(NSError * _Nullable)error;
+- (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSEntityDescription;
+@class NSManagedObjectContext;
+
+SWIFT_CLASS_NAMED("Goal")
+@interface Goal : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Goal (SWIFT_EXTENSION(Ghosting_Connector))
+@property (nonatomic) int64_t ghosts;
+@property (nonatomic) BOOL isCompleted;
+@property (nonatomic) int64_t minutes;
+@property (nonatomic) int64_t order;
+@property (nonatomic) int64_t seconds;
+@end
+
+@class UIImageView;
+@class UILabel;
+
+SWIFT_CLASS("_TtC18Ghosting_Connector8GoalView")
+@interface GoalView : UITableViewCell
+@property (nonatomic, strong) IBOutlet UIImageView * _Null_unspecified back;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified des;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class BarChartView;
+
+SWIFT_CLASS("_TtC18Ghosting_Connector22HomePageViewController")
+@interface HomePageViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified welcomeLabel;
+@property (nonatomic, weak) IBOutlet BarChartView * _Null_unspecified theBarChart;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18Ghosting_Connector26InitialLoginViewController")
+@interface InitialLoginViewController : UIViewController <UITextFieldDelegate>
+- (void)dismissKeyboard:(UITapGestureRecognizer * _Nonnull)sender;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified nameTextField;
+- (void)viewDidLoad;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)continueFromLoginbutton:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS_NAMED("IsFirstLaunch")
+@interface IsFirstLaunch : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface IsFirstLaunch (SWIFT_EXTENSION(Ghosting_Connector))
+@property (nonatomic, getter=bool, setter=setBool:) BOOL bool_;
+@end
+
+@class UIStoryboardSegue;
+
+SWIFT_CLASS("_TtC18Ghosting_Connector27MainViewGoalsViewController")
+@interface MainViewGoalsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)doneButton:(id _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS_NAMED("Name")
+@interface Name : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Name (SWIFT_EXTENSION(Ghosting_Connector))
+@property (nonatomic, copy) NSString * _Nullable name;
+@end
+
+
+SWIFT_CLASS("_TtC18Ghosting_Connector29NumberedWorkoutViewController")
+@interface NumberedWorkoutViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified blankRandomize;
+- (IBAction)unRandomize:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified randomizeButton;
+- (IBAction)randomize:(id _Nonnull)sender;
+- (void)viewDidLoad;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified frontLeft;
+- (IBAction)FL:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified frontRight;
+- (IBAction)FR:(id _Nonnull)sender;
+- (IBAction)CL:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified lowerLeft;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified centerLeft;
+- (IBAction)LL:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified centerRight;
+- (IBAction)CR:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified lowerRight;
+- (IBAction)LR:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIWindow;
@@ -232,20 +435,79 @@ SWIFT_CLASS("_TtC18Ghosting_Connector13SceneDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UISwitch;
-@class UIImageView;
-@class NSBundle;
-@class NSCoder;
 
-SWIFT_CLASS("_TtC18Ghosting_Connector14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC18Ghosting_Connector26SetYourGoalsViewController")
+@interface SetYourGoalsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)Addgoal:(id _Nonnull)sender;
 - (void)viewDidLoad;
-- (void)viewDidDisappear:(BOOL)animated;
-@property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified mainToggle;
-- (IBAction)toggle:(id _Nonnull)sender;
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified lightImage;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18Ghosting_Connector19StartViewController")
+@interface StartViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18Ghosting_Connector26TimedWorkoutViewController")
+@interface TimedWorkoutViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified blankRandomize;
+- (IBAction)unRandomize:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified randomizeButton;
+- (IBAction)randomize:(id _Nonnull)sender;
+- (void)viewDidLoad;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified frontLeft;
+- (IBAction)FL:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified frontRight;
+- (IBAction)FR:(id _Nonnull)sender;
+- (IBAction)CL:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified lowerLeft;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified centerLeft;
+- (IBAction)LL:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified centerRight;
+- (IBAction)CR:(id _Nonnull)sender;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified lowerRight;
+- (IBAction)LR:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18Ghosting_Connector32ViewYourGoalsTableViewController")
+@interface ViewYourGoalsTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS_NAMED("Workout")
+@interface Workout : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Workout (SWIFT_EXTENSION(Ghosting_Connector))
+@property (nonatomic, copy) NSString * _Nullable day;
+@property (nonatomic) int64_t ghosts;
+@property (nonatomic) int64_t minutes;
+@property (nonatomic) int64_t order;
+@property (nonatomic) int64_t seconds;
 @end
 
 #if __has_attribute(external_source_symbol)

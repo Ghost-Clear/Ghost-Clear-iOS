@@ -1,0 +1,564 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DataRenderer"
+provides-nominal:
+- "6Charts12DataRendererC"
+provides-member:
+- ["6Charts12DataRendererC", ""]
+provides-dynamic-lookup:
+- "accessibleChartElements"
+- "animator"
+- "createAccessibleHeader"
+- "drawData"
+- "drawExtras"
+- "drawHighlighted"
+- "drawValues"
+- "initBuffers"
+- "isDrawingValuesAllowed"
+depends-top-level:
+- !private "*"
+- !private "+"
+- !private "<"
+- !private "=="
+- !private "??"
+- "Animator"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CGContext"
+- !private "CGFloat"
+- "ChartData"
+- "ChartDataProvider"
+- "ChartViewBase"
+- "DataRenderer"
+- !private "FloatLiteralType"
+- "Highlight"
+- !private "Int"
+- !private "IntegerLiteralType"
+- "NSUIAccessibilityElement"
+- "Renderer"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- !private "UnicodeScalarType"
+- "ViewPortHandler"
+- !private "fatalError"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["6Charts16AnimatorDelegateP", "bounds"]
+- !private ["6Charts16AnimatorDelegateP", "chartDescription"]
+- !private ["Sa", "count"]
+- !private ["Sa", "joined"]
+- !private ["Sa", "map"]
+- !private ["SK", "count"]
+- !private ["SK", "joined"]
+- !private ["SK", "map"]
+- !private ["SB", "init"]
+- !private ["Sz", "init"]
+- !private ["So15CALayerDelegateP", "bounds"]
+- !private ["So15CALayerDelegateP", "chartDescription"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "NSUIAccessibilityElement"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "accessibilityFrame"]
+- !private ["s7CVarArgP", "accessibilityLabel"]
+- !private ["s7CVarArgP", "animator"]
+- !private ["s7CVarArgP", "bounds"]
+- !private ["s7CVarArgP", "chartDescription"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dataSets"]
+- !private ["s7CVarArgP", "entryCount"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isHeader"]
+- !private ["s7CVarArgP", "joined"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "scaleX"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "viewPortHandler"]
+- !private ["6Charts9ChartDataC", "dataSets"]
+- !private ["6Charts9ChartDataC", "entryCount"]
+- !private ["6Charts17ChartDataProviderP", "bounds"]
+- !private ["6Charts17ChartDataProviderP", "chartDescription"]
+- !private ["6Charts17ChartDataProviderP", "data"]
+- !private ["6Charts17ChartDataProviderP", "maxVisibleCount"]
+- !private ["6Charts13ChartViewBaseC", "bounds"]
+- !private ["6Charts13ChartViewBaseC", "chartDescription"]
+- !private ["6Charts13ChartViewBaseC", "deinit"]
+- !private ["Sl", "count"]
+- !private ["Sl", "joined"]
+- !private ["Sl", "map"]
+- !private ["SL", "init"]
+- !private ["6Charts13ComponentBaseC", "text"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "joined"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "NSUIAccessibilityElement"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityFrame"]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "animator"]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
+- !private ["s28CustomDebugStringConvertibleP", "chartDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSets"]
+- !private ["s28CustomDebugStringConvertibleP", "entryCount"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isHeader"]
+- !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "scaleX"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "viewPortHandler"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "NSUIAccessibilityElement"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "accessibilityFrame"]
+- !private ["s23CustomStringConvertibleP", "accessibilityLabel"]
+- !private ["s23CustomStringConvertibleP", "animator"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "bounds"]
+- !private ["s23CustomStringConvertibleP", "chartDescription"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "dataSets"]
+- !private ["s23CustomStringConvertibleP", "entryCount"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isHeader"]
+- !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "scaleX"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "viewPortHandler"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "joined"]
+- !private ["10Foundation12DataProtocolP", "map"]
+- ["6Charts12DataRendererC", "Animator"]
+- ["6Charts12DataRendererC", "Bool"]
+- ["6Charts12DataRendererC", "CGContext"]
+- !private ["6Charts12DataRendererC", "CGFloat"]
+- ["6Charts12DataRendererC", "ChartData"]
+- ["6Charts12DataRendererC", "ChartDataProvider"]
+- ["6Charts12DataRendererC", "ChartViewBase"]
+- ["6Charts12DataRendererC", "Highlight"]
+- !private ["6Charts12DataRendererC", "Int"]
+- ["6Charts12DataRendererC", "NSUIAccessibilityElement"]
+- ["6Charts12DataRendererC", "String"]
+- ["6Charts12DataRendererC", "ViewPortHandler"]
+- ["6Charts12DataRendererC", "accessibleChartElements"]
+- ["6Charts12DataRendererC", "animator"]
+- ["6Charts12DataRendererC", "createAccessibleHeader"]
+- ["6Charts12DataRendererC", "deinit"]
+- ["6Charts12DataRendererC", "drawData"]
+- ["6Charts12DataRendererC", "drawExtras"]
+- ["6Charts12DataRendererC", "drawHighlighted"]
+- ["6Charts12DataRendererC", "drawValues"]
+- !private ["6Charts12DataRendererC", "fatalError"]
+- ["6Charts12DataRendererC", "init"]
+- ["6Charts12DataRendererC", "initBuffers"]
+- ["6Charts12DataRendererC", "isDrawingValuesAllowed"]
+- !private ["6Charts12DataRendererC", "viewPortHandler"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "joined"]
+- !private ["Se", "map"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- !private ["6Charts11DescriptionC", "text"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "joined"]
+- !private ["SE", "map"]
+- !private ["SQ", "CGFloat"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "NSUIAccessibilityElement"]
+- ["SQ", ""]
+- !private ["SQ", "accessibilityFrame"]
+- !private ["SQ", "accessibilityLabel"]
+- !private ["SQ", "animator"]
+- !private ["SQ", "bounds"]
+- !private ["SQ", "chartDescription"]
+- !private ["SQ", "count"]
+- !private ["SQ", "dataSets"]
+- !private ["SQ", "entryCount"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isHeader"]
+- !private ["SQ", "joined"]
+- !private ["SQ", "map"]
+- !private ["SQ", "scaleX"]
+- !private ["SQ", "text"]
+- !private ["SQ", "viewPortHandler"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "joined"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SF", "init"]
+- !private ["SH", "CGFloat"]
+- !private ["SH", "Int"]
+- !private ["SH", "NSUIAccessibilityElement"]
+- ["SH", ""]
+- !private ["SH", "accessibilityFrame"]
+- !private ["SH", "accessibilityLabel"]
+- !private ["SH", "animator"]
+- !private ["SH", "bounds"]
+- !private ["SH", "chartDescription"]
+- !private ["SH", "count"]
+- !private ["SH", "dataSets"]
+- !private ["SH", "entryCount"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "init"]
+- !private ["SH", "isHeader"]
+- !private ["SH", "joined"]
+- !private ["SH", "map"]
+- !private ["SH", "scaleX"]
+- !private ["SH", "text"]
+- !private ["SH", "viewPortHandler"]
+- !private ["6Charts13IChartDataSetP", "label"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "count"]
+- !private ["SM", "joined"]
+- !private ["SM", "map"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "joined"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- !private ["So8NSCodingP", "bounds"]
+- !private ["So8NSCodingP", "chartDescription"]
+- ["So8NSObjectC", "Animator"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGContext"]
+- !private ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "ChartData"]
+- ["So8NSObjectC", "ChartDataProvider"]
+- ["So8NSObjectC", "ChartViewBase"]
+- ["So8NSObjectC", "Highlight"]
+- !private ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSUIAccessibilityElement"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "ViewPortHandler"]
+- !private ["So8NSObjectC", "accessibilityFrame"]
+- !private ["So8NSObjectC", "accessibilityLabel"]
+- ["So8NSObjectC", "accessibleChartElements"]
+- ["So8NSObjectC", "animator"]
+- !private ["So8NSObjectC", "bounds"]
+- !private ["So8NSObjectC", "chartDescription"]
+- ["So8NSObjectC", "createAccessibleHeader"]
+- !private ["So8NSObjectC", "dataSets"]
+- ["So8NSObjectC", "drawData"]
+- ["So8NSObjectC", "drawExtras"]
+- ["So8NSObjectC", "drawHighlighted"]
+- ["So8NSObjectC", "drawValues"]
+- !private ["So8NSObjectC", "entryCount"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "initBuffers"]
+- ["So8NSObjectC", "isDrawingValuesAllowed"]
+- !private ["So8NSObjectC", "isHeader"]
+- !private ["So8NSObjectC", "scaleX"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "viewPortHandler"]
+- !private ["So8NSObjectP", "CGFloat"]
+- !private ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "NSUIAccessibilityElement"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accessibilityFrame"]
+- !private ["So8NSObjectP", "accessibilityLabel"]
+- !private ["So8NSObjectP", "animator"]
+- !private ["So8NSObjectP", "bounds"]
+- !private ["So8NSObjectP", "chartDescription"]
+- !private ["So8NSObjectP", "dataSets"]
+- !private ["So8NSObjectP", "entryCount"]
+- !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isHeader"]
+- !private ["So8NSObjectP", "scaleX"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "viewPortHandler"]
+- !private ["6Charts24NSUIAccessibilityElementC", "accessibilityFrame"]
+- !private ["6Charts24NSUIAccessibilityElementC", "accessibilityLabel"]
+- !private ["6Charts24NSUIAccessibilityElementC", "init"]
+- !private ["6Charts24NSUIAccessibilityElementC", "isHeader"]
+- !private ["6Charts8NSUIViewC", "bounds"]
+- !private ["6Charts8NSUIViewC", "chartDescription"]
+- !private ["Sj", "init"]
+- !private ["Sk", "count"]
+- !private ["Sk", "joined"]
+- !private ["Sk", "map"]
+- !private ["Sm", "count"]
+- !private ["Sm", "joined"]
+- !private ["Sm", "map"]
+- ["6Charts8RendererC", "Animator"]
+- ["6Charts8RendererC", "Bool"]
+- ["6Charts8RendererC", "CGContext"]
+- !private ["6Charts8RendererC", "CGFloat"]
+- ["6Charts8RendererC", "ChartData"]
+- ["6Charts8RendererC", "ChartDataProvider"]
+- ["6Charts8RendererC", "ChartViewBase"]
+- ["6Charts8RendererC", "Highlight"]
+- !private ["6Charts8RendererC", "Int"]
+- ["6Charts8RendererC", "NSUIAccessibilityElement"]
+- ["6Charts8RendererC", "String"]
+- ["6Charts8RendererC", "ViewPortHandler"]
+- ["6Charts8RendererC", ""]
+- ["6Charts8RendererC", "accessibleChartElements"]
+- ["6Charts8RendererC", "animator"]
+- ["6Charts8RendererC", "createAccessibleHeader"]
+- ["6Charts8RendererC", "drawData"]
+- ["6Charts8RendererC", "drawExtras"]
+- ["6Charts8RendererC", "drawHighlighted"]
+- ["6Charts8RendererC", "drawValues"]
+- !private ["6Charts8RendererC", "fatalError"]
+- ["6Charts8RendererC", "init"]
+- ["6Charts8RendererC", "initBuffers"]
+- ["6Charts8RendererC", "isDrawingValuesAllowed"]
+- !private ["6Charts8RendererC", "viewPortHandler"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "count"]
+- !private ["ST", "joined"]
+- !private ["ST", "map"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["So22UIAccessibilityElementC", "accessibilityFrame"]
+- !private ["So22UIAccessibilityElementC", "accessibilityLabel"]
+- !private ["So22UIAccessibilityElementC", "isHeader"]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityFrame"]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "bounds"]
+- !private ["So29UIAccessibilityIdentificationP", "chartDescription"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "isHeader"]
+- !private ["So12UIAppearanceP", "bounds"]
+- !private ["So12UIAppearanceP", "chartDescription"]
+- !private ["So21UIAppearanceContainerP", "bounds"]
+- !private ["So21UIAppearanceContainerP", "chartDescription"]
+- !private ["So17UICoordinateSpaceP", "bounds"]
+- !private ["So17UICoordinateSpaceP", "chartDescription"]
+- !private ["So13UIDynamicItemP", "bounds"]
+- !private ["So13UIDynamicItemP", "chartDescription"]
+- !private ["So18UIFocusEnvironmentP", "bounds"]
+- !private ["So18UIFocusEnvironmentP", "chartDescription"]
+- !private ["So11UIFocusItemP", "bounds"]
+- !private ["So11UIFocusItemP", "chartDescription"]
+- !private ["So20UIFocusItemContainerP", "bounds"]
+- !private ["So20UIFocusItemContainerP", "chartDescription"]
+- !private ["So24UILargeContentViewerItemP", "bounds"]
+- !private ["So24UILargeContentViewerItemP", "chartDescription"]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityFrame"]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "bounds"]
+- !private ["So30UIPasteConfigurationSupportingP", "chartDescription"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "isHeader"]
+- !private ["So11UIResponderC", "accessibilityFrame"]
+- !private ["So11UIResponderC", "accessibilityLabel"]
+- !private ["So11UIResponderC", "bounds"]
+- !private ["So11UIResponderC", "chartDescription"]
+- !private ["So11UIResponderC", "isHeader"]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityFrame"]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "bounds"]
+- !private ["So30UIResponderStandardEditActionsP", "chartDescription"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "isHeader"]
+- !private ["So18UITraitEnvironmentP", "bounds"]
+- !private ["So18UITraitEnvironmentP", "chartDescription"]
+- !private ["So23UIUserActivityRestoringP", "accessibilityFrame"]
+- !private ["So23UIUserActivityRestoringP", "accessibilityLabel"]
+- !private ["So23UIUserActivityRestoringP", "bounds"]
+- !private ["So23UIUserActivityRestoringP", "chartDescription"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isHeader"]
+- !private ["So6UIViewC", "bounds"]
+- !private ["So6UIViewC", "chartDescription"]
+- !private ["6Charts15ViewPortHandlerC", "scaleX"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "joined"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "joined"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "joined"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "joined"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSUIAccessibilityElement"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityFrame"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chartDescription"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "entryCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isHeader"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scaleX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewPortHandler"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSUIAccessibilityElement"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "accessibilityFrame"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "accessibilityLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "animator"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bounds"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "chartDescription"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataSets"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "entryCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "fatalError"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isHeader"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scaleX"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewPortHandler"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bounds"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "chartDescription"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "6Charts16AnimatorDelegateP"
+- !private "Sa"
+- !private "SK"
+- !private "SB"
+- !private "Sz"
+- !private "So15CALayerDelegateP"
+- !private "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- !private "6Charts9ChartDataC"
+- !private "6Charts17ChartDataProviderP"
+- !private "6Charts13ChartViewBaseC"
+- !private "Sl"
+- !private "SL"
+- !private "6Charts13ComponentBaseC"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- "6Charts12DataRendererC"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- !private "6Charts11DescriptionC"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "SF"
+- "SH"
+- !private "6Charts13IChartDataSetP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "6Charts24NSUIAccessibilityElementC"
+- !private "6Charts8NSUIViewC"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- "6Charts8RendererC"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "So22UIAccessibilityElementC"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "6Charts15ViewPortHandlerC"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "df525f05fca5b9d8068bc9da95391710"

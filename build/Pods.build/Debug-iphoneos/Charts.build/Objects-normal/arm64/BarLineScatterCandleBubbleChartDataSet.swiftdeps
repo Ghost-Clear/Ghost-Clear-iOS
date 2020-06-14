@@ -1,0 +1,277 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BarLineScatterCandleBubbleChartDataSet"
+provides-nominal:
+- "6Charts38BarLineScatterCandleBubbleChartDataSetC"
+provides-member:
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", ""]
+provides-dynamic-lookup:
+- "copy"
+- "highlightColor"
+- "highlightLineDashLengths"
+- "highlightLineDashPhase"
+- "highlightLineWidth"
+depends-top-level:
+- "/"
+- "AssignmentPrecedence"
+- "BarLineScatterCandleBubbleChartDataSet"
+- "CGFloat"
+- "CastingPrecedence"
+- "ChartDataSet"
+- "FloatLiteralType"
+- "IBarLineScatterCandleBubbleChartDataSet"
+- "NSUIColor"
+- "NSZone"
+depends-member:
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "BarLineScatterCandleBubbleChartDataSet"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "CGFloat"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "NSUIColor"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "NSZone"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "copy"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "deinit"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "highlightColor"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "highlightLineDashLengths"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "highlightLineDashPhase"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "highlightLineWidth"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "init"]
+- ["SK", "CGFloat"]
+- ["SK", "NSUIColor"]
+- ["SK", ""]
+- !private ["SK", "copy"]
+- ["SK", "highlightColor"]
+- ["SK", "highlightLineDashLengths"]
+- ["SK", "highlightLineDashPhase"]
+- ["SK", "highlightLineWidth"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "NSUIColor"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "copy"]
+- ["s7CVarArgP", "highlightColor"]
+- ["s7CVarArgP", "highlightLineDashLengths"]
+- ["s7CVarArgP", "highlightLineDashPhase"]
+- ["s7CVarArgP", "highlightLineWidth"]
+- ["s7CVarArgP", "init"]
+- !private ["6Charts16ChartBaseDataSetC", "BarLineScatterCandleBubbleChartDataSet"]
+- ["6Charts16ChartBaseDataSetC", "CGFloat"]
+- ["6Charts16ChartBaseDataSetC", "NSUIColor"]
+- ["6Charts16ChartBaseDataSetC", "NSZone"]
+- ["6Charts16ChartBaseDataSetC", "copy"]
+- ["6Charts16ChartBaseDataSetC", "highlightColor"]
+- ["6Charts16ChartBaseDataSetC", "highlightLineDashLengths"]
+- ["6Charts16ChartBaseDataSetC", "highlightLineDashPhase"]
+- ["6Charts16ChartBaseDataSetC", "highlightLineWidth"]
+- ["6Charts16ChartBaseDataSetC", "init"]
+- !private ["6Charts12ChartDataSetC", "BarLineScatterCandleBubbleChartDataSet"]
+- ["6Charts12ChartDataSetC", "CGFloat"]
+- ["6Charts12ChartDataSetC", "NSUIColor"]
+- ["6Charts12ChartDataSetC", "NSZone"]
+- ["6Charts12ChartDataSetC", ""]
+- ["6Charts12ChartDataSetC", "copy"]
+- !private ["6Charts12ChartDataSetC", "deinit"]
+- ["6Charts12ChartDataSetC", "highlightColor"]
+- ["6Charts12ChartDataSetC", "highlightLineDashLengths"]
+- ["6Charts12ChartDataSetC", "highlightLineDashPhase"]
+- ["6Charts12ChartDataSetC", "highlightLineWidth"]
+- ["6Charts12ChartDataSetC", "init"]
+- ["Sl", "CGFloat"]
+- ["Sl", "NSUIColor"]
+- ["Sl", ""]
+- !private ["Sl", "copy"]
+- ["Sl", "highlightColor"]
+- ["Sl", "highlightLineDashLengths"]
+- ["Sl", "highlightLineDashPhase"]
+- ["Sl", "highlightLineWidth"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "NSUIColor"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "copy"]
+- ["s28CustomDebugStringConvertibleP", "highlightColor"]
+- ["s28CustomDebugStringConvertibleP", "highlightLineDashLengths"]
+- ["s28CustomDebugStringConvertibleP", "highlightLineDashPhase"]
+- ["s28CustomDebugStringConvertibleP", "highlightLineWidth"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "NSUIColor"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "copy"]
+- ["s23CustomStringConvertibleP", "highlightColor"]
+- ["s23CustomStringConvertibleP", "highlightLineDashLengths"]
+- ["s23CustomStringConvertibleP", "highlightLineDashPhase"]
+- ["s23CustomStringConvertibleP", "highlightLineWidth"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["SQ", "CGFloat"]
+- ["SQ", "NSUIColor"]
+- ["SQ", ""]
+- !private ["SQ", "copy"]
+- ["SQ", "highlightColor"]
+- ["SQ", "highlightLineDashLengths"]
+- ["SQ", "highlightLineDashPhase"]
+- ["SQ", "highlightLineWidth"]
+- ["SQ", "init"]
+- ["SH", "CGFloat"]
+- ["SH", "NSUIColor"]
+- ["SH", ""]
+- !private ["SH", "copy"]
+- ["SH", "highlightColor"]
+- ["SH", "highlightLineDashLengths"]
+- ["SH", "highlightLineDashPhase"]
+- ["SH", "highlightLineWidth"]
+- ["SH", "init"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGFloat"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "NSUIColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", ""]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightLineDashLengths"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightLineDashPhase"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightLineWidth"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", "NSUIColor"]
+- ["6Charts13IChartDataSetP", ""]
+- !private ["6Charts13IChartDataSetP", "copy"]
+- ["6Charts13IChartDataSetP", "highlightColor"]
+- ["6Charts13IChartDataSetP", "highlightLineDashLengths"]
+- ["6Charts13IChartDataSetP", "highlightLineDashPhase"]
+- ["6Charts13IChartDataSetP", "highlightLineWidth"]
+- ["SM", "CGFloat"]
+- ["SM", "NSUIColor"]
+- ["SM", ""]
+- !private ["SM", "copy"]
+- ["SM", "highlightColor"]
+- ["SM", "highlightLineDashLengths"]
+- ["SM", "highlightLineDashPhase"]
+- ["SM", "highlightLineWidth"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "CGFloat"]
+- ["So9NSCopyingP", "NSUIColor"]
+- ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "copy"]
+- ["So9NSCopyingP", "highlightColor"]
+- ["So9NSCopyingP", "highlightLineDashLengths"]
+- ["So9NSCopyingP", "highlightLineDashPhase"]
+- ["So9NSCopyingP", "highlightLineWidth"]
+- ["So9NSCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- !private ["So8NSObjectC", "BarLineScatterCandleBubbleChartDataSet"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "NSZone"]
+- ["So8NSObjectC", "copy"]
+- ["So8NSObjectC", "highlightColor"]
+- ["So8NSObjectC", "highlightLineDashLengths"]
+- ["So8NSObjectC", "highlightLineDashPhase"]
+- ["So8NSObjectC", "highlightLineWidth"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectP", "CGFloat"]
+- ["So8NSObjectP", "NSUIColor"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "copy"]
+- ["So8NSObjectP", "highlightColor"]
+- ["So8NSObjectP", "highlightLineDashLengths"]
+- ["So8NSObjectP", "highlightLineDashPhase"]
+- ["So8NSObjectP", "highlightLineWidth"]
+- ["So8NSObjectP", "init"]
+- ["So14NSSecureCodingP", "init"]
+- ["Sk", "CGFloat"]
+- ["Sk", "NSUIColor"]
+- ["Sk", ""]
+- !private ["Sk", "copy"]
+- ["Sk", "highlightColor"]
+- ["Sk", "highlightLineDashLengths"]
+- ["Sk", "highlightLineDashPhase"]
+- ["Sk", "highlightLineWidth"]
+- ["Sm", "CGFloat"]
+- ["Sm", "NSUIColor"]
+- ["Sm", ""]
+- !private ["Sm", "copy"]
+- ["Sm", "highlightColor"]
+- ["Sm", "highlightLineDashLengths"]
+- ["Sm", "highlightLineDashPhase"]
+- ["Sm", "highlightLineWidth"]
+- ["ST", "CGFloat"]
+- ["ST", "NSUIColor"]
+- ["ST", ""]
+- !private ["ST", "copy"]
+- ["ST", "highlightColor"]
+- ["ST", "highlightLineDashLengths"]
+- ["ST", "highlightLineDashPhase"]
+- ["ST", "highlightLineWidth"]
+- ["So7UIColorC", "init"]
+- ["s26_ExpressibleByColorLiteralP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "copy"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "highlightColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "highlightLineDashLengths"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "highlightLineDashPhase"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "highlightLineWidth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSUIColor"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copy"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "highlightColor"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "highlightLineDashLengths"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "highlightLineDashPhase"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "highlightLineWidth"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+depends-nominal:
+- "6Charts38BarLineScatterCandleBubbleChartDataSetC"
+- "SK"
+- "s7CVarArgP"
+- "6Charts16ChartBaseDataSetC"
+- "6Charts12ChartDataSetC"
+- "Sl"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "SM"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- "Sk"
+- "Sm"
+- "ST"
+- "So7UIColorC"
+- "s26_ExpressibleByColorLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "37280f2fd4c15ae92c877e5a7e5d0832"

@@ -1,0 +1,88 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LineChartDataProvider"
+provides-nominal:
+- "6Charts21LineChartDataProviderP"
+provides-member:
+- ["6Charts21LineChartDataProviderP", ""]
+provides-dynamic-lookup:
+- "getAxis"
+- "lineData"
+depends-top-level:
+- "BarLineScatterCandleBubbleChartDataProvider"
+- "LineChartData"
+- "LineChartDataProvider"
+- "YAxis"
+depends-member:
+- ["6Charts8AxisBaseC", "AxisDependency"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "LineChartData"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "YAxis"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", ""]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "getAxis"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "lineData"]
+- ["s7CVarArgP", "AxisDependency"]
+- ["6Charts17ChartDataProviderP", "LineChartData"]
+- ["6Charts17ChartDataProviderP", "YAxis"]
+- ["6Charts17ChartDataProviderP", "getAxis"]
+- ["6Charts17ChartDataProviderP", "lineData"]
+- ["6Charts13ComponentBaseC", "AxisDependency"]
+- ["s28CustomDebugStringConvertibleP", "AxisDependency"]
+- ["s23CustomStringConvertibleP", "AxisDependency"]
+- ["SQ", "AxisDependency"]
+- ["SH", "AxisDependency"]
+- ["6Charts21LineChartDataProviderP", "LineChartData"]
+- ["6Charts21LineChartDataProviderP", "YAxis"]
+- ["6Charts21LineChartDataProviderP", "getAxis"]
+- ["6Charts21LineChartDataProviderP", "lineData"]
+- ["So8NSObjectC", "AxisDependency"]
+- ["So8NSObjectP", "AxisDependency"]
+- ["6Charts5YAxisC", "AxisDependency"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "AxisDependency"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AxisDependency"]
+depends-nominal:
+- "6Charts8AxisBaseC"
+- "6Charts43BarLineScatterCandleBubbleChartDataProviderP"
+- "s7CVarArgP"
+- "6Charts17ChartDataProviderP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "6Charts21LineChartDataProviderP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "6Charts5YAxisC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "cff531d7670a7e33625a20e62b23877c"

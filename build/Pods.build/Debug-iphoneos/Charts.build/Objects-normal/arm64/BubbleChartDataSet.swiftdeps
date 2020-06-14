@@ -1,0 +1,380 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BubbleChartDataSet"
+provides-nominal:
+- "6Charts18BubbleChartDataSetC"
+provides-member:
+- ["6Charts18BubbleChartDataSetC", ""]
+provides-dynamic-lookup:
+- "_maxSize"
+- "calcMinMax"
+- "copy"
+- "highlightCircleWidth"
+- "isNormalizeSizeEnabled"
+- "maxSize"
+- "normalizeSizeEnabled"
+depends-top-level:
+- !private ">"
+- "AssignmentPrecedence"
+- "BarLineScatterCandleBubbleChartDataSet"
+- "Bool"
+- "BooleanLiteralType"
+- !private "BubbleChartDataEntry"
+- "BubbleChartDataSet"
+- "CGFloat"
+- "CastingPrecedence"
+- "ChartDataEntry"
+- "FloatLiteralType"
+- "IBubbleChartDataSet"
+- "NSZone"
+depends-member:
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "Bool"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "BubbleChartDataEntry"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "BubbleChartDataSet"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "CGFloat"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "ChartDataEntry"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "NSZone"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", ""]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "_maxSize"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "_xMax"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "_xMin"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "calcMinMax"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "copy"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "deinit"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "highlightCircleWidth"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "init"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "isNormalizeSizeEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "maxSize"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "normalizeSizeEnabled"]
+- ["SK", "CGFloat"]
+- ["SK", ""]
+- !private ["SK", "_maxSize"]
+- !private ["SK", "_xMax"]
+- !private ["SK", "_xMin"]
+- !private ["SK", "calcMinMax"]
+- !private ["SK", "copy"]
+- ["SK", "highlightCircleWidth"]
+- ["SK", "isNormalizeSizeEnabled"]
+- ["SK", "maxSize"]
+- !private ["SK", "normalizeSizeEnabled"]
+- !private ["6Charts20BubbleChartDataEntryC", "size"]
+- ["6Charts18BubbleChartDataSetC", "Bool"]
+- !private ["6Charts18BubbleChartDataSetC", "BubbleChartDataEntry"]
+- !private ["6Charts18BubbleChartDataSetC", "BubbleChartDataSet"]
+- ["6Charts18BubbleChartDataSetC", "CGFloat"]
+- ["6Charts18BubbleChartDataSetC", "ChartDataEntry"]
+- ["6Charts18BubbleChartDataSetC", "NSZone"]
+- ["6Charts18BubbleChartDataSetC", "_maxSize"]
+- !private ["6Charts18BubbleChartDataSetC", "_xMax"]
+- !private ["6Charts18BubbleChartDataSetC", "_xMin"]
+- ["6Charts18BubbleChartDataSetC", "calcMinMax"]
+- ["6Charts18BubbleChartDataSetC", "copy"]
+- ["6Charts18BubbleChartDataSetC", "deinit"]
+- ["6Charts18BubbleChartDataSetC", "highlightCircleWidth"]
+- ["6Charts18BubbleChartDataSetC", "init"]
+- ["6Charts18BubbleChartDataSetC", "isNormalizeSizeEnabled"]
+- ["6Charts18BubbleChartDataSetC", "maxSize"]
+- ["6Charts18BubbleChartDataSetC", "normalizeSizeEnabled"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_maxSize"]
+- !private ["s7CVarArgP", "_xMax"]
+- !private ["s7CVarArgP", "_xMin"]
+- !private ["s7CVarArgP", "calcMinMax"]
+- !private ["s7CVarArgP", "copy"]
+- ["s7CVarArgP", "highlightCircleWidth"]
+- ["s7CVarArgP", "isNormalizeSizeEnabled"]
+- ["s7CVarArgP", "maxSize"]
+- !private ["s7CVarArgP", "normalizeSizeEnabled"]
+- !private ["s7CVarArgP", "size"]
+- ["6Charts16ChartBaseDataSetC", "Bool"]
+- !private ["6Charts16ChartBaseDataSetC", "BubbleChartDataEntry"]
+- !private ["6Charts16ChartBaseDataSetC", "BubbleChartDataSet"]
+- ["6Charts16ChartBaseDataSetC", "CGFloat"]
+- ["6Charts16ChartBaseDataSetC", "ChartDataEntry"]
+- ["6Charts16ChartBaseDataSetC", "NSZone"]
+- ["6Charts16ChartBaseDataSetC", "_maxSize"]
+- !private ["6Charts16ChartBaseDataSetC", "_xMax"]
+- !private ["6Charts16ChartBaseDataSetC", "_xMin"]
+- ["6Charts16ChartBaseDataSetC", "calcMinMax"]
+- ["6Charts16ChartBaseDataSetC", "copy"]
+- ["6Charts16ChartBaseDataSetC", "highlightCircleWidth"]
+- ["6Charts16ChartBaseDataSetC", "init"]
+- ["6Charts16ChartBaseDataSetC", "isNormalizeSizeEnabled"]
+- ["6Charts16ChartBaseDataSetC", "maxSize"]
+- ["6Charts16ChartBaseDataSetC", "normalizeSizeEnabled"]
+- !private ["6Charts14ChartDataEntryC", "size"]
+- !private ["6Charts18ChartDataEntryBaseC", "size"]
+- ["6Charts12ChartDataSetC", "Bool"]
+- !private ["6Charts12ChartDataSetC", "BubbleChartDataEntry"]
+- !private ["6Charts12ChartDataSetC", "BubbleChartDataSet"]
+- ["6Charts12ChartDataSetC", "CGFloat"]
+- ["6Charts12ChartDataSetC", "ChartDataEntry"]
+- ["6Charts12ChartDataSetC", "NSZone"]
+- ["6Charts12ChartDataSetC", "_maxSize"]
+- !private ["6Charts12ChartDataSetC", "_xMax"]
+- !private ["6Charts12ChartDataSetC", "_xMin"]
+- ["6Charts12ChartDataSetC", "calcMinMax"]
+- ["6Charts12ChartDataSetC", "copy"]
+- ["6Charts12ChartDataSetC", "highlightCircleWidth"]
+- ["6Charts12ChartDataSetC", "init"]
+- ["6Charts12ChartDataSetC", "isNormalizeSizeEnabled"]
+- ["6Charts12ChartDataSetC", "maxSize"]
+- ["6Charts12ChartDataSetC", "normalizeSizeEnabled"]
+- ["Sl", "CGFloat"]
+- ["Sl", ""]
+- !private ["Sl", "_maxSize"]
+- !private ["Sl", "_xMax"]
+- !private ["Sl", "_xMin"]
+- !private ["Sl", "calcMinMax"]
+- !private ["Sl", "copy"]
+- ["Sl", "highlightCircleWidth"]
+- ["Sl", "isNormalizeSizeEnabled"]
+- ["Sl", "maxSize"]
+- !private ["Sl", "normalizeSizeEnabled"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_maxSize"]
+- !private ["s28CustomDebugStringConvertibleP", "_xMax"]
+- !private ["s28CustomDebugStringConvertibleP", "_xMin"]
+- !private ["s28CustomDebugStringConvertibleP", "calcMinMax"]
+- !private ["s28CustomDebugStringConvertibleP", "copy"]
+- ["s28CustomDebugStringConvertibleP", "highlightCircleWidth"]
+- ["s28CustomDebugStringConvertibleP", "isNormalizeSizeEnabled"]
+- ["s28CustomDebugStringConvertibleP", "maxSize"]
+- !private ["s28CustomDebugStringConvertibleP", "normalizeSizeEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_maxSize"]
+- !private ["s23CustomStringConvertibleP", "_xMax"]
+- !private ["s23CustomStringConvertibleP", "_xMin"]
+- !private ["s23CustomStringConvertibleP", "calcMinMax"]
+- !private ["s23CustomStringConvertibleP", "copy"]
+- ["s23CustomStringConvertibleP", "highlightCircleWidth"]
+- ["s23CustomStringConvertibleP", "isNormalizeSizeEnabled"]
+- ["s23CustomStringConvertibleP", "maxSize"]
+- !private ["s23CustomStringConvertibleP", "normalizeSizeEnabled"]
+- !private ["s23CustomStringConvertibleP", "size"]
+- ["SQ", "CGFloat"]
+- ["SQ", ""]
+- !private ["SQ", "_maxSize"]
+- !private ["SQ", "_xMax"]
+- !private ["SQ", "_xMin"]
+- !private ["SQ", "calcMinMax"]
+- !private ["SQ", "copy"]
+- ["SQ", "highlightCircleWidth"]
+- ["SQ", "isNormalizeSizeEnabled"]
+- ["SQ", "maxSize"]
+- !private ["SQ", "normalizeSizeEnabled"]
+- !private ["SQ", "size"]
+- ["SH", "CGFloat"]
+- ["SH", ""]
+- !private ["SH", "_maxSize"]
+- !private ["SH", "_xMax"]
+- !private ["SH", "_xMin"]
+- !private ["SH", "calcMinMax"]
+- !private ["SH", "copy"]
+- ["SH", "highlightCircleWidth"]
+- ["SH", "isNormalizeSizeEnabled"]
+- ["SH", "maxSize"]
+- !private ["SH", "normalizeSizeEnabled"]
+- !private ["SH", "size"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGFloat"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", ""]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "_maxSize"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "_xMax"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "_xMin"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "calcMinMax"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "copy"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleWidth"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isNormalizeSizeEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "maxSize"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "normalizeSizeEnabled"]
+- ["6Charts19IBubbleChartDataSetP", "CGFloat"]
+- ["6Charts19IBubbleChartDataSetP", ""]
+- !private ["6Charts19IBubbleChartDataSetP", "_maxSize"]
+- !private ["6Charts19IBubbleChartDataSetP", "_xMax"]
+- !private ["6Charts19IBubbleChartDataSetP", "_xMin"]
+- ["6Charts19IBubbleChartDataSetP", "highlightCircleWidth"]
+- ["6Charts19IBubbleChartDataSetP", "isNormalizeSizeEnabled"]
+- ["6Charts19IBubbleChartDataSetP", "maxSize"]
+- !private ["6Charts19IBubbleChartDataSetP", "normalizeSizeEnabled"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", ""]
+- !private ["6Charts13IChartDataSetP", "_maxSize"]
+- !private ["6Charts13IChartDataSetP", "_xMax"]
+- !private ["6Charts13IChartDataSetP", "_xMin"]
+- !private ["6Charts13IChartDataSetP", "calcMinMax"]
+- !private ["6Charts13IChartDataSetP", "copy"]
+- ["6Charts13IChartDataSetP", "highlightCircleWidth"]
+- ["6Charts13IChartDataSetP", "isNormalizeSizeEnabled"]
+- ["6Charts13IChartDataSetP", "maxSize"]
+- !private ["6Charts13IChartDataSetP", "normalizeSizeEnabled"]
+- ["SM", "CGFloat"]
+- ["SM", ""]
+- !private ["SM", "_maxSize"]
+- !private ["SM", "_xMax"]
+- !private ["SM", "_xMin"]
+- !private ["SM", "calcMinMax"]
+- !private ["SM", "copy"]
+- ["SM", "highlightCircleWidth"]
+- ["SM", "isNormalizeSizeEnabled"]
+- ["SM", "maxSize"]
+- !private ["SM", "normalizeSizeEnabled"]
+- ["So9NSCopyingP", "CGFloat"]
+- ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "_maxSize"]
+- !private ["So9NSCopyingP", "_xMax"]
+- !private ["So9NSCopyingP", "_xMin"]
+- !private ["So9NSCopyingP", "calcMinMax"]
+- !private ["So9NSCopyingP", "copy"]
+- ["So9NSCopyingP", "highlightCircleWidth"]
+- ["So9NSCopyingP", "isNormalizeSizeEnabled"]
+- ["So9NSCopyingP", "maxSize"]
+- !private ["So9NSCopyingP", "normalizeSizeEnabled"]
+- !private ["So9NSCopyingP", "size"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "BubbleChartDataEntry"]
+- !private ["So8NSObjectC", "BubbleChartDataSet"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "ChartDataEntry"]
+- ["So8NSObjectC", "NSZone"]
+- ["So8NSObjectC", "_maxSize"]
+- !private ["So8NSObjectC", "_xMax"]
+- !private ["So8NSObjectC", "_xMin"]
+- ["So8NSObjectC", "calcMinMax"]
+- ["So8NSObjectC", "copy"]
+- ["So8NSObjectC", "highlightCircleWidth"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isNormalizeSizeEnabled"]
+- ["So8NSObjectC", "maxSize"]
+- ["So8NSObjectC", "normalizeSizeEnabled"]
+- !private ["So8NSObjectC", "size"]
+- ["So8NSObjectP", "CGFloat"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_maxSize"]
+- !private ["So8NSObjectP", "_xMax"]
+- !private ["So8NSObjectP", "_xMin"]
+- !private ["So8NSObjectP", "calcMinMax"]
+- !private ["So8NSObjectP", "copy"]
+- ["So8NSObjectP", "highlightCircleWidth"]
+- ["So8NSObjectP", "isNormalizeSizeEnabled"]
+- ["So8NSObjectP", "maxSize"]
+- !private ["So8NSObjectP", "normalizeSizeEnabled"]
+- !private ["So8NSObjectP", "size"]
+- ["Sk", "CGFloat"]
+- ["Sk", ""]
+- !private ["Sk", "_maxSize"]
+- !private ["Sk", "_xMax"]
+- !private ["Sk", "_xMin"]
+- !private ["Sk", "calcMinMax"]
+- !private ["Sk", "copy"]
+- ["Sk", "highlightCircleWidth"]
+- ["Sk", "isNormalizeSizeEnabled"]
+- ["Sk", "maxSize"]
+- !private ["Sk", "normalizeSizeEnabled"]
+- ["Sm", "CGFloat"]
+- ["Sm", ""]
+- !private ["Sm", "_maxSize"]
+- !private ["Sm", "_xMax"]
+- !private ["Sm", "_xMin"]
+- !private ["Sm", "calcMinMax"]
+- !private ["Sm", "copy"]
+- ["Sm", "highlightCircleWidth"]
+- ["Sm", "isNormalizeSizeEnabled"]
+- ["Sm", "maxSize"]
+- !private ["Sm", "normalizeSizeEnabled"]
+- ["ST", "CGFloat"]
+- ["ST", ""]
+- !private ["ST", "_maxSize"]
+- !private ["ST", "_xMax"]
+- !private ["ST", "_xMin"]
+- !private ["ST", "calcMinMax"]
+- !private ["ST", "copy"]
+- ["ST", "highlightCircleWidth"]
+- ["ST", "isNormalizeSizeEnabled"]
+- ["ST", "maxSize"]
+- !private ["ST", "normalizeSizeEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_maxSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_xMax"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_xMin"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "calcMinMax"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "copy"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "highlightCircleWidth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "isNormalizeSizeEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "maxSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "normalizeSizeEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "size"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_maxSize"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_xMax"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_xMin"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "calcMinMax"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copy"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "highlightCircleWidth"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isNormalizeSizeEnabled"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "maxSize"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "normalizeSizeEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "size"]
+depends-nominal:
+- "6Charts38BarLineScatterCandleBubbleChartDataSetC"
+- "SK"
+- !private "6Charts20BubbleChartDataEntryC"
+- "6Charts18BubbleChartDataSetC"
+- "s7CVarArgP"
+- "6Charts16ChartBaseDataSetC"
+- !private "6Charts14ChartDataEntryC"
+- !private "6Charts18ChartDataEntryBaseC"
+- "6Charts12ChartDataSetC"
+- "Sl"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts19IBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "SM"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "Sk"
+- "Sm"
+- "ST"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ecd210105f26d71c3f42a10a5dfb0641"

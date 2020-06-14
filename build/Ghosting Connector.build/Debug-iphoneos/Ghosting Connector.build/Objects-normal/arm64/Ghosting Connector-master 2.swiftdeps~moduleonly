@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "84e0835f44f7b3848f934a15d1573e5a"
-build_time: [1591565721, 174614000]
-inputs:
-  "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Ghosting Connector/ViewController.swift": [1591565721, 86733256]
-  "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Ghosting Connector/AppDelegate.swift": [1587840580, 313666163]
-  "/Users/varunchitturi/Documents/Coding/App_Development/Ghosting Connector/Ghosting Connector/SceneDelegate.swift": [1587840580, 316120081]
