@@ -19,6 +19,7 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var numMinutesField: UITextField!
     @IBOutlet weak var numSecondsField: UITextField!
     override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
                self.view.addGestureRecognizer(tapGesture)

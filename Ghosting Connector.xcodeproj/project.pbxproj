@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18EF3D3FB18D11648B493DE5 /* Pods_Ghosting_Connector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E398A55B3A6E0FCB4ADC1480 /* Pods_Ghosting_Connector.framework */; };
+		27251F77249810440043D52C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F76249810440043D52C /* KeyboardViewController.swift */; };
 		272BBF8824937C3400529213 /* DoTimedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */; };
 		272BBF8A2495679200529213 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF892495679100529213 /* UUIDKey.swift */; };
 		2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6AE2454BDC400EB4944 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27251F76249810440043D52C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTimedWorkoutViewController.swift; sourceTree = "<group>"; };
 		272BBF892495679100529213 /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		2741C6AB2454BDC400EB4944 /* Ghosting Connector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghosting Connector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				2741C6B72454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld */,
 				27DCEFFA248EE7BF00309DD4 /* CreateGoalsTableViewController.swift */,
 				27D097D124903C830073C797 /* ViewYourGoalsTableViewController.swift */,
+				27251F76249810440043D52C /* KeyboardViewController.swift */,
 			);
 			path = "Ghosting Connector";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				27DCEFF3248EBD1300309DD4 /* StartViewController.swift in Sources */,
 				27D097D624909CDF0073C797 /* AddGoalViewController.swift in Sources */,
 				2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */,
+				27251F77249810440043D52C /* KeyboardViewController.swift in Sources */,
 				2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

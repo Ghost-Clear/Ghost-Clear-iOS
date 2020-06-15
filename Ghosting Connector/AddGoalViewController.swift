@@ -21,6 +21,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var numSecondsField: UITextField!
     
     override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
                self.view.addGestureRecognizer(tapGesture)

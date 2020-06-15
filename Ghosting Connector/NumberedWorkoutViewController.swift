@@ -36,6 +36,7 @@ class NumberedWorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         blankRandomize.isHidden = true
         
         frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)

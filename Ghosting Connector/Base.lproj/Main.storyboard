@@ -842,7 +842,9 @@
                         <outlet property="frontRight" destination="hhV-xR-JWQ" id="kKT-6c-CE6"/>
                         <outlet property="lowerLeft" destination="gJR-m0-hB7" id="bhI-UZ-eoH"/>
                         <outlet property="lowerRight" destination="9SP-Ab-Shq" id="Zrv-A9-zf0"/>
+                        <outlet property="minutesField" destination="716-7D-4Hg" id="vhs-jn-0Uc"/>
                         <outlet property="randomizeButton" destination="OMw-mU-qa6" id="Jcw-70-YQs"/>
+                        <outlet property="secondsField" destination="REX-HQ-G1s" id="KZA-yV-6Q3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gM-ae-MYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

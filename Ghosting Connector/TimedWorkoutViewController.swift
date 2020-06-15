@@ -31,12 +31,14 @@ class TimedWorkoutViewController: UIViewController {
          randomizeButton.isHidden = true
          print(isRandomized)
      }
-     
-     override func viewDidLoad() {
+    @IBOutlet var secondsField: UITextField!
+    @IBOutlet var minutesField: UITextField!
+ 
+         override func viewDidLoad() {
          super.viewDidLoad()
+         self.hideKeyboardWhenTappedAround() 
          blankRandomize.isHidden = true
-         
-         frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
+        frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
          // Do any additional setup after loading the view.
      }
 

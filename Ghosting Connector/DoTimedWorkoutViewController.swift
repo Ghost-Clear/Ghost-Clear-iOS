@@ -298,20 +298,31 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
             print("Bluetooth Enabled")
             startScan()
+            return
             
         } else {
             //If Bluetooth is off, display a UI alert message saying "Bluetooth is not enable" and "Make sure that your bluetooth is turned on"
-            print("Bluetooth Disabled- Make sure your Bluetooth is turned on")
             
-            let alertVC = UIAlertController(title: "Bluetooth is not enabled", message: "Make sure that your bluetooth is turned on", preferredStyle: UIAlertController.Style.alert)
-            let action = UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
-                self.dismiss(animated: true, completion: nil)
-            })
-            alertVC.addAction(action)
-            self.present(alertVC, animated: true, completion: nil)
+            if central.state == CBManagerState.poweredOn {
+            // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
+                print("Bluetooth Enabled")
+                startScan()
+            }
+            else{
+                print("Bluetooth Disabled- Make sure your Bluetooth is turned on")
+                
+                let alertVC = UIAlertController(title: "Bluetooth is not enabled", message: "Make sure that your bluetooth is turned on before starting the workout.", preferredStyle: UIAlertController.Style.alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+                    self.dismiss(animated: true, completion: nil)
+                    //add segue
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alertVC.addAction(action)
+                self.present(alertVC, animated: true, completion: nil)
+            }
         }
     }
-
+    
     /*
     // MARK: - Navigation
 
