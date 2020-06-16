@@ -39,6 +39,9 @@ class TimedWorkoutViewController: UIViewController {
         }
         
     }
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBOutlet var randomizeButton: UIButton!
      @IBAction func randomize(_ sender: Any) {
          isRandomized = false

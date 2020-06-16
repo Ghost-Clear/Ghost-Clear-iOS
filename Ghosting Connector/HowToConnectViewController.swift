@@ -17,6 +17,8 @@ class HowToConnectViewController: UIViewController {
     }
     
 
+    @IBAction func refresh(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
