@@ -24,7 +24,22 @@ class TimedWorkoutViewController: UIViewController {
          print(isRandomized)
      }
      
-     @IBOutlet var randomizeButton: UIButton!
+    @IBAction func startWorkout(_ sender: Any) {
+        if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && minutesField.text! != nil && secondsField.text! != nil){
+        performSegue(withIdentifier: "doTimedWorkoutSegue", sender: nil)
+        }
+        else{
+            let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59.", preferredStyle: UIAlertController.Style.alert)
+              let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+                  alertVC.dismiss(animated: true, completion: nil)
+                  //add segue
+              })
+              alertVC.addAction(action)
+              self.present(alertVC, animated: true, completion: nil)
+        }
+        
+    }
+    @IBOutlet var randomizeButton: UIButton!
      @IBAction func randomize(_ sender: Any) {
          isRandomized = false
          blankRandomize.isHidden = false
@@ -36,7 +51,6 @@ class TimedWorkoutViewController: UIViewController {
  
          override func viewDidLoad() {
          super.viewDidLoad()
-         self.hideKeyboardWhenTappedAround() 
          blankRandomize.isHidden = true
         frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
          // Do any additional setup after loading the view.
@@ -76,7 +90,9 @@ class TimedWorkoutViewController: UIViewController {
              centerLeft.setImage(UIImage(named: "Ellipse 15"), for: .normal)
          }
      }
-     
+     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+         view.endEditing(true)
+     }
      @IBOutlet var lowerLeft: UIButton!
      @IBOutlet var centerLeft: UIButton!
      @IBAction func LL(_ sender: Any) {

@@ -19,9 +19,10 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var numGhostsField: UITextField!
     @IBOutlet weak var numMinutesField: UITextField!
     @IBOutlet weak var numSecondsField: UITextField!
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     override func viewDidLoad() {
-        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
                self.view.addGestureRecognizer(tapGesture)
@@ -51,6 +52,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addGoal(_ sender: Any) {
+        if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numMinutesField.text! != nil && numSecondsField.text! != nil && numGhostsField.text! != "" && numGhostsField.text! != nil){
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let goal = Goal(context: context)
             goal.seconds = Int64((numSecondsField.text! as NSString).integerValue)
@@ -72,6 +74,16 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
         mainSetGoalsView.getGoals()
         mainSetGoalsView.childView?.tableView.reloadData()
         self.dismiss(animated: true, completion: nil)
+    }
+        else{
+            let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59.", preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+                alertVC.dismiss(animated: true, completion: nil)
+                //add segue
+            })
+            alertVC.addAction(action)
+            self.present(alertVC, animated: true, completion: nil)
+        }
     }
     
     /*
