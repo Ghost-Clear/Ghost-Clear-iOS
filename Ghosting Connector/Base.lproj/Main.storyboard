@@ -32,25 +32,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy 4" translatesAutoresizingMaskIntoConstraints="NO" id="Hyu-sK-va1">
-                                <rect key="frame" x="153" y="405" width="109" height="87"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="LaE-uw-wT2">
-                                <rect key="frame" x="178" y="416" width="58" height="64"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-fs-CbR">
+                                <rect key="frame" x="162" y="413" width="91" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.081042814110074773" green="0.10876449015057536" blue="0.1242470357018679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="62p-j8-MIR" firstAttribute="bottom" secondItem="Hyu-sK-va1" secondAttribute="bottom" constant="370" id="0Xe-Xv-YT0"/>
-                            <constraint firstItem="62p-j8-MIR" firstAttribute="trailing" secondItem="Hyu-sK-va1" secondAttribute="trailing" constant="152" id="0k6-TH-Us7"/>
-                            <constraint firstItem="Hyu-sK-va1" firstAttribute="top" secondItem="62p-j8-MIR" secondAttribute="top" constant="361" id="9iu-7E-Vfp"/>
-                            <constraint firstItem="Hyu-sK-va1" firstAttribute="leading" secondItem="62p-j8-MIR" secondAttribute="leading" constant="153" id="BUi-D5-05s"/>
-                            <constraint firstItem="62p-j8-MIR" firstAttribute="bottom" secondItem="LaE-uw-wT2" secondAttribute="bottom" constant="382" id="ZcT-Nd-uyT"/>
-                            <constraint firstItem="62p-j8-MIR" firstAttribute="trailing" secondItem="LaE-uw-wT2" secondAttribute="trailing" constant="178" id="a2H-43-hD9"/>
-                            <constraint firstItem="LaE-uw-wT2" firstAttribute="leading" secondItem="62p-j8-MIR" secondAttribute="leading" constant="178" id="aiV-HU-59J"/>
-                            <constraint firstItem="LaE-uw-wT2" firstAttribute="top" secondItem="62p-j8-MIR" secondAttribute="top" constant="372" id="nqn-fX-HjH"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="62p-j8-MIR"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gbq-05-BPl"/>
@@ -570,7 +558,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-Mt-h8c">
-                                <rect key="frame" x="361" y="44" width="25" height="26"/>
+                                <rect key="frame" x="361" y="55" width="25" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="gear"/>
                                 <connections>
@@ -959,16 +947,8 @@
                                     <segue destination="Ldv-hu-VSK" kind="showDetail" id="abc-on-t2U"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Change your name" translatesAutoresizingMaskIntoConstraints="NO" id="Xnr-Xp-dHV">
-                                <rect key="frame" x="-71" y="200" width="415" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Settings" translatesAutoresizingMaskIntoConstraints="NO" id="S78-6H-Ar7">
                                 <rect key="frame" x="20" y="85" width="188" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="How to Connect" translatesAutoresizingMaskIntoConstraints="NO" id="2pl-gM-y9d">
-                                <rect key="frame" x="-88" y="260" width="415" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-hZ-eYW">
@@ -979,6 +959,20 @@
                                     <action selector="goBack:" destination="at1-VZ-0TC" eventType="touchUpInside" id="9qZ-JU-ZgG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aF-Vt-pzE">
+                                <rect key="frame" x="20" y="197" width="374" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izD-W8-Jw9">
+                                <rect key="frame" x="20" y="254" width="374" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yuh-fl-pWY"/>
@@ -987,7 +981,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdv-Rr-SuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="1428"/>
+            <point key="canvasLocation" x="11.594202898550726" y="1427.6785714285713"/>
         </scene>
         <!--Change Name View Controller-->
         <scene sceneID="shd-dF-sdQ">
@@ -1049,14 +1043,13 @@
         <!--How To Connect View Controller-->
         <scene sceneID="KLl-9E-Fca">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5rl-Ix-gUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Ldv-hu-VSK" customClass="HowToConnectViewController" customModule="Ghosting_Connector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9S-n7-ILR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to connect your ghosting devices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS7-7j-pax">
-                                <rect key="frame" x="20" y="20" width="258" height="69"/>
+                                <rect key="frame" x="20" y="20" width="362" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1087,6 +1080,7 @@
                         <viewLayoutGuide key="safeArea" id="xOn-Wl-hfP"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rl-Ix-gUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11.594202898550726" y="2112.7232142857142"/>
         </scene>
@@ -1207,15 +1201,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sEJ-BF-7bl"/>
+        <segue reference="EKe-id-vDU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add Button" width="92" height="92"/>
-        <image name="Change your name" width="709" height="83"/>
         <image name="Create A Goal _" width="336.33334350585938" height="37.666667938232422"/>
         <image name="Ellipse 15" width="844" height="844"/>
         <image name="Goal Button" width="446.66665649414062" height="96"/>
-        <image name="How to Connect" width="601" height="62"/>
         <image name="Icon" width="76" height="96.5"/>
         <image name="Image" width="42.666667938232422" height="41.333332061767578"/>
         <image name="Line" width="1164" height="9"/>
@@ -1223,7 +1215,6 @@
         <image name="Next_Button" width="337.33334350585938" height="88"/>
         <image name="Next_Button-1" width="421.33334350585938" height="88"/>
         <image name="Next_Button-2" width="1340" height="264"/>
-        <image name="Rectangle Copy 4" width="70.666664123535156" height="68"/>
         <image name="Rectangle Icon" width="53" height="51"/>
         <image name="Settings" width="639" height="160"/>
         <image name="applyChange" width="326.66665649414062" height="77.333335876464844"/>
@@ -1235,6 +1226,7 @@
         <image name="ghosts" width="82.666664123535156" height="26.666666030883789"/>
         <image name="graphcutOut" width="1308" height="592"/>
         <image name="grid" width="1388" height="1136"/>
+        <image name="logo" width="60" height="57.333332061767578"/>
         <image name="mdi_directions_run" width="96" height="96"/>
         <image name="mdi_format_list_numbered" width="32" height="32"/>
         <image name="minutes" width="101.66666412353516" height="21.666666030883789"/>

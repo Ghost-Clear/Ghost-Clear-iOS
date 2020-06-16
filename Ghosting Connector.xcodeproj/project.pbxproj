@@ -40,7 +40,7 @@
 		27251F802498C7DC0043D52C /* HowToConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToConnectViewController.swift; sourceTree = "<group>"; };
 		272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTimedWorkoutViewController.swift; sourceTree = "<group>"; };
 		272BBF892495679100529213 /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
-		2741C6AB2454BDC400EB4944 /* Ghosting Connector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghosting Connector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2741C6AB2454BDC400EB4944 /* Ghost Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghost Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2741C6AE2454BDC400EB4944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2741C6B02454BDC400EB4944 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2741C6B52454BDC400EB4944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		2741C6AC2454BDC400EB4944 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2741C6AB2454BDC400EB4944 /* Ghosting Connector.app */,
+				2741C6AB2454BDC400EB4944 /* Ghost Connect.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 			);
 			name = "Ghosting Connector";
 			productName = "Ghosting Connector";
-			productReference = 2741C6AB2454BDC400EB4944 /* Ghosting Connector.app */;
+			productReference = 2741C6AB2454BDC400EB4944 /* Ghost Connect.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -441,9 +441,9 @@
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SqDev.Ghosting-Connector";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ghost Connect";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,9 +470,9 @@
 					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SqDev.Ghosting-Connector";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ghost Connect";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
