@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,8 +18,8 @@
 		2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6B02454BDC400EB4944 /* SceneDelegate.swift */; };
 		2741C6B62454BDC400EB4944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6B42454BDC400EB4944 /* Main.storyboard */; };
 		2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6B72454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld */; };
-		2741C6BB2454BDC500EB4944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BA2454BDC500EB4944 /* Assets.xcassets */; };
 		2741C6BE2454BDC500EB4944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BC2454BDC500EB4944 /* LaunchScreen.storyboard */; };
+		2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BA2454BDC500EB4944 /* Assets.xcassets */; };
 		27D097D224903C830073C797 /* ViewYourGoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D124903C830073C797 /* ViewYourGoalsTableViewController.swift */; };
 		27D097D4249043290073C797 /* MainViewGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D3249043290073C797 /* MainViewGoalsViewController.swift */; };
 		27D097D624909CDF0073C797 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D524909CDF0073C797 /* AddGoalViewController.swift */; };
@@ -180,7 +180,7 @@
 				};
 			};
 			buildConfigurationList = 2741C6A62454BDC400EB4944 /* Build configuration list for PBXProject "Ghosting Connector" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -203,7 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2741C6BE2454BDC500EB4944 /* LaunchScreen.storyboard in Resources */,
-				2741C6BB2454BDC500EB4944 /* Assets.xcassets in Resources */,
+				2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */,
 				2741C6B62454BDC400EB4944 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +436,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Ghosting Connector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"$(inherited)",
@@ -465,6 +466,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Ghosting Connector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"$(inherited)",
