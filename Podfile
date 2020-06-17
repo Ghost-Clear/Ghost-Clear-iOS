@@ -5,4 +5,5 @@ target 'Ghosting Connector' do
   use_frameworks!
 pod 'CocoaAsyncSocket'
 pod 'Charts'
+pod 'CircleTimer'
 end

@@ -2,21 +2,25 @@ PODS:
   - Charts (3.4.0):
     - Charts/Core (= 3.4.0)
   - Charts/Core (3.4.0)
+  - CircleTimer (0.2.2)
   - CocoaAsyncSocket (7.6.4)
 
 DEPENDENCIES:
   - Charts
+  - CircleTimer
   - CocoaAsyncSocket
 
 SPEC REPOS:
   trunk:
     - Charts
+    - CircleTimer
     - CocoaAsyncSocket
 
 SPEC CHECKSUMS:
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  CircleTimer: 623db0cf5762db38ac3c940677377df0b94af674
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
 
-PODFILE CHECKSUM: ef4dc24af2b930d22927465a0e65fbd017e3680c
+PODFILE CHECKSUM: a67ab9c597fe84d1a81df9ec8bb9f6db2ab3344d
 
 COCOAPODS: 1.9.3

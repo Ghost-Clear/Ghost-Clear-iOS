@@ -9,12 +9,23 @@
 import UIKit
 import CoreBluetooth
 import Foundation
-
+import AppusCircleTimer
 var txCharacteristic : CBCharacteristic?
 var rxCharacteristic : CBCharacteristic?
 var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
-class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate {
+class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
+    @IBOutlet var circleTime: AppusCircleTimer!
+   
+    @IBOutlet var workoutStartsIn: UILabel!
+    
+    func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
+        circleTime.isActive = false
+        circleTime.isHidden = true
+        helloButton.isHidden = false
+        workoutStartsIn.isHidden = true
+    }
+    
      var centralManager : CBCentralManager!
      var peripheral: CBPeripheral!
      var peripheralManager: CBPeripheralManager?
@@ -27,9 +38,17 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
      var characteristics = [String : CBCharacteristic]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        workoutStartsIn.isHidden = true
+        circleTime.delegate = self
+         circleTime.font = UIFont(name: "System", size: 50 )
+        circleTime.isBackwards = true
+        circleTime.isActive = false
+        circleTime.isHidden = true
         centralManager = CBCentralManager(delegate: self, queue: nil)
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         updateIncomingData()
+        helloButton.isHidden = true
+        
             // Do any additional setup after loading the view.
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -297,7 +316,14 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         if central.state == CBManagerState.poweredOn {
             // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
             print("Bluetooth Enabled")
+            workoutStartsIn.isHidden = false
             startScan()
+            circleTime.font = UIFont(name: "System", size: 50 )
+            circleTime.isHidden = false
+            circleTime.isActive = true
+            circleTime.totalTime = 10
+            circleTime.elapsedTime = 0
+            circleTime.start()
             return
             
         } else {
@@ -306,6 +332,13 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             if central.state == CBManagerState.poweredOn {
             // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
                 print("Bluetooth Enabled")
+                workoutStartsIn.isHidden = false
+                circleTime.font = UIFont(name: "System", size: 50 )
+                circleTime.isHidden = false
+                circleTime.isActive = true
+                circleTime.totalTime = 10
+                circleTime.elapsedTime = 0
+                circleTime.start()
                 startScan()
             }
             else{
