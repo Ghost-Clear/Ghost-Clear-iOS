@@ -16,7 +16,14 @@ var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
     @IBOutlet var circleTime: AppusCircleTimer!
-   
+    @IBAction func stopWorkout(_ sender: Any) {
+        circleTime.isActive = false
+        circleTime.isHidden = true
+        circleTime.stop()
+        centralManager.stopScan()
+        disconnectAllConnection()
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBOutlet var workoutStartsIn: UILabel!
     
     func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
