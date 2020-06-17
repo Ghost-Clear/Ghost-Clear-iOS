@@ -15,6 +15,13 @@ var rxCharacteristic : CBCharacteristic?
 var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
+    var FR : Bool!
+    var FL : Bool!
+    var CR : Bool!
+    var CL : Bool!
+    var LR : Bool!
+    var LL : Bool!
+    var isRandom : Bool!
     @IBOutlet var circleTime: AppusCircleTimer!
     @IBAction func stopWorkout(_ sender: Any) {
         circleTime.isActive = false
