@@ -16,7 +16,7 @@ class HowToConnectViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+	//TODO: implement this
     @IBAction func refresh(_ sender: Any) {
     }
     /*

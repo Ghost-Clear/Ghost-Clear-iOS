@@ -52,7 +52,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addGoal(_ sender: Any) {
-        if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numMinutesField.text! != nil && numSecondsField.text! != nil && numGhostsField.text! != "" && numGhostsField.text! != nil){
+		if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numMinutesField.text! != nil && numSecondsField.text! != nil && numGhostsField.text! != "" && numGhostsField.text! != nil && numGhostsField.text! != "0"){
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let goal = Goal(context: context)
             goal.seconds = Int64((numSecondsField.text! as NSString).integerValue)
@@ -76,7 +76,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
         else{
-            let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59.", preferredStyle: UIAlertController.Style.alert)
+            let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts are greater than 0.", preferredStyle: UIAlertController.Style.alert)
             let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                 alertVC.dismiss(animated: true, completion: nil)
                 //add segue
