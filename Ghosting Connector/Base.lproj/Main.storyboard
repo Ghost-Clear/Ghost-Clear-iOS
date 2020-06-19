@@ -147,7 +147,7 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jC-YE-pSn">
-                                <rect key="frame" x="44" y="789" width="327" height="73"/>
+                                <rect key="frame" x="44" y="797" width="327" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Goal Button"/>
                                 <connections>
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNq-8a-LhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472" y="15"/>
+            <point key="canvasLocation" x="1471.0144927536232" y="14.732142857142856"/>
         </scene>
         <!--Create Singular Goal View Controller-->
         <scene sceneID="piE-bk-pCq">
@@ -534,7 +534,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jca-eN-xnd">
-                                <rect key="frame" x="20" y="781" width="374" height="81"/>
+                                <rect key="frame" x="20" y="787" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Next_Button-2"/>
                             </button>
@@ -553,10 +553,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mdi_directions_run" translatesAutoresizingMaskIntoConstraints="NO" id="07J-Zt-15Y">
-                                <rect key="frame" x="301" y="806" width="36" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-Mt-h8c">
                                 <rect key="frame" x="343" y="44" width="51" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1224,20 +1220,20 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EKe-id-vDU"/>
+        <segue reference="sEJ-BF-7bl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add Button" width="92" height="92"/>
         <image name="Create A Goal _" width="336.33334350585938" height="37.666667938232422"/>
         <image name="Ellipse 15" width="844" height="844"/>
-        <image name="Goal Button" width="446.66665649414062" height="96"/>
+        <image name="Goal Button" width="436" height="85.333335876464844"/>
         <image name="Icon" width="76" height="96.5"/>
         <image name="Image" width="42.666667938232422" height="41.333332061767578"/>
         <image name="Line" width="1164" height="9"/>
         <image name="Line-1" width="492" height="4"/>
-        <image name="Next_Button" width="337.33334350585938" height="88"/>
-        <image name="Next_Button-1" width="421.33334350585938" height="88"/>
-        <image name="Next_Button-2" width="1340" height="264"/>
+        <image name="Next_Button" width="326.66665649414062" height="77.333335876464844"/>
+        <image name="Next_Button-1" width="410.66665649414062" height="77.333335876464844"/>
+        <image name="Next_Button-2" width="1308" height="232"/>
         <image name="Rectangle Icon" width="53" height="51"/>
         <image name="Settings" width="639" height="160"/>
         <image name="applyChange" width="326.66665649414062" height="77.333335876464844"/>
@@ -1250,17 +1246,16 @@
         <image name="graphcutOut" width="1308" height="592"/>
         <image name="grid" width="1388" height="1136"/>
         <image name="logo" width="60" height="57.333332061767578"/>
-        <image name="mdi_directions_run" width="96" height="96"/>
         <image name="mdi_format_list_numbered" width="32" height="32"/>
         <image name="minutes" width="101.66666412353516" height="21.666666030883789"/>
         <image name="numberWorkout" width="600" height="840"/>
         <image name="redRectangle" width="1388" height="232"/>
         <image name="refresh" width="1084" height="232"/>
         <image name="seconds" width="98.666664123535156" height="21.666666030883789"/>
-        <image name="startWorkout" width="696" height="232"/>
+        <image name="startWorkout" width="756" height="232"/>
         <image name="stopWorkout" width="441.33334350585938" height="77.333335876464844"/>
         <image name="timedWorkout" width="600" height="840"/>
-        <image name="viewGoals-1" width="1340" height="288"/>
+        <image name="viewGoals-1" width="1308" height="256"/>
         <image name="yellowRect" width="468" height="88"/>
     </resources>
 </document>
