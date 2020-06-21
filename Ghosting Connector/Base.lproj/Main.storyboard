@@ -368,7 +368,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONn-8V-prF">
-                                <rect key="frame" x="32" y="798" width="153" height="53"/>
+                                <rect key="frame" x="32" y="798" width="153" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="fullRandomize"/>
                                 <connections>
@@ -427,11 +427,6 @@
                                     <action selector="LR:" destination="x0X-u5-1M6" eventType="touchUpInside" id="4lA-4E-CTL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4z-pb-dUM">
-                                <rect key="frame" x="238" y="798" width="156" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Workout" image="startWorkout"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ghosts" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-Tl-V5S">
                                 <rect key="frame" x="169" y="375" width="76" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -455,6 +450,11 @@
                                 <connections>
                                     <action selector="goBack:" destination="x0X-u5-1M6" eventType="touchUpInside" id="SXg-Bp-DEC"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4z-pb-dUM">
+                                <rect key="frame" x="215" y="798" width="170" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Workout" image="startWorkout"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -538,7 +538,7 @@
                                 <state key="normal" title="Button" image="Next_Button-2"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-8C-G5w">
-                                <rect key="frame" x="15" y="387" width="383" height="84"/>
+                                <rect key="frame" x="15" y="387" width="383" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="viewGoals-1"/>
                                 <connections>
@@ -830,14 +830,6 @@
                                 <rect key="frame" x="269" y="370" width="114" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-OI-CZw">
-                                <rect key="frame" x="238" y="798" width="156" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Workout" image="startWorkout"/>
-                                <connections>
-                                    <action selector="startWorkout:" destination="OzQ-ta-Cac" eventType="touchUpInside" id="DUA-kb-8tZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount of Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-z5-LSl">
                                 <rect key="frame" x="61" y="172" width="293" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -904,6 +896,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-OI-CZw">
+                                <rect key="frame" x="213" y="798" width="170" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Workout" image="startWorkout"/>
+                                <connections>
+                                    <action selector="startWorkout:" destination="OzQ-ta-Cac" eventType="touchUpInside" id="DUA-kb-8tZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="u4U-lS-5IM"/>
@@ -1249,7 +1249,7 @@
         <image name="redRectangle" width="1388" height="232"/>
         <image name="refresh" width="1084" height="232"/>
         <image name="seconds" width="98.666664123535156" height="21.666666030883789"/>
-        <image name="startWorkout" width="756" height="232"/>
+        <image name="startWorkout" width="739" height="232"/>
         <image name="stopWorkout" width="441.33334350585938" height="77.333335876464844"/>
         <image name="timedWorkout" width="600" height="840"/>
         <image name="viewGoals-1" width="1308" height="256"/>

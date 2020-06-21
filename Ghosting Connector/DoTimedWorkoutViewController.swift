@@ -188,7 +188,9 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     }
     
     func disconnectAllConnection() {
-        centralManager.cancelPeripheralConnection(blePeripheral!)
+		if(centralManager != nil && blePeripheral != nil){
+			centralManager.cancelPeripheralConnection(blePeripheral!)
+		}
     }
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         print("*******************************************************")
