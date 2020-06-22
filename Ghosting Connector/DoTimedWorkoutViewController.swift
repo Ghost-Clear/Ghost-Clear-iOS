@@ -10,18 +10,35 @@ import UIKit
 import CoreBluetooth
 import Foundation
 import AppusCircleTimer
-var txCharacteristic : CBCharacteristic?
-var rxCharacteristic : CBCharacteristic?
-var blePeripheral : CBPeripheral?
-var characteristicASCIIValue = NSString()
+
 class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
-    var FR : Bool!
+	var frtxCharacteristic : CBCharacteristic?
+	var frrxCharacteristic : CBCharacteristic?
+	var fltxCharacteristic : CBCharacteristic?
+	var flrxCharacteristic : CBCharacteristic?
+	var crtxCharacteristic : CBCharacteristic?
+	var crrxCharacteristic : CBCharacteristic?
+	var cltxCharacteristic : CBCharacteristic?
+	var clrxCharacteristic : CBCharacteristic?
+	var lrtxCharacteristic : CBCharacteristic?
+	var lrrxCharacteristic : CBCharacteristic?
+	var lltxCharacteristic : CBCharacteristic?
+	var llrxCharacteristic : CBCharacteristic?
+	var FRPeripheral : CBPeripheral?
+	var FLPeripheral : CBPeripheral?
+	var CRPeripheral : CBPeripheral?
+	var CLPeripheral : CBPeripheral?
+	var LRPeripheral : CBPeripheral?
+	var LLPeripheral : CBPeripheral?
+	var characteristicASCIIValue = NSString()
+	var FR : Bool!
     var FL : Bool!
     var CR : Bool!
     var CL : Bool!
     var LR : Bool!
     var LL : Bool!
     var isRandom : Bool!
+	var peripheralCount = 0
     @IBOutlet var circleTime: AppusCircleTimer!
     @IBAction func stopWorkout(_ sender: Any) {
         circleTime.isActive = false
@@ -36,12 +53,10 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
         circleTime.isActive = false
         circleTime.isHidden = true
-        helloButton.isHidden = false
         workoutStartsIn.isHidden = true
     }
     
      var centralManager : CBCentralManager!
-     var peripheral: CBPeripheral!
      var peripheralManager: CBPeripheralManager?
      var RSSIs = [NSNumber]()
      var data = NSMutableData()
@@ -61,8 +76,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         centralManager = CBCentralManager(delegate: self, queue: nil)
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         updateIncomingData()
-        helloButton.isHidden = true
-        
+               
             // Do any additional setup after loading the view.
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -74,33 +88,146 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     func updateIncomingData() {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
-            
-            self.helloButton.titleLabel?.text = characteristicASCIIValue as String
-           
+                       
             
             
         }
     }
-   
-    @IBOutlet var helloButton: UIButton!
-    func outgoingData () {
-       
-        let inputText = "hello"
-
-        writeValue(data: inputText)
-        
-               
-    }
-    func writeValue(data: String){
+	
+	@IBOutlet var FRbutton: UIButton!
+	@IBAction func FR(_ sender: Any) {
+		writeValueFR(data: "Hello")
+	}
+	
+	
+	@IBOutlet var FLbutton: UIButton!
+	@IBAction func FL(_ sender: Any) {
+		writeValueFL(data: "Hello")
+	}
+	
+	
+	@IBOutlet var CRbutton: UIButton!
+	@IBAction func CR(_ sender: Any) {
+		writeValueCR(data: "Hello")
+	}
+	
+	
+	@IBOutlet var CLbutton: UIButton!
+	@IBAction func CL(_ sender: Any) {
+		writeValueCL(data: "Hello")
+	}
+	
+	
+	@IBOutlet var LLbutton: UIButton!
+	@IBAction func LL(_ sender: Any) {
+		writeValueLL(data: "Hello")
+	}
+	
+	
+	
+	@IBOutlet var LRbutton: UIButton!
+	@IBAction func LR(_ sender: Any) {
+		writeValueLR(data: "Hello")
+	}
+	
+	
+    func writeValueFR(data: String){
         let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
         //change the "data" to valueString
-        if let blePeripheral = blePeripheral{
-            if let txCharacteristic = txCharacteristic {
-                blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+        if let blePeripheral = FRPeripheral{
+            if let txCharacteristic = frtxCharacteristic {
+				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
             }
         }
     }
-    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+	func writeCharacteristicFR(val: Int8){
+		var val = val
+		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
+		FRPeripheral!.writeValue(ns as Data, for: frtxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
+	}
+	
+	
+	func writeValueFL(data: String){
+		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
+		//change the "data" to valueString
+		if let blePeripheral = FLPeripheral{
+			if let txCharacteristic = fltxCharacteristic {
+				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+			}
+		}
+	}
+	func writeCharacteristicFL(val: Int8){
+		var val = val
+		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
+		FLPeripheral!.writeValue(ns as Data, for: fltxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
+	}
+	
+	
+	func writeValueCR(data: String){
+		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
+		//change the "data" to valueString
+		if let blePeripheral = CRPeripheral{
+			if let txCharacteristic = crtxCharacteristic {
+				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+			}
+		}
+	}
+	func writeCharacteristicCR(val: Int8){
+		var val = val
+		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
+		CRPeripheral!.writeValue(ns as Data, for: crtxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
+	}
+	
+	
+	func writeValueCL(data: String){
+		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
+		//change the "data" to valueString
+		if let blePeripheral = CLPeripheral{
+			if let txCharacteristic = cltxCharacteristic {
+				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+			}
+		}
+	}
+	func writeCharacteristicCL(val: Int8){
+		var val = val
+		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
+		CLPeripheral!.writeValue(ns as Data, for: cltxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
+	}
+	
+	
+	func writeValueLL(data: String){
+		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
+		//change the "data" to valueString
+		if let blePeripheral = LLPeripheral{
+			if let txCharacteristic = lltxCharacteristic {
+				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+			}
+		}
+	}
+	func writeCharacteristicLL(val: Int8){
+		var val = val
+		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
+		LLPeripheral!.writeValue(ns as Data, for: lltxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
+	}
+	
+	
+	func writeValueLR(data: String){
+		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
+		//change the "data" to valueString
+		if let blePeripheral = LRPeripheral{
+			if let txCharacteristic = lrtxCharacteristic {
+				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+			}
+		}
+	}
+	func writeCharacteristicLR(val: Int8){
+		var val = val
+		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
+		LRPeripheral!.writeValue(ns as Data, for: lrtxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
+	}
+    
+	
+	func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
             return
         }
@@ -109,11 +236,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         print("Device subscribe to characteristic")
     }
-    func writeCharacteristic(val: Int8){
-        var val = val
-        let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
-        blePeripheral!.writeValue(ns as Data, for: txCharacteristic!, type: CBCharacteristicWriteType.withResponse)
-    }
+    
     func startScan() {
           peripherals = []
           print("Now Scanning...")
@@ -129,11 +252,36 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
            print("Number of Peripherals Found: \(peripherals.count)")
        }
     func disconnectFromDevice () {
-        if blePeripheral != nil {
+        if FRPeripheral != nil {
             // We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
             // Therefore, we will just disconnect from the peripheral
-            centralManager?.cancelPeripheralConnection(blePeripheral!)
+            centralManager?.cancelPeripheralConnection(FRPeripheral!)
         }
+		if FLPeripheral != nil {
+			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
+			// Therefore, we will just disconnect from the peripheral
+			centralManager?.cancelPeripheralConnection(FLPeripheral!)
+		}
+		if CRPeripheral != nil {
+			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
+			// Therefore, we will just disconnect from the peripheral
+			centralManager?.cancelPeripheralConnection(CRPeripheral!)
+		}
+		if CLPeripheral != nil {
+			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
+			// Therefore, we will just disconnect from the peripheral
+			centralManager?.cancelPeripheralConnection(CLPeripheral!)
+		}
+		if LRPeripheral != nil {
+			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
+			// Therefore, we will just disconnect from the peripheral
+			centralManager?.cancelPeripheralConnection(LRPeripheral!)
+		}
+		if LLPeripheral != nil {
+			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
+			// Therefore, we will just disconnect from the peripheral
+			centralManager?.cancelPeripheralConnection(LLPeripheral!)
+		}
     }
     func restoreCentralManager() {
         //Restores Central Manager delegate if something went wrong
@@ -141,33 +289,55 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-        blePeripheral = peripheral
+		if(peripheral.name == "FR"){
+			FRPeripheral = peripheral
+			FRPeripheral?.delegate = self
+			centralManager?.connect(FRPeripheral!, options: nil)
+			
+		}
+		if(peripheral.name == "FL"){
+			FLPeripheral = peripheral
+			FLPeripheral?.delegate = self
+			centralManager?.connect(FLPeripheral!, options: nil)
+		}
+		if(peripheral.name == "CR"){
+			CRPeripheral = peripheral
+			CRPeripheral?.delegate = self
+			centralManager?.connect(CRPeripheral!, options: nil)
+		}
+		if(peripheral.name == "CL"){
+			CLPeripheral = peripheral
+			CLPeripheral?.delegate = self
+			centralManager?.connect(CLPeripheral!, options: nil)
+		}
+		if(peripheral.name == "LL"){
+			LLPeripheral = peripheral
+			LLPeripheral?.delegate = self
+			centralManager?.connect(LLPeripheral!, options: nil)
+		}
+		if(peripheral.name == "LR"){
+			LRPeripheral = peripheral
+			LRPeripheral?.delegate = self
+			centralManager?.connect(LRPeripheral!, options: nil)
+		}
         self.peripherals.append(peripheral)
-        connectToDevice()
         self.RSSIs.append(RSSI)
         peripheral.delegate = self
-        if blePeripheral == nil {
-            print("Found new pheripheral devices with services")
-            print("Peripheral name: \(String(describing: peripheral.name))")
-            print("**********************************")
-            print ("Advertisement Data : \(advertisementData)")
-        }
-    }
-    func connectToDevice () {
-        centralManager?.connect(blePeripheral!, options: nil)
+		print("Peripheral name: \(String(describing: peripheral.name))")
+            
+        
     }
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("*****************************")
         print("Connection complete")
-        print("Peripheral info: \(String(describing: blePeripheral))")
-        
+		peripheralCount += 1
         //Stop Scan- We don't need to scan once we've connected to a peripheral. We got what we came for.
-        centralManager?.stopScan()
-        print("Scan Stopped")
-        
+		if peripheralCount == 6{
+			//centralManager?.stopScan()
+			print("Scan Stopped")
+		}
         //Erase data that we might have
         data.length = 0
-        self.peripheral = peripheral
         //Discovery callback
         peripheral.delegate = self
         //Only look for services that matches transmit uuid
@@ -177,9 +347,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         //Once connected, move to new view controller to manager incoming and outgoing data
         
     }
-    @IBAction func sayHello(_ sender: Any) {
-        outgoingData()
-    }
+    
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         if error != nil {
             print("Failed to connect to peripheral")
@@ -188,8 +356,23 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     }
     
     func disconnectAllConnection() {
-		if(centralManager != nil && blePeripheral != nil){
-			centralManager.cancelPeripheralConnection(blePeripheral!)
+		if(centralManager != nil && FRPeripheral != nil){
+			centralManager.cancelPeripheralConnection(FRPeripheral!)
+		}
+		if(centralManager != nil && FLPeripheral != nil){
+			centralManager.cancelPeripheralConnection(FLPeripheral!)
+		}
+		if(centralManager != nil && CRPeripheral != nil){
+			centralManager.cancelPeripheralConnection(CRPeripheral!)
+		}
+		if(centralManager != nil && CLPeripheral != nil){
+			centralManager.cancelPeripheralConnection(CLPeripheral!)
+		}
+		if(centralManager != nil && LRPeripheral != nil){
+			centralManager.cancelPeripheralConnection(LRPeripheral!)
+		}
+		if(centralManager != nil && LLPeripheral != nil){
+			centralManager.cancelPeripheralConnection(LLPeripheral!)
 		}
     }
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
@@ -230,32 +413,138 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             //looks for the right characteristic
             
             if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Rx)  {
-                rxCharacteristic = characteristic
+				if peripheral.name == "FR"{
+					frrxCharacteristic = characteristic
+					peripheral.setNotifyValue(true, for: frrxCharacteristic!)
+				}
+				if peripheral.name == "FL"{
+					flrxCharacteristic = characteristic
+					peripheral.setNotifyValue(true, for: flrxCharacteristic!)
+				}
+				if peripheral.name == "CR"{
+					crrxCharacteristic = characteristic
+					peripheral.setNotifyValue(true, for: crrxCharacteristic!)
+				}
+				if peripheral.name == "CL"{
+					clrxCharacteristic = characteristic
+					peripheral.setNotifyValue(true, for: clrxCharacteristic!)
+				}
+				if peripheral.name == "LR"{
+					lrrxCharacteristic = characteristic
+					peripheral.setNotifyValue(true, for: lrrxCharacteristic!)
+				}
+				if peripheral.name == "LL"{
+					llrxCharacteristic = characteristic
+					peripheral.setNotifyValue(true, for: llrxCharacteristic!)
+				}
+				
                 
                 //Once found, subscribe to the this particular characteristic...
-                peripheral.setNotifyValue(true, for: rxCharacteristic!)
                 // We can return after calling CBPeripheral.setNotifyValue because CBPeripheralDelegate's
                 // didUpdateNotificationStateForCharacteristic method will be called automatically
                 peripheral.readValue(for: characteristic)
                 print("Rx Characteristic: \(characteristic.uuid)")
             }
             if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Tx){
-                txCharacteristic = characteristic
+				if peripheral.name == "FR"{
+					frtxCharacteristic = characteristic
+				}
+				if peripheral.name == "FL"{
+					fltxCharacteristic = characteristic
+					
+				}
+				if peripheral.name == "CR"{
+					crtxCharacteristic = characteristic
+					
+				}
+				if peripheral.name == "CL"{
+					cltxCharacteristic = characteristic
+					
+				}
+				if peripheral.name == "LR"{
+					lrtxCharacteristic = characteristic
+					
+				}
+				if peripheral.name == "LL"{
+					lltxCharacteristic = characteristic
+					
+				}
                 print("Tx Characteristic: \(characteristic.uuid)")
             }
             peripheral.discoverDescriptors(for: characteristic)
         }
     }
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        guard characteristic == rxCharacteristic,
-            let characteristicValue = characteristic.value,
-            let ASCIIstring = NSString(data: characteristicValue,
-                                       encoding: String.Encoding.utf8.rawValue)
-            else { return }
+		if peripheral.name == "FR"{
+			guard characteristic == frrxCharacteristic,
+				let characteristicValue = characteristic.value,
+				let ASCIIstring = NSString(data: characteristicValue,
+										   encoding: String.Encoding.utf8.rawValue)
+				else { return }
+			characteristicASCIIValue = ASCIIstring
+		}
+		if peripheral.name == "FL"{
+			guard characteristic == flrxCharacteristic,
+				let characteristicValue = characteristic.value,
+				let ASCIIstring = NSString(data: characteristicValue,
+										   encoding: String.Encoding.utf8.rawValue)
+				else { return }
+			characteristicASCIIValue = ASCIIstring
+		}
+		if peripheral.name == "CR"{
+			guard characteristic == crrxCharacteristic,
+				let characteristicValue = characteristic.value,
+				let ASCIIstring = NSString(data: characteristicValue,
+										   encoding: String.Encoding.utf8.rawValue)
+				else { return }
+			characteristicASCIIValue = ASCIIstring
+		}
+		if peripheral.name == "CL"{
+			guard characteristic == clrxCharacteristic,
+				let characteristicValue = characteristic.value,
+				let ASCIIstring = NSString(data: characteristicValue,
+										   encoding: String.Encoding.utf8.rawValue)
+				else { return }
+			characteristicASCIIValue = ASCIIstring
+		}
+		if peripheral.name == "LR"{
+			guard characteristic == lrrxCharacteristic,
+				let characteristicValue = characteristic.value,
+				let ASCIIstring = NSString(data: characteristicValue,
+										   encoding: String.Encoding.utf8.rawValue)
+				else { return }
+			characteristicASCIIValue = ASCIIstring
+		}
+		if peripheral.name == "LL"{
+			guard characteristic == llrxCharacteristic,
+				let characteristicValue = characteristic.value,
+				let ASCIIstring = NSString(data: characteristicValue,
+										   encoding: String.Encoding.utf8.rawValue)
+				else { return }
+				characteristicASCIIValue = ASCIIstring
+		}
+		
         
-        characteristicASCIIValue = ASCIIstring
+        
         print("Value Recieved: \((characteristicASCIIValue as String))")
-        helloButton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == FRPeripheral{
+			FRbutton.titleLabel?.text = characteristicASCIIValue as String
+		}
+		if peripheral == FLPeripheral{
+			FLbutton.titleLabel?.text = characteristicASCIIValue as String
+		}
+		if peripheral == CRPeripheral{
+			CRbutton.titleLabel?.text = characteristicASCIIValue as String
+		}
+		if peripheral == CLPeripheral{
+			CLbutton.titleLabel?.text = characteristicASCIIValue as String
+		}
+		if peripheral == LRPeripheral{
+			LRbutton.titleLabel?.text = characteristicASCIIValue as String
+		}
+		if peripheral == LLPeripheral{
+			LLbutton.titleLabel?.text = characteristicASCIIValue as String
+		}
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
     
@@ -271,9 +560,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             
         descriptors.forEach { descript in
             print("function name: DidDiscoverDescriptorForChar \(String(describing: descript.description))")
-            print("Rx Value \(String(describing: rxCharacteristic?.value))")
-            print("Tx Value \(String(describing: txCharacteristic?.value))")
-
         }
     }
     
@@ -316,10 +602,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         print("Succeeded!")
     }
     
-    //Table View Functions
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.peripherals.count
-    }
 
     
     
