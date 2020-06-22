@@ -537,14 +537,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Next_Button-2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-8C-G5w">
-                                <rect key="frame" x="15" y="387" width="383" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="viewGoals-1"/>
-                                <connections>
-                                    <segue destination="XpF-kv-tTd" kind="show" id="XS2-yh-48Y"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start a Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-bg-nhV">
                                 <rect key="frame" x="31" y="479" width="362" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -559,6 +551,14 @@
                                 <connections>
                                     <action selector="goToSettings:" destination="H9u-zo-5jr" eventType="touchUpInside" id="6z0-A6-vD8"/>
                                     <segue destination="at1-VZ-0TC" kind="show" identifier="goToSettings" id="8Jf-cq-Xqb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-8C-G5w">
+                                <rect key="frame" x="20" y="384" width="374" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="viewGoals-1"/>
+                                <connections>
+                                    <segue destination="XpF-kv-tTd" kind="show" id="XS2-yh-48Y"/>
                                 </connections>
                             </button>
                         </subviews>
