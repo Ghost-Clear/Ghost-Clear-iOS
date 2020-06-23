@@ -528,22 +528,22 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         
         print("Value Recieved: \((characteristicASCIIValue as String))")
 		if peripheral == FRPeripheral{
-			FRbutton.titleLabel?.text = characteristicASCIIValue as String
+			//FRbutton.titleLabel?.text = characteristicASCIIValue as String
 		}
 		if peripheral == FLPeripheral{
-			FLbutton.titleLabel?.text = characteristicASCIIValue as String
+			//FLbutton.titleLabel?.text = characteristicASCIIValue as String
 		}
 		if peripheral == CRPeripheral{
-			CRbutton.titleLabel?.text = characteristicASCIIValue as String
+			//CRbutton.titleLabel?.text = characteristicASCIIValue as String
 		}
 		if peripheral == CLPeripheral{
-			CLbutton.titleLabel?.text = characteristicASCIIValue as String
+			//CLbutton.titleLabel?.text = characteristicASCIIValue as String
 		}
 		if peripheral == LRPeripheral{
-			LRbutton.titleLabel?.text = characteristicASCIIValue as String
+			//LRbutton.titleLabel?.text = characteristicASCIIValue as String
 		}
 		if peripheral == LLPeripheral{
-			LLbutton.titleLabel?.text = characteristicASCIIValue as String
+			//LLbutton.titleLabel?.text = characteristicASCIIValue as String
 		}
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
