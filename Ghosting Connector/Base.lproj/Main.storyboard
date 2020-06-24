@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNq-8a-LhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471.0144927536232" y="14.732142857142856"/>
+            <point key="canvasLocation" x="1481" y="31"/>
         </scene>
         <!--Create Singular Goal View Controller-->
         <scene sceneID="piE-bk-pCq">
@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ga-W1-jBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218.840579710145" y="14.732142857142856"/>
+            <point key="canvasLocation" x="2235" y="31"/>
         </scene>
         <!--Create Goals Table View Controller-->
         <scene sceneID="lR0-T0-p9K">
@@ -718,7 +718,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAh-FU-HWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582.608695652174" y="738.95089285714278"/>
+            <point key="canvasLocation" x="1674" y="739"/>
         </scene>
         <!--Do Timed Workout View Controller-->
         <scene sceneID="dhf-Z0-qEF">
