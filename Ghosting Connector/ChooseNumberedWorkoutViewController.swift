@@ -1,5 +1,5 @@
 //
-//  ChooseTimedWorkoutPatternViewController.swift
+//  ChooseNumberedWorkoutViewController.swift
 //  Ghosting Connector
 //
 //  Created by Varun Chitturi on 6/24/20.
@@ -8,27 +8,23 @@
 
 import UIKit
 
-class ChooseTimedWorkoutPatternViewController: UIViewController {
+class ChooseNumberedWorkoutViewController: UIViewController {
 	var isFL = true
 	var isFR = true
-	var isCR = true
 	var isCL = true
-	var isLL = true
+	var isCR = true
 	var isLR = true
-	var numSets : Int!
+	var isLL = true
 	var isRandomized = true
-	var offMinutes: Int!
-	var onMinutes : Int!
-	var offSeconds : Int!
-	var onSeconds : Int!
+	var minutesOff : Int!
+	var secondsOff : Int!
+	var numSets: Int!
+	var numGhosts : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-	@IBAction func goBack(_ sender: Any) {
-		self.navigationController?.popViewController(animated: true)
-	}
 	@IBOutlet var frontLeft: UIButton!
 	@IBAction func FL(_ sender: Any) {
 		if isFL{
@@ -63,9 +59,7 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			centerLeft.setImage(UIImage(named: "Ellipse 15"), for: .normal)
 		}
 	}
-	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		view.endEditing(true)
-	}
+	
 	@IBOutlet var lowerLeft: UIButton!
 	@IBOutlet var centerLeft: UIButton!
 	@IBAction func LL(_ sender: Any) {
@@ -106,34 +100,18 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			lowerRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
 		}
 	}
-	
 
-
-    
+	@IBAction func goBack(_ sender: Any) {
+		self.navigationController?.popViewController(animated: true)
+	}
+	/*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		if segue.identifier == "startWorkout" {
-			if let childVC = segue.destination as? DoTimedWorkoutViewController {
-				//Some property on ChildVC that needs to be set
-				childVC.numSets = numSets
-				childVC.numMinutesOn = onMinutes
-				childVC.numMinutesOff = offMinutes
-				childVC.isRandom = isRandomized
-				childVC.numSecondsOff = offSeconds
-				childVC.numSecondsOn = onSeconds
-				childVC.FR = isFR
-				childVC.FL = isFL
-				childVC.CR = isCR
-				childVC.CL = isCL
-				childVC.LR = isLR
-				childVC.LL = isLL
-			}
-		}
     }
-    
+    */
 
 }
