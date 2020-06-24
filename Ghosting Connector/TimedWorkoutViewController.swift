@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreBluetooth
-class TimedWorkoutViewController: UIViewController {
+class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = false
        var isFR = true
        var isFL = true
@@ -23,8 +23,58 @@ class TimedWorkoutViewController: UIViewController {
          randomizeButton.isHidden = false
          print(isRandomized)
      }
-     
-    @IBAction func startWorkout(_ sender: Any) {
+	@IBAction func setFieldSelected(_ sender: Any) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+		setsField.text = ""
+	}
+	
+	@IBAction func minutesFieldSelected(_ sender: Any) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+		minutesField.text = ""
+	}
+	
+	@IBAction func secondFieldSelected(_ sender: Any) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+		secondsField.text = ""
+	}
+	
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+	}
+   
+	@IBAction func startWorkout(_ sender: Any) {
 		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0"){
         performSegue(withIdentifier: "doTimedWorkoutSegue", sender: nil)
         }
@@ -57,9 +107,20 @@ class TimedWorkoutViewController: UIViewController {
          super.viewDidLoad()
          blankRandomize.isHidden = true
         frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
          // Do any additional setup after loading the view.
      }
-
+	@objc func keyboardWillHide(notification: NSNotification) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+	}
      @IBOutlet var frontLeft: UIButton!
      @IBAction func FL(_ sender: Any) {
          if isFL{
