@@ -46,11 +46,11 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
         }
         if goalsFromCoreData[indexPath.row].seconds == 1{
             cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
-                       cellText = cellText + " second"
+                       cellText = cellText + " second per set"
         }
         else{
             cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
-            cellText = cellText + " seconds"
+            cellText = cellText + " seconds per set"
         }
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = cellText
