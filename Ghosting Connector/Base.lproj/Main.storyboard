@@ -819,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80k-SJ-VpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652.1739130434785" y="1427.6785714285713"/>
+            <point key="canvasLocation" x="-1614" y="1428"/>
         </scene>
         <!--Timed Workout View Controller-->
         <scene sceneID="Mo6-4D-3ut">
