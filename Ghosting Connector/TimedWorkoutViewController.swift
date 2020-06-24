@@ -25,11 +25,11 @@ class TimedWorkoutViewController: UIViewController {
      }
      
     @IBAction func startWorkout(_ sender: Any) {
-        if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && minutesField.text! != nil && secondsField.text! != nil){
+		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0"){
         performSegue(withIdentifier: "doTimedWorkoutSegue", sender: nil)
         }
         else{
-            let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59.", preferredStyle: UIAlertController.Style.alert)
+            let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
               let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                   alertVC.dismiss(animated: true, completion: nil)
                   //add segue
@@ -51,7 +51,8 @@ class TimedWorkoutViewController: UIViewController {
      }
     @IBOutlet var secondsField: UITextField!
     @IBOutlet var minutesField: UITextField!
- 
+	@IBOutlet weak var setsField: UITextField!
+	
          override func viewDidLoad() {
          super.viewDidLoad()
          blankRandomize.isHidden = true
@@ -154,6 +155,9 @@ class TimedWorkoutViewController: UIViewController {
             childVC.CL = isCL
             childVC.LL = isLL
             childVC.LR = isLR
+			childVC.numSets = (setsField.text! as NSString).integerValue
+			childVC.numMinutes = (minutesField.text! as NSString).integerValue
+			childVC.numSeconds = (secondsField.text! as NSString).integerValue
             childVC.isRandom = isRandomized
           }
         }

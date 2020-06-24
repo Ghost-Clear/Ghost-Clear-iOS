@@ -17,8 +17,10 @@ class NumberedWorkoutViewController: UIViewController {
     var isLR = true
     var isLL = true
     
-   
-    @IBOutlet var blankRandomize: UIButton!
+	@IBOutlet weak var setsField: UITextField!
+	@IBOutlet weak var ghostsField: UITextField!
+	
+	@IBOutlet var blankRandomize: UIButton!
     @IBAction func unRandomize(_ sender: Any) {
         isRandomized = true
         blankRandomize.isHidden = true

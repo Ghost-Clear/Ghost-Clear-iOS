@@ -6,6 +6,7 @@
         <attribute name="minutes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="seconds" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sets" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="IsFirstLaunch" representedClassName="IsFirstLaunch" syncable="YES" codeGenerationType="class">
         <attribute name="bool" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -19,11 +20,12 @@
         <attribute name="minutes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="seconds" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sets" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Goal" positionX="-54" positionY="0" width="128" height="118"/>
+        <element name="Goal" positionX="-54" positionY="0" width="128" height="133"/>
         <element name="IsFirstLaunch" positionX="-63" positionY="-18" width="128" height="58"/>
         <element name="Name" positionX="-36" positionY="36" width="128" height="58"/>
-        <element name="Workout" positionX="-45" positionY="27" width="128" height="118"/>
+        <element name="Workout" positionX="-45" positionY="27" width="128" height="133"/>
     </elements>
 </model>

@@ -21,8 +21,15 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newGoal", for: indexPath)
         var cellText: String
-        cellText = "    "
-        cellText = cellText + String(goalsFromCoreData[indexPath.row].ghosts)
+        cellText = "   "
+        cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
+		if goalsFromCoreData[indexPath.row].sets == 1{
+			cellText = cellText + " set of "
+		}
+		else{
+			cellText = cellText + " sets of "
+		}
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].ghosts)
         if goalsFromCoreData[indexPath.row].ghosts == 1{
              cellText = cellText + " ghost in "
         }

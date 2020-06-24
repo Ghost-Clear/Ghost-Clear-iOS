@@ -38,6 +38,9 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     var LR : Bool!
     var LL : Bool!
     var isRandom : Bool!
+	var numSets : Int!
+	var numMinutes : Int!
+	var numSeconds : Int!
 	var peripheralCount = 0
     @IBOutlet var circleTime: AppusCircleTimer!
     @IBAction func stopWorkout(_ sender: Any) {
@@ -627,7 +630,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         } else {
             //If Bluetooth is off, display a UI alert message saying "Bluetooth is not enable" and "Make sure that your bluetooth is turned on"
             
-            if central.state == CBManagerState.poweredOn {
+			if central.state == CBManagerState.poweredOn && FRPeripheral != nil && FLPeripheral != nil && CRPeripheral != nil && CLPeripheral != nil && FRPeripheral != nil && FLPeripheral != nil {
             // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
                 print("Bluetooth Enabled")
                 workoutStartsIn.isHidden = false
@@ -642,7 +645,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             else{
                 print("Bluetooth Disabled- Make sure your Bluetooth is turned on")
                 
-                let alertVC = UIAlertController(title: "Bluetooth is not enabled", message: "Make sure that your bluetooth is turned on before starting the workout.", preferredStyle: UIAlertController.Style.alert)
+                let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
                 let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                     self.dismiss(animated: true, completion: nil)
                     //add segue
