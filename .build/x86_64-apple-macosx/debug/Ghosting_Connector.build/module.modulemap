@@ -1,4 +1,0 @@
-module Ghosting_Connector {
-    header "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/.build/x86_64-apple-macosx/debug/Ghosting_Connector.build/Ghosting Connector-Swift.h"
-    requires objc
-}

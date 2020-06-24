@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "7fb162fee11b22081d1b675feee2c9e1"
-build_time: [1592982790, 68110000]
-inputs:
-  "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Sources/Ghosting Connector/Ghosting_Connector.swift": [1592982765, 52631728]
