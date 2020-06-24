@@ -1,0 +1,20 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Ghosting_Connector"
+provides-nominal:
+- "18Ghosting_ConnectorAAV"
+provides-member:
+- ["18Ghosting_ConnectorAAV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Ghosting_Connector"
+- "StringLiteralType"
+depends-member:
+- ["18Ghosting_ConnectorAAV", "init"]
+- ["18Ghosting_ConnectorAAV", "text"]
+depends-nominal:
+- "18Ghosting_ConnectorAAV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/.build/x86_64-apple-macosx/debug/Ghosting_Connector.build/module.modulemap"
+interface-hash: "1b20e7ed36af4682b0bd781a9b9cb4cf"
