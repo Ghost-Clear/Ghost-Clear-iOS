@@ -21,7 +21,7 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newGoal", for: indexPath)
         var cellText: String
-        cellText = "  "
+        cellText = "   "
         cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
 		if goalsFromCoreData[indexPath.row].sets == 1{
 			cellText = cellText + " set of "
@@ -54,7 +54,6 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
         }
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = cellText
-		cell.textLabel?.font = UIFont(name: "Helvetica", size: 15.0)
         // Configure the cell...
        
         
