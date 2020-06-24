@@ -38,7 +38,14 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
             cell.back.image = UIImage(named: "redRectangle")
         }
         var cellText: String
-        cellText = "    "
+		cellText = "  "
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
+		if goalsFromCoreData[indexPath.row].sets == 1{
+			cellText = cellText + " set of "
+		}
+		else{
+			cellText = cellText + " sets of "
+		}
         cellText = cellText + String(goalsFromCoreData[indexPath.row].ghosts)
         if goalsFromCoreData[indexPath.row].ghosts == 1{
              cellText = cellText + " ghost in "
@@ -64,6 +71,7 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
         }
         //cell.textLabel?.textColor = UIColor.white
         cell.des?.text = cellText
+		cell.des?.font = UIFont(name: "Helvetica", size: 15.0)
         //cell.textLabel?.layer.cornerRadius = 15.0
         //cell.textLabel?.clipsToBounds = true
         // Configure the cell...

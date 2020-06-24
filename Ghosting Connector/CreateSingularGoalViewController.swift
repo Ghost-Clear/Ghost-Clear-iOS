@@ -32,6 +32,81 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
 		}
 		
     }
+	@IBAction func setFieldSelected(_ sender: Any) {
+		if numGhostsField.text == ""{
+			numGhostsField.text = "0"
+		}
+		if numMinutesField.text == ""{
+			numMinutesField.text = "0"
+		}
+		if numSecondsField.text == ""{
+			numSecondsField.text = "0"
+		}
+		if numSetsField.text == ""{
+			numSetsField.text = "0"
+		}
+		numSetsField.text = ""
+	}
+	@IBAction func ghostFieldSelected(_ sender: Any) {
+		if numGhostsField.text == ""{
+			numGhostsField.text = "0"
+		}
+		if numMinutesField.text == ""{
+			numMinutesField.text = "0"
+		}
+		if numSecondsField.text == ""{
+			numSecondsField.text = "0"
+		}
+		if numSetsField.text == ""{
+			numSetsField.text = "0"
+		}
+		numGhostsField.text = ""
+	}
+	@IBAction func minuteFieldSelected(_ sender: Any) {
+		if numGhostsField.text == ""{
+			numGhostsField.text = "0"
+		}
+		if numMinutesField.text == ""{
+			numMinutesField.text = "0"
+		}
+		if numSecondsField.text == ""{
+			numSecondsField.text = "0"
+		}
+		if numSetsField.text == ""{
+			numSetsField.text = "0"
+		}
+		numMinutesField.text = ""
+	}
+	
+	@IBAction func secondFieldSelected(_ sender: Any) {
+		if numGhostsField.text == ""{
+			numGhostsField.text = "0"
+		}
+		if numMinutesField.text == ""{
+			numMinutesField.text = "0"
+		}
+		if numSecondsField.text == ""{
+			numSecondsField.text = "0"
+		}
+		if numSetsField.text == ""{
+			numSetsField.text = "0"
+		}
+		numSecondsField.text = ""
+	}
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		if numGhostsField.text == ""{
+			numGhostsField.text = "0"
+		}
+		if numMinutesField.text == ""{
+			numMinutesField.text = "0"
+		}
+		if numSecondsField.text == ""{
+			numSecondsField.text = "0"
+		}
+		if numSetsField.text == ""{
+			numSetsField.text = "0"
+		}
+	}
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
@@ -50,7 +125,7 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= (keyboardSize.height - 20)
+                self.view.frame.origin.y -= (keyboardSize.height - 124)
             }
         }
     }

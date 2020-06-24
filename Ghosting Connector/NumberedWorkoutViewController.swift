@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreBluetooth
-class NumberedWorkoutViewController: UIViewController {
+class NumberedWorkoutViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = false
     var isFR = true
     var isFL = true
@@ -28,7 +28,34 @@ class NumberedWorkoutViewController: UIViewController {
         print(isRandomized)
     }
     
-    @IBOutlet var randomizeButton: UIButton!
+	@IBAction func setFieldSelected(_ sender: Any) {
+		if ghostsField.text == ""{
+			ghostsField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		setsField.text = ""
+	}
+	
+	@IBAction func ghostFieldSelected(_ sender: Any) {
+		if ghostsField.text == ""{
+			ghostsField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		ghostsField.text = ""
+	}
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		if ghostsField.text == ""{
+			ghostsField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+	}
+	@IBOutlet var randomizeButton: UIButton!
     @IBAction func randomize(_ sender: Any) {
         isRandomized = false
         blankRandomize.isHidden = false
@@ -44,11 +71,18 @@ class NumberedWorkoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         blankRandomize.isHidden = true
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
         // Do any additional setup after loading the view.
     }
-
+	@objc func keyboardWillHide(notification: NSNotification) {
+		if ghostsField.text == ""{
+			ghostsField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+	}
     @IBOutlet var frontLeft: UIButton!
     @IBAction func FL(_ sender: Any) {
         if isFL{
