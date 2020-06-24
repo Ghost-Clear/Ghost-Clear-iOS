@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild clean -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector xcodebuild build -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector
+      run: xcodebuild clean -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector && xcodebuild build -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector
