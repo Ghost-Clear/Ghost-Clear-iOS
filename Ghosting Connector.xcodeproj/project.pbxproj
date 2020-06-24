@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18EF3D3FB18D11648B493DE5 /* Pods_Ghosting_Connector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E398A55B3A6E0FCB4ADC1480 /* Pods_Ghosting_Connector.framework */; };
+		27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27003E3224A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift */; };
 		27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F782498B29C0043D52C /* SettingsViewController.swift */; };
 		27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F7E2498C3740043D52C /* ChangeNameViewController.swift */; };
 		27251F812498C7DC0043D52C /* HowToConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F802498C7DC0043D52C /* HowToConnectViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27003E3224A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTimedWorkoutPatternViewController.swift; sourceTree = "<group>"; };
 		27251F782498B29C0043D52C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		27251F7E2498C3740043D52C /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 		27251F802498C7DC0043D52C /* HowToConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToConnectViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */,
 				27D097D92490E57A0073C797 /* NumberedWorkoutViewController.swift */,
 				27D097DB249181330073C797 /* TimedWorkoutViewController.swift */,
+				27003E3224A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift */,
 				27D097D3249043290073C797 /* MainViewGoalsViewController.swift */,
 				27D097D524909CDF0073C797 /* AddGoalViewController.swift */,
 				27DCEFFC248F57C300309DD4 /* CreateSingularGoalViewController.swift */,
@@ -258,6 +261,7 @@
 				27DCEFFB248EE7BF00309DD4 /* CreateGoalsTableViewController.swift in Sources */,
 				27D097D4249043290073C797 /* MainViewGoalsViewController.swift in Sources */,
 				2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */,
+				27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */,
 				27DCEFFD248F57C300309DD4 /* CreateSingularGoalViewController.swift in Sources */,
 				27DCEFF5248EC2F300309DD4 /* InitialLoginViewController.swift in Sources */,
 				272BBF8824937C3400529213 /* DoTimedWorkoutViewController.swift in Sources */,

@@ -10,12 +10,6 @@ import UIKit
 import CoreBluetooth
 class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = false
-       var isFR = true
-       var isFL = true
-       var isCR = true
-       var isCL = true
-       var isLR = true
-       var isLL = true
      @IBOutlet var blankRandomize: UIButton!
      @IBAction func unRandomize(_ sender: Any) {
          isRandomized = true
@@ -33,6 +27,12 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if secondsField.text == ""{
 			secondsField.text = "0"
 		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
+		}
 		setsField.text = ""
 	}
 	
@@ -45,6 +45,12 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		}
 		if secondsField.text == ""{
 			secondsField.text = "0"
+		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
 		}
 		minutesField.text = ""
 	}
@@ -59,6 +65,12 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if secondsField.text == ""{
 			secondsField.text = "0"
 		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
+		}
 		secondsField.text = ""
 	}
 	
@@ -72,11 +84,53 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if secondsField.text == ""{
 			secondsField.text = "0"
 		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
+		}
 	}
-   
-	@IBAction func startWorkout(_ sender: Any) {
-		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0"){
-        performSegue(withIdentifier: "doTimedWorkoutSegue", sender: nil)
+	@IBAction func minutesOffFieldSelected(_ sender: Any) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
+		}
+		minutesOffField.text = ""
+	}
+	
+	@IBAction func secondsOffFieldSelected(_ sender: Any) {
+		if minutesField.text == ""{
+			minutesField.text = "0"
+		}
+		if setsField.text == ""{
+			setsField.text = "0"
+		}
+		if secondsField.text == ""{
+			secondsField.text = "0"
+		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
+		}
+		secondsOffField.text = ""
+	}
+	@IBAction func choosePattern(_ sender: Any) {
+		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0" && minutesOffField.text != "" && secondsOffField.text != ""  && ((secondsOffField.text! as NSString).integerValue) < 60 && ((secondsOffField.text! as NSString).integerValue) >= 0 && ((minutesOffField.text! as NSString).integerValue) < 60 && ((minutesOffField.text! as NSString).integerValue) >= 0){
+			performSegue(withIdentifier: "chooseTimedPattern", sender: nil)
         }
         else{
             let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
@@ -102,15 +156,28 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var secondsField: UITextField!
     @IBOutlet var minutesField: UITextField!
 	@IBOutlet weak var setsField: UITextField!
+	@IBOutlet weak var minutesOffField: UITextField!
+	@IBOutlet weak var secondsOffField: UITextField!
+	
 	
          override func viewDidLoad() {
          super.viewDidLoad()
          blankRandomize.isHidden = true
-        frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
+			NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
          // Do any additional setup after loading the view.
      }
+	@objc func keyboardWillShow(notification: NSNotification) {
+		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+			if self.view.frame.origin.y == 0 {
+				self.view.frame.origin.y -= (keyboardSize.height - 150)
+			}
+		}
+	}
 	@objc func keyboardWillHide(notification: NSNotification) {
+		if self.view.frame.origin.y != 0 {
+			self.view.frame.origin.y = 0
+		}
 		if minutesField.text == ""{
 			minutesField.text = "0"
 		}
@@ -120,86 +187,17 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if secondsField.text == ""{
 			secondsField.text = "0"
 		}
+		if secondsOffField.text == ""{
+			secondsOffField.text = "0"
+		}
+		if minutesOffField.text == ""{
+			minutesOffField.text = "0"
+		}
+		
 	}
-     @IBOutlet var frontLeft: UIButton!
-     @IBAction func FL(_ sender: Any) {
-         if isFL{
-                frontLeft.setImage(nil, for: .normal)
-                isFL = false
-                }
-                else{
-                    isFL = true
-                    frontLeft.setImage(UIImage(named: "Ellipse 15"), for: .normal)
-                }
-     }
-     @IBOutlet var frontRight: UIButton!
-     
-     @IBAction func FR(_ sender: Any) {
-         if isFR{
-         frontRight.setImage(nil, for: .normal)
-         isFR = false
-         }
-         else{
-             isFR = true
-             frontRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
-         }
-     }
-     
-     @IBAction func CL(_ sender: Any) {
-         if isCL{
-         centerLeft.setImage(nil, for: .normal)
-         isCL = false
-         }
-         else{
-             isCL = true
-             centerLeft.setImage(UIImage(named: "Ellipse 15"), for: .normal)
-         }
-     }
-     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-         view.endEditing(true)
-     }
-     @IBOutlet var lowerLeft: UIButton!
-     @IBOutlet var centerLeft: UIButton!
-     @IBAction func LL(_ sender: Any) {
-         if isLL{
-                lowerLeft.setImage(nil, for: .normal)
-                isLL = false
-                }
-                else{
-                    isLL = true
-                    lowerLeft.setImage(UIImage(named: "Ellipse 15"), for: .normal)
-                }
-     }
-     
-     
-     @IBOutlet var centerRight: UIButton!
-     @IBAction func CR(_ sender: Any) {
-         if isCR{
-                      centerRight.setImage(nil, for: .normal)
-                      isCR = false
-                      }
-                      else{
-                          isCR = true
-                          centerRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
-                      }
-     }
-     
-    
-     
-     
-     @IBOutlet var lowerRight: UIButton!
-     @IBAction func LR(_ sender: Any) {
-         if isLR{
-                      lowerRight.setImage(nil, for: .normal)
-                      isLR = false
-                      }
-                      else{
-                          isLR = true
-                          lowerRight.setImage(UIImage(named: "Ellipse 15"), for: .normal)
-                      }
-     }
-     
-
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		view.endEditing(true)
+	}
     
     // MARK: - Navigation
 
@@ -207,19 +205,15 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "doTimedWorkoutSegue" {
-          if let childVC = segue.destination as? DoTimedWorkoutViewController {
+        if segue.identifier == "chooseTimedPattern" {
+          if let childVC = segue.destination as? ChooseTimedWorkoutPatternViewController {
             //Some property on ChildVC that needs to be set
-            childVC.FR = isFR
-            childVC.FL = isFL
-            childVC.CR = isCR
-            childVC.CL = isCL
-            childVC.LL = isLL
-            childVC.LR = isLR
 			childVC.numSets = (setsField.text! as NSString).integerValue
-			childVC.numMinutes = (minutesField.text! as NSString).integerValue
-			childVC.numSeconds = (secondsField.text! as NSString).integerValue
-            childVC.isRandom = isRandomized
+			childVC.onMinutes = (minutesField.text! as NSString).integerValue
+			childVC.offMinutes = (secondsField.text! as NSString).integerValue
+            childVC.isRandomized = isRandomized
+			childVC.offMinutes = (minutesOffField.text! as NSString).integerValue
+			childVC.offSeconds = (secondsOffField.text! as NSString).integerValue
           }
         }
         

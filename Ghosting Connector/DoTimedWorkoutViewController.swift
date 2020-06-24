@@ -39,17 +39,28 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     var LL : Bool!
     var isRandom : Bool!
 	var numSets : Int!
-	var numMinutes : Int!
-	var numSeconds : Int!
+	var numMinutesOn : Int!
+	var numSecondsOn : Int!
+	var numMinutesOff : Int!
+	var numSecondsOff : Int!
 	var peripheralCount = 0
     @IBOutlet var circleTime: AppusCircleTimer!
-    @IBAction func stopWorkout(_ sender: Any) {
+	func popBack(_ nb: Int) {
+		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
+			guard viewControllers.count < nb else {
+				self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
+				return
+			}
+		}
+	}
+	@IBAction func stopWorkout(_ sender: Any) {
         circleTime.isActive = false
         circleTime.isHidden = true
         circleTime.stop()
         centralManager.stopScan()
         disconnectAllConnection()
-        self.navigationController?.popViewController(animated: true)
+        popBack(3)
+		
     }
     @IBOutlet var workoutStartsIn: UILabel!
     
