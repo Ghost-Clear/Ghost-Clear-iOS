@@ -78,7 +78,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="honorifix-prefix"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="honorifix-prefix"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="ZgG-Zp-MTk">
                                 <rect key="frame" x="106" y="417" width="308" height="128"/>
@@ -165,6 +165,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Goal Button"/>
                                 <connections>
+                                    <action selector="FinishCreatingGoals:" destination="dJi-iQ-vOz" eventType="touchUpInside" id="ebz-hj-wkR"/>
                                     <segue destination="H9u-zo-5jr" kind="show" id="sEJ-BF-7bl"/>
                                 </connections>
                             </button>
@@ -332,7 +333,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowRect" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-TG-XhU">
-                                            <rect key="frame" x="-39" y="5" width="492" height="74"/>
+                                            <rect key="frame" x="16" y="1" width="382" height="78"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -349,7 +350,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxp-YX-0sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-471"/>
+            <point key="canvasLocation" x="1469.5652173913045" y="-471.42857142857139"/>
         </scene>
         <!--Numbered Workout View Controller-->
         <scene sceneID="7wh-8q-o6Z">

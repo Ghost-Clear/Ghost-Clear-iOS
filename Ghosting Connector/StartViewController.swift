@@ -21,11 +21,6 @@ class StartViewController: UIViewController {
         if(someEntityExists(id: true)){
            let seconds = 1.0
             DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-                    let firstLaunch = IsFirstLaunch(context: context)
-                    firstLaunch.bool = true
-                }
-                    (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
                 self.performSegue(withIdentifier: "goToLogin", sender: nil)
             }
             

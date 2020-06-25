@@ -55,13 +55,21 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
         }
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = cellText
-		cell.textLabel?.font = UIFont(name: "Helvetica", size: 15.0)
+		cell.textLabel?.font = UIFont(name: "Helvetica", size: 13.5)
+		cell.textLabel?.textAlignment = NSTextAlignment.center
         // Configure the cell...
        
         
        
         return cell
     }
+	@IBAction func FinishCreatingGoals(_ sender: Any) {
+		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+			let firstLaunch = IsFirstLaunch(context: context)
+			firstLaunch.bool = true
+		}
+		(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+	}
 	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
 			self.count -= 1
