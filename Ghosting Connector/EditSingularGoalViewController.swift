@@ -15,6 +15,10 @@ class EditSingularGoalViewController: UIViewController {
 		super.viewDidLoad()
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+		numGhostsField.text = String(editingGoal.ghosts)
+		numSecondsField.text = String(editingGoal.seconds)
+		numMinutesField.text = String(editingGoal.minutes)
+		numSetsField.text = String(editingGoal.sets)
 		// Do any additional setup after loading the view.
 	}
 	@objc func keyboardWillShow(notification: NSNotification) {
