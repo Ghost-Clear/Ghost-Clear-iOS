@@ -11,6 +11,7 @@ import CoreBluetooth
 class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    var goalsFromCoreData = [Goal]()
     var count = 0
+	var toEdit : Goal!
     var childView: CreateGoalsTableViewController? = nil
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -61,33 +62,45 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
        
         return cell
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-          if editingStyle == .delete {
-             count -= 1
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-            let new = self.goalsFromCoreData[indexPath.row]
-            self.goalsFromCoreData.remove(at: indexPath.row)
-                             context.delete(new)
-                             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-                self.getGoals()
-                             
-                         }
-          } else if editingStyle == .insert {
-              // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-          }
-      }
-      
+	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+			self.count -= 1
+			tableView.deleteRows(at: [indexPath], with: .fade)
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				let new = self.goalsFromCoreData[indexPath.row]
+				self.goalsFromCoreData.remove(at: indexPath.row)
+				context.delete(new)
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+				self.getGoals()
+				
+			}
+		}
+			
+			
+		)
+		let editAction = UIContextualAction(style: .normal, title: "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+			//do segue here
+			self.toEdit =  self.goalsFromCoreData[indexPath.row]
+			self.performSegue(withIdentifier: "editSingularGoal", sender: nil)
+			
+			
+		})
+		editAction.backgroundColor = UIColor(red: 255/256, green: 197/256, blue: 66/256, alpha: 1)
+		return UISwipeActionsConfiguration(actions: [deleteAction,editAction])
+	}
 
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     
+	
+	
+	
+	
+	
+	
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var cellHeight:CGFloat = CGFloat()
         cellHeight = 80
         return cellHeight
-    }
-    
-    @IBAction func Addgoal(_ sender: Any) {
-        
-        
     }
     func getGoals(){
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -135,6 +148,13 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
             childVC.mainSetGoalsView = self
           }
         }
+		if segue.identifier == "editSingularGoal" {
+			if let childVC = segue.destination as? EditSingularGoalViewController {
+				//Some property on ChildVC that needs to be set
+				childVC.editingGoal = toEdit
+				childVC.parentView = self
+			}
+		}
         
     }
     

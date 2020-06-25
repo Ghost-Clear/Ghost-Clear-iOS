@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Edit Goal _.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "Base.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

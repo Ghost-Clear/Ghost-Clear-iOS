@@ -14,7 +14,8 @@ class GoalView: UITableViewCell{
 }
 class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var goalsFromCoreData = [Goal]()
-     var count = 0
+	var count = 0
+	var toEdit : Goal!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "viewGoal", for: indexPath) as!  GoalView
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -69,12 +70,8 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
             cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
             cellText = cellText + " seconds per set"
         }
-        //cell.textLabel?.textColor = UIColor.white
         cell.des?.text = cellText
-		cell.des?.font = UIFont(name: "Helvetica", size: 15.0)
-        //cell.textLabel?.layer.cornerRadius = 15.0
-        //cell.textLabel?.clipsToBounds = true
-        // Configure the cell...
+		cell.des?.font = UIFont(name: "Helvetica", size: 13.5)
         
         return cell
     }
@@ -134,7 +131,32 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
           }
 
     }
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+			self.count -= 1
+			tableView.deleteRows(at: [indexPath], with: .fade)
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				let new = self.goalsFromCoreData[indexPath.row]
+				self.goalsFromCoreData.remove(at: indexPath.row)
+				context.delete(new)
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+				self.getGoals()
+				
+			}
+		}
+			
+			
+		)
+		let editAction = UIContextualAction(style: .normal, title: "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+			//do segue here
+			self.toEdit =  self.goalsFromCoreData[indexPath.row]
+			self.performSegue(withIdentifier: "editGoalSegue", sender: nil)
+			
+			
+		})
+		editAction.backgroundColor = UIColor(red: 255/256, green: 197/256, blue: 66/256, alpha: 1)
+		return UISwipeActionsConfiguration(actions: [deleteAction,editAction])
+	}
     
     // MARK: - Navigation
 
@@ -151,12 +173,19 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
             childView = childVC
           }
         }
-            if segue.identifier == "addSingular" {
-              if let childVC = segue.destination as? AddGoalViewController {
-                //Some property on ChildVC that needs to be set
-                childVC.mainSetGoalsView = self
-              }
-            }
+		if segue.identifier == "addSingular" {
+		  if let childVC = segue.destination as? AddGoalViewController {
+			//Some property on ChildVC that needs to be set
+			childVC.mainSetGoalsView = self
+		  }
+		}
+		if segue.identifier == "editGoalSegue" {
+			if let childVC = segue.destination as? EditGoalViewController {
+				//Some property on ChildVC that needs to be set
+				childVC.editingGoal = toEdit
+				childVC.parentView = self
+			}
+		}
     }
     
 
