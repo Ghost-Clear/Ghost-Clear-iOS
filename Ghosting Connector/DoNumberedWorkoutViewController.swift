@@ -44,6 +44,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var numMinutesOff : Int!
 	var numSecondsOff : Int!
 	var peripheralCount = 0
+	var checkTimer : Timer!
 	@IBOutlet var circleTime: AppusCircleTimer!
 	func popBack(_ nb: Int) {
 		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
@@ -90,7 +91,18 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		centralManager = CBCentralManager(delegate: self, queue: nil)
 		peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
 		updateIncomingData()
-		
+		checkTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { timer in
+			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
+				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
+				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+					self.dismiss(animated: true, completion: nil)
+					//add segue
+					self.popBack(3)
+				})
+				alertVC.addAction(action)
+				self.present(alertVC, animated: true, completion: nil)
+			}
+		})
 		// Do any additional setup after loading the view.
 	}
 	override func viewWillDisappear(_ animated: Bool) {
