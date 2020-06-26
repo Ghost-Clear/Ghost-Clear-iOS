@@ -1,4 +1,4 @@
-name: Master Deploy
+name: Build
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
 
 jobs:
 
-  
+
   test-workspace:
-    
+
     runs-on: macos-latest
     strategy:
       matrix:
@@ -21,7 +21,7 @@ jobs:
             action: build
             skip-testing:  true
             use-xcpretty: true
-        
+
     steps:
       - run: sudo xcode-select -s /Applications/Xcode_11.4.app/Contents/Developer
       - uses: actions/checkout@v2
@@ -33,6 +33,3 @@ jobs:
           skip-testing: ${{matrix.skip-testing}}
           action: ${{matrix.action}}
           use-xcpretty: ${{matrix.use-xcpretty}}
-      
-
-  
