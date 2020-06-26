@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class HowToConnectViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -18,7 +18,24 @@ class HowToConnectViewController: UIViewController {
     
 	//TODO: implement this
     @IBAction func refresh(_ sender: Any) {
+		resetAllRecords(in: "BLEkey");
     }
+	func resetAllRecords(in entity : String) // entity = Your_Entity_Name
+	{
+		
+		let context = ( UIApplication.shared.delegate as! AppDelegate ).persistentContainer.viewContext
+		let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+		let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+		do
+		{
+			try context.execute(deleteRequest)
+			try context.save()
+		}
+		catch
+		{
+			print ("There was an error")
+		}
+	}
     /*
     // MARK: - Navigation
 

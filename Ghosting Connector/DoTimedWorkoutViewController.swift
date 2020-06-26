@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 import Foundation
 import AppusCircleTimer
-
+import CoreData
 class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
 	var frtxCharacteristic : CBCharacteristic?
 	var frrxCharacteristic : CBCharacteristic?
@@ -45,6 +45,13 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var numSecondsOff : Int!
 	var peripheralCount = 0
 	var checkTimer : Timer!
+	var isFirstPair : Bool!
+	var FRname : String!
+	var FLname : String!
+	var CRname : String!
+	var CLname : String!
+	var LRname : String!
+	var LLname : String!
     @IBOutlet var circleTime: AppusCircleTimer!
 	func popBack(_ nb: Int) {
 		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
@@ -91,13 +98,49 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         centralManager = CBCentralManager(delegate: self, queue: nil)
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         updateIncomingData()
+		if allPeripeheralsExist(id: true){
+			isFirstPair = false
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				if let keysFromCore = try? context.fetch(BLEkey.fetchRequest()){
+					let keyfromcore = keysFromCore as! [BLEkey]
+					for key in keyfromcore {
+						if key.name == "FR"{
+							FRname = key.key
+						}
+						if key.name == "FL"{
+							FLname = key.key
+						}
+						if key.name == "CR"{
+							CRname = key.key
+						}
+						if key.name == "CL"{
+							CLname = key.key
+						}
+						if key.name == "LR"{
+							LRname = key.key
+						}
+						if key.name == "LL"{
+							LLname = key.key
+						}
+						
+					}
+				}
+				
+			}
+		}
+		else{
+			isFirstPair = true
+			
+		}
 		checkTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
 					//add segue
+					self.disconnectFromDevice()
 					self.popBack(3)
+					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
 				self.present(alertVC, animated: true, completion: nil)
@@ -105,7 +148,26 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		})
 		// Do any additional setup after loading the view.
     }
-	
+	func allPeripeheralsExist(id: Bool) -> Bool {
+		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+			let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BLEkey")
+			fetchRequest.includesSubentities = false
+			
+			var entitiesCount = 0
+			
+			do {
+				entitiesCount = try context.count(for: fetchRequest)
+			}
+			catch {
+				print("error executing fetch request: \(error)")
+			}
+			
+			return entitiesCount == 6
+			
+		}
+		return false
+		
+	}
     override func viewWillDisappear(_ animated: Bool) {
           super.viewWillDisappear(animated)
           print("Stop Scanning")
@@ -315,42 +377,130 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         centralManager?.delegate = self
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        
-		if(peripheral.name == "FR"){
-			FRPeripheral = peripheral
-			FRPeripheral?.delegate = self
-			centralManager?.connect(FRPeripheral!, options: nil)
+		if !isFirstPair{
+			if(peripheral.name == FRname){
+				FRPeripheral = peripheral
+				FRPeripheral?.delegate = self
+				centralManager?.connect(FRPeripheral!, options: nil)
+				
+			}
+			if(peripheral.name == FLname){
+				FLPeripheral = peripheral
+				FLPeripheral?.delegate = self
+				centralManager?.connect(FLPeripheral!, options: nil)
+			}
+			if(peripheral.name == CRname){
+				CRPeripheral = peripheral
+				CRPeripheral?.delegate = self
+				centralManager?.connect(CRPeripheral!, options: nil)
+			}
+			if(peripheral.name == CLname){
+				CLPeripheral = peripheral
+				CLPeripheral?.delegate = self
+				centralManager?.connect(CLPeripheral!, options: nil)
+			}
+			if(peripheral.name == LLname){
+				LLPeripheral = peripheral
+				LLPeripheral?.delegate = self
+				centralManager?.connect(LLPeripheral!, options: nil)
+			}
+			if(peripheral.name == LRname){
+				LRPeripheral = peripheral
+				LRPeripheral?.delegate = self
+				centralManager?.connect(LRPeripheral!, options: nil)
+			}
+			self.peripherals.append(peripheral)
+			self.RSSIs.append(RSSI)
+			peripheral.delegate = self
+			print("Peripheral name: \(String(describing: peripheral.name))")
+		}
+		else{
 			
+			if(peripheral.name!.prefix(2) == "FR"){
+				FRname = peripheral.name
+				FRPeripheral = peripheral
+				FRPeripheral?.delegate = self
+				centralManager?.connect(FRPeripheral!, options: nil)
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let name = BLEkey(context: context)
+					name.key = peripheral.name!
+					name.name = "FR"
+				}
+				//let finalData = joke()
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+				
+			}
+			if(peripheral.name!.prefix(2) == "FL"){
+				FLname = peripheral.name
+				FLPeripheral = peripheral
+				FLPeripheral?.delegate = self
+				centralManager?.connect(FLPeripheral!, options: nil)
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let name = BLEkey(context: context)
+					name.key = peripheral.name!
+					name.name = "FL"
+				}
+				//let finalData = joke()
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			}
+			if(peripheral.name!.prefix(2) == "CR"){
+				CRname = peripheral.name
+				CRPeripheral = peripheral
+				CRPeripheral?.delegate = self
+				centralManager?.connect(CRPeripheral!, options: nil)
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let name = BLEkey(context: context)
+					name.key = peripheral.name!
+					name.name = "CR"
+				}
+				//let finalData = joke()
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			}
+			if(peripheral.name!.prefix(2) == "CL"){
+				CLname = peripheral.name
+				CLPeripheral = peripheral
+				CLPeripheral?.delegate = self
+				centralManager?.connect(CLPeripheral!, options: nil)
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let name = BLEkey(context: context)
+					name.key = peripheral.name!
+					name.name = "CL"
+				}
+				//let finalData = joke()
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			}
+			if(peripheral.name!.prefix(2) == "LL"){
+				LLname = peripheral.name
+				LLPeripheral = peripheral
+				LLPeripheral?.delegate = self
+				centralManager?.connect(LLPeripheral!, options: nil)
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let name = BLEkey(context: context)
+					name.key = peripheral.name!
+					name.name = "LL"
+				}
+				//let finalData = joke()
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			}
+			if(peripheral.name!.prefix(2) == "LR"){
+				LRname = peripheral.name
+				LRPeripheral = peripheral
+				LRPeripheral?.delegate = self
+				centralManager?.connect(LRPeripheral!, options: nil)
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let name = BLEkey(context: context)
+					name.key = peripheral.name!
+					name.name = "LR"
+				}
+				//let finalData = joke()
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			}
+			self.peripherals.append(peripheral)
+			self.RSSIs.append(RSSI)
+			peripheral.delegate = self
+			print("Peripheral name: \(String(describing: peripheral.name))")
 		}
-		if(peripheral.name == "FL"){
-			FLPeripheral = peripheral
-			FLPeripheral?.delegate = self
-			centralManager?.connect(FLPeripheral!, options: nil)
-		}
-		if(peripheral.name == "CR"){
-			CRPeripheral = peripheral
-			CRPeripheral?.delegate = self
-			centralManager?.connect(CRPeripheral!, options: nil)
-		}
-		if(peripheral.name == "CL"){
-			CLPeripheral = peripheral
-			CLPeripheral?.delegate = self
-			centralManager?.connect(CLPeripheral!, options: nil)
-		}
-		if(peripheral.name == "LL"){
-			LLPeripheral = peripheral
-			LLPeripheral?.delegate = self
-			centralManager?.connect(LLPeripheral!, options: nil)
-		}
-		if(peripheral.name == "LR"){
-			LRPeripheral = peripheral
-			LRPeripheral?.delegate = self
-			centralManager?.connect(LRPeripheral!, options: nil)
-		}
-        self.peripherals.append(peripheral)
-        self.RSSIs.append(RSSI)
-        peripheral.delegate = self
-		print("Peripheral name: \(String(describing: peripheral.name))")
+		
             
         
     }
@@ -440,27 +590,27 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             //looks for the right characteristic
             
             if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Rx)  {
-				if peripheral.name == "FR"{
+				if peripheral.name == "FR" || peripheral.name == FRname{
 					frrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: frrxCharacteristic!)
 				}
-				if peripheral.name == "FL"{
+				if peripheral.name == "FL" || peripheral.name == FLname{
 					flrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: flrxCharacteristic!)
 				}
-				if peripheral.name == "CR"{
+				if peripheral.name == "CR" || peripheral.name == CRname{
 					crrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: crrxCharacteristic!)
 				}
-				if peripheral.name == "CL"{
+				if peripheral.name == "CL" || peripheral.name == CLname{
 					clrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: clrxCharacteristic!)
 				}
-				if peripheral.name == "LR"{
+				if peripheral.name == "LR" || peripheral.name == LRname{
 					lrrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: lrrxCharacteristic!)
 				}
-				if peripheral.name == "LL"{
+				if peripheral.name == "LL" || peripheral.name == LLname{
 					llrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: llrxCharacteristic!)
 				}
@@ -473,26 +623,26 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
                 print("Rx Characteristic: \(characteristic.uuid)")
             }
             if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Tx){
-				if peripheral.name == "FR"{
+				if peripheral.name == "FR" || peripheral.name == FRname{
 					frtxCharacteristic = characteristic
 				}
-				if peripheral.name == "FL"{
+				if peripheral.name == "FL" || peripheral.name == FLname{
 					fltxCharacteristic = characteristic
 					
 				}
-				if peripheral.name == "CR"{
+				if peripheral.name == "CR" || peripheral.name == CRname{
 					crtxCharacteristic = characteristic
 					
 				}
-				if peripheral.name == "CL"{
+				if peripheral.name == "CL" || peripheral.name == CLname{
 					cltxCharacteristic = characteristic
 					
 				}
-				if peripheral.name == "LR"{
+				if peripheral.name == "LR" || peripheral.name == LRname{
 					lrtxCharacteristic = characteristic
 					
 				}
-				if peripheral.name == "LL"{
+				if peripheral.name == "LL" || peripheral.name == LLname{
 					lltxCharacteristic = characteristic
 					
 				}
@@ -502,7 +652,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         }
     }
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-		if peripheral.name == "FR"{
+		if peripheral.name == "FR" || peripheral.name == FRname{
 			guard characteristic == frrxCharacteristic,
 				let characteristicValue = characteristic.value,
 				let ASCIIstring = NSString(data: characteristicValue,
@@ -510,7 +660,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				else { return }
 			characteristicASCIIValue = ASCIIstring
 		}
-		if peripheral.name == "FL"{
+		if peripheral.name == "FL" || peripheral.name == FLname{
 			guard characteristic == flrxCharacteristic,
 				let characteristicValue = characteristic.value,
 				let ASCIIstring = NSString(data: characteristicValue,
@@ -518,7 +668,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				else { return }
 			characteristicASCIIValue = ASCIIstring
 		}
-		if peripheral.name == "CR"{
+		if peripheral.name == "CR" || peripheral.name == CRname{
 			guard characteristic == crrxCharacteristic,
 				let characteristicValue = characteristic.value,
 				let ASCIIstring = NSString(data: characteristicValue,
@@ -526,7 +676,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				else { return }
 			characteristicASCIIValue = ASCIIstring
 		}
-		if peripheral.name == "CL"{
+		if peripheral.name == "CL" || peripheral.name == CLname{
 			guard characteristic == clrxCharacteristic,
 				let characteristicValue = characteristic.value,
 				let ASCIIstring = NSString(data: characteristicValue,
@@ -534,7 +684,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				else { return }
 			characteristicASCIIValue = ASCIIstring
 		}
-		if peripheral.name == "LR"{
+		if peripheral.name == "LR" || peripheral.name == LRname{
 			guard characteristic == lrrxCharacteristic,
 				let characteristicValue = characteristic.value,
 				let ASCIIstring = NSString(data: characteristicValue,
@@ -542,7 +692,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				else { return }
 			characteristicASCIIValue = ASCIIstring
 		}
-		if peripheral.name == "LL"{
+		if peripheral.name == "LL" || peripheral.name == LLname{
 			guard characteristic == llrxCharacteristic,
 				let characteristicValue = characteristic.value,
 				let ASCIIstring = NSString(data: characteristicValue,

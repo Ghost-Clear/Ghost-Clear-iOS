@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BLEkey" representedClassName="BLEkey" syncable="YES" codeGenerationType="class">
         <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Goal" representedClassName="Goal" syncable="YES" codeGenerationType="class">
         <attribute name="ghosts" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -26,10 +27,10 @@
         <attribute name="sets" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
+        <element name="BLEkey" positionX="108" positionY="117" width="128" height="73"/>
         <element name="Goal" positionX="-34.5234375" positionY="115.53125" width="128" height="133"/>
         <element name="IsFirstLaunch" positionX="236.46484375" positionY="24.43359375" width="128" height="58"/>
         <element name="Name" positionX="-29.1796875" positionY="32.9453125" width="128" height="58"/>
         <element name="Workout" positionX="256.3046875" positionY="120.7421875" width="128" height="133"/>
-        <element name="BLEkey" positionX="108" positionY="117" width="128" height="58"/>
     </elements>
 </model>

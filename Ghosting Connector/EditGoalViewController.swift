@@ -120,7 +120,7 @@ class EditGoalViewController: UIViewController, UITextFieldDelegate {
 				parentView.childView.tableView.reloadData()
 			}
 		else{
-			let alertVC = UIAlertController(title: "Times not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts and sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
+			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts and sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
 				//add segue
