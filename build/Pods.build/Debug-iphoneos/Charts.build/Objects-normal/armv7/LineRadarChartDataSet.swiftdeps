@@ -1,0 +1,459 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LineRadarChartDataSet"
+provides-nominal:
+- "6Charts21LineRadarChartDataSetC"
+provides-member:
+- ["6Charts21LineRadarChartDataSetC", ""]
+provides-dynamic-lookup:
+- "_fillColor"
+- "_lineWidth"
+- "copy"
+- "drawFilledEnabled"
+- "fill"
+- "fillAlpha"
+- "fillColor"
+- "isDrawFilledEnabled"
+- "lineWidth"
+depends-top-level:
+- !private "..."
+- "/"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- "CastingPrecedence"
+- "Fill"
+- "FloatLiteralType"
+- "ILineRadarChartDataSet"
+- !private "IntegerLiteralType"
+- "LineRadarChartDataSet"
+- "LineScatterCandleRadarChartDataSet"
+- "NSUIColor"
+- "NSZone"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "clamped"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "Bool"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "CGFloat"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "Fill"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "LineRadarChartDataSet"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "NSUIColor"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "NSZone"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "_fillColor"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "_lineWidth"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "copy"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "drawFilledEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "fill"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "fillAlpha"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "fillColor"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "init"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "isDrawFilledEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "lineWidth"]
+- ["SK", "CGFloat"]
+- ["SK", "NSUIColor"]
+- ["SK", ""]
+- !private ["SK", "_fillColor"]
+- !private ["SK", "_lineWidth"]
+- !private ["SK", "copy"]
+- ["SK", "drawFilledEnabled"]
+- ["SK", "fill"]
+- ["SK", "fillAlpha"]
+- ["SK", "fillColor"]
+- ["SK", "isDrawFilledEnabled"]
+- ["SK", "lineWidth"]
+- !private ["SB", "clamped"]
+- !private ["12CoreGraphics7CGFloatV", "clamped"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "NSUIColor"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_fillColor"]
+- !private ["s7CVarArgP", "_lineWidth"]
+- !private ["s7CVarArgP", "clamped"]
+- !private ["s7CVarArgP", "copy"]
+- ["s7CVarArgP", "drawFilledEnabled"]
+- ["s7CVarArgP", "fill"]
+- ["s7CVarArgP", "fillAlpha"]
+- ["s7CVarArgP", "fillColor"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "isDrawFilledEnabled"]
+- ["s7CVarArgP", "lineWidth"]
+- ["6Charts16ChartBaseDataSetC", "Bool"]
+- ["6Charts16ChartBaseDataSetC", "CGFloat"]
+- ["6Charts16ChartBaseDataSetC", "Fill"]
+- !private ["6Charts16ChartBaseDataSetC", "LineRadarChartDataSet"]
+- ["6Charts16ChartBaseDataSetC", "NSUIColor"]
+- ["6Charts16ChartBaseDataSetC", "NSZone"]
+- ["6Charts16ChartBaseDataSetC", "_fillColor"]
+- ["6Charts16ChartBaseDataSetC", "_lineWidth"]
+- ["6Charts16ChartBaseDataSetC", "copy"]
+- ["6Charts16ChartBaseDataSetC", "drawFilledEnabled"]
+- ["6Charts16ChartBaseDataSetC", "fill"]
+- ["6Charts16ChartBaseDataSetC", "fillAlpha"]
+- ["6Charts16ChartBaseDataSetC", "fillColor"]
+- ["6Charts16ChartBaseDataSetC", "init"]
+- ["6Charts16ChartBaseDataSetC", "isDrawFilledEnabled"]
+- ["6Charts16ChartBaseDataSetC", "lineWidth"]
+- ["6Charts12ChartDataSetC", "Bool"]
+- ["6Charts12ChartDataSetC", "CGFloat"]
+- ["6Charts12ChartDataSetC", "Fill"]
+- !private ["6Charts12ChartDataSetC", "LineRadarChartDataSet"]
+- ["6Charts12ChartDataSetC", "NSUIColor"]
+- ["6Charts12ChartDataSetC", "NSZone"]
+- ["6Charts12ChartDataSetC", "_fillColor"]
+- ["6Charts12ChartDataSetC", "_lineWidth"]
+- ["6Charts12ChartDataSetC", "copy"]
+- ["6Charts12ChartDataSetC", "drawFilledEnabled"]
+- ["6Charts12ChartDataSetC", "fill"]
+- ["6Charts12ChartDataSetC", "fillAlpha"]
+- ["6Charts12ChartDataSetC", "fillColor"]
+- ["6Charts12ChartDataSetC", "init"]
+- ["6Charts12ChartDataSetC", "isDrawFilledEnabled"]
+- ["6Charts12ChartDataSetC", "lineWidth"]
+- ["Sl", "CGFloat"]
+- ["Sl", "NSUIColor"]
+- ["Sl", ""]
+- !private ["Sl", "_fillColor"]
+- !private ["Sl", "_lineWidth"]
+- !private ["Sl", "copy"]
+- ["Sl", "drawFilledEnabled"]
+- ["Sl", "fill"]
+- ["Sl", "fillAlpha"]
+- ["Sl", "fillColor"]
+- ["Sl", "isDrawFilledEnabled"]
+- ["Sl", "lineWidth"]
+- !private ["SL", "clamped"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "NSUIColor"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_fillColor"]
+- !private ["s28CustomDebugStringConvertibleP", "_lineWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "copy"]
+- ["s28CustomDebugStringConvertibleP", "drawFilledEnabled"]
+- ["s28CustomDebugStringConvertibleP", "fill"]
+- ["s28CustomDebugStringConvertibleP", "fillAlpha"]
+- ["s28CustomDebugStringConvertibleP", "fillColor"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "isDrawFilledEnabled"]
+- ["s28CustomDebugStringConvertibleP", "lineWidth"]
+- !private ["s17CustomReflectableP", "clamped"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "NSUIColor"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_fillColor"]
+- !private ["s23CustomStringConvertibleP", "_lineWidth"]
+- !private ["s23CustomStringConvertibleP", "clamped"]
+- !private ["s23CustomStringConvertibleP", "copy"]
+- ["s23CustomStringConvertibleP", "drawFilledEnabled"]
+- ["s23CustomStringConvertibleP", "fill"]
+- ["s23CustomStringConvertibleP", "fillAlpha"]
+- ["s23CustomStringConvertibleP", "fillColor"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "isDrawFilledEnabled"]
+- ["s23CustomStringConvertibleP", "lineWidth"]
+- !private ["Se", "clamped"]
+- !private ["SE", "clamped"]
+- ["SQ", "CGFloat"]
+- ["SQ", "NSUIColor"]
+- ["SQ", ""]
+- !private ["SQ", "_fillColor"]
+- !private ["SQ", "_lineWidth"]
+- !private ["SQ", "clamped"]
+- !private ["SQ", "copy"]
+- ["SQ", "drawFilledEnabled"]
+- ["SQ", "fill"]
+- ["SQ", "fillAlpha"]
+- ["SQ", "fillColor"]
+- ["SQ", "init"]
+- ["SQ", "isDrawFilledEnabled"]
+- ["SQ", "lineWidth"]
+- !private ["s25ExpressibleByFloatLiteralP", "clamped"]
+- !private ["s27ExpressibleByIntegerLiteralP", "clamped"]
+- !private ["SF", "clamped"]
+- ["SH", "CGFloat"]
+- ["SH", "NSUIColor"]
+- ["SH", ""]
+- !private ["SH", "_fillColor"]
+- !private ["SH", "_lineWidth"]
+- !private ["SH", "clamped"]
+- !private ["SH", "copy"]
+- ["SH", "drawFilledEnabled"]
+- ["SH", "fill"]
+- ["SH", "fillAlpha"]
+- ["SH", "fillColor"]
+- ["SH", "init"]
+- ["SH", "isDrawFilledEnabled"]
+- ["SH", "lineWidth"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGFloat"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "NSUIColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", ""]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "_fillColor"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "_lineWidth"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "copy"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawFilledEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fill"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fillAlpha"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fillColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "lineWidth"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", "NSUIColor"]
+- ["6Charts13IChartDataSetP", ""]
+- !private ["6Charts13IChartDataSetP", "_fillColor"]
+- !private ["6Charts13IChartDataSetP", "_lineWidth"]
+- !private ["6Charts13IChartDataSetP", "copy"]
+- ["6Charts13IChartDataSetP", "drawFilledEnabled"]
+- ["6Charts13IChartDataSetP", "fill"]
+- ["6Charts13IChartDataSetP", "fillAlpha"]
+- ["6Charts13IChartDataSetP", "fillColor"]
+- ["6Charts13IChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts13IChartDataSetP", "lineWidth"]
+- ["6Charts22ILineRadarChartDataSetP", "CGFloat"]
+- ["6Charts22ILineRadarChartDataSetP", "NSUIColor"]
+- ["6Charts22ILineRadarChartDataSetP", ""]
+- !private ["6Charts22ILineRadarChartDataSetP", "_fillColor"]
+- !private ["6Charts22ILineRadarChartDataSetP", "_lineWidth"]
+- ["6Charts22ILineRadarChartDataSetP", "drawFilledEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "fill"]
+- ["6Charts22ILineRadarChartDataSetP", "fillAlpha"]
+- ["6Charts22ILineRadarChartDataSetP", "fillColor"]
+- ["6Charts22ILineRadarChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "lineWidth"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "CGFloat"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "NSUIColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", ""]
+- !private ["6Charts35ILineScatterCandleRadarChartDataSetP", "_fillColor"]
+- !private ["6Charts35ILineScatterCandleRadarChartDataSetP", "_lineWidth"]
+- !private ["6Charts35ILineScatterCandleRadarChartDataSetP", "copy"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawFilledEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fill"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fillAlpha"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fillColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "lineWidth"]
+- ["6Charts21LineRadarChartDataSetC", "Bool"]
+- ["6Charts21LineRadarChartDataSetC", "CGFloat"]
+- ["6Charts21LineRadarChartDataSetC", "Fill"]
+- !private ["6Charts21LineRadarChartDataSetC", "LineRadarChartDataSet"]
+- ["6Charts21LineRadarChartDataSetC", "NSUIColor"]
+- ["6Charts21LineRadarChartDataSetC", "NSZone"]
+- !private ["6Charts21LineRadarChartDataSetC", "_fillColor"]
+- !private ["6Charts21LineRadarChartDataSetC", "_lineWidth"]
+- ["6Charts21LineRadarChartDataSetC", "copy"]
+- ["6Charts21LineRadarChartDataSetC", "deinit"]
+- ["6Charts21LineRadarChartDataSetC", "drawFilledEnabled"]
+- ["6Charts21LineRadarChartDataSetC", "fill"]
+- ["6Charts21LineRadarChartDataSetC", "fillAlpha"]
+- ["6Charts21LineRadarChartDataSetC", "fillColor"]
+- ["6Charts21LineRadarChartDataSetC", "init"]
+- ["6Charts21LineRadarChartDataSetC", "isDrawFilledEnabled"]
+- ["6Charts21LineRadarChartDataSetC", "lineWidth"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "Bool"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "CGFloat"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "Fill"]
+- !private ["6Charts34LineScatterCandleRadarChartDataSetC", "LineRadarChartDataSet"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "NSUIColor"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "NSZone"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", ""]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "_fillColor"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "_lineWidth"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "copy"]
+- !private ["6Charts34LineScatterCandleRadarChartDataSetC", "deinit"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "drawFilledEnabled"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "fill"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "fillAlpha"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "fillColor"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "init"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "isDrawFilledEnabled"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "lineWidth"]
+- ["SM", "CGFloat"]
+- ["SM", "NSUIColor"]
+- ["SM", ""]
+- !private ["SM", "_fillColor"]
+- !private ["SM", "_lineWidth"]
+- !private ["SM", "copy"]
+- ["SM", "drawFilledEnabled"]
+- ["SM", "fill"]
+- ["SM", "fillAlpha"]
+- ["SM", "fillColor"]
+- ["SM", "isDrawFilledEnabled"]
+- ["SM", "lineWidth"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "CGFloat"]
+- ["So9NSCopyingP", "NSUIColor"]
+- ["So9NSCopyingP", ""]
+- !private ["So9NSCopyingP", "_fillColor"]
+- !private ["So9NSCopyingP", "_lineWidth"]
+- !private ["So9NSCopyingP", "copy"]
+- ["So9NSCopyingP", "drawFilledEnabled"]
+- ["So9NSCopyingP", "fill"]
+- ["So9NSCopyingP", "fillAlpha"]
+- ["So9NSCopyingP", "fillColor"]
+- ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "isDrawFilledEnabled"]
+- ["So9NSCopyingP", "lineWidth"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Fill"]
+- !private ["So8NSObjectC", "LineRadarChartDataSet"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "NSZone"]
+- ["So8NSObjectC", "_fillColor"]
+- ["So8NSObjectC", "_lineWidth"]
+- ["So8NSObjectC", "copy"]
+- ["So8NSObjectC", "drawFilledEnabled"]
+- ["So8NSObjectC", "fill"]
+- ["So8NSObjectC", "fillAlpha"]
+- ["So8NSObjectC", "fillColor"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isDrawFilledEnabled"]
+- ["So8NSObjectC", "lineWidth"]
+- ["So8NSObjectP", "CGFloat"]
+- ["So8NSObjectP", "NSUIColor"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_fillColor"]
+- !private ["So8NSObjectP", "_lineWidth"]
+- !private ["So8NSObjectP", "copy"]
+- ["So8NSObjectP", "drawFilledEnabled"]
+- ["So8NSObjectP", "fill"]
+- ["So8NSObjectP", "fillAlpha"]
+- ["So8NSObjectP", "fillColor"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "isDrawFilledEnabled"]
+- ["So8NSObjectP", "lineWidth"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["Sj", "clamped"]
+- ["Sk", "CGFloat"]
+- ["Sk", "NSUIColor"]
+- ["Sk", ""]
+- !private ["Sk", "_fillColor"]
+- !private ["Sk", "_lineWidth"]
+- !private ["Sk", "copy"]
+- ["Sk", "drawFilledEnabled"]
+- ["Sk", "fill"]
+- ["Sk", "fillAlpha"]
+- ["Sk", "fillColor"]
+- ["Sk", "isDrawFilledEnabled"]
+- ["Sk", "lineWidth"]
+- ["Sm", "CGFloat"]
+- ["Sm", "NSUIColor"]
+- ["Sm", ""]
+- !private ["Sm", "_fillColor"]
+- !private ["Sm", "_lineWidth"]
+- !private ["Sm", "copy"]
+- ["Sm", "drawFilledEnabled"]
+- ["Sm", "fill"]
+- ["Sm", "fillAlpha"]
+- ["Sm", "fillColor"]
+- ["Sm", "isDrawFilledEnabled"]
+- ["Sm", "lineWidth"]
+- ["ST", "CGFloat"]
+- ["ST", "NSUIColor"]
+- ["ST", ""]
+- !private ["ST", "_fillColor"]
+- !private ["ST", "_lineWidth"]
+- !private ["ST", "copy"]
+- ["ST", "drawFilledEnabled"]
+- ["ST", "fill"]
+- ["ST", "fillAlpha"]
+- ["ST", "fillColor"]
+- ["ST", "isDrawFilledEnabled"]
+- ["ST", "lineWidth"]
+- !private ["s13SignedNumericP", "clamped"]
+- !private ["Sx", "clamped"]
+- ["So7UIColorC", "init"]
+- !private ["s15_CVarArgAlignedP", "clamped"]
+- !private ["s22_CVarArgPassedAsDoubleP", "clamped"]
+- ["s26_ExpressibleByColorLiteralP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_fillColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_lineWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "copy"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "drawFilledEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fill"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fillAlpha"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fillColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "isDrawFilledEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "lineWidth"]
+- !private ["s21_ObjectiveCBridgeableP", "clamped"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "6Charts38BarLineScatterCandleBubbleChartDataSetC"
+- "SK"
+- !private "SB"
+- !private "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "6Charts16ChartBaseDataSetC"
+- "6Charts12ChartDataSetC"
+- "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "SF"
+- "SH"
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "6Charts22ILineRadarChartDataSetP"
+- "6Charts35ILineScatterCandleRadarChartDataSetP"
+- "6Charts21LineRadarChartDataSetC"
+- "6Charts34LineScatterCandleRadarChartDataSetC"
+- "SM"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- !private "Sj"
+- "Sk"
+- "Sm"
+- "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- "So7UIColorC"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- "s26_ExpressibleByColorLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "046716646a37725a20691c07d5d06257"

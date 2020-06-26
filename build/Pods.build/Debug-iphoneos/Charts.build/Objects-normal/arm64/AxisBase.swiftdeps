@@ -1,0 +1,1033 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AxisBase"
+provides-nominal:
+- "6Charts8AxisBaseC"
+provides-member:
+- ["6Charts8AxisBaseC", ""]
+provides-dynamic-lookup:
+- "_axisMaximum"
+- "_axisMinimum"
+- "_axisValueFormatter"
+- "_centerAxisLabelsEnabled"
+- "_customAxisMax"
+- "_customAxisMin"
+- "_granularity"
+- "_labelCount"
+- "_limitLines"
+- "addLimitLine"
+- "axisLineColor"
+- "axisLineDashLengths"
+- "axisLineDashPhase"
+- "axisLineWidth"
+- "axisMaxLabels"
+- "axisMaximum"
+- "axisMinLabels"
+- "axisMinimum"
+- "axisRange"
+- "calculate"
+- "centerAxisLabelsEnabled"
+- "centeredEntries"
+- "decimals"
+- "drawAxisLineEnabled"
+- "drawGridLinesEnabled"
+- "drawLabelsEnabled"
+- "drawLimitLinesBehindDataEnabled"
+- "entries"
+- "entryCount"
+- "forceLabelsEnabled"
+- "getFormattedLabel"
+- "getLongestLabel"
+- "granularity"
+- "granularityEnabled"
+- "gridAntialiasEnabled"
+- "gridColor"
+- "gridLineCap"
+- "gridLineDashLengths"
+- "gridLineDashPhase"
+- "gridLineWidth"
+- "isAxisMaxCustom"
+- "isAxisMinCustom"
+- "isCenterAxisLabelsEnabled"
+- "isDrawAxisLineEnabled"
+- "isDrawGridLinesEnabled"
+- "isDrawLabelsEnabled"
+- "isDrawLimitLinesBehindDataEnabled"
+- "isForceLabelsEnabled"
+- "isGranularityEnabled"
+- "labelCount"
+- "labelFont"
+- "labelTextColor"
+- "limitLines"
+- "removeAllLimitLines"
+- "removeLimitLine"
+- "resetCustomAxisMax"
+- "resetCustomAxisMin"
+- "setLabelCount"
+- "spaceMax"
+- "spaceMin"
+- "valueFormatter"
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "+"
+- !private "-"
+- !private "..."
+- !private "..<"
+- !private "<"
+- !private "=="
+- !private ">"
+- !private ">="
+- !private "??"
+- "AssignmentPrecedence"
+- "AxisBase"
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- "CGLineCap"
+- "CastingPrecedence"
+- "ChartLimitLine"
+- !private "ClosedRange"
+- "ComponentBase"
+- !private "DefaultAxisValueFormatter"
+- "Double"
+- "FloatLiteralType"
+- "IAxisValueFormatter"
+- "Int"
+- "IntegerLiteralType"
+- "NSUIColor"
+- "NSUIFont"
+- "String"
+- !private "StringLiteralType"
+- "TernaryPrecedence"
+- !private "abs"
+- !private "||"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "clamped"]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "firstIndex"]
+- ["Sa", "init"]
+- !private ["Sa", "remove"]
+- !private ["Sa", "removeAll"]
+- !private ["Sa", "subscript"]
+- ["6Charts8AxisBaseC", "Bool"]
+- ["6Charts8AxisBaseC", "CGFloat"]
+- ["6Charts8AxisBaseC", "CGLineCap"]
+- ["6Charts8AxisBaseC", "ChartLimitLine"]
+- !private ["6Charts8AxisBaseC", "ClosedRange"]
+- !private ["6Charts8AxisBaseC", "DefaultAxisValueFormatter"]
+- ["6Charts8AxisBaseC", "Double"]
+- ["6Charts8AxisBaseC", "IAxisValueFormatter"]
+- ["6Charts8AxisBaseC", "Int"]
+- ["6Charts8AxisBaseC", "NSUIColor"]
+- ["6Charts8AxisBaseC", "NSUIFont"]
+- ["6Charts8AxisBaseC", "String"]
+- ["6Charts8AxisBaseC", "_axisMaximum"]
+- ["6Charts8AxisBaseC", "_axisMinimum"]
+- !private ["6Charts8AxisBaseC", "_axisValueFormatter"]
+- !private ["6Charts8AxisBaseC", "_centerAxisLabelsEnabled"]
+- ["6Charts8AxisBaseC", "_customAxisMax"]
+- ["6Charts8AxisBaseC", "_customAxisMin"]
+- !private ["6Charts8AxisBaseC", "_granularity"]
+- !private ["6Charts8AxisBaseC", "_labelCount"]
+- !private ["6Charts8AxisBaseC", "_limitLines"]
+- !private ["6Charts8AxisBaseC", "abs"]
+- ["6Charts8AxisBaseC", "addLimitLine"]
+- ["6Charts8AxisBaseC", "axisLineColor"]
+- ["6Charts8AxisBaseC", "axisLineDashLengths"]
+- ["6Charts8AxisBaseC", "axisLineDashPhase"]
+- ["6Charts8AxisBaseC", "axisLineWidth"]
+- ["6Charts8AxisBaseC", "axisMaxLabels"]
+- ["6Charts8AxisBaseC", "axisMaximum"]
+- ["6Charts8AxisBaseC", "axisMinLabels"]
+- ["6Charts8AxisBaseC", "axisMinimum"]
+- ["6Charts8AxisBaseC", "axisRange"]
+- ["6Charts8AxisBaseC", "calculate"]
+- ["6Charts8AxisBaseC", "centerAxisLabelsEnabled"]
+- ["6Charts8AxisBaseC", "centeredEntries"]
+- ["6Charts8AxisBaseC", "decimals"]
+- ["6Charts8AxisBaseC", "deinit"]
+- ["6Charts8AxisBaseC", "drawAxisLineEnabled"]
+- ["6Charts8AxisBaseC", "drawGridLinesEnabled"]
+- ["6Charts8AxisBaseC", "drawLabelsEnabled"]
+- ["6Charts8AxisBaseC", "drawLimitLinesBehindDataEnabled"]
+- ["6Charts8AxisBaseC", "entries"]
+- ["6Charts8AxisBaseC", "entryCount"]
+- ["6Charts8AxisBaseC", "forceLabelsEnabled"]
+- ["6Charts8AxisBaseC", "getFormattedLabel"]
+- ["6Charts8AxisBaseC", "getLongestLabel"]
+- ["6Charts8AxisBaseC", "granularity"]
+- ["6Charts8AxisBaseC", "granularityEnabled"]
+- ["6Charts8AxisBaseC", "gridAntialiasEnabled"]
+- ["6Charts8AxisBaseC", "gridColor"]
+- ["6Charts8AxisBaseC", "gridLineCap"]
+- ["6Charts8AxisBaseC", "gridLineDashLengths"]
+- ["6Charts8AxisBaseC", "gridLineDashPhase"]
+- ["6Charts8AxisBaseC", "gridLineWidth"]
+- ["6Charts8AxisBaseC", "init"]
+- ["6Charts8AxisBaseC", "isAxisMaxCustom"]
+- ["6Charts8AxisBaseC", "isAxisMinCustom"]
+- ["6Charts8AxisBaseC", "isCenterAxisLabelsEnabled"]
+- ["6Charts8AxisBaseC", "isDrawAxisLineEnabled"]
+- ["6Charts8AxisBaseC", "isDrawGridLinesEnabled"]
+- ["6Charts8AxisBaseC", "isDrawLabelsEnabled"]
+- ["6Charts8AxisBaseC", "isDrawLimitLinesBehindDataEnabled"]
+- ["6Charts8AxisBaseC", "isForceLabelsEnabled"]
+- ["6Charts8AxisBaseC", "isGranularityEnabled"]
+- ["6Charts8AxisBaseC", "labelCount"]
+- ["6Charts8AxisBaseC", "labelFont"]
+- ["6Charts8AxisBaseC", "labelTextColor"]
+- ["6Charts8AxisBaseC", "limitLines"]
+- ["6Charts8AxisBaseC", "removeAllLimitLines"]
+- ["6Charts8AxisBaseC", "removeLimitLine"]
+- ["6Charts8AxisBaseC", "resetCustomAxisMax"]
+- ["6Charts8AxisBaseC", "resetCustomAxisMin"]
+- ["6Charts8AxisBaseC", "setLabelCount"]
+- ["6Charts8AxisBaseC", "spaceMax"]
+- ["6Charts8AxisBaseC", "spaceMin"]
+- ["6Charts8AxisBaseC", "valueFormatter"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "firstIndex"]
+- ["SK", "init"]
+- !private ["SK", "remove"]
+- !private ["SK", "removeAll"]
+- !private ["SK", "subscript"]
+- !private ["Sz", "clamped"]
+- ["So9CGLineCapV", "butt"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "CGLineCap"]
+- ["s7CVarArgP", "ChartLimitLine"]
+- !private ["s7CVarArgP", "DefaultAxisValueFormatter"]
+- ["s7CVarArgP", "Double"]
+- ["s7CVarArgP", "Int"]
+- ["s7CVarArgP", "NSUIColor"]
+- ["s7CVarArgP", "NSUIFont"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_axisMaximum"]
+- !private ["s7CVarArgP", "_axisMinimum"]
+- !private ["s7CVarArgP", "_axisValueFormatter"]
+- !private ["s7CVarArgP", "_centerAxisLabelsEnabled"]
+- !private ["s7CVarArgP", "_customAxisMax"]
+- !private ["s7CVarArgP", "_customAxisMin"]
+- !private ["s7CVarArgP", "_granularity"]
+- !private ["s7CVarArgP", "_labelCount"]
+- !private ["s7CVarArgP", "_limitLines"]
+- !private ["s7CVarArgP", "abs"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "axisMaxLabels"]
+- !private ["s7CVarArgP", "axisMinLabels"]
+- !private ["s7CVarArgP", "axisRange"]
+- ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "centerAxisLabelsEnabled"]
+- !private ["s7CVarArgP", "clamped"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "decimals"]
+- !private ["s7CVarArgP", "drawAxisLineEnabled"]
+- !private ["s7CVarArgP", "drawGridLinesEnabled"]
+- !private ["s7CVarArgP", "drawLabelsEnabled"]
+- !private ["s7CVarArgP", "drawLimitLinesBehindDataEnabled"]
+- !private ["s7CVarArgP", "entries"]
+- !private ["s7CVarArgP", "entryCount"]
+- !private ["s7CVarArgP", "firstIndex"]
+- !private ["s7CVarArgP", "forceLabelsEnabled"]
+- !private ["s7CVarArgP", "getFormattedLabel"]
+- !private ["s7CVarArgP", "granularityEnabled"]
+- ["s7CVarArgP", "gray"]
+- !private ["s7CVarArgP", "hasAutoDecimals"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "labelCount"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "spaceMax"]
+- !private ["s7CVarArgP", "spaceMin"]
+- !private ["s7CVarArgP", "subscript"]
+- ["s7CVarArgP", "systemFont"]
+- !private ["s7CVarArgP", "valueFormatter"]
+- ["s7CVarArgP", "withAlphaComponent"]
+- !private ["6Charts14ChartLimitLineC", "deinit"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "firstIndex"]
+- ["Sl", "init"]
+- !private ["Sl", "remove"]
+- !private ["Sl", "removeAll"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "clamped"]
+- !private ["SL", "count"]
+- ["6Charts13ComponentBaseC", "Bool"]
+- ["6Charts13ComponentBaseC", "CGFloat"]
+- ["6Charts13ComponentBaseC", "CGLineCap"]
+- ["6Charts13ComponentBaseC", "ChartLimitLine"]
+- !private ["6Charts13ComponentBaseC", "ClosedRange"]
+- !private ["6Charts13ComponentBaseC", "DefaultAxisValueFormatter"]
+- ["6Charts13ComponentBaseC", "Double"]
+- ["6Charts13ComponentBaseC", "IAxisValueFormatter"]
+- ["6Charts13ComponentBaseC", "Int"]
+- ["6Charts13ComponentBaseC", "NSUIColor"]
+- ["6Charts13ComponentBaseC", "NSUIFont"]
+- ["6Charts13ComponentBaseC", "String"]
+- ["6Charts13ComponentBaseC", ""]
+- ["6Charts13ComponentBaseC", "_axisMaximum"]
+- ["6Charts13ComponentBaseC", "_axisMinimum"]
+- ["6Charts13ComponentBaseC", "_axisValueFormatter"]
+- ["6Charts13ComponentBaseC", "_centerAxisLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "_customAxisMax"]
+- ["6Charts13ComponentBaseC", "_customAxisMin"]
+- ["6Charts13ComponentBaseC", "_granularity"]
+- ["6Charts13ComponentBaseC", "_labelCount"]
+- ["6Charts13ComponentBaseC", "_limitLines"]
+- !private ["6Charts13ComponentBaseC", "abs"]
+- ["6Charts13ComponentBaseC", "addLimitLine"]
+- ["6Charts13ComponentBaseC", "axisLineColor"]
+- ["6Charts13ComponentBaseC", "axisLineDashLengths"]
+- ["6Charts13ComponentBaseC", "axisLineDashPhase"]
+- ["6Charts13ComponentBaseC", "axisLineWidth"]
+- ["6Charts13ComponentBaseC", "axisMaxLabels"]
+- ["6Charts13ComponentBaseC", "axisMaximum"]
+- ["6Charts13ComponentBaseC", "axisMinLabels"]
+- ["6Charts13ComponentBaseC", "axisMinimum"]
+- ["6Charts13ComponentBaseC", "axisRange"]
+- ["6Charts13ComponentBaseC", "calculate"]
+- ["6Charts13ComponentBaseC", "centerAxisLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "centeredEntries"]
+- ["6Charts13ComponentBaseC", "decimals"]
+- ["6Charts13ComponentBaseC", "drawAxisLineEnabled"]
+- ["6Charts13ComponentBaseC", "drawGridLinesEnabled"]
+- ["6Charts13ComponentBaseC", "drawLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "drawLimitLinesBehindDataEnabled"]
+- ["6Charts13ComponentBaseC", "entries"]
+- ["6Charts13ComponentBaseC", "entryCount"]
+- ["6Charts13ComponentBaseC", "forceLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "getFormattedLabel"]
+- ["6Charts13ComponentBaseC", "getLongestLabel"]
+- ["6Charts13ComponentBaseC", "granularity"]
+- ["6Charts13ComponentBaseC", "granularityEnabled"]
+- ["6Charts13ComponentBaseC", "gridAntialiasEnabled"]
+- ["6Charts13ComponentBaseC", "gridColor"]
+- ["6Charts13ComponentBaseC", "gridLineCap"]
+- ["6Charts13ComponentBaseC", "gridLineDashLengths"]
+- ["6Charts13ComponentBaseC", "gridLineDashPhase"]
+- ["6Charts13ComponentBaseC", "gridLineWidth"]
+- ["6Charts13ComponentBaseC", "init"]
+- ["6Charts13ComponentBaseC", "isAxisMaxCustom"]
+- ["6Charts13ComponentBaseC", "isAxisMinCustom"]
+- ["6Charts13ComponentBaseC", "isCenterAxisLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "isDrawAxisLineEnabled"]
+- ["6Charts13ComponentBaseC", "isDrawGridLinesEnabled"]
+- ["6Charts13ComponentBaseC", "isDrawLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "isDrawLimitLinesBehindDataEnabled"]
+- ["6Charts13ComponentBaseC", "isForceLabelsEnabled"]
+- ["6Charts13ComponentBaseC", "isGranularityEnabled"]
+- ["6Charts13ComponentBaseC", "labelCount"]
+- ["6Charts13ComponentBaseC", "labelFont"]
+- ["6Charts13ComponentBaseC", "labelTextColor"]
+- ["6Charts13ComponentBaseC", "limitLines"]
+- ["6Charts13ComponentBaseC", "removeAllLimitLines"]
+- ["6Charts13ComponentBaseC", "removeLimitLine"]
+- ["6Charts13ComponentBaseC", "resetCustomAxisMax"]
+- ["6Charts13ComponentBaseC", "resetCustomAxisMin"]
+- ["6Charts13ComponentBaseC", "setLabelCount"]
+- ["6Charts13ComponentBaseC", "spaceMax"]
+- ["6Charts13ComponentBaseC", "spaceMin"]
+- ["6Charts13ComponentBaseC", "valueFormatter"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "firstIndex"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "remove"]
+- !private ["10Foundation15ContiguousBytesP", "removeAll"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "CGLineCap"]
+- ["s28CustomDebugStringConvertibleP", "ChartLimitLine"]
+- !private ["s28CustomDebugStringConvertibleP", "DefaultAxisValueFormatter"]
+- ["s28CustomDebugStringConvertibleP", "Double"]
+- ["s28CustomDebugStringConvertibleP", "Int"]
+- ["s28CustomDebugStringConvertibleP", "NSUIColor"]
+- ["s28CustomDebugStringConvertibleP", "NSUIFont"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_axisMaximum"]
+- !private ["s28CustomDebugStringConvertibleP", "_axisMinimum"]
+- !private ["s28CustomDebugStringConvertibleP", "_axisValueFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "_centerAxisLabelsEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "_customAxisMax"]
+- !private ["s28CustomDebugStringConvertibleP", "_customAxisMin"]
+- !private ["s28CustomDebugStringConvertibleP", "_granularity"]
+- !private ["s28CustomDebugStringConvertibleP", "_labelCount"]
+- !private ["s28CustomDebugStringConvertibleP", "_limitLines"]
+- !private ["s28CustomDebugStringConvertibleP", "abs"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "axisMaxLabels"]
+- !private ["s28CustomDebugStringConvertibleP", "axisMinLabels"]
+- !private ["s28CustomDebugStringConvertibleP", "axisRange"]
+- ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "centerAxisLabelsEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "decimals"]
+- !private ["s28CustomDebugStringConvertibleP", "drawAxisLineEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "drawGridLinesEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "drawLabelsEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "drawLimitLinesBehindDataEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "entries"]
+- !private ["s28CustomDebugStringConvertibleP", "entryCount"]
+- !private ["s28CustomDebugStringConvertibleP", "firstIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "forceLabelsEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "getFormattedLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "granularityEnabled"]
+- ["s28CustomDebugStringConvertibleP", "gray"]
+- !private ["s28CustomDebugStringConvertibleP", "hasAutoDecimals"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "labelCount"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "spaceMax"]
+- !private ["s28CustomDebugStringConvertibleP", "spaceMin"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- ["s28CustomDebugStringConvertibleP", "systemFont"]
+- !private ["s28CustomDebugStringConvertibleP", "valueFormatter"]
+- ["s28CustomDebugStringConvertibleP", "withAlphaComponent"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "clamped"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "firstIndex"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s17CustomReflectableP", "subscript"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "CGLineCap"]
+- ["s23CustomStringConvertibleP", "ChartLimitLine"]
+- !private ["s23CustomStringConvertibleP", "DefaultAxisValueFormatter"]
+- ["s23CustomStringConvertibleP", "Double"]
+- ["s23CustomStringConvertibleP", "Int"]
+- ["s23CustomStringConvertibleP", "NSUIColor"]
+- ["s23CustomStringConvertibleP", "NSUIFont"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_axisMaximum"]
+- !private ["s23CustomStringConvertibleP", "_axisMinimum"]
+- !private ["s23CustomStringConvertibleP", "_axisValueFormatter"]
+- !private ["s23CustomStringConvertibleP", "_centerAxisLabelsEnabled"]
+- !private ["s23CustomStringConvertibleP", "_customAxisMax"]
+- !private ["s23CustomStringConvertibleP", "_customAxisMin"]
+- !private ["s23CustomStringConvertibleP", "_granularity"]
+- !private ["s23CustomStringConvertibleP", "_labelCount"]
+- !private ["s23CustomStringConvertibleP", "_limitLines"]
+- !private ["s23CustomStringConvertibleP", "abs"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "axisMaxLabels"]
+- !private ["s23CustomStringConvertibleP", "axisMinLabels"]
+- !private ["s23CustomStringConvertibleP", "axisRange"]
+- ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "centerAxisLabelsEnabled"]
+- !private ["s23CustomStringConvertibleP", "clamped"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "decimals"]
+- !private ["s23CustomStringConvertibleP", "drawAxisLineEnabled"]
+- !private ["s23CustomStringConvertibleP", "drawGridLinesEnabled"]
+- !private ["s23CustomStringConvertibleP", "drawLabelsEnabled"]
+- !private ["s23CustomStringConvertibleP", "drawLimitLinesBehindDataEnabled"]
+- !private ["s23CustomStringConvertibleP", "entries"]
+- !private ["s23CustomStringConvertibleP", "entryCount"]
+- !private ["s23CustomStringConvertibleP", "firstIndex"]
+- !private ["s23CustomStringConvertibleP", "forceLabelsEnabled"]
+- !private ["s23CustomStringConvertibleP", "getFormattedLabel"]
+- !private ["s23CustomStringConvertibleP", "granularityEnabled"]
+- ["s23CustomStringConvertibleP", "gray"]
+- !private ["s23CustomStringConvertibleP", "hasAutoDecimals"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "labelCount"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "spaceMax"]
+- !private ["s23CustomStringConvertibleP", "spaceMin"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- ["s23CustomStringConvertibleP", "systemFont"]
+- !private ["s23CustomStringConvertibleP", "valueFormatter"]
+- ["s23CustomStringConvertibleP", "withAlphaComponent"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "firstIndex"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "remove"]
+- !private ["10Foundation12DataProtocolP", "removeAll"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "append"]
+- !private ["Se", "clamped"]
+- !private ["Se", "count"]
+- !private ["Se", "firstIndex"]
+- ["Se", "init"]
+- !private ["Se", "remove"]
+- !private ["Se", "removeAll"]
+- !private ["Se", "subscript"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "decimals"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "deinit"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "hasAutoDecimals"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "init"]
+- !private ["SE", "append"]
+- !private ["SE", "clamped"]
+- !private ["SE", "count"]
+- !private ["SE", "firstIndex"]
+- ["SE", "init"]
+- !private ["SE", "remove"]
+- !private ["SE", "removeAll"]
+- !private ["SE", "subscript"]
+- ["SQ", "CGFloat"]
+- ["SQ", "CGLineCap"]
+- ["SQ", "ChartLimitLine"]
+- !private ["SQ", "DefaultAxisValueFormatter"]
+- ["SQ", "Double"]
+- ["SQ", "Int"]
+- ["SQ", "NSUIColor"]
+- ["SQ", "NSUIFont"]
+- ["SQ", ""]
+- !private ["SQ", "_axisMaximum"]
+- !private ["SQ", "_axisMinimum"]
+- !private ["SQ", "_axisValueFormatter"]
+- !private ["SQ", "_centerAxisLabelsEnabled"]
+- !private ["SQ", "_customAxisMax"]
+- !private ["SQ", "_customAxisMin"]
+- !private ["SQ", "_granularity"]
+- !private ["SQ", "_labelCount"]
+- !private ["SQ", "_limitLines"]
+- !private ["SQ", "abs"]
+- !private ["SQ", "append"]
+- !private ["SQ", "axisMaxLabels"]
+- !private ["SQ", "axisMinLabels"]
+- !private ["SQ", "axisRange"]
+- ["SQ", "black"]
+- ["SQ", "butt"]
+- !private ["SQ", "centerAxisLabelsEnabled"]
+- !private ["SQ", "clamped"]
+- !private ["SQ", "count"]
+- !private ["SQ", "decimals"]
+- !private ["SQ", "drawAxisLineEnabled"]
+- !private ["SQ", "drawGridLinesEnabled"]
+- !private ["SQ", "drawLabelsEnabled"]
+- !private ["SQ", "drawLimitLinesBehindDataEnabled"]
+- !private ["SQ", "entries"]
+- !private ["SQ", "entryCount"]
+- !private ["SQ", "firstIndex"]
+- !private ["SQ", "forceLabelsEnabled"]
+- !private ["SQ", "getFormattedLabel"]
+- !private ["SQ", "granularityEnabled"]
+- ["SQ", "gray"]
+- !private ["SQ", "hasAutoDecimals"]
+- ["SQ", "init"]
+- !private ["SQ", "labelCount"]
+- !private ["SQ", "remove"]
+- !private ["SQ", "removeAll"]
+- !private ["SQ", "spaceMax"]
+- !private ["SQ", "spaceMin"]
+- !private ["SQ", "subscript"]
+- ["SQ", "systemFont"]
+- !private ["SQ", "valueFormatter"]
+- ["SQ", "withAlphaComponent"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "firstIndex"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s27ExpressibleByIntegerLiteralP", "clamped"]
+- !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- !private ["s17FixedWidthIntegerP", "clamped"]
+- ["SH", "CGFloat"]
+- ["SH", "CGLineCap"]
+- ["SH", "ChartLimitLine"]
+- !private ["SH", "DefaultAxisValueFormatter"]
+- ["SH", "Double"]
+- ["SH", "Int"]
+- ["SH", "NSUIColor"]
+- ["SH", "NSUIFont"]
+- ["SH", ""]
+- !private ["SH", "_axisMaximum"]
+- !private ["SH", "_axisMinimum"]
+- !private ["SH", "_axisValueFormatter"]
+- !private ["SH", "_centerAxisLabelsEnabled"]
+- !private ["SH", "_customAxisMax"]
+- !private ["SH", "_customAxisMin"]
+- !private ["SH", "_granularity"]
+- !private ["SH", "_labelCount"]
+- !private ["SH", "_limitLines"]
+- !private ["SH", "abs"]
+- !private ["SH", "append"]
+- !private ["SH", "axisMaxLabels"]
+- !private ["SH", "axisMinLabels"]
+- !private ["SH", "axisRange"]
+- ["SH", "black"]
+- ["SH", "butt"]
+- !private ["SH", "centerAxisLabelsEnabled"]
+- !private ["SH", "clamped"]
+- !private ["SH", "count"]
+- !private ["SH", "decimals"]
+- !private ["SH", "drawAxisLineEnabled"]
+- !private ["SH", "drawGridLinesEnabled"]
+- !private ["SH", "drawLabelsEnabled"]
+- !private ["SH", "drawLimitLinesBehindDataEnabled"]
+- !private ["SH", "entries"]
+- !private ["SH", "entryCount"]
+- !private ["SH", "firstIndex"]
+- !private ["SH", "forceLabelsEnabled"]
+- !private ["SH", "getFormattedLabel"]
+- !private ["SH", "granularityEnabled"]
+- ["SH", "gray"]
+- !private ["SH", "hasAutoDecimals"]
+- ["SH", "init"]
+- !private ["SH", "labelCount"]
+- !private ["SH", "remove"]
+- !private ["SH", "removeAll"]
+- !private ["SH", "spaceMax"]
+- !private ["SH", "spaceMin"]
+- !private ["SH", "subscript"]
+- ["SH", "systemFont"]
+- !private ["SH", "valueFormatter"]
+- ["SH", "withAlphaComponent"]
+- !private ["6Charts19IAxisValueFormatterP", "decimals"]
+- !private ["6Charts19IAxisValueFormatterP", "hasAutoDecimals"]
+- !private ["6Charts19IAxisValueFormatterP", "init"]
+- !private ["6Charts19IAxisValueFormatterP", "stringForValue"]
+- !private ["Si", "clamped"]
+- !private ["s25LosslessStringConvertibleP", "clamped"]
+- !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s10MirrorPathP", "clamped"]
+- !private ["s10MirrorPathP", "count"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "firstIndex"]
+- ["SM", "init"]
+- !private ["SM", "remove"]
+- !private ["SM", "removeAll"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "firstIndex"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "remove"]
+- !private ["10Foundation19MutableDataProtocolP", "removeAll"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["So8NSCodingP", "black"]
+- !private ["So8NSCodingP", "count"]
+- ["So8NSCodingP", "gray"]
+- ["So8NSCodingP", "withAlphaComponent"]
+- ["So9NSCopyingP", "black"]
+- !private ["So9NSCopyingP", "count"]
+- ["So9NSCopyingP", "gray"]
+- ["So9NSCopyingP", "systemFont"]
+- ["So9NSCopyingP", "withAlphaComponent"]
+- ["So21NSItemProviderReadingP", "black"]
+- !private ["So21NSItemProviderReadingP", "count"]
+- ["So21NSItemProviderReadingP", "gray"]
+- ["So21NSItemProviderReadingP", "withAlphaComponent"]
+- ["So21NSItemProviderWritingP", "black"]
+- !private ["So21NSItemProviderWritingP", "count"]
+- ["So21NSItemProviderWritingP", "gray"]
+- ["So21NSItemProviderWritingP", "withAlphaComponent"]
+- !private ["So16NSMutableCopyingP", "count"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CGLineCap"]
+- ["So8NSObjectC", "ChartLimitLine"]
+- !private ["So8NSObjectC", "ClosedRange"]
+- !private ["So8NSObjectC", "DefaultAxisValueFormatter"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "IAxisValueFormatter"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "NSUIFont"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "_axisMaximum"]
+- ["So8NSObjectC", "_axisMinimum"]
+- ["So8NSObjectC", "_axisValueFormatter"]
+- ["So8NSObjectC", "_centerAxisLabelsEnabled"]
+- ["So8NSObjectC", "_customAxisMax"]
+- ["So8NSObjectC", "_customAxisMin"]
+- ["So8NSObjectC", "_granularity"]
+- ["So8NSObjectC", "_labelCount"]
+- ["So8NSObjectC", "_limitLines"]
+- !private ["So8NSObjectC", "abs"]
+- ["So8NSObjectC", "addLimitLine"]
+- ["So8NSObjectC", "axisLineColor"]
+- ["So8NSObjectC", "axisLineDashLengths"]
+- ["So8NSObjectC", "axisLineDashPhase"]
+- ["So8NSObjectC", "axisLineWidth"]
+- ["So8NSObjectC", "axisMaxLabels"]
+- ["So8NSObjectC", "axisMaximum"]
+- ["So8NSObjectC", "axisMinLabels"]
+- ["So8NSObjectC", "axisMinimum"]
+- ["So8NSObjectC", "axisRange"]
+- ["So8NSObjectC", "black"]
+- ["So8NSObjectC", "calculate"]
+- ["So8NSObjectC", "centerAxisLabelsEnabled"]
+- ["So8NSObjectC", "centeredEntries"]
+- !private ["So8NSObjectC", "count"]
+- ["So8NSObjectC", "decimals"]
+- ["So8NSObjectC", "drawAxisLineEnabled"]
+- ["So8NSObjectC", "drawGridLinesEnabled"]
+- ["So8NSObjectC", "drawLabelsEnabled"]
+- ["So8NSObjectC", "drawLimitLinesBehindDataEnabled"]
+- ["So8NSObjectC", "entries"]
+- ["So8NSObjectC", "entryCount"]
+- ["So8NSObjectC", "forceLabelsEnabled"]
+- ["So8NSObjectC", "getFormattedLabel"]
+- ["So8NSObjectC", "getLongestLabel"]
+- ["So8NSObjectC", "granularity"]
+- ["So8NSObjectC", "granularityEnabled"]
+- ["So8NSObjectC", "gray"]
+- ["So8NSObjectC", "gridAntialiasEnabled"]
+- ["So8NSObjectC", "gridColor"]
+- ["So8NSObjectC", "gridLineCap"]
+- ["So8NSObjectC", "gridLineDashLengths"]
+- ["So8NSObjectC", "gridLineDashPhase"]
+- ["So8NSObjectC", "gridLineWidth"]
+- !private ["So8NSObjectC", "hasAutoDecimals"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isAxisMaxCustom"]
+- ["So8NSObjectC", "isAxisMinCustom"]
+- ["So8NSObjectC", "isCenterAxisLabelsEnabled"]
+- ["So8NSObjectC", "isDrawAxisLineEnabled"]
+- ["So8NSObjectC", "isDrawGridLinesEnabled"]
+- ["So8NSObjectC", "isDrawLabelsEnabled"]
+- ["So8NSObjectC", "isDrawLimitLinesBehindDataEnabled"]
+- ["So8NSObjectC", "isForceLabelsEnabled"]
+- ["So8NSObjectC", "isGranularityEnabled"]
+- ["So8NSObjectC", "labelCount"]
+- ["So8NSObjectC", "labelFont"]
+- ["So8NSObjectC", "labelTextColor"]
+- ["So8NSObjectC", "limitLines"]
+- ["So8NSObjectC", "removeAllLimitLines"]
+- ["So8NSObjectC", "removeLimitLine"]
+- ["So8NSObjectC", "resetCustomAxisMax"]
+- ["So8NSObjectC", "resetCustomAxisMin"]
+- ["So8NSObjectC", "setLabelCount"]
+- ["So8NSObjectC", "spaceMax"]
+- ["So8NSObjectC", "spaceMin"]
+- ["So8NSObjectC", "systemFont"]
+- ["So8NSObjectC", "valueFormatter"]
+- ["So8NSObjectC", "withAlphaComponent"]
+- ["So8NSObjectP", "CGFloat"]
+- ["So8NSObjectP", "CGLineCap"]
+- ["So8NSObjectP", "ChartLimitLine"]
+- !private ["So8NSObjectP", "DefaultAxisValueFormatter"]
+- ["So8NSObjectP", "Double"]
+- ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "NSUIColor"]
+- ["So8NSObjectP", "NSUIFont"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_axisMaximum"]
+- !private ["So8NSObjectP", "_axisMinimum"]
+- !private ["So8NSObjectP", "_axisValueFormatter"]
+- !private ["So8NSObjectP", "_centerAxisLabelsEnabled"]
+- !private ["So8NSObjectP", "_customAxisMax"]
+- !private ["So8NSObjectP", "_customAxisMin"]
+- !private ["So8NSObjectP", "_granularity"]
+- !private ["So8NSObjectP", "_labelCount"]
+- !private ["So8NSObjectP", "_limitLines"]
+- !private ["So8NSObjectP", "abs"]
+- !private ["So8NSObjectP", "axisMaxLabels"]
+- !private ["So8NSObjectP", "axisMinLabels"]
+- !private ["So8NSObjectP", "axisRange"]
+- ["So8NSObjectP", "black"]
+- !private ["So8NSObjectP", "centerAxisLabelsEnabled"]
+- !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "decimals"]
+- !private ["So8NSObjectP", "drawAxisLineEnabled"]
+- !private ["So8NSObjectP", "drawGridLinesEnabled"]
+- !private ["So8NSObjectP", "drawLabelsEnabled"]
+- !private ["So8NSObjectP", "drawLimitLinesBehindDataEnabled"]
+- !private ["So8NSObjectP", "entries"]
+- !private ["So8NSObjectP", "entryCount"]
+- !private ["So8NSObjectP", "forceLabelsEnabled"]
+- !private ["So8NSObjectP", "getFormattedLabel"]
+- !private ["So8NSObjectP", "granularityEnabled"]
+- ["So8NSObjectP", "gray"]
+- !private ["So8NSObjectP", "hasAutoDecimals"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "labelCount"]
+- !private ["So8NSObjectP", "spaceMax"]
+- !private ["So8NSObjectP", "spaceMin"]
+- ["So8NSObjectP", "systemFont"]
+- !private ["So8NSObjectP", "valueFormatter"]
+- ["So8NSObjectP", "withAlphaComponent"]
+- ["So14NSSecureCodingP", "black"]
+- !private ["So14NSSecureCodingP", "count"]
+- ["So14NSSecureCodingP", "gray"]
+- ["So14NSSecureCodingP", "withAlphaComponent"]
+- !private ["So8NSStringC", "count"]
+- !private ["Sj", "clamped"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "firstIndex"]
+- ["Sk", "init"]
+- !private ["Sk", "remove"]
+- !private ["Sk", "removeAll"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "firstIndex"]
+- ["Sm", "init"]
+- !private ["Sm", "remove"]
+- !private ["Sm", "removeAll"]
+- !private ["Sm", "subscript"]
+- ["SY", "butt"]
+- !private ["s10SIMDScalarP", "clamped"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "firstIndex"]
+- ["ST", "init"]
+- !private ["ST", "remove"]
+- !private ["ST", "removeAll"]
+- !private ["ST", "subscript"]
+- !private ["SZ", "clamped"]
+- !private ["s13SignedNumericP", "clamped"]
+- !private ["Sx", "clamped"]
+- !private ["SS", "count"]
+- !private ["Sy", "count"]
+- !private ["s16TextOutputStreamP", "count"]
+- !private ["s20TextOutputStreamableP", "count"]
+- ["So7UIColorC", "black"]
+- ["So7UIColorC", "gray"]
+- ["So7UIColorC", "withAlphaComponent"]
+- ["So6UIFontC", "systemFont"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "firstIndex"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s14_ArrayProtocolP", "removeAll"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "clamped"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "firstIndex"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "removeAll"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "clamped"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
+- ["s26_ExpressibleByColorLiteralP", "black"]
+- ["s26_ExpressibleByColorLiteralP", "gray"]
+- ["s26_ExpressibleByColorLiteralP", "withAlphaComponent"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "firstIndex"]
+- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "remove"]
+- !private ["s19_HasContiguousBytesP", "removeAll"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "clamped"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "firstIndex"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "remove"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "removeAll"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGLineCap"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ChartLimitLine"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DefaultAxisValueFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIFont"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_axisMaximum"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_axisMinimum"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_axisValueFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_centerAxisLabelsEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_customAxisMax"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_customAxisMin"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_granularity"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_labelCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_limitLines"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "abs"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "axisMaxLabels"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "axisMinLabels"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "axisRange"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "centerAxisLabelsEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "decimals"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "drawAxisLineEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "drawGridLinesEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "drawLabelsEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "drawLimitLinesBehindDataEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "entries"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "entryCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "forceLabelsEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getFormattedLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "granularityEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "gray"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasAutoDecimals"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "labelCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "spaceMax"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "spaceMin"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "valueFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "withAlphaComponent"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGFloat"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CGLineCap"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ChartLimitLine"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DefaultAxisValueFormatter"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Double"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSUIColor"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSUIFont"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_axisMaximum"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_axisMinimum"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_axisValueFormatter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_centerAxisLabelsEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_customAxisMax"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_customAxisMin"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_granularity"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_labelCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_limitLines"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "abs"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axisMaxLabels"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axisMinLabels"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "axisRange"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "black"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "centerAxisLabelsEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "decimals"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drawAxisLineEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drawGridLinesEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drawLabelsEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "drawLimitLinesBehindDataEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "entries"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "entryCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "forceLabelsEnabled"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getFormattedLabel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "granularityEnabled"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "gray"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "hasAutoDecimals"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "labelCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "spaceMax"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "spaceMin"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "systemFont"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "valueFormatter"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "withAlphaComponent"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "clamped"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "firstIndex"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- "Sa"
+- "6Charts8AxisBaseC"
+- "SK"
+- !private "Sz"
+- "So9CGLineCapV"
+- "s7CVarArgP"
+- !private "6Charts14ChartLimitLineC"
+- "Sl"
+- !private "SL"
+- "6Charts13ComponentBaseC"
+- "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
+- "Se"
+- !private "6Charts25DefaultAxisValueFormatterC"
+- "SE"
+- "SQ"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "6Charts19IAxisValueFormatterP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "SM"
+- "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sj"
+- "Sk"
+- "Sm"
+- "SY"
+- !private "s10SIMDScalarP"
+- "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "So7UIColorC"
+- "So6UIFontC"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s24_DestructorSafeContainerP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s26_ExpressibleByColorLiteralP"
+- "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a75e5cc9d59c5a31dc188174a9a7815f"

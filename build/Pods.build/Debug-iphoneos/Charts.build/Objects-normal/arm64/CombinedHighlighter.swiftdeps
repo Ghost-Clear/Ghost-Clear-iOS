@@ -1,0 +1,374 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CombinedHighlighter"
+provides-nominal:
+- "6Charts19CombinedHighlighterC"
+provides-member:
+- ["6Charts19CombinedHighlighterC", ""]
+provides-dynamic-lookup:
+- "barHighlighter"
+- "getHighlights"
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "..<"
+- !private "=="
+- "AssignmentPrecedence"
+- !private "BarChartData"
+- "BarChartDataProvider"
+- "BarHighlighter"
+- "CGFloat"
+- "CastingPrecedence"
+- "ChartHighlighter"
+- "CombinedChartDataProvider"
+- "CombinedHighlighter"
+- "Double"
+- !private "FloatLiteralType"
+- "Highlight"
+- !private "IntegerLiteralType"
+- "TernaryPrecedence"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["6Charts12BarChartDataC", "deinit"]
+- !private ["6Charts20BarChartDataProviderP", "barData"]
+- !private ["6Charts20BarChartDataProviderP", "combinedData"]
+- !private ["6Charts14BarHighlighterC", "deinit"]
+- !private ["6Charts14BarHighlighterC", "getHighlight"]
+- !private ["6Charts14BarHighlighterC", "init"]
+- !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "allData"]
+- !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "barData"]
+- !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "combinedData"]
+- !private ["SK", "append"]
+- !private ["SK", "count"]
+- !private ["SK", "init"]
+- !private ["SK", "subscript"]
+- !private ["6Charts23BubbleChartDataProviderP", "combinedData"]
+- !private ["s7CVarArgP", "BarHighlighter"]
+- !private ["s7CVarArgP", "Highlight"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "allData"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "barHighlighter"]
+- !private ["s7CVarArgP", "buildHighlights"]
+- !private ["s7CVarArgP", "chart"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dataIndex"]
+- !private ["s7CVarArgP", "dataSetCount"]
+- !private ["s7CVarArgP", "getDataSetByIndex"]
+- !private ["s7CVarArgP", "getHighlight"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["6Charts23CandleChartDataProviderP", "combinedData"]
+- !private ["6Charts9ChartDataC", "allData"]
+- !private ["6Charts9ChartDataC", "dataSetCount"]
+- !private ["6Charts9ChartDataC", "getDataSetByIndex"]
+- !private ["6Charts17ChartDataProviderP", "barData"]
+- !private ["6Charts17ChartDataProviderP", "combinedData"]
+- !private ["6Charts20ChartDataSetRoundingO", "closest"]
+- !private ["6Charts16ChartHighlighterC", "BarChartData"]
+- ["6Charts16ChartHighlighterC", "BarChartDataProvider"]
+- ["6Charts16ChartHighlighterC", "BarHighlighter"]
+- ["6Charts16ChartHighlighterC", "CGFloat"]
+- ["6Charts16ChartHighlighterC", "CombinedChartDataProvider"]
+- ["6Charts16ChartHighlighterC", "Double"]
+- ["6Charts16ChartHighlighterC", "Highlight"]
+- ["6Charts16ChartHighlighterC", ""]
+- ["6Charts16ChartHighlighterC", "barHighlighter"]
+- !private ["6Charts16ChartHighlighterC", "buildHighlights"]
+- !private ["6Charts16ChartHighlighterC", "chart"]
+- !private ["6Charts16ChartHighlighterC", "getHighlight"]
+- ["6Charts16ChartHighlighterC", "getHighlights"]
+- ["6Charts16ChartHighlighterC", "init"]
+- !private ["Sl", "append"]
+- !private ["Sl", "count"]
+- !private ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- !private ["6Charts17CombinedChartDataC", "allData"]
+- !private ["6Charts25CombinedChartDataProviderP", "combinedData"]
+- !private ["6Charts19CombinedHighlighterC", "BarChartData"]
+- ["6Charts19CombinedHighlighterC", "BarChartDataProvider"]
+- ["6Charts19CombinedHighlighterC", "BarHighlighter"]
+- ["6Charts19CombinedHighlighterC", "CGFloat"]
+- ["6Charts19CombinedHighlighterC", "CombinedChartDataProvider"]
+- ["6Charts19CombinedHighlighterC", "Double"]
+- ["6Charts19CombinedHighlighterC", "Highlight"]
+- !private ["6Charts19CombinedHighlighterC", "barHighlighter"]
+- !private ["6Charts19CombinedHighlighterC", "buildHighlights"]
+- !private ["6Charts19CombinedHighlighterC", "chart"]
+- ["6Charts19CombinedHighlighterC", "deinit"]
+- ["6Charts19CombinedHighlighterC", "getHighlights"]
+- ["6Charts19CombinedHighlighterC", "init"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "BarHighlighter"]
+- !private ["s28CustomDebugStringConvertibleP", "Highlight"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "allData"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "barHighlighter"]
+- !private ["s28CustomDebugStringConvertibleP", "buildHighlights"]
+- !private ["s28CustomDebugStringConvertibleP", "chart"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dataIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSetCount"]
+- !private ["s28CustomDebugStringConvertibleP", "getDataSetByIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "getHighlight"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "BarHighlighter"]
+- !private ["s23CustomStringConvertibleP", "Highlight"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "allData"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "barHighlighter"]
+- !private ["s23CustomStringConvertibleP", "buildHighlights"]
+- !private ["s23CustomStringConvertibleP", "chart"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "dataIndex"]
+- !private ["s23CustomStringConvertibleP", "dataSetCount"]
+- !private ["s23CustomStringConvertibleP", "getDataSetByIndex"]
+- !private ["s23CustomStringConvertibleP", "getHighlight"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "append"]
+- !private ["Se", "count"]
+- !private ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["SE", "append"]
+- !private ["SE", "count"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "BarHighlighter"]
+- !private ["SQ", "Highlight"]
+- ["SQ", ""]
+- !private ["SQ", "allData"]
+- !private ["SQ", "append"]
+- !private ["SQ", "barHighlighter"]
+- !private ["SQ", "buildHighlights"]
+- !private ["SQ", "chart"]
+- !private ["SQ", "closest"]
+- !private ["SQ", "count"]
+- !private ["SQ", "dataIndex"]
+- !private ["SQ", "dataSetCount"]
+- !private ["SQ", "getDataSetByIndex"]
+- !private ["SQ", "getHighlight"]
+- !private ["SQ", "init"]
+- !private ["SQ", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["SH", "BarHighlighter"]
+- !private ["SH", "Highlight"]
+- ["SH", ""]
+- !private ["SH", "allData"]
+- !private ["SH", "append"]
+- !private ["SH", "barHighlighter"]
+- !private ["SH", "buildHighlights"]
+- !private ["SH", "chart"]
+- !private ["SH", "closest"]
+- !private ["SH", "count"]
+- !private ["SH", "dataIndex"]
+- !private ["SH", "dataSetCount"]
+- !private ["SH", "getDataSetByIndex"]
+- !private ["SH", "getHighlight"]
+- !private ["SH", "init"]
+- !private ["SH", "subscript"]
+- !private ["6Charts9HighlightC", "dataIndex"]
+- !private ["6Charts13IChartDataSetP", "isHighlightEnabled"]
+- !private ["6Charts12IHighlighterP", "BarHighlighter"]
+- !private ["6Charts12IHighlighterP", "Highlight"]
+- ["6Charts12IHighlighterP", ""]
+- !private ["6Charts12IHighlighterP", "barHighlighter"]
+- !private ["6Charts12IHighlighterP", "buildHighlights"]
+- !private ["6Charts12IHighlighterP", "chart"]
+- !private ["6Charts12IHighlighterP", "getHighlight"]
+- !private ["6Charts12IHighlighterP", "init"]
+- !private ["6Charts21LineChartDataProviderP", "combinedData"]
+- !private ["SM", "append"]
+- !private ["SM", "count"]
+- !private ["SM", "init"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSObjectC", "BarChartData"]
+- ["So8NSObjectC", "BarChartDataProvider"]
+- ["So8NSObjectC", "BarHighlighter"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CombinedChartDataProvider"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Highlight"]
+- !private ["So8NSObjectC", "allData"]
+- ["So8NSObjectC", "barHighlighter"]
+- !private ["So8NSObjectC", "buildHighlights"]
+- !private ["So8NSObjectC", "chart"]
+- !private ["So8NSObjectC", "dataIndex"]
+- !private ["So8NSObjectC", "dataSetCount"]
+- !private ["So8NSObjectC", "getDataSetByIndex"]
+- !private ["So8NSObjectC", "getHighlight"]
+- ["So8NSObjectC", "getHighlights"]
+- !private ["So8NSObjectP", "BarHighlighter"]
+- !private ["So8NSObjectP", "Highlight"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "allData"]
+- !private ["So8NSObjectP", "barHighlighter"]
+- !private ["So8NSObjectP", "buildHighlights"]
+- !private ["So8NSObjectP", "chart"]
+- !private ["So8NSObjectP", "dataIndex"]
+- !private ["So8NSObjectP", "dataSetCount"]
+- !private ["So8NSObjectP", "getDataSetByIndex"]
+- !private ["So8NSObjectP", "getHighlight"]
+- !private ["So8NSObjectP", "init"]
+- !private ["Sk", "append"]
+- !private ["Sk", "count"]
+- !private ["Sk", "init"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "append"]
+- !private ["Sm", "count"]
+- !private ["Sm", "init"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "closest"]
+- !private ["6Charts24ScatterChartDataProviderP", "combinedData"]
+- !private ["ST", "append"]
+- !private ["ST", "count"]
+- !private ["ST", "init"]
+- !private ["ST", "subscript"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "BarHighlighter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Highlight"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "allData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "barHighlighter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "buildHighlights"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSetCount"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDataSetByIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getHighlight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "BarHighlighter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Highlight"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "allData"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "barHighlighter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "buildHighlights"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "chart"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataIndex"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dataSetCount"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getDataSetByIndex"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getHighlight"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "Sa"
+- !private "6Charts12BarChartDataC"
+- !private "6Charts20BarChartDataProviderP"
+- !private "6Charts14BarHighlighterC"
+- !private "6Charts35BarLineScatterCandleBubbleChartDataC"
+- !private "6Charts43BarLineScatterCandleBubbleChartDataProviderP"
+- !private "SK"
+- !private "6Charts23BubbleChartDataProviderP"
+- "s7CVarArgP"
+- !private "6Charts23CandleChartDataProviderP"
+- !private "6Charts9ChartDataC"
+- !private "6Charts17ChartDataProviderP"
+- !private "6Charts20ChartDataSetRoundingO"
+- "6Charts16ChartHighlighterC"
+- !private "Sl"
+- !private "6Charts17CombinedChartDataC"
+- !private "6Charts25CombinedChartDataProviderP"
+- "6Charts19CombinedHighlighterC"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- "SH"
+- !private "6Charts9HighlightC"
+- !private "6Charts13IChartDataSetP"
+- "6Charts12IHighlighterP"
+- !private "6Charts21LineChartDataProviderP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "6Charts24ScatterChartDataProviderP"
+- !private "ST"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "64623d41d33a5ca3dad6082a17ce0f8a"

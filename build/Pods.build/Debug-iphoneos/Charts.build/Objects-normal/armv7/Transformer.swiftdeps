@@ -1,0 +1,449 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Transformer"
+provides-nominal:
+- "6Charts11TransformerC"
+provides-member:
+- ["6Charts11TransformerC", ""]
+provides-dynamic-lookup:
+- "_matrixOffset"
+- "_matrixValueToPx"
+- "_viewPortHandler"
+- "pixelForValues"
+- "pixelToValueMatrix"
+- "pixelToValues"
+- "pixelsToValues"
+- "pointValueToPixel"
+- "pointValuesToPixel"
+- "prepareMatrixOffset"
+- "prepareMatrixValuePx"
+- "rectValueToPixel"
+- "rectValueToPixelHorizontal"
+- "rectValuesToPixel"
+- "valueForTouchPoint"
+- "valueToPixelMatrix"
+depends-top-level:
+- !private "!"
+- !private "*"
+- !private "*="
+- !private "+"
+- !private "-"
+- !private "/"
+- !private "=="
+- "AssignmentPrecedence"
+- "Bool"
+- "CGAffineTransform"
+- "CGFloat"
+- "CGPoint"
+- "CGRect"
+- "Double"
+- !private "FloatLiteralType"
+- "NSObject"
+- "Transformer"
+- "ViewPortHandler"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "infinity"]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "map"]
+- !private ["SK", "map"]
+- !private ["SB", "infinity"]
+- !private ["SB", "init"]
+- !private ["So17CGAffineTransformV", "concatenating"]
+- ["So17CGAffineTransformV", "identity"]
+- !private ["So17CGAffineTransformV", "init"]
+- !private ["So17CGAffineTransformV", "inverted"]
+- !private ["So17CGAffineTransformV", "scaledBy"]
+- !private ["So17CGAffineTransformV", "translatedBy"]
+- !private ["12CoreGraphics7CGFloatV", "infinity"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["So7CGPointV", "applying"]
+- !private ["So7CGPointV", "init"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So6CGRectV", "applying"]
+- !private ["So6CGRectV", "origin"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
+- ["s7CVarArgP", "CGAffineTransform"]
+- !private ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "CGPoint"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_matrixOffset"]
+- !private ["s7CVarArgP", "_matrixValueToPx"]
+- !private ["s7CVarArgP", "_viewPortHandler"]
+- !private ["s7CVarArgP", "chartHeight"]
+- !private ["s7CVarArgP", "contentHeight"]
+- !private ["s7CVarArgP", "contentWidth"]
+- !private ["s7CVarArgP", "infinity"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "offsetBottom"]
+- !private ["s7CVarArgP", "offsetLeft"]
+- !private ["s7CVarArgP", "offsetTop"]
+- !private ["s7CVarArgP", "pixelToValueMatrix"]
+- !private ["s7CVarArgP", "touchMatrix"]
+- !private ["s7CVarArgP", "valueToPixelMatrix"]
+- !private ["Sl", "map"]
+- !private ["SL", "infinity"]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "map"]
+- ["s28CustomDebugStringConvertibleP", "CGAffineTransform"]
+- !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_matrixOffset"]
+- !private ["s28CustomDebugStringConvertibleP", "_matrixValueToPx"]
+- !private ["s28CustomDebugStringConvertibleP", "_viewPortHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "applying"]
+- !private ["s28CustomDebugStringConvertibleP", "chartHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "contentHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "contentWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetBottom"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetLeft"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetTop"]
+- !private ["s28CustomDebugStringConvertibleP", "origin"]
+- !private ["s28CustomDebugStringConvertibleP", "pixelToValueMatrix"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "touchMatrix"]
+- !private ["s28CustomDebugStringConvertibleP", "valueToPixelMatrix"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s17CustomReflectableP", "applying"]
+- !private ["s17CustomReflectableP", "height"]
+- !private ["s17CustomReflectableP", "infinity"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "origin"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- ["s23CustomStringConvertibleP", "CGAffineTransform"]
+- !private ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_matrixOffset"]
+- !private ["s23CustomStringConvertibleP", "_matrixValueToPx"]
+- !private ["s23CustomStringConvertibleP", "_viewPortHandler"]
+- !private ["s23CustomStringConvertibleP", "chartHeight"]
+- !private ["s23CustomStringConvertibleP", "contentHeight"]
+- !private ["s23CustomStringConvertibleP", "contentWidth"]
+- !private ["s23CustomStringConvertibleP", "infinity"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "offsetBottom"]
+- !private ["s23CustomStringConvertibleP", "offsetLeft"]
+- !private ["s23CustomStringConvertibleP", "offsetTop"]
+- !private ["s23CustomStringConvertibleP", "pixelToValueMatrix"]
+- !private ["s23CustomStringConvertibleP", "touchMatrix"]
+- !private ["s23CustomStringConvertibleP", "valueToPixelMatrix"]
+- !private ["10Foundation12DataProtocolP", "map"]
+- !private ["Se", "applying"]
+- !private ["Se", "concatenating"]
+- !private ["Se", "height"]
+- ["Se", "identity"]
+- !private ["Se", "infinity"]
+- !private ["Se", "init"]
+- !private ["Se", "inverted"]
+- !private ["Se", "map"]
+- !private ["Se", "origin"]
+- !private ["Se", "scaledBy"]
+- !private ["Se", "size"]
+- !private ["Se", "translatedBy"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["SE", "applying"]
+- !private ["SE", "concatenating"]
+- !private ["SE", "height"]
+- ["SE", "identity"]
+- !private ["SE", "infinity"]
+- !private ["SE", "init"]
+- !private ["SE", "inverted"]
+- !private ["SE", "map"]
+- !private ["SE", "origin"]
+- !private ["SE", "scaledBy"]
+- !private ["SE", "size"]
+- !private ["SE", "translatedBy"]
+- !private ["SE", "width"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- ["SQ", "CGAffineTransform"]
+- !private ["SQ", "CGFloat"]
+- !private ["SQ", "CGPoint"]
+- ["SQ", ""]
+- !private ["SQ", "_matrixOffset"]
+- !private ["SQ", "_matrixValueToPx"]
+- !private ["SQ", "_viewPortHandler"]
+- !private ["SQ", "applying"]
+- !private ["SQ", "chartHeight"]
+- !private ["SQ", "concatenating"]
+- !private ["SQ", "contentHeight"]
+- !private ["SQ", "contentWidth"]
+- !private ["SQ", "height"]
+- ["SQ", "identity"]
+- !private ["SQ", "infinity"]
+- !private ["SQ", "init"]
+- !private ["SQ", "inverted"]
+- !private ["SQ", "map"]
+- !private ["SQ", "offsetBottom"]
+- !private ["SQ", "offsetLeft"]
+- !private ["SQ", "offsetTop"]
+- !private ["SQ", "origin"]
+- !private ["SQ", "pixelToValueMatrix"]
+- !private ["SQ", "scaledBy"]
+- !private ["SQ", "size"]
+- !private ["SQ", "touchMatrix"]
+- !private ["SQ", "translatedBy"]
+- !private ["SQ", "valueToPixelMatrix"]
+- !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByFloatLiteralP", "infinity"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "infinity"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["SF", "infinity"]
+- !private ["SF", "init"]
+- ["SH", "CGAffineTransform"]
+- !private ["SH", "CGFloat"]
+- !private ["SH", "CGPoint"]
+- ["SH", ""]
+- !private ["SH", "_matrixOffset"]
+- !private ["SH", "_matrixValueToPx"]
+- !private ["SH", "_viewPortHandler"]
+- !private ["SH", "chartHeight"]
+- !private ["SH", "contentHeight"]
+- !private ["SH", "contentWidth"]
+- !private ["SH", "infinity"]
+- !private ["SH", "init"]
+- !private ["SH", "map"]
+- !private ["SH", "offsetBottom"]
+- !private ["SH", "offsetLeft"]
+- !private ["SH", "offsetTop"]
+- !private ["SH", "pixelToValueMatrix"]
+- !private ["SH", "touchMatrix"]
+- !private ["SH", "valueToPixelMatrix"]
+- !private ["SM", "map"]
+- !private ["10Foundation19MutableDataProtocolP", "map"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGAffineTransform"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "ViewPortHandler"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_matrixOffset"]
+- ["So8NSObjectC", "_matrixValueToPx"]
+- ["So8NSObjectC", "_viewPortHandler"]
+- !private ["So8NSObjectC", "chartHeight"]
+- !private ["So8NSObjectC", "contentHeight"]
+- !private ["So8NSObjectC", "contentWidth"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "offsetBottom"]
+- !private ["So8NSObjectC", "offsetLeft"]
+- !private ["So8NSObjectC", "offsetTop"]
+- ["So8NSObjectC", "pixelForValues"]
+- ["So8NSObjectC", "pixelToValueMatrix"]
+- ["So8NSObjectC", "pixelToValues"]
+- ["So8NSObjectC", "pixelsToValues"]
+- ["So8NSObjectC", "pointValueToPixel"]
+- ["So8NSObjectC", "pointValuesToPixel"]
+- ["So8NSObjectC", "prepareMatrixOffset"]
+- ["So8NSObjectC", "prepareMatrixValuePx"]
+- ["So8NSObjectC", "rectValueToPixel"]
+- ["So8NSObjectC", "rectValueToPixelHorizontal"]
+- ["So8NSObjectC", "rectValuesToPixel"]
+- !private ["So8NSObjectC", "touchMatrix"]
+- ["So8NSObjectC", "valueForTouchPoint"]
+- ["So8NSObjectC", "valueToPixelMatrix"]
+- ["So8NSObjectP", "CGAffineTransform"]
+- !private ["So8NSObjectP", "CGFloat"]
+- !private ["So8NSObjectP", "CGPoint"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_matrixOffset"]
+- !private ["So8NSObjectP", "_matrixValueToPx"]
+- !private ["So8NSObjectP", "_viewPortHandler"]
+- !private ["So8NSObjectP", "chartHeight"]
+- !private ["So8NSObjectP", "contentHeight"]
+- !private ["So8NSObjectP", "contentWidth"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "offsetBottom"]
+- !private ["So8NSObjectP", "offsetLeft"]
+- !private ["So8NSObjectP", "offsetTop"]
+- !private ["So8NSObjectP", "pixelToValueMatrix"]
+- !private ["So8NSObjectP", "touchMatrix"]
+- !private ["So8NSObjectP", "valueToPixelMatrix"]
+- !private ["Sj", "infinity"]
+- !private ["Sj", "init"]
+- !private ["Sk", "map"]
+- !private ["Sm", "map"]
+- !private ["ST", "map"]
+- !private ["s13SignedNumericP", "infinity"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "infinity"]
+- !private ["Sx", "init"]
+- ["6Charts11TransformerC", "Bool"]
+- ["6Charts11TransformerC", "CGAffineTransform"]
+- ["6Charts11TransformerC", "CGFloat"]
+- ["6Charts11TransformerC", "CGPoint"]
+- ["6Charts11TransformerC", "CGRect"]
+- ["6Charts11TransformerC", "Double"]
+- ["6Charts11TransformerC", "ViewPortHandler"]
+- ["6Charts11TransformerC", "_matrixOffset"]
+- ["6Charts11TransformerC", "_matrixValueToPx"]
+- ["6Charts11TransformerC", "_viewPortHandler"]
+- ["6Charts11TransformerC", "deinit"]
+- ["6Charts11TransformerC", "init"]
+- ["6Charts11TransformerC", "pixelForValues"]
+- ["6Charts11TransformerC", "pixelToValueMatrix"]
+- ["6Charts11TransformerC", "pixelToValues"]
+- ["6Charts11TransformerC", "pixelsToValues"]
+- ["6Charts11TransformerC", "pointValueToPixel"]
+- ["6Charts11TransformerC", "pointValuesToPixel"]
+- ["6Charts11TransformerC", "prepareMatrixOffset"]
+- ["6Charts11TransformerC", "prepareMatrixValuePx"]
+- ["6Charts11TransformerC", "rectValueToPixel"]
+- ["6Charts11TransformerC", "rectValueToPixelHorizontal"]
+- ["6Charts11TransformerC", "rectValuesToPixel"]
+- ["6Charts11TransformerC", "valueForTouchPoint"]
+- ["6Charts11TransformerC", "valueToPixelMatrix"]
+- !private ["6Charts15ViewPortHandlerC", "chartHeight"]
+- !private ["6Charts15ViewPortHandlerC", "contentHeight"]
+- !private ["6Charts15ViewPortHandlerC", "contentWidth"]
+- !private ["6Charts15ViewPortHandlerC", "offsetBottom"]
+- !private ["6Charts15ViewPortHandlerC", "offsetLeft"]
+- !private ["6Charts15ViewPortHandlerC", "offsetTop"]
+- !private ["6Charts15ViewPortHandlerC", "touchMatrix"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s15_CVarArgAlignedP", "infinity"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "infinity"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "applying"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "origin"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "size"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "x"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "y"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s19_HasContiguousBytesP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGAffineTransform"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_matrixOffset"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_matrixValueToPx"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_viewPortHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chartHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetBottom"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetLeft"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetTop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pixelToValueMatrix"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "touchMatrix"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "valueToPixelMatrix"]
+- !private ["s21_ObjectiveCBridgeableP", "applying"]
+- !private ["s21_ObjectiveCBridgeableP", "concatenating"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- ["s21_ObjectiveCBridgeableP", "identity"]
+- !private ["s21_ObjectiveCBridgeableP", "infinity"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "inverted"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "origin"]
+- !private ["s21_ObjectiveCBridgeableP", "scaledBy"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "translatedBy"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "SB"
+- "So17CGAffineTransformV"
+- !private "12CoreGraphics7CGFloatV"
+- !private "So7CGPointV"
+- !private "So6CGRectV"
+- !private "So6CGSizeV"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- "Se"
+- "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "SF"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- "6Charts11TransformerC"
+- !private "6Charts15ViewPortHandlerC"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "6c364e3602c859fe5e98ca355add3e50"

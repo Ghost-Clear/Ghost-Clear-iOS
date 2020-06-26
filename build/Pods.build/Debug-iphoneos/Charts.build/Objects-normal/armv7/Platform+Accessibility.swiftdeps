@@ -1,0 +1,523 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "accessibilityPostLayoutChangedNotification"
+- "accessibilityPostScreenChangedNotification"
+- "NSUIAccessibilityElement"
+provides-nominal:
+- "6Charts24NSUIAccessibilityElementC"
+provides-member:
+- ["6Charts24NSUIAccessibilityElementC", ""]
+- ["6Charts8NSUIViewC", ""]
+- ["6Charts8NSUIViewC", "accessibilityChildren"]
+- ["6Charts8NSUIViewC", "isAccessibilityElement"]
+- ["6Charts8NSUIViewC", "accessibilityElementCount"]
+- ["6Charts8NSUIViewC", "accessibilityElement"]
+- ["6Charts8NSUIViewC", "index"]
+provides-dynamic-lookup:
+- "accessibilityChildren"
+- "accessibilityElement"
+- "accessibilityElementCount"
+- "accessibilityFrame"
+- "containerView"
+- "index"
+- "isAccessibilityElement"
+- "isHeader"
+- "isSelected"
+depends-top-level:
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CGRect"
+- "CastingPrecedence"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- !private "NSNotFound"
+- "NSUIAccessibilityElement"
+- "NSUIView"
+- "TernaryPrecedence"
+- !private "UIAccessibility"
+- "UIAccessibilityElement"
+- !private "UIAccessibilityTraits"
+- !private "UIScreen"
+- "UIView"
+- "accessibilityPostLayoutChangedNotification"
+- "accessibilityPostScreenChangedNotification"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "firstIndex"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "count"]
+- !private ["SK", "firstIndex"]
+- !private ["SK", "subscript"]
+- !private ["So15CALayerDelegateP", "NSNotFound"]
+- !private ["So15CALayerDelegateP", "accessibilityChildren"]
+- !private ["So15CALayerDelegateP", "convert"]
+- !private ["s7CVarArgP", "NSNotFound"]
+- !private ["s7CVarArgP", "UIAccessibilityTraits"]
+- !private ["s7CVarArgP", "UIScreen"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "accessibilityChildren"]
+- !private ["s7CVarArgP", "accessibilityFrame"]
+- !private ["s7CVarArgP", "accessibilityTraits"]
+- !private ["s7CVarArgP", "containerView"]
+- !private ["s7CVarArgP", "convert"]
+- !private ["s7CVarArgP", "coordinateSpace"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "firstIndex"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isHeader"]
+- !private ["s7CVarArgP", "isSelected"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", "count"]
+- !private ["Sl", "firstIndex"]
+- !private ["Sl", "subscript"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "firstIndex"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNotFound"]
+- !private ["s28CustomDebugStringConvertibleP", "UIAccessibilityTraits"]
+- !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityChildren"]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityFrame"]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityTraits"]
+- !private ["s28CustomDebugStringConvertibleP", "containerView"]
+- !private ["s28CustomDebugStringConvertibleP", "convert"]
+- !private ["s28CustomDebugStringConvertibleP", "coordinateSpace"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "firstIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isHeader"]
+- !private ["s28CustomDebugStringConvertibleP", "isSelected"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "firstIndex"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "NSNotFound"]
+- !private ["s23CustomStringConvertibleP", "UIAccessibilityTraits"]
+- !private ["s23CustomStringConvertibleP", "UIScreen"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "accessibilityChildren"]
+- !private ["s23CustomStringConvertibleP", "accessibilityFrame"]
+- !private ["s23CustomStringConvertibleP", "accessibilityTraits"]
+- !private ["s23CustomStringConvertibleP", "containerView"]
+- !private ["s23CustomStringConvertibleP", "convert"]
+- !private ["s23CustomStringConvertibleP", "coordinateSpace"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "firstIndex"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isHeader"]
+- !private ["s23CustomStringConvertibleP", "isSelected"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "firstIndex"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
+- !private ["Se", "firstIndex"]
+- !private ["Se", "subscript"]
+- !private ["SE", "count"]
+- !private ["SE", "firstIndex"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "NSNotFound"]
+- !private ["SQ", "UIAccessibilityTraits"]
+- !private ["SQ", "UIScreen"]
+- ["SQ", ""]
+- !private ["SQ", "accessibilityChildren"]
+- !private ["SQ", "accessibilityFrame"]
+- !private ["SQ", "accessibilityTraits"]
+- !private ["SQ", "containerView"]
+- !private ["SQ", "convert"]
+- !private ["SQ", "coordinateSpace"]
+- !private ["SQ", "count"]
+- !private ["SQ", "firstIndex"]
+- !private ["SQ", "header"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isHeader"]
+- !private ["SQ", "isSelected"]
+- !private ["SQ", "layoutChanged"]
+- !private ["SQ", "main"]
+- !private ["SQ", "none"]
+- !private ["SQ", "screenChanged"]
+- !private ["SQ", "selected"]
+- !private ["SQ", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "firstIndex"]
+- !private ["s25ExpressibleByArrayLiteralP", "header"]
+- !private ["s25ExpressibleByArrayLiteralP", "none"]
+- !private ["s25ExpressibleByArrayLiteralP", "selected"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["SH", "NSNotFound"]
+- !private ["SH", "UIAccessibilityTraits"]
+- !private ["SH", "UIScreen"]
+- ["SH", ""]
+- !private ["SH", "accessibilityChildren"]
+- !private ["SH", "accessibilityFrame"]
+- !private ["SH", "accessibilityTraits"]
+- !private ["SH", "containerView"]
+- !private ["SH", "convert"]
+- !private ["SH", "coordinateSpace"]
+- !private ["SH", "count"]
+- !private ["SH", "firstIndex"]
+- !private ["SH", "header"]
+- !private ["SH", "init"]
+- !private ["SH", "isHeader"]
+- !private ["SH", "isSelected"]
+- !private ["SH", "layoutChanged"]
+- !private ["SH", "main"]
+- !private ["SH", "none"]
+- !private ["SH", "screenChanged"]
+- !private ["SH", "selected"]
+- !private ["SH", "subscript"]
+- !private ["SM", "count"]
+- !private ["SM", "firstIndex"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "firstIndex"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSCodingP", "NSNotFound"]
+- !private ["So8NSCodingP", "accessibilityChildren"]
+- !private ["So8NSCodingP", "convert"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "NSNotFound"]
+- !private ["So8NSObjectC", "NSUIAccessibilityElement"]
+- !private ["So8NSObjectC", "UIAccessibilityTraits"]
+- !private ["So8NSObjectC", "UIScreen"]
+- ["So8NSObjectC", "UIView"]
+- ["So8NSObjectC", "accessibilityChildren"]
+- ["So8NSObjectC", "accessibilityElement"]
+- ["So8NSObjectC", "accessibilityElementCount"]
+- ["So8NSObjectC", "accessibilityFrame"]
+- !private ["So8NSObjectC", "accessibilityTraits"]
+- ["So8NSObjectC", "containerView"]
+- !private ["So8NSObjectC", "convert"]
+- !private ["So8NSObjectC", "coordinateSpace"]
+- ["So8NSObjectC", "index"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isAccessibilityElement"]
+- ["So8NSObjectC", "isHeader"]
+- ["So8NSObjectC", "isSelected"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectP", "NSNotFound"]
+- !private ["So8NSObjectP", "UIAccessibilityTraits"]
+- !private ["So8NSObjectP", "UIScreen"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "accessibilityChildren"]
+- !private ["So8NSObjectP", "accessibilityFrame"]
+- !private ["So8NSObjectP", "accessibilityTraits"]
+- !private ["So8NSObjectP", "containerView"]
+- !private ["So8NSObjectP", "convert"]
+- !private ["So8NSObjectP", "coordinateSpace"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isHeader"]
+- !private ["So8NSObjectP", "isSelected"]
+- !private ["So8NSObjectP", "main"]
+- ["6Charts24NSUIAccessibilityElementC", "Bool"]
+- ["6Charts24NSUIAccessibilityElementC", "CGRect"]
+- !private ["6Charts24NSUIAccessibilityElementC", "UIAccessibilityTraits"]
+- !private ["6Charts24NSUIAccessibilityElementC", "UIScreen"]
+- ["6Charts24NSUIAccessibilityElementC", "UIView"]
+- ["6Charts24NSUIAccessibilityElementC", "accessibilityFrame"]
+- !private ["6Charts24NSUIAccessibilityElementC", "accessibilityTraits"]
+- !private ["6Charts24NSUIAccessibilityElementC", "containerView"]
+- ["6Charts24NSUIAccessibilityElementC", "deinit"]
+- ["6Charts24NSUIAccessibilityElementC", "init"]
+- ["6Charts24NSUIAccessibilityElementC", "isHeader"]
+- ["6Charts24NSUIAccessibilityElementC", "isSelected"]
+- ["6Charts8NSUIViewC", "Bool"]
+- ["6Charts8NSUIViewC", "Int"]
+- !private ["6Charts8NSUIViewC", "NSNotFound"]
+- !private ["6Charts8NSUIViewC", "NSUIAccessibilityElement"]
+- ["6Charts8NSUIViewC", "accessibilityChildren"]
+- ["6Charts8NSUIViewC", "accessibilityElement"]
+- ["6Charts8NSUIViewC", "accessibilityElementCount"]
+- ["6Charts8NSUIViewC", "index"]
+- ["6Charts8NSUIViewC", "isAccessibilityElement"]
+- !private ["So28UIAccessibilityNotificationsa", "layoutChanged"]
+- !private ["So28UIAccessibilityNotificationsa", "screenChanged"]
+- !private ["s9OptionSetP", "header"]
+- !private ["s9OptionSetP", "none"]
+- !private ["s9OptionSetP", "selected"]
+- !private ["Sk", "count"]
+- !private ["Sk", "firstIndex"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "count"]
+- !private ["Sm", "firstIndex"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "header"]
+- !private ["SY", "layoutChanged"]
+- !private ["SY", "none"]
+- !private ["SY", "screenChanged"]
+- !private ["SY", "selected"]
+- !private ["ST", "count"]
+- !private ["ST", "firstIndex"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "header"]
+- !private ["s10SetAlgebraP", "none"]
+- !private ["s10SetAlgebraP", "selected"]
+- !private ["So15UIAccessibilityV", "Notification"]
+- !private ["So15UIAccessibilityV", "post"]
+- ["So22UIAccessibilityElementC", "Bool"]
+- ["So22UIAccessibilityElementC", "CGRect"]
+- !private ["So22UIAccessibilityElementC", "UIAccessibilityTraits"]
+- !private ["So22UIAccessibilityElementC", "UIScreen"]
+- ["So22UIAccessibilityElementC", "UIView"]
+- ["So22UIAccessibilityElementC", ""]
+- ["So22UIAccessibilityElementC", "accessibilityFrame"]
+- !private ["So22UIAccessibilityElementC", "accessibilityTraits"]
+- ["So22UIAccessibilityElementC", "containerView"]
+- ["So22UIAccessibilityElementC", "init"]
+- ["So22UIAccessibilityElementC", "isHeader"]
+- ["So22UIAccessibilityElementC", "isSelected"]
+- !private ["So29UIAccessibilityIdentificationP", "NSNotFound"]
+- !private ["So29UIAccessibilityIdentificationP", "UIAccessibilityTraits"]
+- !private ["So29UIAccessibilityIdentificationP", "UIScreen"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityChildren"]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityFrame"]
+- !private ["So29UIAccessibilityIdentificationP", "accessibilityTraits"]
+- !private ["So29UIAccessibilityIdentificationP", "containerView"]
+- !private ["So29UIAccessibilityIdentificationP", "convert"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "isHeader"]
+- !private ["So29UIAccessibilityIdentificationP", "isSelected"]
+- !private ["So21UIAccessibilityTraitsa", "header"]
+- !private ["So21UIAccessibilityTraitsa", "none"]
+- !private ["So21UIAccessibilityTraitsa", "selected"]
+- !private ["So12UIAppearanceP", "NSNotFound"]
+- !private ["So12UIAppearanceP", "accessibilityChildren"]
+- !private ["So12UIAppearanceP", "convert"]
+- !private ["So21UIAppearanceContainerP", "NSNotFound"]
+- !private ["So21UIAppearanceContainerP", "accessibilityChildren"]
+- !private ["So21UIAppearanceContainerP", "convert"]
+- !private ["So17UICoordinateSpaceP", "NSNotFound"]
+- !private ["So17UICoordinateSpaceP", "accessibilityChildren"]
+- !private ["So17UICoordinateSpaceP", "convert"]
+- !private ["So13UIDynamicItemP", "NSNotFound"]
+- !private ["So13UIDynamicItemP", "accessibilityChildren"]
+- !private ["So13UIDynamicItemP", "convert"]
+- !private ["So18UIFocusEnvironmentP", "NSNotFound"]
+- !private ["So18UIFocusEnvironmentP", "accessibilityChildren"]
+- !private ["So18UIFocusEnvironmentP", "convert"]
+- !private ["So11UIFocusItemP", "NSNotFound"]
+- !private ["So11UIFocusItemP", "accessibilityChildren"]
+- !private ["So11UIFocusItemP", "convert"]
+- !private ["So20UIFocusItemContainerP", "NSNotFound"]
+- !private ["So20UIFocusItemContainerP", "accessibilityChildren"]
+- !private ["So20UIFocusItemContainerP", "convert"]
+- !private ["So24UILargeContentViewerItemP", "NSNotFound"]
+- !private ["So24UILargeContentViewerItemP", "accessibilityChildren"]
+- !private ["So24UILargeContentViewerItemP", "convert"]
+- !private ["So30UIPasteConfigurationSupportingP", "NSNotFound"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIAccessibilityTraits"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityChildren"]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityFrame"]
+- !private ["So30UIPasteConfigurationSupportingP", "accessibilityTraits"]
+- !private ["So30UIPasteConfigurationSupportingP", "containerView"]
+- !private ["So30UIPasteConfigurationSupportingP", "convert"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "isHeader"]
+- !private ["So30UIPasteConfigurationSupportingP", "isSelected"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "CGRect"]
+- ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", "NSNotFound"]
+- !private ["So11UIResponderC", "NSUIAccessibilityElement"]
+- !private ["So11UIResponderC", "UIAccessibilityTraits"]
+- !private ["So11UIResponderC", "UIScreen"]
+- ["So11UIResponderC", "UIView"]
+- ["So11UIResponderC", "accessibilityChildren"]
+- ["So11UIResponderC", "accessibilityElement"]
+- ["So11UIResponderC", "accessibilityElementCount"]
+- ["So11UIResponderC", "accessibilityFrame"]
+- !private ["So11UIResponderC", "accessibilityTraits"]
+- ["So11UIResponderC", "containerView"]
+- !private ["So11UIResponderC", "convert"]
+- ["So11UIResponderC", "index"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "isAccessibilityElement"]
+- ["So11UIResponderC", "isHeader"]
+- ["So11UIResponderC", "isSelected"]
+- !private ["So30UIResponderStandardEditActionsP", "NSNotFound"]
+- !private ["So30UIResponderStandardEditActionsP", "UIAccessibilityTraits"]
+- !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityChildren"]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityFrame"]
+- !private ["So30UIResponderStandardEditActionsP", "accessibilityTraits"]
+- !private ["So30UIResponderStandardEditActionsP", "containerView"]
+- !private ["So30UIResponderStandardEditActionsP", "convert"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "isHeader"]
+- !private ["So30UIResponderStandardEditActionsP", "isSelected"]
+- !private ["So8UIScreenC", "coordinateSpace"]
+- !private ["So8UIScreenC", "main"]
+- !private ["So18UITraitEnvironmentP", "NSNotFound"]
+- !private ["So18UITraitEnvironmentP", "accessibilityChildren"]
+- !private ["So18UITraitEnvironmentP", "convert"]
+- !private ["So18UITraitEnvironmentP", "coordinateSpace"]
+- !private ["So18UITraitEnvironmentP", "main"]
+- !private ["So23UIUserActivityRestoringP", "NSNotFound"]
+- !private ["So23UIUserActivityRestoringP", "UIAccessibilityTraits"]
+- !private ["So23UIUserActivityRestoringP", "UIScreen"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "accessibilityChildren"]
+- !private ["So23UIUserActivityRestoringP", "accessibilityFrame"]
+- !private ["So23UIUserActivityRestoringP", "accessibilityTraits"]
+- !private ["So23UIUserActivityRestoringP", "containerView"]
+- !private ["So23UIUserActivityRestoringP", "convert"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "isHeader"]
+- !private ["So23UIUserActivityRestoringP", "isSelected"]
+- ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "Int"]
+- !private ["So6UIViewC", "NSNotFound"]
+- !private ["So6UIViewC", "NSUIAccessibilityElement"]
+- ["So6UIViewC", "accessibilityChildren"]
+- ["So6UIViewC", "accessibilityElement"]
+- ["So6UIViewC", "accessibilityElementCount"]
+- !private ["So6UIViewC", "convert"]
+- ["So6UIViewC", "index"]
+- ["So6UIViewC", "isAccessibilityElement"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "firstIndex"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "firstIndex"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "firstIndex"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "firstIndex"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "header"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "layoutChanged"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "none"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "screenChanged"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "selected"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNotFound"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAccessibilityTraits"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityChildren"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityFrame"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityTraits"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "containerView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "convert"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "coordinateSpace"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isHeader"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isSelected"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "firstIndex"]
+- !private ["s21_ObjectiveCBridgeableP", "header"]
+- !private ["s21_ObjectiveCBridgeableP", "layoutChanged"]
+- !private ["s21_ObjectiveCBridgeableP", "none"]
+- !private ["s21_ObjectiveCBridgeableP", "screenChanged"]
+- !private ["s21_ObjectiveCBridgeableP", "selected"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s20_SwiftNewtypeWrapperP", "header"]
+- !private ["s20_SwiftNewtypeWrapperP", "layoutChanged"]
+- !private ["s20_SwiftNewtypeWrapperP", "none"]
+- !private ["s20_SwiftNewtypeWrapperP", "screenChanged"]
+- !private ["s20_SwiftNewtypeWrapperP", "selected"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "NSNotFound"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "accessibilityChildren"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "convert"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "6Charts24NSUIAccessibilityElementC"
+- "6Charts8NSUIViewC"
+- !private "So28UIAccessibilityNotificationsa"
+- !private "s9OptionSetP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "So15UIAccessibilityV"
+- "So22UIAccessibilityElementC"
+- "So29UIAccessibilityIdentificationP"
+- !private "So21UIAccessibilityTraitsa"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So8UIScreenC"
+- !private "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "e3ca8c2f87215506858047ee554e7eb7"

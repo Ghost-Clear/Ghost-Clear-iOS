@@ -1,0 +1,360 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChartEasingOption"
+- "ChartEasingFunctionBlock"
+- "easingFunctionFromOption"
+- "EasingFunctions"
+provides-nominal:
+- "6Charts17ChartEasingOptionO"
+- "6Charts15EasingFunctionsV"
+provides-member:
+- ["6Charts17ChartEasingOptionO", ""]
+- ["6Charts15EasingFunctionsV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "*"
+- "*="
+- "+"
+- "-"
+- "-="
+- "/"
+- "<"
+- "=="
+- "AssignmentPrecedence"
+- "ChartEasingFunctionBlock"
+- "ChartEasingOption"
+- "Double"
+- "EasingFunctions"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "TernaryPrecedence"
+- "TimeInterval"
+- "asin"
+- "cos"
+- "easingFunctionFromOption"
+- "pow"
+- "sin"
+- "sqrt"
+- !private "unsafeBitCast"
+- !private "~="
+depends-member:
+- ["s18AdditiveArithmeticP", "init"]
+- ["s18AdditiveArithmeticP", "pi"]
+- ["SB", "init"]
+- ["SB", "pi"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "pi"]
+- ["6Charts17ChartEasingOptionO", "=="]
+- ["6Charts17ChartEasingOptionO", "RawValue"]
+- ["6Charts17ChartEasingOptionO", "_Default_RawValue"]
+- ["6Charts17ChartEasingOptionO", "_rawHashValue"]
+- ["6Charts17ChartEasingOptionO", "deinit"]
+- ["6Charts17ChartEasingOptionO", "easeInBack"]
+- ["6Charts17ChartEasingOptionO", "easeInBounce"]
+- ["6Charts17ChartEasingOptionO", "easeInCirc"]
+- ["6Charts17ChartEasingOptionO", "easeInCubic"]
+- ["6Charts17ChartEasingOptionO", "easeInElastic"]
+- ["6Charts17ChartEasingOptionO", "easeInExpo"]
+- ["6Charts17ChartEasingOptionO", "easeInOutBack"]
+- ["6Charts17ChartEasingOptionO", "easeInOutBounce"]
+- ["6Charts17ChartEasingOptionO", "easeInOutCirc"]
+- ["6Charts17ChartEasingOptionO", "easeInOutCubic"]
+- ["6Charts17ChartEasingOptionO", "easeInOutElastic"]
+- ["6Charts17ChartEasingOptionO", "easeInOutExpo"]
+- ["6Charts17ChartEasingOptionO", "easeInOutQuad"]
+- ["6Charts17ChartEasingOptionO", "easeInOutQuart"]
+- ["6Charts17ChartEasingOptionO", "easeInOutQuint"]
+- ["6Charts17ChartEasingOptionO", "easeInOutSine"]
+- ["6Charts17ChartEasingOptionO", "easeInQuad"]
+- ["6Charts17ChartEasingOptionO", "easeInQuart"]
+- ["6Charts17ChartEasingOptionO", "easeInQuint"]
+- ["6Charts17ChartEasingOptionO", "easeInSine"]
+- ["6Charts17ChartEasingOptionO", "easeOutBack"]
+- ["6Charts17ChartEasingOptionO", "easeOutBounce"]
+- ["6Charts17ChartEasingOptionO", "easeOutCirc"]
+- ["6Charts17ChartEasingOptionO", "easeOutCubic"]
+- ["6Charts17ChartEasingOptionO", "easeOutElastic"]
+- ["6Charts17ChartEasingOptionO", "easeOutExpo"]
+- ["6Charts17ChartEasingOptionO", "easeOutQuad"]
+- ["6Charts17ChartEasingOptionO", "easeOutQuart"]
+- ["6Charts17ChartEasingOptionO", "easeOutQuint"]
+- ["6Charts17ChartEasingOptionO", "easeOutSine"]
+- ["6Charts17ChartEasingOptionO", "hash"]
+- ["6Charts17ChartEasingOptionO", "hashValue"]
+- ["6Charts17ChartEasingOptionO", "init"]
+- ["6Charts17ChartEasingOptionO", "linear"]
+- ["6Charts17ChartEasingOptionO", "rawValue"]
+- !private ["6Charts17ChartEasingOptionO", "unsafeBitCast"]
+- ["SL", "init"]
+- ["SL", "pi"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "pi"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "pi"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "pi"]
+- ["Se", "init"]
+- ["Se", "pi"]
+- ["Sd", "init"]
+- ["Sd", "pi"]
+- ["6Charts15EasingFunctionsV", "Double"]
+- ["6Charts15EasingFunctionsV", "EaseInBack"]
+- ["6Charts15EasingFunctionsV", "EaseInBounce"]
+- ["6Charts15EasingFunctionsV", "EaseInCirc"]
+- ["6Charts15EasingFunctionsV", "EaseInCubic"]
+- ["6Charts15EasingFunctionsV", "EaseInElastic"]
+- ["6Charts15EasingFunctionsV", "EaseInExpo"]
+- ["6Charts15EasingFunctionsV", "EaseInOutBack"]
+- ["6Charts15EasingFunctionsV", "EaseInOutBounce"]
+- ["6Charts15EasingFunctionsV", "EaseInOutCirc"]
+- ["6Charts15EasingFunctionsV", "EaseInOutCubic"]
+- ["6Charts15EasingFunctionsV", "EaseInOutElastic"]
+- ["6Charts15EasingFunctionsV", "EaseInOutExpo"]
+- ["6Charts15EasingFunctionsV", "EaseInOutQuad"]
+- ["6Charts15EasingFunctionsV", "EaseInOutQuart"]
+- ["6Charts15EasingFunctionsV", "EaseInOutQuint"]
+- ["6Charts15EasingFunctionsV", "EaseInOutSine"]
+- ["6Charts15EasingFunctionsV", "EaseInQuad"]
+- ["6Charts15EasingFunctionsV", "EaseInQuart"]
+- ["6Charts15EasingFunctionsV", "EaseInQuint"]
+- ["6Charts15EasingFunctionsV", "EaseInSine"]
+- ["6Charts15EasingFunctionsV", "EaseOutBack"]
+- ["6Charts15EasingFunctionsV", "EaseOutBounce"]
+- ["6Charts15EasingFunctionsV", "EaseOutCirc"]
+- ["6Charts15EasingFunctionsV", "EaseOutCubic"]
+- ["6Charts15EasingFunctionsV", "EaseOutElastic"]
+- ["6Charts15EasingFunctionsV", "EaseOutExpo"]
+- ["6Charts15EasingFunctionsV", "EaseOutQuad"]
+- ["6Charts15EasingFunctionsV", "EaseOutQuart"]
+- ["6Charts15EasingFunctionsV", "EaseOutQuint"]
+- ["6Charts15EasingFunctionsV", "EaseOutSine"]
+- ["6Charts15EasingFunctionsV", "Linear"]
+- ["6Charts15EasingFunctionsV", "TimeInterval"]
+- ["6Charts15EasingFunctionsV", "asin"]
+- ["6Charts15EasingFunctionsV", "cos"]
+- ["6Charts15EasingFunctionsV", "init"]
+- ["6Charts15EasingFunctionsV", "pow"]
+- ["6Charts15EasingFunctionsV", "sin"]
+- ["6Charts15EasingFunctionsV", "sqrt"]
+- ["SE", "init"]
+- ["SE", "pi"]
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "easeInBack"]
+- ["SQ", "easeInBounce"]
+- ["SQ", "easeInCirc"]
+- ["SQ", "easeInCubic"]
+- ["SQ", "easeInElastic"]
+- ["SQ", "easeInExpo"]
+- ["SQ", "easeInOutBack"]
+- ["SQ", "easeInOutBounce"]
+- ["SQ", "easeInOutCirc"]
+- ["SQ", "easeInOutCubic"]
+- ["SQ", "easeInOutElastic"]
+- ["SQ", "easeInOutExpo"]
+- ["SQ", "easeInOutQuad"]
+- ["SQ", "easeInOutQuart"]
+- ["SQ", "easeInOutQuint"]
+- ["SQ", "easeInOutSine"]
+- ["SQ", "easeInQuad"]
+- ["SQ", "easeInQuart"]
+- ["SQ", "easeInQuint"]
+- ["SQ", "easeInSine"]
+- ["SQ", "easeOutBack"]
+- ["SQ", "easeOutBounce"]
+- ["SQ", "easeOutCirc"]
+- ["SQ", "easeOutCubic"]
+- ["SQ", "easeOutElastic"]
+- ["SQ", "easeOutExpo"]
+- ["SQ", "easeOutQuad"]
+- ["SQ", "easeOutQuart"]
+- ["SQ", "easeOutQuint"]
+- ["SQ", "easeOutSine"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "linear"]
+- ["SQ", "pi"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "unsafeBitCast"]
+- ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "pi"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "pi"]
+- ["SF", "init"]
+- ["SF", "pi"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- ["SH", "_rawHashValue"]
+- ["SH", "easeInBack"]
+- ["SH", "easeInBounce"]
+- ["SH", "easeInCirc"]
+- ["SH", "easeInCubic"]
+- ["SH", "easeInElastic"]
+- ["SH", "easeInExpo"]
+- ["SH", "easeInOutBack"]
+- ["SH", "easeInOutBounce"]
+- ["SH", "easeInOutCirc"]
+- ["SH", "easeInOutCubic"]
+- ["SH", "easeInOutElastic"]
+- ["SH", "easeInOutExpo"]
+- ["SH", "easeInOutQuad"]
+- ["SH", "easeInOutQuart"]
+- ["SH", "easeInOutQuint"]
+- ["SH", "easeInOutSine"]
+- ["SH", "easeInQuad"]
+- ["SH", "easeInQuart"]
+- ["SH", "easeInQuint"]
+- ["SH", "easeInSine"]
+- ["SH", "easeOutBack"]
+- ["SH", "easeOutBounce"]
+- ["SH", "easeOutCirc"]
+- ["SH", "easeOutCubic"]
+- ["SH", "easeOutElastic"]
+- ["SH", "easeOutExpo"]
+- ["SH", "easeOutQuad"]
+- ["SH", "easeOutQuart"]
+- ["SH", "easeOutQuint"]
+- ["SH", "easeOutSine"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "linear"]
+- ["SH", "pi"]
+- ["SH", "rawValue"]
+- !private ["SH", "unsafeBitCast"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "pi"]
+- ["Sj", "init"]
+- ["Sj", "pi"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- ["SY", "_rawHashValue"]
+- ["SY", "easeInBack"]
+- ["SY", "easeInBounce"]
+- ["SY", "easeInCirc"]
+- ["SY", "easeInCubic"]
+- ["SY", "easeInElastic"]
+- ["SY", "easeInExpo"]
+- ["SY", "easeInOutBack"]
+- ["SY", "easeInOutBounce"]
+- ["SY", "easeInOutCirc"]
+- ["SY", "easeInOutCubic"]
+- ["SY", "easeInOutElastic"]
+- ["SY", "easeInOutExpo"]
+- ["SY", "easeInOutQuad"]
+- ["SY", "easeInOutQuart"]
+- ["SY", "easeInOutQuint"]
+- ["SY", "easeInOutSine"]
+- ["SY", "easeInQuad"]
+- ["SY", "easeInQuart"]
+- ["SY", "easeInQuint"]
+- ["SY", "easeInSine"]
+- ["SY", "easeOutBack"]
+- ["SY", "easeOutBounce"]
+- ["SY", "easeOutCirc"]
+- ["SY", "easeOutCubic"]
+- ["SY", "easeOutElastic"]
+- ["SY", "easeOutExpo"]
+- ["SY", "easeOutQuad"]
+- ["SY", "easeOutQuart"]
+- ["SY", "easeOutQuint"]
+- ["SY", "easeOutSine"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "linear"]
+- ["SY", "rawValue"]
+- !private ["SY", "unsafeBitCast"]
+- ["s10SIMDScalarP", "init"]
+- ["s10SIMDScalarP", "pi"]
+- ["s13SignedNumericP", "init"]
+- ["s13SignedNumericP", "pi"]
+- ["Sx", "init"]
+- ["Sx", "pi"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "pi"]
+- ["s15_CVarArgAlignedP", "init"]
+- ["s15_CVarArgAlignedP", "pi"]
+- ["s22_CVarArgPassedAsDoubleP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "pi"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
+- ["s30_CustomPlaygroundQuickLookableP", "pi"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "pi"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "pi"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "pi"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "pi"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- "SB"
+- "s7CVarArgP"
+- "6Charts17ChartEasingOptionO"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "Sd"
+- "6Charts15EasingFunctionsV"
+- "SE"
+- "SQ"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "SF"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "Sj"
+- "SY"
+- "s10SIMDScalarP"
+- "s13SignedNumericP"
+- "Sx"
+- "s20TextOutputStreamableP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "s30_CustomPlaygroundQuickLookableP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "fe5f9188e9acbcf68acb2d76dcd2bd8c"

@@ -1,0 +1,219 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChartDataEntry"
+provides-nominal:
+- "6Charts14ChartDataEntryC"
+provides-member:
+- ["6Charts14ChartDataEntryC", ""]
+- ["6Charts14ChartDataEntryC", "isEqual"]
+provides-dynamic-lookup:
+- "copy"
+- "description"
+- "isEqual"
+- "x"
+depends-top-level:
+- !private "&&"
+- !private "=="
+- !private "==="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "ChartDataEntry"
+- "ChartDataEntryBase"
+- "Double"
+- "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "NSCopying"
+- "NSUIImage"
+- "NSZone"
+- "String"
+- !private "StringLiteralType"
+- !private "type"
+depends-member:
+- ["s7CVarArgP", ""]
+- ["s7CVarArgP", "copy"]
+- ["s7CVarArgP", "copyWithZone"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "icon"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "type"]
+- !private ["s7CVarArgP", "x"]
+- !private ["s7CVarArgP", "y"]
+- ["6Charts14ChartDataEntryC", "Bool"]
+- !private ["6Charts14ChartDataEntryC", "ChartDataEntry"]
+- ["6Charts14ChartDataEntryC", "Double"]
+- ["6Charts14ChartDataEntryC", "NSUIImage"]
+- ["6Charts14ChartDataEntryC", "NSZone"]
+- ["6Charts14ChartDataEntryC", "String"]
+- ["6Charts14ChartDataEntryC", "copy"]
+- ["6Charts14ChartDataEntryC", "copyWithZone"]
+- !private ["6Charts14ChartDataEntryC", "data"]
+- ["6Charts14ChartDataEntryC", "deinit"]
+- ["6Charts14ChartDataEntryC", "description"]
+- !private ["6Charts14ChartDataEntryC", "icon"]
+- ["6Charts14ChartDataEntryC", "init"]
+- ["6Charts14ChartDataEntryC", "isEqual"]
+- !private ["6Charts14ChartDataEntryC", "type"]
+- ["6Charts14ChartDataEntryC", "x"]
+- !private ["6Charts14ChartDataEntryC", "y"]
+- ["6Charts18ChartDataEntryBaseC", "Bool"]
+- !private ["6Charts18ChartDataEntryBaseC", "ChartDataEntry"]
+- ["6Charts18ChartDataEntryBaseC", "Double"]
+- ["6Charts18ChartDataEntryBaseC", "NSUIImage"]
+- ["6Charts18ChartDataEntryBaseC", "NSZone"]
+- ["6Charts18ChartDataEntryBaseC", "String"]
+- ["6Charts18ChartDataEntryBaseC", ""]
+- ["6Charts18ChartDataEntryBaseC", "copy"]
+- ["6Charts18ChartDataEntryBaseC", "copyWithZone"]
+- !private ["6Charts18ChartDataEntryBaseC", "data"]
+- ["6Charts18ChartDataEntryBaseC", "description"]
+- !private ["6Charts18ChartDataEntryBaseC", "icon"]
+- ["6Charts18ChartDataEntryBaseC", "init"]
+- ["6Charts18ChartDataEntryBaseC", "isEqual"]
+- !private ["6Charts18ChartDataEntryBaseC", "type"]
+- ["6Charts18ChartDataEntryBaseC", "x"]
+- !private ["6Charts18ChartDataEntryBaseC", "y"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "copy"]
+- ["s28CustomDebugStringConvertibleP", "copyWithZone"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "icon"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "type"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- ["s23CustomStringConvertibleP", "copy"]
+- ["s23CustomStringConvertibleP", "copyWithZone"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "icon"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "type"]
+- !private ["s23CustomStringConvertibleP", "x"]
+- !private ["s23CustomStringConvertibleP", "y"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["SQ", ""]
+- ["SQ", "copy"]
+- ["SQ", "copyWithZone"]
+- !private ["SQ", "data"]
+- !private ["SQ", "icon"]
+- !private ["SQ", "init"]
+- !private ["SQ", "type"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- ["SH", ""]
+- ["SH", "copy"]
+- ["SH", "copyWithZone"]
+- !private ["SH", "data"]
+- !private ["SH", "icon"]
+- !private ["SH", "init"]
+- !private ["SH", "type"]
+- !private ["SH", "x"]
+- !private ["SH", "y"]
+- ["So9NSCopyingP", ""]
+- ["So9NSCopyingP", "copy"]
+- ["So9NSCopyingP", "copyWithZone"]
+- !private ["So9NSCopyingP", "data"]
+- !private ["So9NSCopyingP", "icon"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "type"]
+- !private ["So9NSCopyingP", "x"]
+- !private ["So9NSCopyingP", "y"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "ChartDataEntry"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "NSUIImage"]
+- ["So8NSObjectC", "NSZone"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "copy"]
+- ["So8NSObjectC", "copyWithZone"]
+- !private ["So8NSObjectC", "data"]
+- ["So8NSObjectC", "description"]
+- !private ["So8NSObjectC", "icon"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isEqual"]
+- !private ["So8NSObjectC", "type"]
+- ["So8NSObjectC", "x"]
+- !private ["So8NSObjectC", "y"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "copy"]
+- ["So8NSObjectP", "copyWithZone"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "icon"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "type"]
+- !private ["So8NSObjectP", "x"]
+- !private ["So8NSObjectP", "y"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "copy"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "copyWithZone"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "icon"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "x"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "y"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copy"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "copyWithZone"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "data"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "icon"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "type"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "x"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "y"]
+depends-nominal:
+- "s7CVarArgP"
+- "6Charts14ChartDataEntryC"
+- "6Charts18ChartDataEntryBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- !private "s26DefaultStringInterpolationV"
+- "SQ"
+- "SH"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Combine.swiftmodule/arm64-apple-ios.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "7039e81c3abe59f67d42d7cb722a70fd"

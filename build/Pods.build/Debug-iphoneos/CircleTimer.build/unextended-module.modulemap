@@ -1,0 +1,10 @@
+framework module AppusCircleTimer {
+  umbrella header "CircleTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AppusCircleTimer.__Swift {
+    exclude header "AppusCircleTimer-Swift.h"
+}

@@ -1,0 +1,11 @@
+framework module AppusCircleTimer {
+  umbrella header "CircleTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AppusCircleTimer.Swift {
+    header "AppusCircleTimer-Swift.h"
+    requires objc
+}

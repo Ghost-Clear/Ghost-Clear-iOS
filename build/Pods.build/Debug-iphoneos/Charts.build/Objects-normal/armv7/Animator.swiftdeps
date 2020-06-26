@@ -1,0 +1,419 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AnimatorDelegate"
+- "Animator"
+provides-nominal:
+- "6Charts16AnimatorDelegateP"
+- "6Charts8AnimatorC"
+provides-member:
+- ["6Charts16AnimatorDelegateP", ""]
+- ["6Charts8AnimatorC", ""]
+provides-dynamic-lookup:
+- "_displayLink"
+- "_durationX"
+- "_durationY"
+- "_easingX"
+- "_easingY"
+- "_enabledX"
+- "_enabledY"
+- "_endTime"
+- "_endTimeX"
+- "_endTimeY"
+- "_startTimeX"
+- "_startTimeY"
+- "animate"
+- "animationLoop"
+- "animatorStopped"
+- "animatorUpdated"
+- "delegate"
+- "phaseX"
+- "phaseY"
+- "stop"
+- "stopBlock"
+- "updateAnimationPhases"
+- "updateBlock"
+depends-top-level:
+- !private "!="
+- !private "+"
+- !private "-"
+- !private "/"
+- !private "=="
+- !private ">"
+- !private ">="
+- !private "??"
+- "Animator"
+- "AnimatorDelegate"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CACurrentMediaTime"
+- "ChartEasingFunctionBlock"
+- "ChartEasingOption"
+- "Double"
+- "FloatLiteralType"
+- "NSObject"
+- "NSUIDisplayLink"
+- !private "RunLoop"
+- "TernaryPrecedence"
+- "TimeInterval"
+- "Void"
+- !private "easingFunctionFromOption"
+- !private "||"
+depends-member:
+- ["6Charts8AnimatorC", "AnimatorDelegate"]
+- ["6Charts8AnimatorC", "Bool"]
+- !private ["6Charts8AnimatorC", "CACurrentMediaTime"]
+- ["6Charts8AnimatorC", "ChartEasingFunctionBlock"]
+- ["6Charts8AnimatorC", "ChartEasingOption"]
+- ["6Charts8AnimatorC", "Double"]
+- ["6Charts8AnimatorC", "NSUIDisplayLink"]
+- !private ["6Charts8AnimatorC", "RunLoop"]
+- ["6Charts8AnimatorC", "TimeInterval"]
+- ["6Charts8AnimatorC", "Void"]
+- !private ["6Charts8AnimatorC", "_displayLink"]
+- !private ["6Charts8AnimatorC", "_durationX"]
+- !private ["6Charts8AnimatorC", "_durationY"]
+- !private ["6Charts8AnimatorC", "_easingX"]
+- !private ["6Charts8AnimatorC", "_easingY"]
+- !private ["6Charts8AnimatorC", "_enabledX"]
+- !private ["6Charts8AnimatorC", "_enabledY"]
+- !private ["6Charts8AnimatorC", "_endTime"]
+- !private ["6Charts8AnimatorC", "_endTimeX"]
+- !private ["6Charts8AnimatorC", "_endTimeY"]
+- !private ["6Charts8AnimatorC", "_startTimeX"]
+- !private ["6Charts8AnimatorC", "_startTimeY"]
+- ["6Charts8AnimatorC", "animate"]
+- !private ["6Charts8AnimatorC", "animationLoop"]
+- ["6Charts8AnimatorC", "deinit"]
+- ["6Charts8AnimatorC", "delegate"]
+- !private ["6Charts8AnimatorC", "easingFunctionFromOption"]
+- ["6Charts8AnimatorC", "init"]
+- ["6Charts8AnimatorC", "phaseX"]
+- ["6Charts8AnimatorC", "phaseY"]
+- ["6Charts8AnimatorC", "stop"]
+- ["6Charts8AnimatorC", "stopBlock"]
+- !private ["6Charts8AnimatorC", "updateAnimationPhases"]
+- ["6Charts8AnimatorC", "updateBlock"]
+- ["6Charts16AnimatorDelegateP", "Animator"]
+- ["6Charts16AnimatorDelegateP", "animatorStopped"]
+- ["6Charts16AnimatorDelegateP", "animatorUpdated"]
+- !private ["So13CADisplayLinkC", "add"]
+- !private ["So13CADisplayLinkC", "init"]
+- !private ["So13CADisplayLinkC", "remove"]
+- !private ["s7CVarArgP", "CACurrentMediaTime"]
+- !private ["s7CVarArgP", "Mode"]
+- !private ["s7CVarArgP", "NSUIDisplayLink"]
+- !private ["s7CVarArgP", "RunLoop"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_displayLink"]
+- !private ["s7CVarArgP", "_durationX"]
+- !private ["s7CVarArgP", "_durationY"]
+- !private ["s7CVarArgP", "_easingX"]
+- !private ["s7CVarArgP", "_easingY"]
+- !private ["s7CVarArgP", "_enabledX"]
+- !private ["s7CVarArgP", "_enabledY"]
+- !private ["s7CVarArgP", "_endTime"]
+- !private ["s7CVarArgP", "_endTimeX"]
+- !private ["s7CVarArgP", "_endTimeY"]
+- !private ["s7CVarArgP", "_startTimeX"]
+- !private ["s7CVarArgP", "_startTimeY"]
+- !private ["s7CVarArgP", "add"]
+- !private ["s7CVarArgP", "animate"]
+- !private ["s7CVarArgP", "animationLoop"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "easingFunctionFromOption"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "phaseX"]
+- !private ["s7CVarArgP", "phaseY"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "stop"]
+- !private ["s7CVarArgP", "stopBlock"]
+- !private ["s7CVarArgP", "updateAnimationPhases"]
+- !private ["s7CVarArgP", "updateBlock"]
+- !private ["6Charts17ChartEasingOptionO", "easeInOutSine"]
+- !private ["s28CustomDebugStringConvertibleP", "CACurrentMediaTime"]
+- !private ["s28CustomDebugStringConvertibleP", "Mode"]
+- !private ["s28CustomDebugStringConvertibleP", "NSUIDisplayLink"]
+- !private ["s28CustomDebugStringConvertibleP", "RunLoop"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_displayLink"]
+- !private ["s28CustomDebugStringConvertibleP", "_durationX"]
+- !private ["s28CustomDebugStringConvertibleP", "_durationY"]
+- !private ["s28CustomDebugStringConvertibleP", "_easingX"]
+- !private ["s28CustomDebugStringConvertibleP", "_easingY"]
+- !private ["s28CustomDebugStringConvertibleP", "_enabledX"]
+- !private ["s28CustomDebugStringConvertibleP", "_enabledY"]
+- !private ["s28CustomDebugStringConvertibleP", "_endTime"]
+- !private ["s28CustomDebugStringConvertibleP", "_endTimeX"]
+- !private ["s28CustomDebugStringConvertibleP", "_endTimeY"]
+- !private ["s28CustomDebugStringConvertibleP", "_startTimeX"]
+- !private ["s28CustomDebugStringConvertibleP", "_startTimeY"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
+- !private ["s28CustomDebugStringConvertibleP", "animate"]
+- !private ["s28CustomDebugStringConvertibleP", "animationLoop"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "easingFunctionFromOption"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "phaseX"]
+- !private ["s28CustomDebugStringConvertibleP", "phaseY"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "stop"]
+- !private ["s28CustomDebugStringConvertibleP", "stopBlock"]
+- !private ["s28CustomDebugStringConvertibleP", "updateAnimationPhases"]
+- !private ["s28CustomDebugStringConvertibleP", "updateBlock"]
+- !private ["s23CustomStringConvertibleP", "CACurrentMediaTime"]
+- !private ["s23CustomStringConvertibleP", "Mode"]
+- !private ["s23CustomStringConvertibleP", "NSUIDisplayLink"]
+- !private ["s23CustomStringConvertibleP", "RunLoop"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_displayLink"]
+- !private ["s23CustomStringConvertibleP", "_durationX"]
+- !private ["s23CustomStringConvertibleP", "_durationY"]
+- !private ["s23CustomStringConvertibleP", "_easingX"]
+- !private ["s23CustomStringConvertibleP", "_easingY"]
+- !private ["s23CustomStringConvertibleP", "_enabledX"]
+- !private ["s23CustomStringConvertibleP", "_enabledY"]
+- !private ["s23CustomStringConvertibleP", "_endTime"]
+- !private ["s23CustomStringConvertibleP", "_endTimeX"]
+- !private ["s23CustomStringConvertibleP", "_endTimeY"]
+- !private ["s23CustomStringConvertibleP", "_startTimeX"]
+- !private ["s23CustomStringConvertibleP", "_startTimeY"]
+- !private ["s23CustomStringConvertibleP", "add"]
+- !private ["s23CustomStringConvertibleP", "animate"]
+- !private ["s23CustomStringConvertibleP", "animationLoop"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "easingFunctionFromOption"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "phaseX"]
+- !private ["s23CustomStringConvertibleP", "phaseY"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "stop"]
+- !private ["s23CustomStringConvertibleP", "stopBlock"]
+- !private ["s23CustomStringConvertibleP", "updateAnimationPhases"]
+- !private ["s23CustomStringConvertibleP", "updateBlock"]
+- !private ["SQ", "CACurrentMediaTime"]
+- !private ["SQ", "Mode"]
+- !private ["SQ", "NSUIDisplayLink"]
+- !private ["SQ", "RunLoop"]
+- ["SQ", ""]
+- !private ["SQ", "_displayLink"]
+- !private ["SQ", "_durationX"]
+- !private ["SQ", "_durationY"]
+- !private ["SQ", "_easingX"]
+- !private ["SQ", "_easingY"]
+- !private ["SQ", "_enabledX"]
+- !private ["SQ", "_enabledY"]
+- !private ["SQ", "_endTime"]
+- !private ["SQ", "_endTimeX"]
+- !private ["SQ", "_endTimeY"]
+- !private ["SQ", "_startTimeX"]
+- !private ["SQ", "_startTimeY"]
+- !private ["SQ", "add"]
+- !private ["SQ", "animate"]
+- !private ["SQ", "animationLoop"]
+- !private ["SQ", "common"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "easeInOutSine"]
+- !private ["SQ", "easingFunctionFromOption"]
+- !private ["SQ", "init"]
+- !private ["SQ", "main"]
+- !private ["SQ", "phaseX"]
+- !private ["SQ", "phaseY"]
+- !private ["SQ", "remove"]
+- !private ["SQ", "stop"]
+- !private ["SQ", "stopBlock"]
+- !private ["SQ", "updateAnimationPhases"]
+- !private ["SQ", "updateBlock"]
+- !private ["SH", "CACurrentMediaTime"]
+- !private ["SH", "Mode"]
+- !private ["SH", "NSUIDisplayLink"]
+- !private ["SH", "RunLoop"]
+- ["SH", ""]
+- !private ["SH", "_displayLink"]
+- !private ["SH", "_durationX"]
+- !private ["SH", "_durationY"]
+- !private ["SH", "_easingX"]
+- !private ["SH", "_easingY"]
+- !private ["SH", "_enabledX"]
+- !private ["SH", "_enabledY"]
+- !private ["SH", "_endTime"]
+- !private ["SH", "_endTimeX"]
+- !private ["SH", "_endTimeY"]
+- !private ["SH", "_startTimeX"]
+- !private ["SH", "_startTimeY"]
+- !private ["SH", "add"]
+- !private ["SH", "animate"]
+- !private ["SH", "animationLoop"]
+- !private ["SH", "common"]
+- !private ["SH", "delegate"]
+- !private ["SH", "easeInOutSine"]
+- !private ["SH", "easingFunctionFromOption"]
+- !private ["SH", "init"]
+- !private ["SH", "main"]
+- !private ["SH", "phaseX"]
+- !private ["SH", "phaseY"]
+- !private ["SH", "remove"]
+- !private ["SH", "stop"]
+- !private ["SH", "stopBlock"]
+- !private ["SH", "updateAnimationPhases"]
+- !private ["SH", "updateBlock"]
+- !private ["So13NSRunLoopModea", "common"]
+- ["So8NSObjectC", "AnimatorDelegate"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CACurrentMediaTime"]
+- ["So8NSObjectC", "ChartEasingFunctionBlock"]
+- ["So8NSObjectC", "ChartEasingOption"]
+- ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "Mode"]
+- ["So8NSObjectC", "NSUIDisplayLink"]
+- !private ["So8NSObjectC", "RunLoop"]
+- ["So8NSObjectC", "TimeInterval"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_displayLink"]
+- ["So8NSObjectC", "_durationX"]
+- ["So8NSObjectC", "_durationY"]
+- ["So8NSObjectC", "_easingX"]
+- ["So8NSObjectC", "_easingY"]
+- ["So8NSObjectC", "_enabledX"]
+- ["So8NSObjectC", "_enabledY"]
+- ["So8NSObjectC", "_endTime"]
+- ["So8NSObjectC", "_endTimeX"]
+- ["So8NSObjectC", "_endTimeY"]
+- ["So8NSObjectC", "_startTimeX"]
+- ["So8NSObjectC", "_startTimeY"]
+- !private ["So8NSObjectC", "add"]
+- ["So8NSObjectC", "animate"]
+- ["So8NSObjectC", "animationLoop"]
+- ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "easingFunctionFromOption"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "phaseX"]
+- ["So8NSObjectC", "phaseY"]
+- !private ["So8NSObjectC", "remove"]
+- ["So8NSObjectC", "stop"]
+- ["So8NSObjectC", "stopBlock"]
+- ["So8NSObjectC", "updateAnimationPhases"]
+- ["So8NSObjectC", "updateBlock"]
+- !private ["So8NSObjectP", "CACurrentMediaTime"]
+- !private ["So8NSObjectP", "Mode"]
+- !private ["So8NSObjectP", "NSUIDisplayLink"]
+- !private ["So8NSObjectP", "RunLoop"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_displayLink"]
+- !private ["So8NSObjectP", "_durationX"]
+- !private ["So8NSObjectP", "_durationY"]
+- !private ["So8NSObjectP", "_easingX"]
+- !private ["So8NSObjectP", "_easingY"]
+- !private ["So8NSObjectP", "_enabledX"]
+- !private ["So8NSObjectP", "_enabledY"]
+- !private ["So8NSObjectP", "_endTime"]
+- !private ["So8NSObjectP", "_endTimeX"]
+- !private ["So8NSObjectP", "_endTimeY"]
+- !private ["So8NSObjectP", "_startTimeX"]
+- !private ["So8NSObjectP", "_startTimeY"]
+- !private ["So8NSObjectP", "add"]
+- !private ["So8NSObjectP", "animate"]
+- !private ["So8NSObjectP", "animationLoop"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "easingFunctionFromOption"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "phaseX"]
+- !private ["So8NSObjectP", "phaseY"]
+- !private ["So8NSObjectP", "remove"]
+- !private ["So8NSObjectP", "stop"]
+- !private ["So8NSObjectP", "stopBlock"]
+- !private ["So8NSObjectP", "updateAnimationPhases"]
+- !private ["So8NSObjectP", "updateBlock"]
+- !private ["SY", "common"]
+- !private ["SY", "easeInOutSine"]
+- !private ["So9NSRunLoopC", "Mode"]
+- !private ["So9NSRunLoopC", "main"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "common"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CACurrentMediaTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Mode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSUIDisplayLink"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "RunLoop"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_displayLink"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_durationX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_durationY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_easingX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_easingY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_enabledX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_enabledY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_endTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_endTimeX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_endTimeY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_startTimeX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_startTimeY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animationLoop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "easingFunctionFromOption"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phaseX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phaseY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "remove"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stopBlock"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateAnimationPhases"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "updateBlock"]
+- !private ["s21_ObjectiveCBridgeableP", "common"]
+- !private ["s20_SwiftNewtypeWrapperP", "common"]
+depends-nominal:
+- "6Charts8AnimatorC"
+- "6Charts16AnimatorDelegateP"
+- !private "So13CADisplayLinkC"
+- "s7CVarArgP"
+- !private "6Charts17ChartEasingOptionO"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- !private "So13NSRunLoopModea"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "SY"
+- !private "So9NSRunLoopC"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d5d0e3489ec5275d5df7e5e4e96de38e"

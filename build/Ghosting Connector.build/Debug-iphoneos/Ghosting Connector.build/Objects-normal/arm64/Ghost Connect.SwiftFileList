@@ -1,0 +1,34 @@
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Numbered\ Workout/ChooseNumberedWorkoutViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Timed\ Workout/TimedWorkoutViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Unused\ TableView\ Delegates/CreateGoalsTableViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Home/Home\ Create\ Goals/MainViewGoalsViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Home/Home\ Create\ Goals/EditGoalViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Timed\ Workout/ChooseTimedWorkoutPatternViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Initial\ Login/Initial\ Create\ Goals/CreateSingularGoalViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Initial\ Login/InitialLoginViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Timed\ Workout/DoTimedWorkoutViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Initial\ Login/Initial\ Create\ Goals/SetYourGoalsViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/UUIDKey.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Initial\ Login/Initial\ Create\ Goals/EditSingularGoalViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Home/HomePageViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Unused\ TableView\ Delegates/ViewYourGoalsTableViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Numbered\ Workout/NumberedWorkoutViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/StartViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Home/Home\ Create\ Goals/AddGoalViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Settings/HowToConnectViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/AppDelegate.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Settings/ChangeNameViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/SceneDelegate.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Settings/SettingsViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/Ghosting\ Connector/Numbered\ Workout/DoNumberedWorkoutViewController.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/BLEkey+CoreDataClass.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/BLEkey+CoreDataProperties.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Goal+CoreDataClass.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Goal+CoreDataProperties.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/IsFirstLaunch+CoreDataClass.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/IsFirstLaunch+CoreDataProperties.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Name+CoreDataClass.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Name+CoreDataProperties.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Workout+CoreDataClass.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Workout+CoreDataProperties.swift
+/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\ Connector/build/Ghosting\ Connector.build/Debug-iphoneos/Ghosting\ Connector.build/DerivedSources/CoreDataGenerated/Ghosting_Connector/Ghosting_Connector+CoreDataModel.swift

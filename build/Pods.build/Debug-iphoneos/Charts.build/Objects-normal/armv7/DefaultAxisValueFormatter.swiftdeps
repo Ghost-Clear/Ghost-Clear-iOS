@@ -1,0 +1,277 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DefaultAxisValueFormatter"
+provides-nominal:
+- "6Charts25DefaultAxisValueFormatterC"
+provides-member:
+- ["6Charts25DefaultAxisValueFormatterC", ""]
+provides-dynamic-lookup:
+- "_decimals"
+- "_formatter"
+- "block"
+- "decimals"
+- "formatter"
+- "hasAutoDecimals"
+- "stringForValue"
+- "with"
+depends-top-level:
+- !private "??"
+- "AssignmentPrecedence"
+- "AxisBase"
+- "Bool"
+- "BooleanLiteralType"
+- "DefaultAxisValueFormatter"
+- "Double"
+- "IAxisValueFormatter"
+- "Int"
+- !private "NSNumber"
+- "NSObject"
+- "NumberFormatter"
+- "String"
+- !private "StringLiteralType"
+depends-member:
+- !private ["s7CVarArgP", "DefaultAxisValueFormatter"]
+- !private ["s7CVarArgP", "NSNumber"]
+- !private ["s7CVarArgP", "NumberFormatter"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_decimals"]
+- !private ["s7CVarArgP", "_formatter"]
+- !private ["s7CVarArgP", "block"]
+- !private ["s7CVarArgP", "decimals"]
+- !private ["s7CVarArgP", "formatter"]
+- !private ["s7CVarArgP", "hasAutoDecimals"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "maximumFractionDigits"]
+- !private ["s7CVarArgP", "minimumFractionDigits"]
+- !private ["s7CVarArgP", "string"]
+- ["s7CVarArgP", "stringForValue"]
+- !private ["s7CVarArgP", "usesGroupingSeparator"]
+- !private ["s28CustomDebugStringConvertibleP", "DefaultAxisValueFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "NSNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "NumberFormatter"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_decimals"]
+- !private ["s28CustomDebugStringConvertibleP", "_formatter"]
+- !private ["s28CustomDebugStringConvertibleP", "block"]
+- !private ["s28CustomDebugStringConvertibleP", "decimals"]
+- !private ["s28CustomDebugStringConvertibleP", "formatter"]
+- !private ["s28CustomDebugStringConvertibleP", "hasAutoDecimals"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "maximumFractionDigits"]
+- !private ["s28CustomDebugStringConvertibleP", "minimumFractionDigits"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- ["s28CustomDebugStringConvertibleP", "stringForValue"]
+- !private ["s28CustomDebugStringConvertibleP", "usesGroupingSeparator"]
+- !private ["s23CustomStringConvertibleP", "DefaultAxisValueFormatter"]
+- !private ["s23CustomStringConvertibleP", "NSNumber"]
+- !private ["s23CustomStringConvertibleP", "NumberFormatter"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_decimals"]
+- !private ["s23CustomStringConvertibleP", "_formatter"]
+- !private ["s23CustomStringConvertibleP", "block"]
+- !private ["s23CustomStringConvertibleP", "decimals"]
+- !private ["s23CustomStringConvertibleP", "formatter"]
+- !private ["s23CustomStringConvertibleP", "hasAutoDecimals"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "maximumFractionDigits"]
+- !private ["s23CustomStringConvertibleP", "minimumFractionDigits"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- ["s23CustomStringConvertibleP", "stringForValue"]
+- !private ["s23CustomStringConvertibleP", "usesGroupingSeparator"]
+- ["6Charts25DefaultAxisValueFormatterC", "AxisBase"]
+- ["6Charts25DefaultAxisValueFormatterC", "Block"]
+- ["6Charts25DefaultAxisValueFormatterC", "Bool"]
+- ["6Charts25DefaultAxisValueFormatterC", "DefaultAxisValueFormatter"]
+- ["6Charts25DefaultAxisValueFormatterC", "Double"]
+- ["6Charts25DefaultAxisValueFormatterC", "Int"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "NSNumber"]
+- ["6Charts25DefaultAxisValueFormatterC", "NumberFormatter"]
+- ["6Charts25DefaultAxisValueFormatterC", "String"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "_decimals"]
+- !private ["6Charts25DefaultAxisValueFormatterC", "_formatter"]
+- ["6Charts25DefaultAxisValueFormatterC", "block"]
+- ["6Charts25DefaultAxisValueFormatterC", "decimals"]
+- ["6Charts25DefaultAxisValueFormatterC", "deinit"]
+- ["6Charts25DefaultAxisValueFormatterC", "formatter"]
+- ["6Charts25DefaultAxisValueFormatterC", "hasAutoDecimals"]
+- ["6Charts25DefaultAxisValueFormatterC", "init"]
+- ["6Charts25DefaultAxisValueFormatterC", "stringForValue"]
+- ["6Charts25DefaultAxisValueFormatterC", "with"]
+- !private ["SQ", "DefaultAxisValueFormatter"]
+- !private ["SQ", "NSNumber"]
+- !private ["SQ", "NumberFormatter"]
+- ["SQ", ""]
+- !private ["SQ", "_decimals"]
+- !private ["SQ", "_formatter"]
+- !private ["SQ", "block"]
+- !private ["SQ", "decimals"]
+- !private ["SQ", "formatter"]
+- !private ["SQ", "hasAutoDecimals"]
+- !private ["SQ", "init"]
+- !private ["SQ", "maximumFractionDigits"]
+- !private ["SQ", "minimumFractionDigits"]
+- !private ["SQ", "string"]
+- ["SQ", "stringForValue"]
+- !private ["SQ", "usesGroupingSeparator"]
+- !private ["s27ExpressibleByBooleanLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["So11NSFormatterC", "init"]
+- !private ["So11NSFormatterC", "maximumFractionDigits"]
+- !private ["So11NSFormatterC", "minimumFractionDigits"]
+- !private ["So11NSFormatterC", "string"]
+- !private ["So11NSFormatterC", "usesGroupingSeparator"]
+- !private ["SH", "DefaultAxisValueFormatter"]
+- !private ["SH", "NSNumber"]
+- !private ["SH", "NumberFormatter"]
+- ["SH", ""]
+- !private ["SH", "_decimals"]
+- !private ["SH", "_formatter"]
+- !private ["SH", "block"]
+- !private ["SH", "decimals"]
+- !private ["SH", "formatter"]
+- !private ["SH", "hasAutoDecimals"]
+- !private ["SH", "init"]
+- !private ["SH", "maximumFractionDigits"]
+- !private ["SH", "minimumFractionDigits"]
+- !private ["SH", "string"]
+- ["SH", "stringForValue"]
+- !private ["SH", "usesGroupingSeparator"]
+- !private ["6Charts19IAxisValueFormatterP", "DefaultAxisValueFormatter"]
+- !private ["6Charts19IAxisValueFormatterP", "NSNumber"]
+- !private ["6Charts19IAxisValueFormatterP", "NumberFormatter"]
+- ["6Charts19IAxisValueFormatterP", ""]
+- !private ["6Charts19IAxisValueFormatterP", "_decimals"]
+- !private ["6Charts19IAxisValueFormatterP", "_formatter"]
+- !private ["6Charts19IAxisValueFormatterP", "block"]
+- !private ["6Charts19IAxisValueFormatterP", "decimals"]
+- !private ["6Charts19IAxisValueFormatterP", "formatter"]
+- !private ["6Charts19IAxisValueFormatterP", "hasAutoDecimals"]
+- !private ["6Charts19IAxisValueFormatterP", "init"]
+- ["6Charts19IAxisValueFormatterP", "stringForValue"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "maximumFractionDigits"]
+- !private ["So8NSCodingP", "minimumFractionDigits"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So8NSCodingP", "usesGroupingSeparator"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "maximumFractionDigits"]
+- !private ["So9NSCopyingP", "minimumFractionDigits"]
+- !private ["So9NSCopyingP", "string"]
+- !private ["So9NSCopyingP", "usesGroupingSeparator"]
+- !private ["So8NSNumberC", "init"]
+- ["So8NSObjectC", "AxisBase"]
+- ["So8NSObjectC", "Block"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "DefaultAxisValueFormatter"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "NSNumber"]
+- ["So8NSObjectC", "NumberFormatter"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_decimals"]
+- ["So8NSObjectC", "_formatter"]
+- ["So8NSObjectC", "block"]
+- ["So8NSObjectC", "decimals"]
+- ["So8NSObjectC", "formatter"]
+- ["So8NSObjectC", "hasAutoDecimals"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "maximumFractionDigits"]
+- !private ["So8NSObjectC", "minimumFractionDigits"]
+- !private ["So8NSObjectC", "string"]
+- ["So8NSObjectC", "stringForValue"]
+- !private ["So8NSObjectC", "usesGroupingSeparator"]
+- ["So8NSObjectC", "with"]
+- !private ["So8NSObjectP", "DefaultAxisValueFormatter"]
+- !private ["So8NSObjectP", "NSNumber"]
+- !private ["So8NSObjectP", "NumberFormatter"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_decimals"]
+- !private ["So8NSObjectP", "_formatter"]
+- !private ["So8NSObjectP", "block"]
+- !private ["So8NSObjectP", "decimals"]
+- !private ["So8NSObjectP", "formatter"]
+- !private ["So8NSObjectP", "hasAutoDecimals"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "maximumFractionDigits"]
+- !private ["So8NSObjectP", "minimumFractionDigits"]
+- !private ["So8NSObjectP", "string"]
+- ["So8NSObjectP", "stringForValue"]
+- !private ["So8NSObjectP", "usesGroupingSeparator"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So7NSValueC", "init"]
+- !private ["So17NSNumberFormatterC", "init"]
+- !private ["So17NSNumberFormatterC", "maximumFractionDigits"]
+- !private ["So17NSNumberFormatterC", "minimumFractionDigits"]
+- !private ["So17NSNumberFormatterC", "string"]
+- !private ["So17NSNumberFormatterC", "usesGroupingSeparator"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DefaultAxisValueFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSNumber"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NumberFormatter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_decimals"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_formatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "block"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "decimals"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasAutoDecimals"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "maximumFractionDigits"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "minimumFractionDigits"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "stringForValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "usesGroupingSeparator"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "6Charts25DefaultAxisValueFormatterC"
+- "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "So11NSFormatterC"
+- "SH"
+- "6Charts19IAxisValueFormatterP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So7NSValueC"
+- !private "So17NSNumberFormatterC"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "13c71cf7550188eb97ea9eba7f7bbab8"

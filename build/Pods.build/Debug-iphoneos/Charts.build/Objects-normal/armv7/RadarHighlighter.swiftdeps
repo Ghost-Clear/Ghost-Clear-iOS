@@ -1,0 +1,703 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RadarHighlighter"
+provides-nominal:
+- "6Charts16RadarHighlighterC"
+provides-member:
+- ["6Charts16RadarHighlighterC", ""]
+provides-dynamic-lookup:
+- "closestHighlight"
+- "getHighlights"
+depends-top-level:
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "/"
+- !private "<"
+- "AssignmentPrecedence"
+- "CGFloat"
+- "CastingPrecedence"
+- !private "Double"
+- "Highlight"
+- "Int"
+- "PieRadarHighlighter"
+- !private "RadarChartView"
+- "RadarHighlighter"
+- !private "abs"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "greatestFiniteMagnitude"]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["6Charts8AnimatorC", "phaseX"]
+- !private ["6Charts8AnimatorC", "phaseY"]
+- !private ["6Charts16AnimatorDelegateP", "centerOffsets"]
+- !private ["6Charts16AnimatorDelegateP", "chartAnimator"]
+- !private ["6Charts16AnimatorDelegateP", "chartYMin"]
+- !private ["6Charts16AnimatorDelegateP", "data"]
+- !private ["6Charts16AnimatorDelegateP", "distanceToCenter"]
+- !private ["6Charts16AnimatorDelegateP", "factor"]
+- !private ["6Charts16AnimatorDelegateP", "rotationAngle"]
+- !private ["6Charts16AnimatorDelegateP", "sliceAngle"]
+- !private ["Sa", "append"]
+- !private ["Sa", "indices"]
+- !private ["Sa", "init"]
+- !private ["SK", "append"]
+- !private ["SK", "indices"]
+- !private ["SK", "init"]
+- !private ["SB", "greatestFiniteMagnitude"]
+- !private ["SB", "init"]
+- !private ["So15CALayerDelegateP", "centerOffsets"]
+- !private ["So15CALayerDelegateP", "chartAnimator"]
+- !private ["So15CALayerDelegateP", "chartYMin"]
+- !private ["So15CALayerDelegateP", "data"]
+- !private ["So15CALayerDelegateP", "distanceToCenter"]
+- !private ["So15CALayerDelegateP", "factor"]
+- !private ["So15CALayerDelegateP", "rotationAngle"]
+- !private ["So15CALayerDelegateP", "sliceAngle"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["So7CGPointV", "moving"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Highlight"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "abs"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "centerOffsets"]
+- !private ["s7CVarArgP", "chart"]
+- !private ["s7CVarArgP", "chartAnimator"]
+- !private ["s7CVarArgP", "chartYMin"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "dataSets"]
+- !private ["s7CVarArgP", "distanceToCenter"]
+- !private ["s7CVarArgP", "factor"]
+- !private ["s7CVarArgP", "getDataSetByIndex"]
+- !private ["s7CVarArgP", "getHighlights"]
+- !private ["s7CVarArgP", "greatestFiniteMagnitude"]
+- !private ["s7CVarArgP", "indices"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "phaseX"]
+- !private ["s7CVarArgP", "phaseY"]
+- !private ["s7CVarArgP", "rotationAngle"]
+- !private ["s7CVarArgP", "sliceAngle"]
+- !private ["s7CVarArgP", "y"]
+- !private ["6Charts9ChartDataC", "dataSets"]
+- !private ["6Charts9ChartDataC", "getDataSetByIndex"]
+- !private ["6Charts14ChartDataEntryC", "y"]
+- !private ["6Charts18ChartDataEntryBaseC", "y"]
+- !private ["6Charts17ChartDataProviderP", "centerOffsets"]
+- !private ["6Charts17ChartDataProviderP", "chartAnimator"]
+- !private ["6Charts17ChartDataProviderP", "chartYMin"]
+- !private ["6Charts17ChartDataProviderP", "data"]
+- !private ["6Charts17ChartDataProviderP", "distanceToCenter"]
+- !private ["6Charts17ChartDataProviderP", "factor"]
+- !private ["6Charts17ChartDataProviderP", "rotationAngle"]
+- !private ["6Charts17ChartDataProviderP", "sliceAngle"]
+- ["6Charts16ChartHighlighterC", "CGFloat"]
+- !private ["6Charts16ChartHighlighterC", "Double"]
+- ["6Charts16ChartHighlighterC", "Highlight"]
+- ["6Charts16ChartHighlighterC", "Int"]
+- !private ["6Charts16ChartHighlighterC", "RadarChartView"]
+- !private ["6Charts16ChartHighlighterC", "abs"]
+- !private ["6Charts16ChartHighlighterC", "chart"]
+- ["6Charts16ChartHighlighterC", "closestHighlight"]
+- ["6Charts16ChartHighlighterC", "getHighlights"]
+- ["6Charts16ChartHighlighterC", "init"]
+- !private ["6Charts13ChartViewBaseC", "centerOffsets"]
+- !private ["6Charts13ChartViewBaseC", "chartAnimator"]
+- !private ["6Charts13ChartViewBaseC", "chartYMin"]
+- !private ["6Charts13ChartViewBaseC", "data"]
+- !private ["6Charts13ChartViewBaseC", "distanceToCenter"]
+- !private ["6Charts13ChartViewBaseC", "factor"]
+- !private ["6Charts13ChartViewBaseC", "rotationAngle"]
+- !private ["6Charts13ChartViewBaseC", "sliceAngle"]
+- !private ["Sl", "append"]
+- !private ["Sl", "indices"]
+- !private ["Sl", "init"]
+- !private ["SL", "greatestFiniteMagnitude"]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "indices"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Highlight"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "abs"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "centerOffsets"]
+- !private ["s28CustomDebugStringConvertibleP", "chart"]
+- !private ["s28CustomDebugStringConvertibleP", "chartAnimator"]
+- !private ["s28CustomDebugStringConvertibleP", "chartYMin"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSets"]
+- !private ["s28CustomDebugStringConvertibleP", "distanceToCenter"]
+- !private ["s28CustomDebugStringConvertibleP", "factor"]
+- !private ["s28CustomDebugStringConvertibleP", "getDataSetByIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "getHighlights"]
+- !private ["s28CustomDebugStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s28CustomDebugStringConvertibleP", "indices"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "moving"]
+- !private ["s28CustomDebugStringConvertibleP", "phaseX"]
+- !private ["s28CustomDebugStringConvertibleP", "phaseY"]
+- !private ["s28CustomDebugStringConvertibleP", "rotationAngle"]
+- !private ["s28CustomDebugStringConvertibleP", "sliceAngle"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "greatestFiniteMagnitude"]
+- !private ["s17CustomReflectableP", "indices"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "moving"]
+- !private ["s17CustomReflectableP", "phaseX"]
+- !private ["s17CustomReflectableP", "phaseY"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Highlight"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "abs"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "centerOffsets"]
+- !private ["s23CustomStringConvertibleP", "chart"]
+- !private ["s23CustomStringConvertibleP", "chartAnimator"]
+- !private ["s23CustomStringConvertibleP", "chartYMin"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "dataSets"]
+- !private ["s23CustomStringConvertibleP", "distanceToCenter"]
+- !private ["s23CustomStringConvertibleP", "factor"]
+- !private ["s23CustomStringConvertibleP", "getDataSetByIndex"]
+- !private ["s23CustomStringConvertibleP", "getHighlights"]
+- !private ["s23CustomStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s23CustomStringConvertibleP", "indices"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "phaseX"]
+- !private ["s23CustomStringConvertibleP", "phaseY"]
+- !private ["s23CustomStringConvertibleP", "rotationAngle"]
+- !private ["s23CustomStringConvertibleP", "sliceAngle"]
+- !private ["s23CustomStringConvertibleP", "y"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "indices"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["Se", "append"]
+- !private ["Se", "greatestFiniteMagnitude"]
+- !private ["Se", "indices"]
+- !private ["Se", "init"]
+- !private ["Se", "moving"]
+- !private ["Se", "phaseX"]
+- !private ["Se", "phaseY"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["Sd", "greatestFiniteMagnitude"]
+- !private ["Sd", "init"]
+- !private ["SE", "append"]
+- !private ["SE", "greatestFiniteMagnitude"]
+- !private ["SE", "indices"]
+- !private ["SE", "init"]
+- !private ["SE", "moving"]
+- !private ["SE", "phaseX"]
+- !private ["SE", "phaseY"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- !private ["SQ", "CGFloat"]
+- !private ["SQ", "Double"]
+- !private ["SQ", "Highlight"]
+- ["SQ", ""]
+- !private ["SQ", "abs"]
+- !private ["SQ", "append"]
+- !private ["SQ", "centerOffsets"]
+- !private ["SQ", "chart"]
+- !private ["SQ", "chartAnimator"]
+- !private ["SQ", "chartYMin"]
+- !private ["SQ", "data"]
+- !private ["SQ", "dataSets"]
+- !private ["SQ", "distanceToCenter"]
+- !private ["SQ", "factor"]
+- !private ["SQ", "getDataSetByIndex"]
+- !private ["SQ", "getHighlights"]
+- !private ["SQ", "greatestFiniteMagnitude"]
+- !private ["SQ", "indices"]
+- !private ["SQ", "init"]
+- !private ["SQ", "moving"]
+- !private ["SQ", "phaseX"]
+- !private ["SQ", "phaseY"]
+- !private ["SQ", "rotationAngle"]
+- !private ["SQ", "sliceAngle"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "indices"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "greatestFiniteMagnitude"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "greatestFiniteMagnitude"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "phaseX"]
+- !private ["s23ExpressibleByNilLiteralP", "phaseY"]
+- !private ["SF", "greatestFiniteMagnitude"]
+- !private ["SF", "init"]
+- !private ["SH", "CGFloat"]
+- !private ["SH", "Double"]
+- !private ["SH", "Highlight"]
+- ["SH", ""]
+- !private ["SH", "abs"]
+- !private ["SH", "append"]
+- !private ["SH", "centerOffsets"]
+- !private ["SH", "chart"]
+- !private ["SH", "chartAnimator"]
+- !private ["SH", "chartYMin"]
+- !private ["SH", "data"]
+- !private ["SH", "dataSets"]
+- !private ["SH", "distanceToCenter"]
+- !private ["SH", "factor"]
+- !private ["SH", "getDataSetByIndex"]
+- !private ["SH", "getHighlights"]
+- !private ["SH", "greatestFiniteMagnitude"]
+- !private ["SH", "indices"]
+- !private ["SH", "init"]
+- !private ["SH", "phaseX"]
+- !private ["SH", "phaseY"]
+- !private ["SH", "rotationAngle"]
+- !private ["SH", "sliceAngle"]
+- !private ["SH", "y"]
+- !private ["6Charts9HighlightC", "init"]
+- !private ["6Charts9HighlightC", "y"]
+- !private ["6Charts13IChartDataSetP", "axisDependency"]
+- !private ["6Charts13IChartDataSetP", "entryForIndex"]
+- !private ["6Charts12IHighlighterP", "CGFloat"]
+- !private ["6Charts12IHighlighterP", "Double"]
+- !private ["6Charts12IHighlighterP", "Highlight"]
+- ["6Charts12IHighlighterP", ""]
+- !private ["6Charts12IHighlighterP", "abs"]
+- !private ["6Charts12IHighlighterP", "chart"]
+- !private ["6Charts12IHighlighterP", "getHighlights"]
+- !private ["s25LosslessStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["SM", "append"]
+- !private ["SM", "indices"]
+- !private ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "indices"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["So8NSCodingP", "centerOffsets"]
+- !private ["So8NSCodingP", "chartAnimator"]
+- !private ["So8NSCodingP", "chartYMin"]
+- !private ["So8NSCodingP", "data"]
+- !private ["So8NSCodingP", "distanceToCenter"]
+- !private ["So8NSCodingP", "factor"]
+- !private ["So8NSCodingP", "rotationAngle"]
+- !private ["So8NSCodingP", "sliceAngle"]
+- !private ["So9NSCopyingP", "y"]
+- ["So8NSObjectC", "CGFloat"]
+- !private ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Highlight"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "RadarChartView"]
+- !private ["So8NSObjectC", "abs"]
+- !private ["So8NSObjectC", "centerOffsets"]
+- !private ["So8NSObjectC", "chart"]
+- !private ["So8NSObjectC", "chartAnimator"]
+- !private ["So8NSObjectC", "chartYMin"]
+- ["So8NSObjectC", "closestHighlight"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataSets"]
+- !private ["So8NSObjectC", "distanceToCenter"]
+- !private ["So8NSObjectC", "factor"]
+- !private ["So8NSObjectC", "getDataSetByIndex"]
+- ["So8NSObjectC", "getHighlights"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "phaseX"]
+- !private ["So8NSObjectC", "phaseY"]
+- !private ["So8NSObjectC", "rotationAngle"]
+- !private ["So8NSObjectC", "sliceAngle"]
+- !private ["So8NSObjectC", "y"]
+- !private ["So8NSObjectP", "CGFloat"]
+- !private ["So8NSObjectP", "Double"]
+- !private ["So8NSObjectP", "Highlight"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "abs"]
+- !private ["So8NSObjectP", "centerOffsets"]
+- !private ["So8NSObjectP", "chart"]
+- !private ["So8NSObjectP", "chartAnimator"]
+- !private ["So8NSObjectP", "chartYMin"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "dataSets"]
+- !private ["So8NSObjectP", "distanceToCenter"]
+- !private ["So8NSObjectP", "factor"]
+- !private ["So8NSObjectP", "getDataSetByIndex"]
+- !private ["So8NSObjectP", "getHighlights"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "phaseX"]
+- !private ["So8NSObjectP", "phaseY"]
+- !private ["So8NSObjectP", "rotationAngle"]
+- !private ["So8NSObjectP", "sliceAngle"]
+- !private ["So8NSObjectP", "y"]
+- !private ["6Charts8NSUIViewC", "centerOffsets"]
+- !private ["6Charts8NSUIViewC", "chartAnimator"]
+- !private ["6Charts8NSUIViewC", "chartYMin"]
+- !private ["6Charts8NSUIViewC", "data"]
+- !private ["6Charts8NSUIViewC", "distanceToCenter"]
+- !private ["6Charts8NSUIViewC", "factor"]
+- !private ["6Charts8NSUIViewC", "rotationAngle"]
+- !private ["6Charts8NSUIViewC", "sliceAngle"]
+- !private ["Sj", "greatestFiniteMagnitude"]
+- !private ["Sj", "init"]
+- !private ["Sq", "phaseX"]
+- !private ["Sq", "phaseY"]
+- !private ["6Charts21PieRadarChartViewBaseC", "centerOffsets"]
+- !private ["6Charts21PieRadarChartViewBaseC", "chartAnimator"]
+- !private ["6Charts21PieRadarChartViewBaseC", "chartYMin"]
+- !private ["6Charts21PieRadarChartViewBaseC", "data"]
+- !private ["6Charts21PieRadarChartViewBaseC", "distanceToCenter"]
+- !private ["6Charts21PieRadarChartViewBaseC", "factor"]
+- !private ["6Charts21PieRadarChartViewBaseC", "rotationAngle"]
+- !private ["6Charts21PieRadarChartViewBaseC", "sliceAngle"]
+- ["6Charts19PieRadarHighlighterC", "CGFloat"]
+- !private ["6Charts19PieRadarHighlighterC", "Double"]
+- ["6Charts19PieRadarHighlighterC", "Highlight"]
+- ["6Charts19PieRadarHighlighterC", "Int"]
+- !private ["6Charts19PieRadarHighlighterC", "RadarChartView"]
+- ["6Charts19PieRadarHighlighterC", ""]
+- !private ["6Charts19PieRadarHighlighterC", "abs"]
+- !private ["6Charts19PieRadarHighlighterC", "chart"]
+- ["6Charts19PieRadarHighlighterC", "closestHighlight"]
+- ["6Charts19PieRadarHighlighterC", "getHighlights"]
+- ["6Charts19PieRadarHighlighterC", "init"]
+- !private ["6Charts14RadarChartViewC", "centerOffsets"]
+- !private ["6Charts14RadarChartViewC", "chartAnimator"]
+- !private ["6Charts14RadarChartViewC", "chartYMin"]
+- !private ["6Charts14RadarChartViewC", "data"]
+- !private ["6Charts14RadarChartViewC", "deinit"]
+- !private ["6Charts14RadarChartViewC", "distanceToCenter"]
+- !private ["6Charts14RadarChartViewC", "factor"]
+- !private ["6Charts14RadarChartViewC", "rotationAngle"]
+- !private ["6Charts14RadarChartViewC", "sliceAngle"]
+- ["6Charts16RadarHighlighterC", "CGFloat"]
+- !private ["6Charts16RadarHighlighterC", "Double"]
+- ["6Charts16RadarHighlighterC", "Highlight"]
+- ["6Charts16RadarHighlighterC", "Int"]
+- !private ["6Charts16RadarHighlighterC", "RadarChartView"]
+- !private ["6Charts16RadarHighlighterC", "abs"]
+- !private ["6Charts16RadarHighlighterC", "chart"]
+- ["6Charts16RadarHighlighterC", "closestHighlight"]
+- ["6Charts16RadarHighlighterC", "deinit"]
+- ["6Charts16RadarHighlighterC", "getHighlights"]
+- ["6Charts16RadarHighlighterC", "init"]
+- !private ["Sk", "append"]
+- !private ["Sk", "indices"]
+- !private ["Sk", "init"]
+- !private ["Sm", "append"]
+- !private ["Sm", "indices"]
+- !private ["Sm", "init"]
+- !private ["s10SIMDScalarP", "greatestFiniteMagnitude"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "append"]
+- !private ["ST", "indices"]
+- !private ["ST", "init"]
+- !private ["s13SignedNumericP", "greatestFiniteMagnitude"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", "greatestFiniteMagnitude"]
+- !private ["Sx", "init"]
+- !private ["s20TextOutputStreamableP", "greatestFiniteMagnitude"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "centerOffsets"]
+- !private ["So29UIAccessibilityIdentificationP", "chartAnimator"]
+- !private ["So29UIAccessibilityIdentificationP", "chartYMin"]
+- !private ["So29UIAccessibilityIdentificationP", "data"]
+- !private ["So29UIAccessibilityIdentificationP", "distanceToCenter"]
+- !private ["So29UIAccessibilityIdentificationP", "factor"]
+- !private ["So29UIAccessibilityIdentificationP", "rotationAngle"]
+- !private ["So29UIAccessibilityIdentificationP", "sliceAngle"]
+- !private ["So12UIAppearanceP", "centerOffsets"]
+- !private ["So12UIAppearanceP", "chartAnimator"]
+- !private ["So12UIAppearanceP", "chartYMin"]
+- !private ["So12UIAppearanceP", "data"]
+- !private ["So12UIAppearanceP", "distanceToCenter"]
+- !private ["So12UIAppearanceP", "factor"]
+- !private ["So12UIAppearanceP", "rotationAngle"]
+- !private ["So12UIAppearanceP", "sliceAngle"]
+- !private ["So21UIAppearanceContainerP", "centerOffsets"]
+- !private ["So21UIAppearanceContainerP", "chartAnimator"]
+- !private ["So21UIAppearanceContainerP", "chartYMin"]
+- !private ["So21UIAppearanceContainerP", "data"]
+- !private ["So21UIAppearanceContainerP", "distanceToCenter"]
+- !private ["So21UIAppearanceContainerP", "factor"]
+- !private ["So21UIAppearanceContainerP", "rotationAngle"]
+- !private ["So21UIAppearanceContainerP", "sliceAngle"]
+- !private ["So17UICoordinateSpaceP", "centerOffsets"]
+- !private ["So17UICoordinateSpaceP", "chartAnimator"]
+- !private ["So17UICoordinateSpaceP", "chartYMin"]
+- !private ["So17UICoordinateSpaceP", "data"]
+- !private ["So17UICoordinateSpaceP", "distanceToCenter"]
+- !private ["So17UICoordinateSpaceP", "factor"]
+- !private ["So17UICoordinateSpaceP", "rotationAngle"]
+- !private ["So17UICoordinateSpaceP", "sliceAngle"]
+- !private ["So13UIDynamicItemP", "centerOffsets"]
+- !private ["So13UIDynamicItemP", "chartAnimator"]
+- !private ["So13UIDynamicItemP", "chartYMin"]
+- !private ["So13UIDynamicItemP", "data"]
+- !private ["So13UIDynamicItemP", "distanceToCenter"]
+- !private ["So13UIDynamicItemP", "factor"]
+- !private ["So13UIDynamicItemP", "rotationAngle"]
+- !private ["So13UIDynamicItemP", "sliceAngle"]
+- !private ["So18UIFocusEnvironmentP", "centerOffsets"]
+- !private ["So18UIFocusEnvironmentP", "chartAnimator"]
+- !private ["So18UIFocusEnvironmentP", "chartYMin"]
+- !private ["So18UIFocusEnvironmentP", "data"]
+- !private ["So18UIFocusEnvironmentP", "distanceToCenter"]
+- !private ["So18UIFocusEnvironmentP", "factor"]
+- !private ["So18UIFocusEnvironmentP", "rotationAngle"]
+- !private ["So18UIFocusEnvironmentP", "sliceAngle"]
+- !private ["So11UIFocusItemP", "centerOffsets"]
+- !private ["So11UIFocusItemP", "chartAnimator"]
+- !private ["So11UIFocusItemP", "chartYMin"]
+- !private ["So11UIFocusItemP", "data"]
+- !private ["So11UIFocusItemP", "distanceToCenter"]
+- !private ["So11UIFocusItemP", "factor"]
+- !private ["So11UIFocusItemP", "rotationAngle"]
+- !private ["So11UIFocusItemP", "sliceAngle"]
+- !private ["So20UIFocusItemContainerP", "centerOffsets"]
+- !private ["So20UIFocusItemContainerP", "chartAnimator"]
+- !private ["So20UIFocusItemContainerP", "chartYMin"]
+- !private ["So20UIFocusItemContainerP", "data"]
+- !private ["So20UIFocusItemContainerP", "distanceToCenter"]
+- !private ["So20UIFocusItemContainerP", "factor"]
+- !private ["So20UIFocusItemContainerP", "rotationAngle"]
+- !private ["So20UIFocusItemContainerP", "sliceAngle"]
+- !private ["So24UILargeContentViewerItemP", "centerOffsets"]
+- !private ["So24UILargeContentViewerItemP", "chartAnimator"]
+- !private ["So24UILargeContentViewerItemP", "chartYMin"]
+- !private ["So24UILargeContentViewerItemP", "data"]
+- !private ["So24UILargeContentViewerItemP", "distanceToCenter"]
+- !private ["So24UILargeContentViewerItemP", "factor"]
+- !private ["So24UILargeContentViewerItemP", "rotationAngle"]
+- !private ["So24UILargeContentViewerItemP", "sliceAngle"]
+- !private ["So30UIPasteConfigurationSupportingP", "centerOffsets"]
+- !private ["So30UIPasteConfigurationSupportingP", "chartAnimator"]
+- !private ["So30UIPasteConfigurationSupportingP", "chartYMin"]
+- !private ["So30UIPasteConfigurationSupportingP", "data"]
+- !private ["So30UIPasteConfigurationSupportingP", "distanceToCenter"]
+- !private ["So30UIPasteConfigurationSupportingP", "factor"]
+- !private ["So30UIPasteConfigurationSupportingP", "rotationAngle"]
+- !private ["So30UIPasteConfigurationSupportingP", "sliceAngle"]
+- !private ["So11UIResponderC", "centerOffsets"]
+- !private ["So11UIResponderC", "chartAnimator"]
+- !private ["So11UIResponderC", "chartYMin"]
+- !private ["So11UIResponderC", "data"]
+- !private ["So11UIResponderC", "distanceToCenter"]
+- !private ["So11UIResponderC", "factor"]
+- !private ["So11UIResponderC", "rotationAngle"]
+- !private ["So11UIResponderC", "sliceAngle"]
+- !private ["So30UIResponderStandardEditActionsP", "centerOffsets"]
+- !private ["So30UIResponderStandardEditActionsP", "chartAnimator"]
+- !private ["So30UIResponderStandardEditActionsP", "chartYMin"]
+- !private ["So30UIResponderStandardEditActionsP", "data"]
+- !private ["So30UIResponderStandardEditActionsP", "distanceToCenter"]
+- !private ["So30UIResponderStandardEditActionsP", "factor"]
+- !private ["So30UIResponderStandardEditActionsP", "rotationAngle"]
+- !private ["So30UIResponderStandardEditActionsP", "sliceAngle"]
+- !private ["So18UITraitEnvironmentP", "centerOffsets"]
+- !private ["So18UITraitEnvironmentP", "chartAnimator"]
+- !private ["So18UITraitEnvironmentP", "chartYMin"]
+- !private ["So18UITraitEnvironmentP", "data"]
+- !private ["So18UITraitEnvironmentP", "distanceToCenter"]
+- !private ["So18UITraitEnvironmentP", "factor"]
+- !private ["So18UITraitEnvironmentP", "rotationAngle"]
+- !private ["So18UITraitEnvironmentP", "sliceAngle"]
+- !private ["So23UIUserActivityRestoringP", "centerOffsets"]
+- !private ["So23UIUserActivityRestoringP", "chartAnimator"]
+- !private ["So23UIUserActivityRestoringP", "chartYMin"]
+- !private ["So23UIUserActivityRestoringP", "data"]
+- !private ["So23UIUserActivityRestoringP", "distanceToCenter"]
+- !private ["So23UIUserActivityRestoringP", "factor"]
+- !private ["So23UIUserActivityRestoringP", "rotationAngle"]
+- !private ["So23UIUserActivityRestoringP", "sliceAngle"]
+- !private ["So6UIViewC", "centerOffsets"]
+- !private ["So6UIViewC", "chartAnimator"]
+- !private ["So6UIViewC", "chartYMin"]
+- !private ["So6UIViewC", "data"]
+- !private ["So6UIViewC", "distanceToCenter"]
+- !private ["So6UIViewC", "factor"]
+- !private ["So6UIViewC", "rotationAngle"]
+- !private ["So6UIViewC", "sliceAngle"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "indices"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s15_CVarArgAlignedP", "greatestFiniteMagnitude"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "greatestFiniteMagnitude"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "greatestFiniteMagnitude"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "moving"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "x"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "y"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "indices"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "greatestFiniteMagnitude"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "greatestFiniteMagnitude"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "indices"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "greatestFiniteMagnitude"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "indices"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Highlight"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "abs"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "centerOffsets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chartAnimator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chartYMin"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "distanceToCenter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "factor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDataSetByIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getHighlights"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phaseX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phaseY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rotationAngle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sliceAngle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "y"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "greatestFiniteMagnitude"]
+- !private ["s21_ObjectiveCBridgeableP", "indices"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "moving"]
+- !private ["s21_ObjectiveCBridgeableP", "phaseX"]
+- !private ["s21_ObjectiveCBridgeableP", "phaseY"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerOffsets"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "chartAnimator"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "chartYMin"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "data"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "distanceToCenter"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "factor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rotationAngle"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "sliceAngle"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "6Charts8AnimatorC"
+- !private "6Charts16AnimatorDelegateP"
+- !private "Sa"
+- !private "SK"
+- !private "SB"
+- !private "So15CALayerDelegateP"
+- !private "12CoreGraphics7CGFloatV"
+- !private "So7CGPointV"
+- "s7CVarArgP"
+- !private "6Charts9ChartDataC"
+- !private "6Charts14ChartDataEntryC"
+- !private "6Charts18ChartDataEntryBaseC"
+- !private "6Charts17ChartDataProviderP"
+- "6Charts16ChartHighlighterC"
+- !private "6Charts13ChartViewBaseC"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "Sd"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "SF"
+- "SH"
+- !private "6Charts9HighlightC"
+- !private "6Charts13IChartDataSetP"
+- "6Charts12IHighlighterP"
+- !private "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "6Charts8NSUIViewC"
+- !private "Sj"
+- !private "Sq"
+- !private "6Charts21PieRadarChartViewBaseC"
+- "6Charts19PieRadarHighlighterC"
+- !private "6Charts14RadarChartViewC"
+- "6Charts16RadarHighlighterC"
+- !private "Sk"
+- !private "Sm"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "b7c45cc6e6eef0b0d655d93406dd0b35"

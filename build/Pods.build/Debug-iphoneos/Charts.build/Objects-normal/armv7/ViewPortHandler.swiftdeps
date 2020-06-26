@@ -1,0 +1,831 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewPortHandler"
+provides-nominal:
+- "6Charts15ViewPortHandlerC"
+provides-member:
+- ["6Charts15ViewPortHandlerC", ""]
+provides-dynamic-lookup:
+- "_chartHeight"
+- "_chartWidth"
+- "_contentRect"
+- "_maxScaleX"
+- "_maxScaleY"
+- "_minScaleX"
+- "_minScaleY"
+- "_scaleX"
+- "_scaleY"
+- "_touchMatrix"
+- "_transOffsetX"
+- "_transOffsetY"
+- "_transX"
+- "_transY"
+- "canZoomInMoreX"
+- "canZoomInMoreY"
+- "canZoomOutMoreX"
+- "canZoomOutMoreY"
+- "centerViewPort"
+- "chartHeight"
+- "chartWidth"
+- "contentBottom"
+- "contentCenter"
+- "contentHeight"
+- "contentLeft"
+- "contentRect"
+- "contentRight"
+- "contentTop"
+- "contentWidth"
+- "fitScreen"
+- "hasChartDimens"
+- "hasNoDragOffset"
+- "isFullyZoomedOut"
+- "isFullyZoomedOutX"
+- "isFullyZoomedOutY"
+- "isInBounds"
+- "isInBoundsBottom"
+- "isInBoundsLeft"
+- "isInBoundsRight"
+- "isInBoundsTop"
+- "isInBoundsX"
+- "isInBoundsY"
+- "isIntersectingLine"
+- "limitTransAndScale"
+- "maxScaleX"
+- "maxScaleY"
+- "minScaleX"
+- "minScaleY"
+- "offsetBottom"
+- "offsetLeft"
+- "offsetRight"
+- "offsetTop"
+- "refresh"
+- "resetZoom"
+- "restrainViewPort"
+- "scaleX"
+- "scaleY"
+- "setChartDimens"
+- "setDragOffsetX"
+- "setDragOffsetY"
+- "setMaximumScaleX"
+- "setMaximumScaleY"
+- "setMinMaxScaleX"
+- "setMinMaxScaleY"
+- "setMinimumScaleX"
+- "setMinimumScaleY"
+- "setZoom"
+- "touchMatrix"
+- "transX"
+- "transY"
+- "translate"
+- "zoom"
+- "zoomIn"
+- "zoomOut"
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "*"
+- !private "+"
+- !private "-"
+- !private "/"
+- !private "<"
+- !private "<="
+- !private "=="
+- !private ">"
+- !private ">="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CGAffineTransform"
+- "CGFloat"
+- "CGPoint"
+- "CGRect"
+- "ChartViewBase"
+- "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "NSObject"
+- "ViewPortHandler"
+- !private "floor"
+- !private "max"
+- !private "min"
+- !private "||"
+depends-member:
+- ["s18AdditiveArithmeticP", "greatestFiniteMagnitude"]
+- !private ["6Charts16AnimatorDelegateP", "setNeedsDisplay"]
+- ["SB", "greatestFiniteMagnitude"]
+- !private ["So15CALayerDelegateP", "setNeedsDisplay"]
+- !private ["So17CGAffineTransformV", "a"]
+- !private ["So17CGAffineTransformV", "concatenating"]
+- !private ["So17CGAffineTransformV", "d"]
+- ["So17CGAffineTransformV", "identity"]
+- !private ["So17CGAffineTransformV", "init"]
+- !private ["So17CGAffineTransformV", "scaledBy"]
+- !private ["So17CGAffineTransformV", "translatedBy"]
+- !private ["So17CGAffineTransformV", "tx"]
+- !private ["So17CGAffineTransformV", "ty"]
+- ["12CoreGraphics7CGFloatV", "greatestFiniteMagnitude"]
+- !private ["So7CGPointV", "init"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So6CGRectV", "height"]
+- ["So6CGRectV", "init"]
+- !private ["So6CGRectV", "maxY"]
+- !private ["So6CGRectV", "minX"]
+- !private ["So6CGRectV", "minY"]
+- !private ["So6CGRectV", "origin"]
+- !private ["So6CGRectV", "size"]
+- !private ["So6CGRectV", "width"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "width"]
+- ["s7CVarArgP", "CGAffineTransform"]
+- ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "CGPoint"]
+- ["s7CVarArgP", "CGRect"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_chartHeight"]
+- !private ["s7CVarArgP", "_chartWidth"]
+- !private ["s7CVarArgP", "_contentRect"]
+- !private ["s7CVarArgP", "_maxScaleX"]
+- !private ["s7CVarArgP", "_maxScaleY"]
+- !private ["s7CVarArgP", "_minScaleX"]
+- !private ["s7CVarArgP", "_minScaleY"]
+- !private ["s7CVarArgP", "_scaleX"]
+- !private ["s7CVarArgP", "_scaleY"]
+- !private ["s7CVarArgP", "_touchMatrix"]
+- !private ["s7CVarArgP", "_transOffsetX"]
+- !private ["s7CVarArgP", "_transOffsetY"]
+- !private ["s7CVarArgP", "_transX"]
+- !private ["s7CVarArgP", "_transY"]
+- !private ["s7CVarArgP", "contentRect"]
+- !private ["s7CVarArgP", "floor"]
+- ["s7CVarArgP", "greatestFiniteMagnitude"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isFullyZoomedOutX"]
+- !private ["s7CVarArgP", "isFullyZoomedOutY"]
+- !private ["s7CVarArgP", "isInBounds"]
+- !private ["s7CVarArgP", "isInBoundsBottom"]
+- !private ["s7CVarArgP", "isInBoundsLeft"]
+- !private ["s7CVarArgP", "isInBoundsRight"]
+- !private ["s7CVarArgP", "isInBoundsTop"]
+- !private ["s7CVarArgP", "isInBoundsX"]
+- !private ["s7CVarArgP", "isInBoundsY"]
+- !private ["s7CVarArgP", "limitTransAndScale"]
+- !private ["s7CVarArgP", "max"]
+- !private ["s7CVarArgP", "min"]
+- !private ["s7CVarArgP", "offsetBottom"]
+- !private ["s7CVarArgP", "offsetLeft"]
+- !private ["s7CVarArgP", "offsetRight"]
+- !private ["s7CVarArgP", "offsetTop"]
+- !private ["s7CVarArgP", "refresh"]
+- !private ["s7CVarArgP", "restrainViewPort"]
+- !private ["s7CVarArgP", "setChartDimens"]
+- !private ["s7CVarArgP", "setNeedsDisplay"]
+- !private ["s7CVarArgP", "zoom"]
+- !private ["6Charts17ChartDataProviderP", "setNeedsDisplay"]
+- !private ["6Charts13ChartViewBaseC", "setNeedsDisplay"]
+- ["SL", "greatestFiniteMagnitude"]
+- ["s28CustomDebugStringConvertibleP", "CGAffineTransform"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- ["s28CustomDebugStringConvertibleP", "CGRect"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_chartHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "_chartWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "_contentRect"]
+- !private ["s28CustomDebugStringConvertibleP", "_maxScaleX"]
+- !private ["s28CustomDebugStringConvertibleP", "_maxScaleY"]
+- !private ["s28CustomDebugStringConvertibleP", "_minScaleX"]
+- !private ["s28CustomDebugStringConvertibleP", "_minScaleY"]
+- !private ["s28CustomDebugStringConvertibleP", "_scaleX"]
+- !private ["s28CustomDebugStringConvertibleP", "_scaleY"]
+- !private ["s28CustomDebugStringConvertibleP", "_touchMatrix"]
+- !private ["s28CustomDebugStringConvertibleP", "_transOffsetX"]
+- !private ["s28CustomDebugStringConvertibleP", "_transOffsetY"]
+- !private ["s28CustomDebugStringConvertibleP", "_transX"]
+- !private ["s28CustomDebugStringConvertibleP", "_transY"]
+- !private ["s28CustomDebugStringConvertibleP", "contentRect"]
+- !private ["s28CustomDebugStringConvertibleP", "floor"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isFullyZoomedOutX"]
+- !private ["s28CustomDebugStringConvertibleP", "isFullyZoomedOutY"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBoundsBottom"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBoundsLeft"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBoundsRight"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBoundsTop"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBoundsX"]
+- !private ["s28CustomDebugStringConvertibleP", "isInBoundsY"]
+- !private ["s28CustomDebugStringConvertibleP", "limitTransAndScale"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "maxY"]
+- !private ["s28CustomDebugStringConvertibleP", "min"]
+- !private ["s28CustomDebugStringConvertibleP", "minX"]
+- !private ["s28CustomDebugStringConvertibleP", "minY"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetBottom"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetLeft"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetRight"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetTop"]
+- !private ["s28CustomDebugStringConvertibleP", "origin"]
+- !private ["s28CustomDebugStringConvertibleP", "refresh"]
+- !private ["s28CustomDebugStringConvertibleP", "restrainViewPort"]
+- !private ["s28CustomDebugStringConvertibleP", "setChartDimens"]
+- !private ["s28CustomDebugStringConvertibleP", "setNeedsDisplay"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s28CustomDebugStringConvertibleP", "zoom"]
+- ["s17CustomReflectableP", "greatestFiniteMagnitude"]
+- !private ["s17CustomReflectableP", "height"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "maxY"]
+- !private ["s17CustomReflectableP", "minX"]
+- !private ["s17CustomReflectableP", "minY"]
+- !private ["s17CustomReflectableP", "origin"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- ["s23CustomStringConvertibleP", "CGAffineTransform"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- ["s23CustomStringConvertibleP", "CGRect"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_chartHeight"]
+- !private ["s23CustomStringConvertibleP", "_chartWidth"]
+- !private ["s23CustomStringConvertibleP", "_contentRect"]
+- !private ["s23CustomStringConvertibleP", "_maxScaleX"]
+- !private ["s23CustomStringConvertibleP", "_maxScaleY"]
+- !private ["s23CustomStringConvertibleP", "_minScaleX"]
+- !private ["s23CustomStringConvertibleP", "_minScaleY"]
+- !private ["s23CustomStringConvertibleP", "_scaleX"]
+- !private ["s23CustomStringConvertibleP", "_scaleY"]
+- !private ["s23CustomStringConvertibleP", "_touchMatrix"]
+- !private ["s23CustomStringConvertibleP", "_transOffsetX"]
+- !private ["s23CustomStringConvertibleP", "_transOffsetY"]
+- !private ["s23CustomStringConvertibleP", "_transX"]
+- !private ["s23CustomStringConvertibleP", "_transY"]
+- !private ["s23CustomStringConvertibleP", "contentRect"]
+- !private ["s23CustomStringConvertibleP", "floor"]
+- ["s23CustomStringConvertibleP", "greatestFiniteMagnitude"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isFullyZoomedOutX"]
+- !private ["s23CustomStringConvertibleP", "isFullyZoomedOutY"]
+- !private ["s23CustomStringConvertibleP", "isInBounds"]
+- !private ["s23CustomStringConvertibleP", "isInBoundsBottom"]
+- !private ["s23CustomStringConvertibleP", "isInBoundsLeft"]
+- !private ["s23CustomStringConvertibleP", "isInBoundsRight"]
+- !private ["s23CustomStringConvertibleP", "isInBoundsTop"]
+- !private ["s23CustomStringConvertibleP", "isInBoundsX"]
+- !private ["s23CustomStringConvertibleP", "isInBoundsY"]
+- !private ["s23CustomStringConvertibleP", "limitTransAndScale"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "min"]
+- !private ["s23CustomStringConvertibleP", "offsetBottom"]
+- !private ["s23CustomStringConvertibleP", "offsetLeft"]
+- !private ["s23CustomStringConvertibleP", "offsetRight"]
+- !private ["s23CustomStringConvertibleP", "offsetTop"]
+- !private ["s23CustomStringConvertibleP", "refresh"]
+- !private ["s23CustomStringConvertibleP", "restrainViewPort"]
+- !private ["s23CustomStringConvertibleP", "setChartDimens"]
+- !private ["s23CustomStringConvertibleP", "setNeedsDisplay"]
+- !private ["s23CustomStringConvertibleP", "zoom"]
+- !private ["Se", "a"]
+- !private ["Se", "concatenating"]
+- !private ["Se", "d"]
+- ["Se", "greatestFiniteMagnitude"]
+- !private ["Se", "height"]
+- ["Se", "identity"]
+- ["Se", "init"]
+- !private ["Se", "maxY"]
+- !private ["Se", "minX"]
+- !private ["Se", "minY"]
+- !private ["Se", "origin"]
+- !private ["Se", "scaledBy"]
+- !private ["Se", "size"]
+- !private ["Se", "translatedBy"]
+- !private ["Se", "tx"]
+- !private ["Se", "ty"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["SE", "a"]
+- !private ["SE", "concatenating"]
+- !private ["SE", "d"]
+- ["SE", "greatestFiniteMagnitude"]
+- !private ["SE", "height"]
+- ["SE", "identity"]
+- ["SE", "init"]
+- !private ["SE", "maxY"]
+- !private ["SE", "minX"]
+- !private ["SE", "minY"]
+- !private ["SE", "origin"]
+- !private ["SE", "scaledBy"]
+- !private ["SE", "size"]
+- !private ["SE", "translatedBy"]
+- !private ["SE", "tx"]
+- !private ["SE", "ty"]
+- !private ["SE", "width"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- ["SQ", "CGAffineTransform"]
+- ["SQ", "CGFloat"]
+- !private ["SQ", "CGPoint"]
+- ["SQ", "CGRect"]
+- ["SQ", ""]
+- !private ["SQ", "_chartHeight"]
+- !private ["SQ", "_chartWidth"]
+- !private ["SQ", "_contentRect"]
+- !private ["SQ", "_maxScaleX"]
+- !private ["SQ", "_maxScaleY"]
+- !private ["SQ", "_minScaleX"]
+- !private ["SQ", "_minScaleY"]
+- !private ["SQ", "_scaleX"]
+- !private ["SQ", "_scaleY"]
+- !private ["SQ", "_touchMatrix"]
+- !private ["SQ", "_transOffsetX"]
+- !private ["SQ", "_transOffsetY"]
+- !private ["SQ", "_transX"]
+- !private ["SQ", "_transY"]
+- !private ["SQ", "a"]
+- !private ["SQ", "concatenating"]
+- !private ["SQ", "contentRect"]
+- !private ["SQ", "d"]
+- !private ["SQ", "floor"]
+- ["SQ", "greatestFiniteMagnitude"]
+- !private ["SQ", "height"]
+- ["SQ", "identity"]
+- ["SQ", "init"]
+- !private ["SQ", "isFullyZoomedOutX"]
+- !private ["SQ", "isFullyZoomedOutY"]
+- !private ["SQ", "isInBounds"]
+- !private ["SQ", "isInBoundsBottom"]
+- !private ["SQ", "isInBoundsLeft"]
+- !private ["SQ", "isInBoundsRight"]
+- !private ["SQ", "isInBoundsTop"]
+- !private ["SQ", "isInBoundsX"]
+- !private ["SQ", "isInBoundsY"]
+- !private ["SQ", "limitTransAndScale"]
+- !private ["SQ", "max"]
+- !private ["SQ", "maxY"]
+- !private ["SQ", "min"]
+- !private ["SQ", "minX"]
+- !private ["SQ", "minY"]
+- !private ["SQ", "offsetBottom"]
+- !private ["SQ", "offsetLeft"]
+- !private ["SQ", "offsetRight"]
+- !private ["SQ", "offsetTop"]
+- !private ["SQ", "origin"]
+- !private ["SQ", "refresh"]
+- !private ["SQ", "restrainViewPort"]
+- !private ["SQ", "scaledBy"]
+- !private ["SQ", "setChartDimens"]
+- !private ["SQ", "setNeedsDisplay"]
+- !private ["SQ", "size"]
+- !private ["SQ", "translatedBy"]
+- !private ["SQ", "tx"]
+- !private ["SQ", "ty"]
+- !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["SQ", "zoom"]
+- ["s25ExpressibleByFloatLiteralP", "greatestFiniteMagnitude"]
+- ["s27ExpressibleByIntegerLiteralP", "greatestFiniteMagnitude"]
+- ["SF", "greatestFiniteMagnitude"]
+- ["SH", "CGAffineTransform"]
+- ["SH", "CGFloat"]
+- !private ["SH", "CGPoint"]
+- ["SH", "CGRect"]
+- ["SH", ""]
+- !private ["SH", "_chartHeight"]
+- !private ["SH", "_chartWidth"]
+- !private ["SH", "_contentRect"]
+- !private ["SH", "_maxScaleX"]
+- !private ["SH", "_maxScaleY"]
+- !private ["SH", "_minScaleX"]
+- !private ["SH", "_minScaleY"]
+- !private ["SH", "_scaleX"]
+- !private ["SH", "_scaleY"]
+- !private ["SH", "_touchMatrix"]
+- !private ["SH", "_transOffsetX"]
+- !private ["SH", "_transOffsetY"]
+- !private ["SH", "_transX"]
+- !private ["SH", "_transY"]
+- !private ["SH", "contentRect"]
+- !private ["SH", "floor"]
+- ["SH", "greatestFiniteMagnitude"]
+- !private ["SH", "init"]
+- !private ["SH", "isFullyZoomedOutX"]
+- !private ["SH", "isFullyZoomedOutY"]
+- !private ["SH", "isInBounds"]
+- !private ["SH", "isInBoundsBottom"]
+- !private ["SH", "isInBoundsLeft"]
+- !private ["SH", "isInBoundsRight"]
+- !private ["SH", "isInBoundsTop"]
+- !private ["SH", "isInBoundsX"]
+- !private ["SH", "isInBoundsY"]
+- !private ["SH", "limitTransAndScale"]
+- !private ["SH", "max"]
+- !private ["SH", "min"]
+- !private ["SH", "offsetBottom"]
+- !private ["SH", "offsetLeft"]
+- !private ["SH", "offsetRight"]
+- !private ["SH", "offsetTop"]
+- !private ["SH", "refresh"]
+- !private ["SH", "restrainViewPort"]
+- !private ["SH", "setChartDimens"]
+- !private ["SH", "setNeedsDisplay"]
+- !private ["SH", "zoom"]
+- !private ["So8NSCodingP", "setNeedsDisplay"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGAffineTransform"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "ChartViewBase"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_chartHeight"]
+- ["So8NSObjectC", "_chartWidth"]
+- ["So8NSObjectC", "_contentRect"]
+- ["So8NSObjectC", "_maxScaleX"]
+- ["So8NSObjectC", "_maxScaleY"]
+- ["So8NSObjectC", "_minScaleX"]
+- ["So8NSObjectC", "_minScaleY"]
+- ["So8NSObjectC", "_scaleX"]
+- ["So8NSObjectC", "_scaleY"]
+- ["So8NSObjectC", "_touchMatrix"]
+- ["So8NSObjectC", "_transOffsetX"]
+- ["So8NSObjectC", "_transOffsetY"]
+- ["So8NSObjectC", "_transX"]
+- ["So8NSObjectC", "_transY"]
+- ["So8NSObjectC", "canZoomInMoreX"]
+- ["So8NSObjectC", "canZoomInMoreY"]
+- ["So8NSObjectC", "canZoomOutMoreX"]
+- ["So8NSObjectC", "canZoomOutMoreY"]
+- ["So8NSObjectC", "centerViewPort"]
+- ["So8NSObjectC", "chartHeight"]
+- ["So8NSObjectC", "chartWidth"]
+- ["So8NSObjectC", "contentBottom"]
+- ["So8NSObjectC", "contentCenter"]
+- ["So8NSObjectC", "contentHeight"]
+- ["So8NSObjectC", "contentLeft"]
+- ["So8NSObjectC", "contentRect"]
+- ["So8NSObjectC", "contentRight"]
+- ["So8NSObjectC", "contentTop"]
+- ["So8NSObjectC", "contentWidth"]
+- ["So8NSObjectC", "fitScreen"]
+- !private ["So8NSObjectC", "floor"]
+- ["So8NSObjectC", "hasChartDimens"]
+- ["So8NSObjectC", "hasNoDragOffset"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isFullyZoomedOut"]
+- ["So8NSObjectC", "isFullyZoomedOutX"]
+- ["So8NSObjectC", "isFullyZoomedOutY"]
+- ["So8NSObjectC", "isInBounds"]
+- ["So8NSObjectC", "isInBoundsBottom"]
+- ["So8NSObjectC", "isInBoundsLeft"]
+- ["So8NSObjectC", "isInBoundsRight"]
+- ["So8NSObjectC", "isInBoundsTop"]
+- ["So8NSObjectC", "isInBoundsX"]
+- ["So8NSObjectC", "isInBoundsY"]
+- ["So8NSObjectC", "isIntersectingLine"]
+- ["So8NSObjectC", "limitTransAndScale"]
+- !private ["So8NSObjectC", "max"]
+- ["So8NSObjectC", "maxScaleX"]
+- ["So8NSObjectC", "maxScaleY"]
+- !private ["So8NSObjectC", "min"]
+- ["So8NSObjectC", "minScaleX"]
+- ["So8NSObjectC", "minScaleY"]
+- ["So8NSObjectC", "offsetBottom"]
+- ["So8NSObjectC", "offsetLeft"]
+- ["So8NSObjectC", "offsetRight"]
+- ["So8NSObjectC", "offsetTop"]
+- ["So8NSObjectC", "refresh"]
+- ["So8NSObjectC", "resetZoom"]
+- ["So8NSObjectC", "restrainViewPort"]
+- ["So8NSObjectC", "scaleX"]
+- ["So8NSObjectC", "scaleY"]
+- ["So8NSObjectC", "setChartDimens"]
+- ["So8NSObjectC", "setDragOffsetX"]
+- ["So8NSObjectC", "setDragOffsetY"]
+- ["So8NSObjectC", "setMaximumScaleX"]
+- ["So8NSObjectC", "setMaximumScaleY"]
+- ["So8NSObjectC", "setMinMaxScaleX"]
+- ["So8NSObjectC", "setMinMaxScaleY"]
+- ["So8NSObjectC", "setMinimumScaleX"]
+- ["So8NSObjectC", "setMinimumScaleY"]
+- !private ["So8NSObjectC", "setNeedsDisplay"]
+- ["So8NSObjectC", "setZoom"]
+- ["So8NSObjectC", "touchMatrix"]
+- ["So8NSObjectC", "transX"]
+- ["So8NSObjectC", "transY"]
+- ["So8NSObjectC", "translate"]
+- ["So8NSObjectC", "zoom"]
+- ["So8NSObjectC", "zoomIn"]
+- ["So8NSObjectC", "zoomOut"]
+- ["So8NSObjectP", "CGAffineTransform"]
+- ["So8NSObjectP", "CGFloat"]
+- !private ["So8NSObjectP", "CGPoint"]
+- ["So8NSObjectP", "CGRect"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_chartHeight"]
+- !private ["So8NSObjectP", "_chartWidth"]
+- !private ["So8NSObjectP", "_contentRect"]
+- !private ["So8NSObjectP", "_maxScaleX"]
+- !private ["So8NSObjectP", "_maxScaleY"]
+- !private ["So8NSObjectP", "_minScaleX"]
+- !private ["So8NSObjectP", "_minScaleY"]
+- !private ["So8NSObjectP", "_scaleX"]
+- !private ["So8NSObjectP", "_scaleY"]
+- !private ["So8NSObjectP", "_touchMatrix"]
+- !private ["So8NSObjectP", "_transOffsetX"]
+- !private ["So8NSObjectP", "_transOffsetY"]
+- !private ["So8NSObjectP", "_transX"]
+- !private ["So8NSObjectP", "_transY"]
+- !private ["So8NSObjectP", "contentRect"]
+- !private ["So8NSObjectP", "floor"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isFullyZoomedOutX"]
+- !private ["So8NSObjectP", "isFullyZoomedOutY"]
+- !private ["So8NSObjectP", "isInBounds"]
+- !private ["So8NSObjectP", "isInBoundsBottom"]
+- !private ["So8NSObjectP", "isInBoundsLeft"]
+- !private ["So8NSObjectP", "isInBoundsRight"]
+- !private ["So8NSObjectP", "isInBoundsTop"]
+- !private ["So8NSObjectP", "isInBoundsX"]
+- !private ["So8NSObjectP", "isInBoundsY"]
+- !private ["So8NSObjectP", "limitTransAndScale"]
+- !private ["So8NSObjectP", "max"]
+- !private ["So8NSObjectP", "min"]
+- !private ["So8NSObjectP", "offsetBottom"]
+- !private ["So8NSObjectP", "offsetLeft"]
+- !private ["So8NSObjectP", "offsetRight"]
+- !private ["So8NSObjectP", "offsetTop"]
+- !private ["So8NSObjectP", "refresh"]
+- !private ["So8NSObjectP", "restrainViewPort"]
+- !private ["So8NSObjectP", "setChartDimens"]
+- !private ["So8NSObjectP", "setNeedsDisplay"]
+- !private ["So8NSObjectP", "zoom"]
+- !private ["6Charts8NSUIViewC", "setNeedsDisplay"]
+- ["Sj", "greatestFiniteMagnitude"]
+- ["s13SignedNumericP", "greatestFiniteMagnitude"]
+- ["Sx", "greatestFiniteMagnitude"]
+- !private ["So29UIAccessibilityIdentificationP", "setNeedsDisplay"]
+- !private ["So12UIAppearanceP", "setNeedsDisplay"]
+- !private ["So21UIAppearanceContainerP", "setNeedsDisplay"]
+- !private ["So17UICoordinateSpaceP", "setNeedsDisplay"]
+- !private ["So13UIDynamicItemP", "setNeedsDisplay"]
+- !private ["So18UIFocusEnvironmentP", "setNeedsDisplay"]
+- !private ["So11UIFocusItemP", "setNeedsDisplay"]
+- !private ["So20UIFocusItemContainerP", "setNeedsDisplay"]
+- !private ["So24UILargeContentViewerItemP", "setNeedsDisplay"]
+- !private ["So30UIPasteConfigurationSupportingP", "setNeedsDisplay"]
+- !private ["So11UIResponderC", "setNeedsDisplay"]
+- !private ["So30UIResponderStandardEditActionsP", "setNeedsDisplay"]
+- !private ["So18UITraitEnvironmentP", "setNeedsDisplay"]
+- !private ["So23UIUserActivityRestoringP", "setNeedsDisplay"]
+- !private ["So6UIViewC", "setNeedsDisplay"]
+- ["6Charts15ViewPortHandlerC", "Bool"]
+- ["6Charts15ViewPortHandlerC", "CGAffineTransform"]
+- ["6Charts15ViewPortHandlerC", "CGFloat"]
+- ["6Charts15ViewPortHandlerC", "CGPoint"]
+- ["6Charts15ViewPortHandlerC", "CGRect"]
+- ["6Charts15ViewPortHandlerC", "ChartViewBase"]
+- !private ["6Charts15ViewPortHandlerC", "_chartHeight"]
+- !private ["6Charts15ViewPortHandlerC", "_chartWidth"]
+- !private ["6Charts15ViewPortHandlerC", "_contentRect"]
+- !private ["6Charts15ViewPortHandlerC", "_maxScaleX"]
+- !private ["6Charts15ViewPortHandlerC", "_maxScaleY"]
+- !private ["6Charts15ViewPortHandlerC", "_minScaleX"]
+- !private ["6Charts15ViewPortHandlerC", "_minScaleY"]
+- !private ["6Charts15ViewPortHandlerC", "_scaleX"]
+- !private ["6Charts15ViewPortHandlerC", "_scaleY"]
+- !private ["6Charts15ViewPortHandlerC", "_touchMatrix"]
+- !private ["6Charts15ViewPortHandlerC", "_transOffsetX"]
+- !private ["6Charts15ViewPortHandlerC", "_transOffsetY"]
+- !private ["6Charts15ViewPortHandlerC", "_transX"]
+- !private ["6Charts15ViewPortHandlerC", "_transY"]
+- ["6Charts15ViewPortHandlerC", "canZoomInMoreX"]
+- ["6Charts15ViewPortHandlerC", "canZoomInMoreY"]
+- ["6Charts15ViewPortHandlerC", "canZoomOutMoreX"]
+- ["6Charts15ViewPortHandlerC", "canZoomOutMoreY"]
+- ["6Charts15ViewPortHandlerC", "centerViewPort"]
+- ["6Charts15ViewPortHandlerC", "chartHeight"]
+- ["6Charts15ViewPortHandlerC", "chartWidth"]
+- ["6Charts15ViewPortHandlerC", "contentBottom"]
+- ["6Charts15ViewPortHandlerC", "contentCenter"]
+- ["6Charts15ViewPortHandlerC", "contentHeight"]
+- ["6Charts15ViewPortHandlerC", "contentLeft"]
+- ["6Charts15ViewPortHandlerC", "contentRect"]
+- ["6Charts15ViewPortHandlerC", "contentRight"]
+- ["6Charts15ViewPortHandlerC", "contentTop"]
+- ["6Charts15ViewPortHandlerC", "contentWidth"]
+- ["6Charts15ViewPortHandlerC", "deinit"]
+- ["6Charts15ViewPortHandlerC", "fitScreen"]
+- !private ["6Charts15ViewPortHandlerC", "floor"]
+- ["6Charts15ViewPortHandlerC", "hasChartDimens"]
+- ["6Charts15ViewPortHandlerC", "hasNoDragOffset"]
+- ["6Charts15ViewPortHandlerC", "init"]
+- ["6Charts15ViewPortHandlerC", "isFullyZoomedOut"]
+- ["6Charts15ViewPortHandlerC", "isFullyZoomedOutX"]
+- ["6Charts15ViewPortHandlerC", "isFullyZoomedOutY"]
+- ["6Charts15ViewPortHandlerC", "isInBounds"]
+- ["6Charts15ViewPortHandlerC", "isInBoundsBottom"]
+- ["6Charts15ViewPortHandlerC", "isInBoundsLeft"]
+- ["6Charts15ViewPortHandlerC", "isInBoundsRight"]
+- ["6Charts15ViewPortHandlerC", "isInBoundsTop"]
+- ["6Charts15ViewPortHandlerC", "isInBoundsX"]
+- ["6Charts15ViewPortHandlerC", "isInBoundsY"]
+- ["6Charts15ViewPortHandlerC", "isIntersectingLine"]
+- !private ["6Charts15ViewPortHandlerC", "limitTransAndScale"]
+- !private ["6Charts15ViewPortHandlerC", "max"]
+- ["6Charts15ViewPortHandlerC", "maxScaleX"]
+- ["6Charts15ViewPortHandlerC", "maxScaleY"]
+- !private ["6Charts15ViewPortHandlerC", "min"]
+- ["6Charts15ViewPortHandlerC", "minScaleX"]
+- ["6Charts15ViewPortHandlerC", "minScaleY"]
+- ["6Charts15ViewPortHandlerC", "offsetBottom"]
+- ["6Charts15ViewPortHandlerC", "offsetLeft"]
+- ["6Charts15ViewPortHandlerC", "offsetRight"]
+- ["6Charts15ViewPortHandlerC", "offsetTop"]
+- ["6Charts15ViewPortHandlerC", "refresh"]
+- ["6Charts15ViewPortHandlerC", "resetZoom"]
+- ["6Charts15ViewPortHandlerC", "restrainViewPort"]
+- ["6Charts15ViewPortHandlerC", "scaleX"]
+- ["6Charts15ViewPortHandlerC", "scaleY"]
+- ["6Charts15ViewPortHandlerC", "setChartDimens"]
+- ["6Charts15ViewPortHandlerC", "setDragOffsetX"]
+- ["6Charts15ViewPortHandlerC", "setDragOffsetY"]
+- ["6Charts15ViewPortHandlerC", "setMaximumScaleX"]
+- ["6Charts15ViewPortHandlerC", "setMaximumScaleY"]
+- ["6Charts15ViewPortHandlerC", "setMinMaxScaleX"]
+- ["6Charts15ViewPortHandlerC", "setMinMaxScaleY"]
+- ["6Charts15ViewPortHandlerC", "setMinimumScaleX"]
+- ["6Charts15ViewPortHandlerC", "setMinimumScaleY"]
+- ["6Charts15ViewPortHandlerC", "setZoom"]
+- ["6Charts15ViewPortHandlerC", "touchMatrix"]
+- ["6Charts15ViewPortHandlerC", "transX"]
+- ["6Charts15ViewPortHandlerC", "transY"]
+- ["6Charts15ViewPortHandlerC", "translate"]
+- ["6Charts15ViewPortHandlerC", "zoom"]
+- ["6Charts15ViewPortHandlerC", "zoomIn"]
+- ["6Charts15ViewPortHandlerC", "zoomOut"]
+- ["s15_CVarArgAlignedP", "greatestFiniteMagnitude"]
+- ["s22_CVarArgPassedAsDoubleP", "greatestFiniteMagnitude"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "maxY"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "minX"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "minY"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "origin"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "size"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "x"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "y"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGAffineTransform"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGRect"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_chartHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_chartWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_contentRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_maxScaleX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_maxScaleY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_minScaleX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_minScaleY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_scaleX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_scaleY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_touchMatrix"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_transOffsetX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_transOffsetY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_transX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_transY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "floor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isFullyZoomedOutX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isFullyZoomedOutY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBoundsBottom"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBoundsLeft"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBoundsRight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBoundsTop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBoundsX"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isInBoundsY"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "limitTransAndScale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "min"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetBottom"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetLeft"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetRight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetTop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "refresh"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "restrainViewPort"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setChartDimens"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setNeedsDisplay"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "zoom"]
+- !private ["s21_ObjectiveCBridgeableP", "a"]
+- !private ["s21_ObjectiveCBridgeableP", "concatenating"]
+- !private ["s21_ObjectiveCBridgeableP", "d"]
+- ["s21_ObjectiveCBridgeableP", "greatestFiniteMagnitude"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- ["s21_ObjectiveCBridgeableP", "identity"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "maxY"]
+- !private ["s21_ObjectiveCBridgeableP", "minX"]
+- !private ["s21_ObjectiveCBridgeableP", "minY"]
+- !private ["s21_ObjectiveCBridgeableP", "origin"]
+- !private ["s21_ObjectiveCBridgeableP", "scaledBy"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "translatedBy"]
+- !private ["s21_ObjectiveCBridgeableP", "tx"]
+- !private ["s21_ObjectiveCBridgeableP", "ty"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setNeedsDisplay"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- !private "6Charts16AnimatorDelegateP"
+- "SB"
+- !private "So15CALayerDelegateP"
+- "So17CGAffineTransformV"
+- "12CoreGraphics7CGFloatV"
+- !private "So7CGPointV"
+- "So6CGRectV"
+- !private "So6CGSizeV"
+- "s7CVarArgP"
+- !private "6Charts17ChartDataProviderP"
+- !private "6Charts13ChartViewBaseC"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "SF"
+- "SH"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "6Charts8NSUIViewC"
+- "Sj"
+- "s13SignedNumericP"
+- "Sx"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "6Charts15ViewPortHandlerC"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "s30_CustomPlaygroundQuickLookableP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "1d5843b99b995cfb455248fb6c552494"

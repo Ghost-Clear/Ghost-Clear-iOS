@@ -1,0 +1,215 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LegendEntry"
+provides-nominal:
+- "6Charts11LegendEntryC"
+provides-member:
+- ["6Charts11LegendEntryC", ""]
+provides-dynamic-lookup:
+- "form"
+- "formColor"
+- "formLineDashLengths"
+- "formLineDashPhase"
+- "formLineWidth"
+- "formSize"
+- "label"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CGFloat"
+- "FloatLiteralType"
+- "Legend"
+- "LegendEntry"
+- "NSObject"
+- "NSUIColor"
+- "String"
+depends-member:
+- ["s18AdditiveArithmeticP", "nan"]
+- ["SB", "nan"]
+- ["12CoreGraphics7CGFloatV", "nan"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "Form"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "form"]
+- !private ["s7CVarArgP", "formColor"]
+- !private ["s7CVarArgP", "formLineDashLengths"]
+- !private ["s7CVarArgP", "formLineDashPhase"]
+- !private ["s7CVarArgP", "formLineWidth"]
+- !private ["s7CVarArgP", "formSize"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "label"]
+- ["s7CVarArgP", "nan"]
+- ["SL", "nan"]
+- ["6Charts13ComponentBaseC", "Form"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "Form"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "form"]
+- !private ["s28CustomDebugStringConvertibleP", "formColor"]
+- !private ["s28CustomDebugStringConvertibleP", "formLineDashLengths"]
+- !private ["s28CustomDebugStringConvertibleP", "formLineDashPhase"]
+- !private ["s28CustomDebugStringConvertibleP", "formLineWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "formSize"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "label"]
+- ["s17CustomReflectableP", "nan"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "Form"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "form"]
+- !private ["s23CustomStringConvertibleP", "formColor"]
+- !private ["s23CustomStringConvertibleP", "formLineDashLengths"]
+- !private ["s23CustomStringConvertibleP", "formLineDashPhase"]
+- !private ["s23CustomStringConvertibleP", "formLineWidth"]
+- !private ["s23CustomStringConvertibleP", "formSize"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "label"]
+- ["s23CustomStringConvertibleP", "nan"]
+- ["Se", "nan"]
+- ["SE", "nan"]
+- ["SQ", "CGFloat"]
+- ["SQ", "Form"]
+- ["SQ", ""]
+- ["SQ", "default"]
+- !private ["SQ", "form"]
+- !private ["SQ", "formColor"]
+- !private ["SQ", "formLineDashLengths"]
+- !private ["SQ", "formLineDashPhase"]
+- !private ["SQ", "formLineWidth"]
+- !private ["SQ", "formSize"]
+- !private ["SQ", "init"]
+- !private ["SQ", "label"]
+- ["SQ", "nan"]
+- ["s25ExpressibleByFloatLiteralP", "nan"]
+- ["s27ExpressibleByIntegerLiteralP", "nan"]
+- ["SF", "nan"]
+- ["6Charts6LegendC4FormO", "default"]
+- ["SH", "CGFloat"]
+- ["SH", "Form"]
+- ["SH", ""]
+- ["SH", "default"]
+- !private ["SH", "form"]
+- !private ["SH", "formColor"]
+- !private ["SH", "formLineDashLengths"]
+- !private ["SH", "formLineDashPhase"]
+- !private ["SH", "formLineWidth"]
+- !private ["SH", "formSize"]
+- !private ["SH", "init"]
+- !private ["SH", "label"]
+- ["SH", "nan"]
+- ["6Charts6LegendC", "Form"]
+- ["6Charts11LegendEntryC", "CGFloat"]
+- ["6Charts11LegendEntryC", "Legend"]
+- ["6Charts11LegendEntryC", "NSUIColor"]
+- ["6Charts11LegendEntryC", "String"]
+- ["6Charts11LegendEntryC", "deinit"]
+- ["6Charts11LegendEntryC", "form"]
+- ["6Charts11LegendEntryC", "formColor"]
+- ["6Charts11LegendEntryC", "formLineDashLengths"]
+- ["6Charts11LegendEntryC", "formLineDashPhase"]
+- ["6Charts11LegendEntryC", "formLineWidth"]
+- ["6Charts11LegendEntryC", "formSize"]
+- ["6Charts11LegendEntryC", "init"]
+- ["6Charts11LegendEntryC", "label"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Form"]
+- ["So8NSObjectC", "Legend"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "form"]
+- ["So8NSObjectC", "formColor"]
+- ["So8NSObjectC", "formLineDashLengths"]
+- ["So8NSObjectC", "formLineDashPhase"]
+- ["So8NSObjectC", "formLineWidth"]
+- ["So8NSObjectC", "formSize"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "label"]
+- ["So8NSObjectP", "CGFloat"]
+- ["So8NSObjectP", "Form"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "form"]
+- !private ["So8NSObjectP", "formColor"]
+- !private ["So8NSObjectP", "formLineDashLengths"]
+- !private ["So8NSObjectP", "formLineDashPhase"]
+- !private ["So8NSObjectP", "formLineWidth"]
+- !private ["So8NSObjectP", "formSize"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "label"]
+- ["Sj", "nan"]
+- ["SY", "default"]
+- ["s13SignedNumericP", "nan"]
+- ["Sx", "nan"]
+- ["s15_CVarArgAlignedP", "nan"]
+- ["s22_CVarArgPassedAsDoubleP", "nan"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Form"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "form"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formLineDashLengths"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formLineDashPhase"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formLineWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "label"]
+- ["s21_ObjectiveCBridgeableP", "nan"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- "SB"
+- "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "SL"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "SF"
+- "6Charts6LegendC4FormO"
+- "SH"
+- "6Charts6LegendC"
+- "6Charts11LegendEntryC"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "Sj"
+- "SY"
+- "s13SignedNumericP"
+- "Sx"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Darwin.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Foundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Swift.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/UIKit.swiftmodule/armv7.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/SwiftOnoneSupport.swiftmodule/armv7.swiftmodule"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/build/Pods.build/Debug-iphoneos/Charts.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.5.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "fc86e638d343c71c0190691cdfda6111"
