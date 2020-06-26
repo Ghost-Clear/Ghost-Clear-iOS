@@ -97,7 +97,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         circleTime.isHidden = true
         centralManager = CBCentralManager(delegate: self, queue: nil)
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-        updateIncomingData()
+        //updateIncomingData()
 		if allPeripeheralsExist(id: true){
 			isFirstPair = false
 			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -174,14 +174,15 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
           centralManager?.stopScan()
       }
     
-    func updateIncomingData() {
+    /*
+	func updateIncomingData() {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
                        
             
             
         }
-    }
+    }*/
 	
 	@IBOutlet var FRbutton: UIButton!
 	@IBAction func FR(_ sender: Any) {

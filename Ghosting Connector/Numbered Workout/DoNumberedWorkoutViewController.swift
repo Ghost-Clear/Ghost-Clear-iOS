@@ -98,7 +98,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		circleTime.isHidden = true
 		centralManager = CBCentralManager(delegate: self, queue: nil)
 		peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-		updateIncomingData()
+		//updateIncomingData()
 		checkTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
@@ -139,7 +139,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		print("Stop Scanning")
 		centralManager?.stopScan()
 	}
-	
+	/*
 	func updateIncomingData() {
 		NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
 			notification in
@@ -148,7 +148,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			
 		}
 	}
-	
+	*/
 	@IBOutlet var FRbutton: UIButton!
 	@IBAction func FR(_ sender: Any) {
 		writeValueFR(data: "Hello")
