@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: sersoft-gmbh/xcodebuild-action@master
         with:
-          workspace:  Ghosting COnnector.xcworkspace
+          workspace:  Ghosting Connector.xcworkspace
           scheme: Ghosting Connector
           destination: ${{matrix.destination}}
           skip-testing: ${{matrix.skip-testing}}
