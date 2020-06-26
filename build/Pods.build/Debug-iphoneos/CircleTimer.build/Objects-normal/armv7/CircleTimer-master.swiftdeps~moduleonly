@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
-options: "3860f4e5fd6e5a90d2d7e727ea6041e4"
-build_time: [1593185255, 472070000]
-inputs:
-  "/Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting Connector/Pods/CircleTimer/CircleTimer/AppusCircleTimer.swift": [1592423024, 509562702]
