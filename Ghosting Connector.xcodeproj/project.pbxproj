@@ -339,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxattr -cr /Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\\ Connector\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxattr -cr /Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\\ Connector || echo \"codesign not adjusted\"\n";
 		};
 		CBF647FFDD0F125088AEC08B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
