@@ -11,6 +11,7 @@ import CoreBluetooth
 import Foundation
 import AppusCircleTimer
 import CoreData
+import AVFoundation
 class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
 	var frtxCharacteristic : CBCharacteristic?
 	var frrxCharacteristic : CBCharacteristic?
@@ -40,7 +41,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     var isRandom : Bool!
 	var numSets : Int!
 	var numMinutesOn : Int!
-	var numSecondsOn : Int!
+	var numSecondsOn : Int! = 0
 	var numMinutesOff : Int!
 	var numSecondsOff : Int!
 	var peripheralCount = 0
@@ -52,8 +53,31 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var CLname : String!
 	var LRname : String!
 	var LLname : String!
+	var isRest : Bool! = true
+	var setsToGo : Int!
+	var ghostsDone : Int! = 0
+	var order : [String]!
+	var orderCount = 0
+	var nextGhost : String!
+	var isWaitingForGhost : Bool! = false
     @IBOutlet var circleTime: AppusCircleTimer!
+	@IBOutlet weak var setsLabel: UILabel!
+	@IBOutlet weak var ghostsLabel: UILabel!
+	func getNextGhost() -> String!{
+		var toReturn : String!
+		if isRandom{
+			orderCount = Int.random(in: 0..<order.count)
+			toReturn = order[orderCount]
+		}
+		else{
+			toReturn = order[orderCount % order.count]
+			orderCount += 1
+		
+		}
+		return toReturn
+	}
 	func popBack(_ nb: Int) {
+		
 		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
 			guard viewControllers.count < nb else {
 				self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
@@ -70,11 +94,56 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         popBack(3)
 		
     }
-    @IBOutlet var workoutStartsIn: UILabel!
     
+	@IBOutlet weak var workoutStartsIn: UIImageView!
+	
     func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
-        circleTime.isActive = false
-        circleTime.isHidden = true
+		if isRest && setsToGo != 0{
+			circleTime.totalTime = Double(numMinutesOn) * 60 + Double(numSecondsOn)
+			circleTime.elapsedTime = 0
+			circleTime.activeColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
+			circleTime.start()
+			isRest = false
+			ghostsDone = 0
+			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			
+		}
+		else if setsToGo != 0{
+			isWaitingForGhost = false
+			circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+			circleTime.elapsedTime = 0
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.start()
+			isRest = true
+			setsToGo -= 1
+			setsLabel.text = String(setsToGo)
+		}
+		if setsToGo == 0{
+			circleTime.isHidden = true
+			circleTime.isActive = false
+		}
         workoutStartsIn.isHidden = true
     }
     
@@ -89,6 +158,8 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
      var characteristics = [String : CBCharacteristic]()
     override func viewDidLoad() {
         super.viewDidLoad()
+		setsToGo = numSets
+		setsLabel.text = String(setsToGo)
         workoutStartsIn.isHidden = true
         circleTime.delegate = self
          circleTime.font = UIFont(name: "System", size: 50 )
@@ -132,7 +203,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			isFirstPair = true
 			
 		}
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { timer in
+		checkTimer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
@@ -184,41 +255,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         }
     }*/
 	
-	@IBOutlet var FRbutton: UIButton!
-	@IBAction func FR(_ sender: Any) {
-		writeValueFR(data: "Hello")
-	}
-	
-	
-	@IBOutlet var FLbutton: UIButton!
-	@IBAction func FL(_ sender: Any) {
-		writeValueFL(data: "Hello")
-	}
-	
-	
-	@IBOutlet var CRbutton: UIButton!
-	@IBAction func CR(_ sender: Any) {
-		writeValueCR(data: "Hello")
-	}
-	
-	
-	@IBOutlet var CLbutton: UIButton!
-	@IBAction func CL(_ sender: Any) {
-		writeValueCL(data: "Hello")
-	}
-	
-	
-	@IBOutlet var LLbutton: UIButton!
-	@IBAction func LL(_ sender: Any) {
-		writeValueLL(data: "Hello")
-	}
-	
-	
-	
-	@IBOutlet var LRbutton: UIButton!
-	@IBAction func LR(_ sender: Any) {
-		writeValueLR(data: "Hello")
-	}
 	
 	
     func writeValueFR(data: String){
@@ -705,23 +741,143 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         
         
         print("Value Recieved: \((characteristicASCIIValue as String))")
-		if peripheral == FRPeripheral{
-			//FRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == FRPeripheral && isWaitingForGhost && nextGhost == "FR"{
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			ghostsDone += 1
+			ghostsLabel.text = String(ghostsDone)
 		}
-		if peripheral == FLPeripheral{
-			//FLbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == FLPeripheral && isWaitingForGhost && nextGhost == "FL"{
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			ghostsDone += 1
+			ghostsLabel.text = String(ghostsDone)
 		}
-		if peripheral == CRPeripheral{
-			//CRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == CRPeripheral && isWaitingForGhost && nextGhost == "CR"{
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			ghostsDone += 1
+			ghostsLabel.text = String(ghostsDone)
 		}
-		if peripheral == CLPeripheral{
-			//CLbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == CLPeripheral && isWaitingForGhost && nextGhost == "CL"{
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			ghostsDone += 1
+			ghostsLabel.text = String(ghostsDone)
 		}
-		if peripheral == LRPeripheral{
-			//LRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == LRPeripheral && isWaitingForGhost && nextGhost == "LR"{
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			ghostsDone += 1
+			ghostsLabel.text = String(ghostsDone)
 		}
-		if peripheral == LLPeripheral{
-			//LLbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == LLPeripheral && isWaitingForGhost && nextGhost == "LL"{
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			ghostsDone += 1
+			ghostsLabel.text = String(ghostsDone)
 		}
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
@@ -810,6 +966,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
                 print("Bluetooth Enabled")
                 workoutStartsIn.isHidden = false
                 circleTime.font = UIFont(name: "System", size: 50 )
+				isRest = true
                 circleTime.isHidden = false
                 circleTime.isActive = true
                 circleTime.totalTime = 10

@@ -13,6 +13,8 @@
 		27196FE324A3B99900B9A8DC /* ChooseNumberedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27196FE224A3B99900B9A8DC /* ChooseNumberedWorkoutViewController.swift */; };
 		27196FE524A3C47900B9A8DC /* DoNumberedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27196FE424A3C47900B9A8DC /* DoNumberedWorkoutViewController.swift */; };
 		27196FE724A463EF00B9A8DC /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27196FE624A463EF00B9A8DC /* EditGoalViewController.swift */; };
+		272300D724A8324200DA0D49 /* DoneTimedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272300D624A8324200DA0D49 /* DoneTimedWorkoutViewController.swift */; };
+		272300D924A8329700DA0D49 /* DoneNumberedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272300D824A8329700DA0D49 /* DoneNumberedWorkoutViewController.swift */; };
 		27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F782498B29C0043D52C /* SettingsViewController.swift */; };
 		27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F7E2498C3740043D52C /* ChangeNameViewController.swift */; };
 		27251F812498C7DC0043D52C /* HowToConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F802498C7DC0043D52C /* HowToConnectViewController.swift */; };
@@ -43,6 +45,8 @@
 		27196FE224A3B99900B9A8DC /* ChooseNumberedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNumberedWorkoutViewController.swift; sourceTree = "<group>"; };
 		27196FE424A3C47900B9A8DC /* DoNumberedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNumberedWorkoutViewController.swift; sourceTree = "<group>"; };
 		27196FE624A463EF00B9A8DC /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
+		272300D624A8324200DA0D49 /* DoneTimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTimedWorkoutViewController.swift; sourceTree = "<group>"; };
+		272300D824A8329700DA0D49 /* DoneNumberedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneNumberedWorkoutViewController.swift; sourceTree = "<group>"; };
 		27251F782498B29C0043D52C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		27251F7E2498C3740043D52C /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 		27251F802498C7DC0043D52C /* HowToConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToConnectViewController.swift; sourceTree = "<group>"; };
@@ -84,9 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272300DA24A844A000DA0D49 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		2741C6A22454BDC400EB4944 = {
 			isa = PBXGroup;
 			children = (
+				272300DA24A844A000DA0D49 /* Sounds */,
 				2741C6AD2454BDC400EB4944 /* Ghosting Connector */,
 				2741C6AC2454BDC400EB4944 /* Products */,
 				6A1011C760EC1DFB3E9EB70B /* Pods */,
@@ -150,6 +162,7 @@
 				27196FE424A3C47900B9A8DC /* DoNumberedWorkoutViewController.swift */,
 				27D097D92490E57A0073C797 /* NumberedWorkoutViewController.swift */,
 				27196FE224A3B99900B9A8DC /* ChooseNumberedWorkoutViewController.swift */,
+				272300D824A8329700DA0D49 /* DoneNumberedWorkoutViewController.swift */,
 			);
 			path = "Numbered Workout";
 			sourceTree = "<group>";
@@ -160,6 +173,7 @@
 				272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */,
 				27D097DB249181330073C797 /* TimedWorkoutViewController.swift */,
 				27003E3224A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift */,
+				272300D624A8324200DA0D49 /* DoneTimedWorkoutViewController.swift */,
 			);
 			path = "Timed Workout";
 			sourceTree = "<group>";
@@ -230,6 +244,7 @@
 				2741C6A82454BDC400EB4944 /* Frameworks */,
 				2741C6A92454BDC400EB4944 /* Resources */,
 				CBF647FFDD0F125088AEC08B /* [CP] Embed Pods Frameworks */,
+				272300DB24A8732800DA0D49 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,6 +324,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		272300DB24A8732800DA0D49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxattr -cr /Users/varunchitturi/Documents/Coding/Project_Development/Ghosting/Ghosting\\ Connector\n";
+		};
 		CBF647FFDD0F125088AEC08B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +369,7 @@
 				27D097DC249181330073C797 /* TimedWorkoutViewController.swift in Sources */,
 				27DCEFFB248EE7BF00309DD4 /* CreateGoalsTableViewController.swift in Sources */,
 				27D097D4249043290073C797 /* MainViewGoalsViewController.swift in Sources */,
+				272300D924A8329700DA0D49 /* DoneNumberedWorkoutViewController.swift in Sources */,
 				27196FE724A463EF00B9A8DC /* EditGoalViewController.swift in Sources */,
 				2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */,
 				27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */,
@@ -354,6 +387,7 @@
 				27251F812498C7DC0043D52C /* HowToConnectViewController.swift in Sources */,
 				2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */,
 				27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */,
+				272300D724A8324200DA0D49 /* DoneTimedWorkoutViewController.swift in Sources */,
 				2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */,
 				27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */,
 				27196FE524A3C47900B9A8DC /* DoNumberedWorkoutViewController.swift in Sources */,

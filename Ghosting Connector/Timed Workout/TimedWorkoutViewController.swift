@@ -129,10 +129,19 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		secondsOffField.text = ""
 	}
 	@IBAction func choosePattern(_ sender: Any) {
-		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0" && minutesOffField.text != "" && secondsOffField.text != ""  && ((secondsOffField.text! as NSString).integerValue) < 60 && ((secondsOffField.text! as NSString).integerValue) >= 0 && ((minutesOffField.text! as NSString).integerValue) < 60 && ((minutesOffField.text! as NSString).integerValue) >= 0){
+		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0" && minutesOffField.text != "" && secondsOffField.text != ""  && ((secondsOffField.text! as NSString).integerValue) < 60 && ((secondsOffField.text! as NSString).integerValue) >= 0 && ((minutesOffField.text! as NSString).integerValue) < 60 && ((minutesOffField.text! as NSString).integerValue) >= 0 && (((secondsField.text! as NSString).integerValue) != 0 || ((minutesField.text! as NSString).integerValue != 0)) && (((secondsOffField.text! as NSString).integerValue) != 0 || ((minutesOffField.text! as NSString).integerValue != 0))){
 			performSegue(withIdentifier: "chooseTimedPattern", sender: nil)
         }
-        else{
+		else if( (((secondsField.text! as NSString).integerValue) == 0 && ((minutesField.text! as NSString).integerValue == 0)) || (((secondsOffField.text! as NSString).integerValue) == 0 && ((minutesOffField.text! as NSString).integerValue == 0)) ){
+			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your work time and rest time are not equal to 0 minutes and 0 seconds.", preferredStyle: UIAlertController.Style.alert)
+			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+				alertVC.dismiss(animated: true, completion: nil)
+				//add segue
+			})
+			alertVC.addAction(action)
+			self.present(alertVC, animated: true, completion: nil)
+		}
+		else{
             let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
               let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                   alertVC.dismiss(animated: true, completion: nil)
@@ -210,7 +219,7 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
             //Some property on ChildVC that needs to be set
 			childVC.numSets = (setsField.text! as NSString).integerValue
 			childVC.onMinutes = (minutesField.text! as NSString).integerValue
-			childVC.offMinutes = (secondsField.text! as NSString).integerValue
+			childVC.onSeconds = (secondsField.text! as NSString).integerValue
             childVC.isRandomized = isRandomized
 			childVC.offMinutes = (minutesOffField.text! as NSString).integerValue
 			childVC.offSeconds = (secondsOffField.text! as NSString).integerValue
