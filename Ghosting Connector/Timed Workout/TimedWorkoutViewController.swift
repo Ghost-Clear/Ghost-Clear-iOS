@@ -132,6 +132,15 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0" && minutesOffField.text != "" && secondsOffField.text != ""  && ((secondsOffField.text! as NSString).integerValue) < 60 && ((secondsOffField.text! as NSString).integerValue) >= 0 && ((minutesOffField.text! as NSString).integerValue) < 60 && ((minutesOffField.text! as NSString).integerValue) >= 0 && (((secondsField.text! as NSString).integerValue) != 0 || ((minutesField.text! as NSString).integerValue != 0)) && (((secondsOffField.text! as NSString).integerValue) != 0 || ((minutesOffField.text! as NSString).integerValue != 0))){
 			performSegue(withIdentifier: "chooseTimedPattern", sender: nil)
         }
+		else if((setsField.text! as NSString).integerValue > 9999){
+			let alertVC = UIAlertController(title: "Too many sets", message: "Your sets value is to large.", preferredStyle: UIAlertController.Style.alert)
+			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+				alertVC.dismiss(animated: true, completion: nil)
+				//add segue
+			})
+			alertVC.addAction(action)
+			self.present(alertVC, animated: true, completion: nil)
+		}
 		else if( (((secondsField.text! as NSString).integerValue) == 0 && ((minutesField.text! as NSString).integerValue == 0)) || (((secondsOffField.text! as NSString).integerValue) == 0 && ((minutesOffField.text! as NSString).integerValue == 0)) ){
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your work time and rest time are not equal to 0 minutes and 0 seconds.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in

@@ -131,7 +131,7 @@
 				2741C6BF2454BDC500EB4944 /* Info.plist */,
 				2741C6BA2454BDC500EB4944 /* Assets.xcassets */,
 				2741C6B72454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld */,
-				27B0FCCF24A6398200BCAA2E /* Unused TableView Delegates */,
+				27B0FCCF24A6398200BCAA2E /* Unused Delegates */,
 			);
 			path = "Ghosting Connector";
 			sourceTree = "<group>";
@@ -188,13 +188,13 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		27B0FCCF24A6398200BCAA2E /* Unused TableView Delegates */ = {
+		27B0FCCF24A6398200BCAA2E /* Unused Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				27DCEFFA248EE7BF00309DD4 /* CreateGoalsTableViewController.swift */,
 				27D097D124903C830073C797 /* ViewYourGoalsTableViewController.swift */,
 			);
-			path = "Unused TableView Delegates";
+			path = "Unused Delegates";
 			sourceTree = "<group>";
 		};
 		27B0FCD024A639AB00BCAA2E /* Initial Login */ = {

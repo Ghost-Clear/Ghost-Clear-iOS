@@ -60,9 +60,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var orderCount = 0
 	var nextGhost : String!
 	var isWaitingForGhost : Bool! = false
+	var currentGhosts : Int! = 0
+	var cornersMet : [String]! = []
     @IBOutlet var circleTime: AppusCircleTimer!
 	@IBOutlet weak var setsLabel: UILabel!
 	@IBOutlet weak var ghostsLabel: UILabel!
+	@IBOutlet weak var whichGhostLabel: UILabel!
 	func getNextGhost() -> String!{
 		var toReturn : String!
 		if isRandom{
@@ -96,7 +99,14 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     }
     
 	@IBOutlet weak var workoutStartsIn: UIImageView!
-	
+	func meet(corner : String){
+		for c in cornersMet{
+			if c == corner{
+				return
+			}
+		}
+		cornersMet.append(corner)
+	}
     func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
 		if isRest && setsToGo != 0{
 			circleTime.totalTime = Double(numMinutesOn) * 60 + Double(numSecondsOn)
@@ -111,21 +121,27 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			isWaitingForGhost = true
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
 			
 		}
@@ -136,15 +152,59 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			circleTime.start()
+			whichGhostLabel.text = "Rest"
 			isRest = true
 			setsToGo -= 1
 			setsLabel.text = String(setsToGo)
+			if nextGhost == "FR"{
+				writeValueFR(data: "0")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "0")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "0")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "0")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "0")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "0")
+			}
 		}
 		if setsToGo == 0{
 			circleTime.isHidden = true
 			circleTime.isActive = false
+			if nextGhost == "FR"{
+				writeValueFR(data: "0")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "0")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "0")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "0")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "0")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "0")
+			}
+			circleTime.stop()
+			centralManager.stopScan()
+			disconnectAllConnection()
+			performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+			
+			
 		}
         workoutStartsIn.isHidden = true
+		
     }
     
      var centralManager : CBCentralManager!
@@ -158,6 +218,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
      var characteristics = [String : CBCharacteristic]()
     override func viewDidLoad() {
         super.viewDidLoad()
+		whichGhostLabel.text = ""
 		setsToGo = numSets
 		setsLabel.text = String(setsToGo)
         workoutStartsIn.isHidden = true
@@ -203,7 +264,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			isFirstPair = true
 			
 		}
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false, block: { timer in
+		checkTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
@@ -743,6 +804,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         print("Value Recieved: \((characteristicASCIIValue as String))")
 		if peripheral == FRPeripheral && isWaitingForGhost && nextGhost == "FR"{
 			isWaitingForGhost = true
+			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
 			}
@@ -763,10 +825,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
-			nextGhost = getNextGhost()
+			meet(corner: "FR")
+			currentGhosts += 1
 		}
 		if peripheral == FLPeripheral && isWaitingForGhost && nextGhost == "FL"{
 			isWaitingForGhost = true
+			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
 			}
@@ -787,10 +851,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
-			nextGhost = getNextGhost()
+			meet(corner: "FL")
+			currentGhosts += 1
 		}
 		if peripheral == CRPeripheral && isWaitingForGhost && nextGhost == "CR"{
 			isWaitingForGhost = true
+			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
 			}
@@ -811,10 +877,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
-			nextGhost = getNextGhost()
+			meet(corner: "CR")
+			currentGhosts += 1
 		}
 		if peripheral == CLPeripheral && isWaitingForGhost && nextGhost == "CL"{
 			isWaitingForGhost = true
+			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
 			}
@@ -835,10 +903,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
-			nextGhost = getNextGhost()
+			meet(corner: "CL")
+			currentGhosts += 1
 		}
 		if peripheral == LRPeripheral && isWaitingForGhost && nextGhost == "LR"{
 			isWaitingForGhost = true
+			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
 			}
@@ -859,10 +929,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
-			nextGhost = getNextGhost()
+			meet(corner: "LR")
+			currentGhosts += 1
 		}
 		if peripheral == LLPeripheral && isWaitingForGhost && nextGhost == "LL"{
 			isWaitingForGhost = true
+			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
 			}
@@ -883,8 +955,10 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
-			nextGhost = getNextGhost()
+			meet(corner: "LL")
+			currentGhosts += 1
 		}
+		
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
     
@@ -995,15 +1069,90 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+		if segue.identifier == "finishTimedWorkout" {
+			if let childVC = segue.destination as? DoneTimedWorkoutViewController {
+				//Some property on ChildVC that needs to be set
+				let shownMinutesLeft = ((circleTime.timerLabel?.text?.prefix(2))! as NSString).integerValue
+				let shownSecondsLeft = ((circleTime.timerLabel?.text?.suffix(2))! as NSString).integerValue
+				childVC.minutesOn = (numMinutesOn * (numSets-setsToGo))
+				childVC.minutesOn = childVC.minutesOn + (numMinutesOn - shownMinutesLeft)
+				childVC.secondsOn = (numSecondsOn * (numSets-setsToGo))
+				childVC.secondsOn = childVC.secondsOn + (numSecondsOn - shownSecondsLeft)
+				// had to split up expressions above because swift compiler was timing out
+				childVC.totalghosts = currentGhosts
+				childVC.numSets = numSets - setsToGo
+				childVC.ghostedCorners = cornersMet
+				
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let workout = Workout(context: context)
+					workout.sets = Int16(childVC.numSets)
+					workout.totalGhosts = Int16(currentGhosts)
+					workout.avgGhosts = Int16(currentGhosts/(numSets-setsToGo))
+					var allCorners = ""
+					for i in cornersMet{
+						allCorners += i + " "
+					}
+					workout.ghostedCorners = allCorners
+					var hours = 0
+					var mins = childVC.minutesOn!
+					var seconds = childVC.secondsOn!
+					if seconds >= 60{
+						mins += seconds % 60
+						seconds -= (seconds % 60) * 60
+					}
+					if mins >= 60{
+						hours += mins % 60
+						mins -= (mins % 60) * 60
+					}
+					workout.totalTimeOn = (String(hours) + " : ")
+					workout.totalTimeOn! +=  String(mins) + " : " + String(seconds)
+					var totalSeconds = hours*360 + mins*60 + seconds
+					totalSeconds /= childVC.numSets
+					seconds = totalSeconds
+					if seconds >= 60{
+						mins = seconds % 60
+						seconds -= (seconds % 60) * 60
+					}
+					if mins >= 60{
+						hours += mins % 60
+						mins -= (mins % 60) * 60
+					}
+					workout.avgTimeOn = String(hours) + " : "
+					workout.avgTimeOn! += String(mins) + " : " + String(seconds)
+					workout.date = Date()
+					
+					// check goals now
+					var allGoalsFromCore : [Goal] = []
+					if let goalsFromCore = try? context.fetch(Goal.fetchRequest()){
+						allGoalsFromCore = goalsFromCore as! [Goal]
+						print ()
+						
+					}
+					for goal in allGoalsFromCore{
+						let goalGhosts = goal.ghosts
+						let goalMinutes = goal.minutes
+						let goalSeconds = goal.seconds
+						let goalSets = goal.sets
+						if childVC.numSets >= goalSets{
+							if childVC.minutesOn*60 + childVC.secondsOn >= goalMinutes*60 + goalSeconds && currentGhosts > goalGhosts{
+								goal.isCompleted = true
+							}
+						}
+					}
+				}
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+				
+			}
+		}
     }
-    */
+    
 
 }
 fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {

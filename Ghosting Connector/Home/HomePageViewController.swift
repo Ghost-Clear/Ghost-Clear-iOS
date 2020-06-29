@@ -18,12 +18,12 @@ protocol GetChartData {
 class HomePageViewController: UIViewController {
     var namesFromCore = [Name]()
     var name = ""
-    var days: [String] = ["Mon","Tues","Wed","Thur","Fri","Sat","Sun"]
+    var days: [String] = ["Sun","Mon","Tues","Wed","Thur","Fri","Sat"]
     @IBOutlet weak var welcomeLabel: UILabel!
    
     
     //TODO: put real infromation here
-    var numWorkouts = [5.0,1.0,1.0,1.0,1.0,1.0,10.0]
+    var numWorkouts = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
    
         @IBAction func goToSettings(_ sender: Any) {
             
@@ -41,7 +41,57 @@ class HomePageViewController: UIViewController {
             }
             
         }
-        customizeChart(dataPoints: days, values: numWorkouts)
+		var workoutsFromCore : [Workout] = []
+		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+			if let wFromCore = try? context.fetch(Workout.fetchRequest()){
+				let allwFromCore = wFromCore as! [Workout]
+				workoutsFromCore = allwFromCore
+				
+			}
+			
+		}
+		for workout in workoutsFromCore{
+			let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+			
+			let date1 = NSDate()
+			let date2 = workout.date!//10 day earlier.
+			
+			let weekOfYear1 = calendar!.component(NSCalendar.Unit.year, from: date1 as Date)
+			let weekOfYear2 = calendar!.component(NSCalendar.Unit.year, from: date2 as Date)
+			
+			let year1 = calendar!.component(NSCalendar.Unit.year, from: date1 as Date)
+			let year2 = calendar!.component(NSCalendar.Unit.year, from: date2 as Date)
+			
+			if (weekOfYear1 == weekOfYear2
+				&& year1 == year2
+				) {
+				let dateFormatter = DateFormatter()
+				dateFormatter.dateFormat = "EEEE"
+				let dayOfTheWeekString = dateFormatter.string(from: workout.date!)
+				if dayOfTheWeekString == "Sunday"{
+					numWorkouts[0] += 1
+				}
+				if dayOfTheWeekString == "Monday"{
+					numWorkouts[1] += 1
+				}
+				if dayOfTheWeekString == "Tuesday"{
+					numWorkouts[2] += 1
+				}
+				if dayOfTheWeekString == "Wednesday"{
+					numWorkouts[3] += 1
+				}
+				if dayOfTheWeekString == "Thursday"{
+					numWorkouts[4] += 1
+				}
+				if dayOfTheWeekString == "Friday"{
+					numWorkouts[5] += 1
+				}
+				if dayOfTheWeekString == "Saturday"{
+					numWorkouts[6] += 1
+				}
+			}
+		}
+		customizeChart(dataPoints: days, values: numWorkouts)
         
         
         // Do any additional setup after loading the view.
@@ -57,6 +107,57 @@ class HomePageViewController: UIViewController {
             }
             
         }
+		var workoutsFromCore : [Workout] = []
+		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+			if let wFromCore = try? context.fetch(Workout.fetchRequest()){
+				let allwFromCore = wFromCore as! [Workout]
+				workoutsFromCore = allwFromCore
+				
+			}
+			
+		}
+		for workout in workoutsFromCore{
+			let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+			
+			let date1 = NSDate()
+			let date2 = workout.date!//10 day earlier.
+			
+			let weekOfYear1 = calendar!.component(NSCalendar.Unit.year, from: date1 as Date)
+			let weekOfYear2 = calendar!.component(NSCalendar.Unit.year, from: date2 as Date)
+			
+			let year1 = calendar!.component(NSCalendar.Unit.year, from: date1 as Date)
+			let year2 = calendar!.component(NSCalendar.Unit.year, from: date2 as Date)
+			
+			if (weekOfYear1 == weekOfYear2
+				&& year1 == year2
+				) {
+				let dateFormatter = DateFormatter()
+				dateFormatter.dateFormat = "EEEE"
+				let dayOfTheWeekString = dateFormatter.string(from: workout.date!)
+				if dayOfTheWeekString == "Sunday"{
+					numWorkouts[0] += 1
+				}
+				if dayOfTheWeekString == "Monday"{
+					numWorkouts[1] += 1
+				}
+				if dayOfTheWeekString == "Tuesday"{
+					numWorkouts[2] += 1
+				}
+				if dayOfTheWeekString == "Wednesday"{
+					numWorkouts[3] += 1
+				}
+				if dayOfTheWeekString == "Thursday"{
+					numWorkouts[4] += 1
+				}
+				if dayOfTheWeekString == "Friday"{
+					numWorkouts[5] += 1
+				}
+				if dayOfTheWeekString == "Saturday"{
+					numWorkouts[6] += 1
+				}
+			}
+		}
+		customizeChart(dataPoints: days, values: numWorkouts)
     }
     func customizeChart(dataPoints: [String], values: [Double]) {
         

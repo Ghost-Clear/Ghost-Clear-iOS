@@ -206,7 +206,7 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 	
 	@IBAction func startGhost(_ sender: Any) {
 		if !isFR && !isFL && !isCR && !isCL && !isLR && !isLL{
-			let alertVC = UIAlertController(title: "Invalid Pattern", message: "Make sure that you choose atleast 1 place to ghost to.", preferredStyle: UIAlertController.Style.alert)
+			let alertVC = UIAlertController(title: "Invalid Pattern", message: "Make sure that you choose at least 1 place to ghost to.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				self.dismiss(animated: true, completion: nil)
 				//add segue
