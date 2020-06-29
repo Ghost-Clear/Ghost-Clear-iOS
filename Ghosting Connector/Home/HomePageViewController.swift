@@ -15,15 +15,25 @@ protocol GetChartData {
     var weeks : [String]{get set}
     var numWorkouts : [String]{get set}
 }
+class DigitValueFormatter : NSObject, IValueFormatter {
+	
+	func stringForValue(_ value: Double,
+						entry: ChartDataEntry,
+						dataSetIndex: Int,
+						viewPortHandler: ViewPortHandler?) -> String {
+		let valueWithoutDecimalPart = String(format: "%.0f", value)
+		return "\(valueWithoutDecimalPart)"
+	}
+}
 class HomePageViewController: UIViewController {
     var namesFromCore = [Name]()
     var name = ""
-    var days: [String] = ["Sun","Mon","Tues","Wed","Thur","Fri","Sat"]
+    var days: [String] = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
     @IBOutlet weak var welcomeLabel: UILabel!
    
     
     //TODO: put real infromation here
-    var numWorkouts = [0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+    var numWorkouts = [0,0,0,0,0,0,0]
    
         @IBAction func goToSettings(_ sender: Any) {
             
@@ -159,7 +169,7 @@ class HomePageViewController: UIViewController {
 		}
 		customizeChart(dataPoints: days, values: numWorkouts)
     }
-    func customizeChart(dataPoints: [String], values: [Double]) {
+    func customizeChart(dataPoints: [String], values: [Int]) {
         
         theBarChart.animate(xAxisDuration: 1, yAxisDuration: 2, easingOption: ChartEasingOption.easeOutExpo)
       // TO-DO: customize the chart here
@@ -168,17 +178,24 @@ class HomePageViewController: UIViewController {
           let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
           dataEntries.append(dataEntry)
         }
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Bar Chart View")
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Workouts")
+		chartDataSet.valueFormatter = DigitValueFormatter()
         chartDataSet.colors = [UIColor(red: 0, green: 1.0, blue: 0.6, alpha: 1.00)]
         let chartData = BarChartData(dataSet: chartDataSet)
         chartData.barWidth = Double(0.25)
-        chartData.groupBars(fromX: 0, groupSpace: 0.5, barSpace: 0.50)
         theBarChart.data = chartData
-        theBarChart.xAxis.drawLabelsEnabled = false
-        theBarChart.xAxis.drawAxisLineEnabled = false
+		theBarChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:days)
+		theBarChart.xAxis.granularity = 1
+		
+		
+		theBarChart.xAxis.drawLabelsEnabled = true
+		theBarChart.xAxis.labelPosition = .bottom
+		theBarChart.xAxis.labelFont = .systemFont(ofSize: 14)
+		
+		//theBarChart.xAxis.drawAxisLineEnabled = false
         theBarChart.xAxis.drawGridLinesEnabled = false
         theBarChart.xAxis.drawLimitLinesBehindDataEnabled = false
-        theBarChart.drawValueAboveBarEnabled = false
+        //theBarChart.drawValueAboveBarEnabled = true
         theBarChart.fitBars = true
         theBarChart.gestureRecognizers = nil
         theBarChart.sizeToFit()
@@ -190,20 +207,22 @@ class HomePageViewController: UIViewController {
         theBarChart.leftAxis.drawZeroLineEnabled = false
         theBarChart.leftAxis.drawLabelsEnabled = false
         theBarChart.leftAxis.drawTopYLabelEntryEnabled = false
-        theBarChart.leftAxis.drawBottomYLabelEntryEnabled = false
-        theBarChart.leftAxis.drawLimitLinesBehindDataEnabled = false
-        theBarChart.leftAxis.gridColor = .clear
+        //theBarChart.leftAxis.drawBottomYLabelEntryEnabled = false
+        //theBarChart.leftAxis.drawLimitLinesBehindDataEnabled = false
+        //theBarChart.leftAxis.gridColor = .clear
         theBarChart.rightAxis.drawGridLinesEnabled = false
-        theBarChart.rightAxis.gridColor = .clear
-        theBarChart.xAxis.gridColor = .clear
+        //theBarChart.rightAxis.gridColor = .clear
+        //theBarChart.xAxis.gridColor = .clear
         theBarChart.rightAxis.drawAxisLineEnabled = false
         theBarChart.rightAxis.drawLabelsEnabled = false
-        theBarChart.drawValueAboveBarEnabled = false
+        theBarChart.drawValueAboveBarEnabled = true
         theBarChart.data?.setDrawValues(false)
-        theBarChart.tintColor = .clear
-        theBarChart.barData?.setDrawValues(false)
-        theBarChart.barData?.setValueTextColor(.clear)
-        
+        //theBarChart.tintColor = .clear
+        theBarChart.barData?.setDrawValues(true)
+		theBarChart.barData?.setValueFont(.systemFont(ofSize: 14))
+        theBarChart.barData?.setValueTextColor(.white)
+		
+		theBarChart.xAxis.labelTextColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 1)
     }
 
     
