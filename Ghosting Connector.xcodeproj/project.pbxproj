@@ -18,6 +18,9 @@
 		27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F782498B29C0043D52C /* SettingsViewController.swift */; };
 		27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F7E2498C3740043D52C /* ChangeNameViewController.swift */; };
 		27251F812498C7DC0043D52C /* HowToConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251F802498C7DC0043D52C /* HowToConnectViewController.swift */; };
+		2726029424A9EE150071B03F /* MainViewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029324A9EE150071B03F /* MainViewWorkoutViewController.swift */; };
+		2726029624A9FF4A0071B03F /* ViewWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029524A9FF4A0071B03F /* ViewWorkoutTableViewController.swift */; };
+		2726029824AA0A750071B03F /* ViewWorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029724AA0A750071B03F /* ViewWorkoutDetailViewController.swift */; };
 		272BBF8824937C3400529213 /* DoTimedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */; };
 		272BBF8A2495679200529213 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF892495679100529213 /* UUIDKey.swift */; };
 		2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6AE2454BDC400EB4944 /* AppDelegate.swift */; };
@@ -50,6 +53,9 @@
 		27251F782498B29C0043D52C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		27251F7E2498C3740043D52C /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 		27251F802498C7DC0043D52C /* HowToConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToConnectViewController.swift; sourceTree = "<group>"; };
+		2726029324A9EE150071B03F /* MainViewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWorkoutViewController.swift; sourceTree = "<group>"; };
+		2726029524A9FF4A0071B03F /* ViewWorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWorkoutTableViewController.swift; sourceTree = "<group>"; };
+		2726029724AA0A750071B03F /* ViewWorkoutDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWorkoutDetailViewController.swift; sourceTree = "<group>"; };
 		272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTimedWorkoutViewController.swift; sourceTree = "<group>"; };
 		272BBF892495679100529213 /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		2741C6AB2454BDC400EB4944 /* Ghost Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghost Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,15 @@
 			children = (
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		2726029224A9ED8D0071B03F /* Home View Workout */ = {
+			isa = PBXGroup;
+			children = (
+				2726029324A9EE150071B03F /* MainViewWorkoutViewController.swift */,
+				2726029724AA0A750071B03F /* ViewWorkoutDetailViewController.swift */,
+			);
+			path = "Home View Workout";
 			sourceTree = "<group>";
 		};
 		2741C6A22454BDC400EB4944 = {
@@ -193,6 +208,7 @@
 			children = (
 				27DCEFFA248EE7BF00309DD4 /* CreateGoalsTableViewController.swift */,
 				27D097D124903C830073C797 /* ViewYourGoalsTableViewController.swift */,
+				2726029524A9FF4A0071B03F /* ViewWorkoutTableViewController.swift */,
 			);
 			path = "Unused Delegates";
 			sourceTree = "<group>";
@@ -209,6 +225,7 @@
 		27B0FCD124A63A0500BCAA2E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2726029224A9ED8D0071B03F /* Home View Workout */,
 				27B0FCCB24A638C300BCAA2E /* Home Create Goals */,
 				27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */,
 			);
@@ -379,8 +396,10 @@
 				27DCEFF9248EE00700309DD4 /* SetYourGoalsViewController.swift in Sources */,
 				272BBF8A2495679200529213 /* UUIDKey.swift in Sources */,
 				2707C23924A46F72004D383C /* EditSingularGoalViewController.swift in Sources */,
+				2726029824AA0A750071B03F /* ViewWorkoutDetailViewController.swift in Sources */,
 				27DCEFF7248ED44200309DD4 /* HomePageViewController.swift in Sources */,
 				27D097D224903C830073C797 /* ViewYourGoalsTableViewController.swift in Sources */,
+				2726029624A9FF4A0071B03F /* ViewWorkoutTableViewController.swift in Sources */,
 				27D097DA2490E57A0073C797 /* NumberedWorkoutViewController.swift in Sources */,
 				27DCEFF3248EBD1300309DD4 /* StartViewController.swift in Sources */,
 				27D097D624909CDF0073C797 /* AddGoalViewController.swift in Sources */,
@@ -388,6 +407,7 @@
 				2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */,
 				27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */,
 				272300D724A8324200DA0D49 /* DoneTimedWorkoutViewController.swift in Sources */,
+				2726029424A9EE150071B03F /* MainViewWorkoutViewController.swift in Sources */,
 				2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */,
 				27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */,
 				27196FE524A3C47900B9A8DC /* DoNumberedWorkoutViewController.swift in Sources */,

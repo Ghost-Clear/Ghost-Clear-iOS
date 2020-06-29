@@ -1092,6 +1092,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				
 				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 					let workout = Workout(context: context)
+					workout.type = "Timed"
 					workout.sets = Int16(childVC.numSets)
 					workout.totalGhosts = Int16(currentGhosts)
 					workout.avgGhosts = Int16(currentGhosts/(numSets-setsToGo))
@@ -1141,7 +1142,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 						let goalSeconds = goal.seconds
 						let goalSets = goal.sets
 						if childVC.numSets >= goalSets{
-							if childVC.minutesOn*60 + childVC.secondsOn >= goalMinutes*60 + goalSeconds && currentGhosts > goalGhosts{
+							if childVC.minutesOn*60 + childVC.secondsOn <= goalMinutes*60 + goalSeconds && currentGhosts > goalGhosts{
 								goal.isCompleted = true
 							}
 						}

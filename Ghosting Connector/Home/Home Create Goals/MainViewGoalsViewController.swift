@@ -39,7 +39,7 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
             cell.back.image = UIImage(named: "redRectangle")
         }
         var cellText: String
-		cellText = "  "
+		cellText = " "
 		cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
 		if goalsFromCoreData[indexPath.row].sets == 1{
 			cellText = cellText + " set of "
@@ -52,26 +52,14 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
              cellText = cellText + " ghost in "
         }
         else{
-            cellText = cellText + " ghosts in "
+            cellText = cellText + " ghosts in  "
         }
-        if goalsFromCoreData[indexPath.row].minutes == 1{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes)
-            cellText = cellText + " minute and "
-        }
-        else{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes)
-            cellText = cellText + " minutes and "
-        }
-        if goalsFromCoreData[indexPath.row].seconds == 1{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
-                       cellText = cellText + " second per set"
-        }
-        else{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
-            cellText = cellText + " seconds per set"
-        }
+		cellText += "0 : "
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes) + " : "
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds) + "  per set"
+		
         cell.des?.text = cellText
-		cell.des?.font = UIFont(name: "Helvetica", size: 13.5)
+		cell.des?.font = .systemFont(ofSize: 15)
         
         return cell
     }
