@@ -763,6 +763,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
 		}
 		if peripheral == FLPeripheral && isWaitingForGhost && nextGhost == "FL"{
 			isWaitingForGhost = true
@@ -786,6 +787,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
 		}
 		if peripheral == CRPeripheral && isWaitingForGhost && nextGhost == "CR"{
 			isWaitingForGhost = true
@@ -809,6 +811,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
 		}
 		if peripheral == CLPeripheral && isWaitingForGhost && nextGhost == "CL"{
 			isWaitingForGhost = true
@@ -832,6 +835,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
 		}
 		if peripheral == LRPeripheral && isWaitingForGhost && nextGhost == "LR"{
 			isWaitingForGhost = true
@@ -855,6 +859,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
 		}
 		if peripheral == LLPeripheral && isWaitingForGhost && nextGhost == "LL"{
 			isWaitingForGhost = true
@@ -878,6 +883,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
+			nextGhost = getNextGhost()
 		}
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
     }
