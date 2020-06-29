@@ -41,6 +41,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var theBarChart: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
+		 numWorkouts = [0,0,0,0,0,0,0]
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             if let nameFromCore = try? context.fetch(Name.fetchRequest()){
                 let allNamesFromCore = nameFromCore as! [Name]
@@ -107,6 +108,7 @@ class HomePageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+		 numWorkouts = [0,0,0,0,0,0,0]
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             if let nameFromCore = try? context.fetch(Name.fetchRequest()){
                 let allNamesFromCore = nameFromCore as! [Name]
