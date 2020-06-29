@@ -31,6 +31,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var CLPeripheral : CBPeripheral?
 	var LRPeripheral : CBPeripheral?
 	var LLPeripheral : CBPeripheral?
+	var isPaused : Bool! = false
 	var characteristicASCIIValue = NSString()
 	var FR : Bool!
     var FL : Bool!
@@ -98,6 +99,91 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		
     }
     
+	@IBOutlet weak var pauseButton: UIButton!
+	@IBAction func pauseWorkout(_ sender: Any) {
+		isPaused = !isPaused
+		if isPaused{
+			pauseButton.setImage( UIImage(named: "play"), for: .normal)
+			self.circleTime.stop()
+			if nextGhost == "FR"{
+				writeValueFR(data: "0")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "0")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "0")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "0")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "0")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "0")
+			}
+			isWaitingForGhost = false
+			
+		}
+		else{
+			pauseButton.setImage( UIImage(named: "pause"), for: .normal)
+			self.circleTime.stop()
+			self.circleTime.resume()
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			
+		}
+	}
+	@IBAction func finishWorkout(_ sender: Any) {
+		circleTime.isHidden = true
+		circleTime.isActive = false
+		if nextGhost == "FR"{
+			writeValueFR(data: "0")
+		}
+		if nextGhost == "FL"{
+			writeValueFL(data: "0")
+		}
+		if nextGhost == "CR"{
+			writeValueCR(data: "0")
+		}
+		if nextGhost == "CL"{
+			writeValueCL(data: "0")
+		}
+		if nextGhost == "LR"{
+			writeValueLR(data: "0")
+		}
+		if nextGhost == "LL"{
+			writeValueLL(data: "0")
+		}
+		circleTime.stop()
+		centralManager.stopScan()
+		disconnectAllConnection()
+		if numSets == setsToGo && isRest{
+			popBack(4)
+		}
+		else{
+			performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+		}
+		
+	}
 	@IBOutlet weak var workoutStartsIn: UIImageView!
 	func meet(corner : String){
 		for c in cornersMet{
@@ -264,9 +350,11 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			isFirstPair = true
 			
 		}
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { timer in
+		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
+				self.circleTime.stop()
+				self.centralManager.stopScan()
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
 					//add segue
@@ -275,7 +363,10 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
-				self.present(alertVC, animated: true, completion: nil)
+				if self.navigationController?.visibleViewController == self{
+					self.present(alertVC, animated: true, completion: nil)
+				}
+				
 			}
 		})
 		// Do any additional setup after loading the view.
@@ -1079,8 +1170,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		if segue.identifier == "finishTimedWorkout" {
 			if let childVC = segue.destination as? DoneTimedWorkoutViewController {
 				//Some property on ChildVC that needs to be set
-				let shownMinutesLeft = ((circleTime.timerLabel?.text?.prefix(2))! as NSString).integerValue
-				let shownSecondsLeft = ((circleTime.timerLabel?.text?.suffix(2))! as NSString).integerValue
+				var shownMinutesLeft = ((circleTime.timerLabel?.text?.prefix(2))! as NSString).integerValue
+				var shownSecondsLeft = ((circleTime.timerLabel?.text?.suffix(2))! as NSString).integerValue
+				if isRest{
+					shownMinutesLeft = numMinutesOn
+					shownSecondsLeft = numSecondsOn
+				}
 				childVC.minutesOn = (numMinutesOn * (numSets-setsToGo))
 				childVC.minutesOn = childVC.minutesOn + (numMinutesOn - shownMinutesLeft)
 				childVC.secondsOn = (numSecondsOn * (numSets-setsToGo))
@@ -1095,7 +1190,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					workout.type = "Timed"
 					workout.sets = Int16(childVC.numSets)
 					workout.totalGhosts = Int16(currentGhosts)
-					workout.avgGhosts = Int16(currentGhosts/(numSets-setsToGo))
+					if numSets - setsToGo == 0{
+						workout.avgGhosts = Int16(currentGhosts)
+					}
+					else{
+						workout.avgGhosts = Int16(currentGhosts/(numSets-setsToGo))
+					}
 					var allCorners = ""
 					for i in cornersMet{
 						allCorners += i + " "
@@ -1115,7 +1215,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					workout.totalTimeOn = (String(hours) + " : ")
 					workout.totalTimeOn! +=  String(mins) + " : " + String(seconds)
 					var totalSeconds = hours*360 + mins*60 + seconds
-					totalSeconds /= childVC.numSets
+					if childVC.numSets == 0{
+						totalSeconds = 0
+					}
+					else{
+						totalSeconds /= childVC.numSets
+					}
 					seconds = totalSeconds
 					if seconds >= 60{
 						mins = seconds % 60

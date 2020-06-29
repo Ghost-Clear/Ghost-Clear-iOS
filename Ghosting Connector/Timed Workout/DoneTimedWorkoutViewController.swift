@@ -26,7 +26,13 @@ class DoneTimedWorkoutViewController: UIViewController {
 			minutesOn -= (minutesOn % 60) * 60
 		}
 		totalTimeLabel.text = String(hours) + " : " + String(minutesOn) + " : " + String(secondsOn)
-		averageGhostsLabel.text = String(totalghosts / numSets)
+		if numSets == 0{
+			averageGhostsLabel.text = String(totalghosts)
+		}
+		else{
+			averageGhostsLabel.text = String(totalghosts / numSets)
+		}
+		
 		totalGhostsLabel.text = String(totalghosts)
 		ghostedCornersLabel.text = ""
 		for i in ghostedCorners{
