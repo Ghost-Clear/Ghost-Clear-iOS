@@ -19,6 +19,7 @@ class ViewWorkoutDetailViewController: UIViewController {
 	@IBOutlet weak var totalGhostsLabel: UILabel!
 	@IBOutlet weak var ghostedCornersLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
+	@IBOutlet weak var setsLabel: UILabel!
 	override func viewDidLoad() {
         super.viewDidLoad()
 		averageTimeLabel.text = viewingWorkout.avgTimeOn
@@ -32,6 +33,7 @@ class ViewWorkoutDetailViewController: UIViewController {
 		dateFormatter.dateStyle = .full
 		dateLabel.text = dateFormatter.string(from: date)
 		workoutTypeLabel.text = viewingWorkout.type! + " Workout"
+		setsLabel.text = String(viewingWorkout.sets)
         // Do any additional setup after loading the view.
     }
     
