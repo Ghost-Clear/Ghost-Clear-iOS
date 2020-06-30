@@ -133,7 +133,16 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 			performSegue(withIdentifier: "chooseTimedPattern", sender: nil)
         }
 		else if((setsField.text! as NSString).integerValue > 9999){
-			let alertVC = UIAlertController(title: "Too many sets", message: "Your sets value is to large.", preferredStyle: UIAlertController.Style.alert)
+			let alertVC = UIAlertController(title: "Values too large", message: "Your sets value is to large.", preferredStyle: UIAlertController.Style.alert)
+			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+				alertVC.dismiss(animated: true, completion: nil)
+				//add segue
+			})
+			alertVC.addAction(action)
+			self.present(alertVC, animated: true, completion: nil)
+		}
+		else if (setsField.text! == "0"){
+			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your number of sets is not equal to 0.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
 				//add segue
@@ -151,7 +160,7 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 			self.present(alertVC, animated: true, completion: nil)
 		}
 		else{
-            let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
+            let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59.", preferredStyle: UIAlertController.Style.alert)
               let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                   alertVC.dismiss(animated: true, completion: nil)
                   //add segue
