@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxd-01-xn6">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -29,11 +29,11 @@
             <objects>
                 <viewController title="Start Page" id="bwu-1W-6Nv" customClass="StartViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m0I-I7-ucD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-fs-CbR">
-                                <rect key="frame" x="177" y="419.66666666666669" width="60" height="57"/>
+                                <rect key="frame" x="162.5" y="310" width="50" height="47.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="H7Z-6h-d26"/>
                                     <constraint firstAttribute="width" secondItem="o7i-fs-CbR" secondAttribute="height" multiplier="20:19" id="bAd-VJ-uRx"/>
@@ -65,11 +65,11 @@
             <objects>
                 <viewController title="initialLogin" id="a1U-fi-Lwb" customClass="InitialLoginViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HaD-aV-apV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-Fq-Jz6">
-                                <rect key="frame" x="43.666666666666657" y="774.66666666666663" width="327" height="77.333333333333371"/>
+                                <rect key="frame" x="43.5" y="589" width="288" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aGD-Fq-Jz6" secondAttribute="height" multiplier="326:77" id="Wj7-xd-w1u"/>
                                 </constraints>
@@ -80,39 +80,39 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ABP-4V-rv3">
-                                <rect key="frame" x="33" y="84" width="50" height="47.666666666666657"/>
+                                <rect key="frame" x="33" y="40" width="50" height="47.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="43R-Lo-Dbr"/>
                                     <constraint firstAttribute="width" secondItem="ABP-4V-rv3" secondAttribute="height" multiplier="20:19" id="Onj-Rq-zB5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="XFJ-31-1C5">
-                                <rect key="frame" x="33" y="151.33333333333334" width="118.5" height="57.333333333333343"/>
+                                <rect key="frame" x="33" y="107.5" width="118.5" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="lets introduce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bmX-pf-Tc5">
-                                <rect key="frame" x="33" y="217.66666666666666" width="208.5" height="42.999999999999972"/>
+                                <rect key="frame" x="33" y="173.5" width="208.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your First Name" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egK-JG-Pgd">
-                                <rect key="frame" x="99" y="448" width="227" height="30"/>
+                                <rect key="frame" x="99" y="333.5" width="227" height="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="honorifix-prefix"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-mr-Y15">
-                                <rect key="frame" x="16" y="434" width="83" height="58"/>
+                                <rect key="frame" x="16" y="319.5" width="83" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="8gK-Qf-kjK"/>
                                     <constraint firstAttribute="width" constant="83" id="deg-uX-HKj"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="ZgG-Zp-MTk">
-                                <rect key="frame" x="99" y="487" width="227" height="9"/>
+                                <rect key="frame" x="99" y="372.5" width="227" height="9"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,56 +151,78 @@
             <objects>
                 <viewController id="dJi-iQ-vOz" customClass="SetYourGoalsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5L-zL-PSw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Your Goals." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR6-Z0-f9j">
-                                <rect key="frame" x="20" y="68" width="387" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Goals." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZR6-Z0-f9j">
+                                <rect key="frame" x="20" y="24" width="272" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goals :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-7W-806">
-                                <rect key="frame" x="20" y="186" width="324" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-7W-806">
+                                <rect key="frame" x="20" y="95" width="285" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-O4-0Sh">
-                                <rect key="frame" x="0.0" y="292" width="414" height="386"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-O4-0Sh">
+                                <rect key="frame" x="0.0" y="300" width="430" height="289"/>
                                 <connections>
                                     <segue destination="Jze-bU-5ex" kind="embed" identifier="showTables" id="zRG-B5-WFn"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-eI-jtd">
-                                <rect key="frame" x="177" y="709" width="61" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Add Button"/>
-                                <connections>
-                                    <segue destination="PDD-oj-JfH" kind="showDetail" identifier="createSingular" id="lFl-3P-bhd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enhance your speed and staminia by setting goals." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-CV-QbU">
-                                <rect key="frame" x="20" y="223" width="387" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhance your speed and staminia by setting goals." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fMk-CV-QbU">
+                                <rect key="frame" x="20" y="129" width="340.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jC-YE-pSn">
-                                <rect key="frame" x="32" y="797" width="350" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jC-YE-pSn">
+                                <rect key="frame" x="32" y="599" width="311" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8jC-YE-pSn" secondAttribute="height" multiplier="70:13" id="Ttj-zh-xdX"/>
+                                </constraints>
                                 <state key="normal" image="Goal Button"/>
                                 <connections>
                                     <action selector="FinishCreatingGoals:" destination="dJi-iQ-vOz" eventType="touchUpInside" id="ebz-hj-wkR"/>
                                     <segue destination="H9u-zo-5jr" kind="show" id="sEJ-BF-7bl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-eI-jtd">
+                                <rect key="frame" x="156" y="513" width="63" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="9S5-Vk-dwe"/>
+                                    <constraint firstAttribute="width" constant="63" id="cK3-TW-8Ec"/>
+                                </constraints>
+                                <state key="normal" image="Add Button"/>
+                                <connections>
+                                    <segue destination="PDD-oj-JfH" kind="showDetail" identifier="createSingular" id="lFl-3P-bhd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pat-O4-0Sh" firstAttribute="trailing" secondItem="6lk-5V-lCU" secondAttribute="trailing" id="2eh-2W-Pky"/>
+                            <constraint firstItem="6lk-5V-lCU" firstAttribute="trailing" secondItem="ZR6-Z0-f9j" secondAttribute="trailing" constant="83" id="5BN-O7-LoJ"/>
+                            <constraint firstItem="Pat-O4-0Sh" firstAttribute="leading" secondItem="6lk-5V-lCU" secondAttribute="leading" id="5PR-yU-dIm"/>
+                            <constraint firstItem="6lk-5V-lCU" firstAttribute="trailing" secondItem="dIX-7W-806" secondAttribute="trailing" constant="70" id="7Oz-4Y-fY7"/>
+                            <constraint firstItem="dIX-7W-806" firstAttribute="leading" secondItem="6lk-5V-lCU" secondAttribute="leading" constant="20" id="9q0-hn-2h2"/>
+                            <constraint firstItem="Pat-O4-0Sh" firstAttribute="top" secondItem="fMk-CV-QbU" secondAttribute="bottom" constant="29" id="EbX-od-sN9"/>
+                            <constraint firstItem="ZR6-Z0-f9j" firstAttribute="top" secondItem="6lk-5V-lCU" secondAttribute="top" constant="24" id="Jgb-E1-2Pn"/>
+                            <constraint firstItem="8jC-YE-pSn" firstAttribute="top" secondItem="2Ct-eI-jtd" secondAttribute="bottom" constant="23" id="JrK-km-Rqb"/>
+                            <constraint firstItem="fMk-CV-QbU" firstAttribute="top" secondItem="dIX-7W-806" secondAttribute="bottom" constant="5" id="MaW-va-rkS"/>
+                            <constraint firstItem="6lk-5V-lCU" firstAttribute="trailing" secondItem="8jC-YE-pSn" secondAttribute="trailing" constant="32" id="Up2-NF-8Hs"/>
+                            <constraint firstItem="ZR6-Z0-f9j" firstAttribute="leading" secondItem="6lk-5V-lCU" secondAttribute="leading" constant="20" id="V5E-z7-Hjt"/>
+                            <constraint firstItem="fMk-CV-QbU" firstAttribute="width" secondItem="dIX-7W-806" secondAttribute="width" multiplier="1.19444" id="YRj-A6-OPk"/>
+                            <constraint firstItem="fMk-CV-QbU" firstAttribute="leading" secondItem="dIX-7W-806" secondAttribute="leading" id="aeR-Aw-6J0"/>
+                            <constraint firstItem="2Ct-eI-jtd" firstAttribute="top" secondItem="Pat-O4-0Sh" secondAttribute="bottom" constant="23" id="dM9-Ef-npD"/>
+                            <constraint firstItem="8jC-YE-pSn" firstAttribute="centerX" secondItem="F5L-zL-PSw" secondAttribute="centerX" id="ekx-k5-2o5"/>
+                            <constraint firstItem="2Ct-eI-jtd" firstAttribute="centerX" secondItem="F5L-zL-PSw" secondAttribute="centerX" id="jgQ-mw-CKV"/>
+                            <constraint firstItem="dIX-7W-806" firstAttribute="top" secondItem="ZR6-Z0-f9j" secondAttribute="bottom" constant="13" id="kxd-GV-FLq"/>
+                            <constraint firstItem="8jC-YE-pSn" firstAttribute="bottom" secondItem="6lk-5V-lCU" secondAttribute="bottom" constant="-10" id="ueE-b1-ZGI"/>
+                            <constraint firstItem="8jC-YE-pSn" firstAttribute="leading" secondItem="6lk-5V-lCU" secondAttribute="leading" constant="32" id="ycZ-nD-Nh0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6lk-5V-lCU"/>
                     </view>
                     <navigationItem key="navigationItem" id="lsf-VN-Sss"/>
@@ -210,14 +232,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNq-8a-LhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="31"/>
+            <point key="canvasLocation" x="1475.3623188405797" y="30.133928571428569"/>
         </scene>
         <!--Create Singular Goal View Controller-->
         <scene sceneID="piE-bk-pCq">
             <objects>
                 <viewController id="PDD-oj-JfH" customClass="CreateSingularGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Fj-p4-cAN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minutes" translatesAutoresizingMaskIntoConstraints="NO" id="tBo-kY-ZVh">
@@ -350,24 +372,29 @@
             <objects>
                 <tableViewController id="Jze-bU-5ex" customClass="CreateGoalsTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" minimumZoomScale="-1" maximumZoomScale="-1" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bmp-Rf-Aat">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="289"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="newGoal" rowHeight="79" id="NIw-NQ-Low">
-                                <rect key="frame" x="0.0" y="28" width="414" height="79"/>
+                                <rect key="frame" x="0.0" y="28" width="430" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NIw-NQ-Low" id="vJQ-Ln-dqw">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowRect" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-TG-XhU">
-                                            <rect key="frame" x="16" y="1" width="382" height="78"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowRect" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-TG-XhU">
+                                            <rect key="frame" x="5" y="0.5" width="420" height="78"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="u0a-TG-XhU" firstAttribute="centerY" secondItem="vJQ-Ln-dqw" secondAttribute="centerY" id="2tn-Wp-p1N"/>
+                                        <constraint firstItem="u0a-TG-XhU" firstAttribute="centerX" secondItem="vJQ-Ln-dqw" secondAttribute="centerX" id="Guj-3i-GF5"/>
+                                        <constraint firstItem="u0a-TG-XhU" firstAttribute="leading" secondItem="vJQ-Ln-dqw" secondAttribute="leading" constant="5" id="GwB-Uk-ig9"/>
+                                        <constraint firstAttribute="trailing" secondItem="u0a-TG-XhU" secondAttribute="trailing" constant="5" id="o7k-x1-ghR"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <rect key="contentStretch" x="0.45000000000000001" y="0.10000000000000001" width="1" height="1"/>
                             </tableViewCell>
@@ -387,7 +414,7 @@
             <objects>
                 <viewController id="x0X-u5-1M6" customClass="NumberedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnv-4u-nry">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgW-I6-XnG">
@@ -553,7 +580,7 @@
             <objects>
                 <viewController title="Home Page" id="H9u-zo-5jr" customClass="HomePageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUI-V5-8HJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-SP-KES">
@@ -646,11 +673,11 @@
             <objects>
                 <viewController id="XpF-kv-tTd" customClass="MainViewGoalsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2JS-gO-Wix">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Er4-NY-jsq">
-                                <rect key="frame" x="0.0" y="170" width="414" height="601"/>
+                                <rect key="frame" x="0.0" y="-59" width="375" height="601"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="S1J-j2-fSy" kind="embed" identifier="showGoalTables" id="vPT-UL-GYR"/>
@@ -704,15 +731,15 @@
             <objects>
                 <tableViewController title="ViewYourGoalsTableViewController" id="S1J-j2-fSy" customClass="ViewYourGoalsTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gdl-Gk-A1q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="601"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="viewGoal" rowHeight="88" id="7MS-bD-4EB" customClass="GoalView" customModule="Ghost_Connect" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7MS-bD-4EB" id="sXk-Bj-xZe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="NPa-1o-IMr">
@@ -745,14 +772,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAh-FU-HWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673.913043478261" y="738.95089285714278"/>
+            <point key="canvasLocation" x="2646" y="756"/>
         </scene>
         <!--View Workout Detail View Controller-->
         <scene sceneID="6gw-Kl-h6g">
             <objects>
                 <viewController id="uP9-Dy-wjy" customClass="ViewWorkoutDetailViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XV7-R1-sMD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drc-KK-xfY">
@@ -925,7 +952,7 @@
             <objects>
                 <viewController id="Ylo-oK-Lm2" customClass="DoneTimedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9a-wj-MXd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed Timed Workout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QN-Ec-2ge">
@@ -1040,7 +1067,7 @@
             <objects>
                 <viewController id="xlN-GH-EKa" customClass="DoTimedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B8R-7J-wK4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivd-Ul-eOI">
@@ -1147,7 +1174,7 @@
             <objects>
                 <viewController id="OzQ-ta-Cac" customClass="TimedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqH-z6-q9K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG8-mq-A1T">
@@ -1349,7 +1376,7 @@
             <objects>
                 <viewController id="at1-VZ-0TC" customClass="SettingsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugf-ez-u3H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ron-1O-SPs">
@@ -1441,15 +1468,15 @@
             <objects>
                 <tableViewController id="hOW-Dd-KI1" customClass="ViewWorkoutTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8cw-fe-tjO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="579"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="579"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="79" id="l7A-HR-ulZ" customClass="workoutCell" customModule="Ghost_Connect" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="79"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l7A-HR-ulZ" id="yrk-Kn-nBE">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-F7-vNu">
@@ -1491,11 +1518,11 @@
             <objects>
                 <viewController id="G0F-98-OF8" customClass="MainViewWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b7u-WM-Dsd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2C-0t-7OY">
-                                <rect key="frame" x="0.0" y="170" width="414" height="579"/>
+                                <rect key="frame" x="0.0" y="-59" width="375" height="579"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="hOW-Dd-KI1" kind="embed" identifier="showWorkoutTable" id="QX5-Q0-APl"/>
@@ -1542,7 +1569,7 @@
             <objects>
                 <viewController id="VNq-xu-Qw5" customClass="ChooseTimedWorkoutPatternViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bkg-ey-2rQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grid" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-zQ-MtQ">
@@ -1700,7 +1727,7 @@
             <objects>
                 <viewController id="C3Q-2g-iP5" customClass="ChangeNameViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4YS-j9-qaq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Your Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdy-aZ-q50">
@@ -1757,7 +1784,7 @@
             <objects>
                 <viewController id="Ldv-hu-VSK" customClass="HowToConnectViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9S-n7-ILR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to connect your ghosting devices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS7-7j-pax">
@@ -1801,7 +1828,7 @@
             <objects>
                 <viewController id="Cno-YU-v8y" customClass="ChangePreperationViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8P-Zo-mlI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-qq-EA0">
@@ -1887,7 +1914,7 @@
             <objects>
                 <viewController title="addGoalViewController" id="WZo-EC-FUV" customClass="AddGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qhY-XR-q1T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minutes" translatesAutoresizingMaskIntoConstraints="NO" id="Ek7-Fv-KLZ">
@@ -2021,7 +2048,7 @@
             <objects>
                 <viewController id="6lj-3l-Myb" customClass="DoneNumberedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i52-vn-UJ1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed Number Workout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgJ-QU-WjX">
@@ -2136,7 +2163,7 @@
             <objects>
                 <viewController id="kTC-vT-pnh" customClass="DoNumberedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FSq-HR-AsQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uft-DE-g0h">
@@ -2251,7 +2278,7 @@
             <objects>
                 <viewController id="Ryd-Gw-Krp" customClass="ChooseNumberedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGw-wT-5kC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubw-Iu-N7O">
@@ -2410,7 +2437,7 @@
             <objects>
                 <viewController id="ktl-FS-3dE" customClass="EditGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYL-Ri-P6u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minutes" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-7k-4JE">
@@ -2543,7 +2570,7 @@
             <objects>
                 <viewController id="FVC-FU-0LJ" customClass="EditSingularGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tA-55-A3Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minutes" translatesAutoresizingMaskIntoConstraints="NO" id="0xV-2y-4q7">
