@@ -53,6 +53,20 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var CLname : String!
 	var LRname : String!
 	var LLname : String!
+	var order : [String]!
+	var setsToGo : Int!
+	var ghostsToDo : Int!
+	var counter = 0
+	var stopWatch = Timer()
+	var stopWatchIsPlaying = false
+	var orderCount = 0
+	var totalTimeinSeconds = 0
+	var totalGhosts = 0
+	var isWaitingForGhost = false
+	var nextGhost : String!
+	var cornersMet : [String]! = []
+	var isRest = true
+	var isPaused = false
 	@IBOutlet var circleTime: AppusCircleTimer!
 	func popBack(_ nb: Int) {
 		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
@@ -62,6 +76,17 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 		}
 	}
+	func meet(corner : String){
+		for c in cornersMet{
+			if c == corner{
+				return
+			}
+		}
+		cornersMet.append(corner)
+	}
+	@IBOutlet weak var setsLabel: UILabel!
+	@IBOutlet weak var ghostsLabel: UILabel!
+	@IBOutlet weak var stopWatchLabel: UILabel!
 	@IBAction func stopWorkout(_ sender: Any) {
 		circleTime.isActive = false
 		circleTime.isHidden = true
@@ -71,14 +96,165 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		popBack(3)
 		
 	}
-	@IBOutlet var workoutStartsIn: UILabel!
+	@IBOutlet var workoutStartsIn: UIImageView!
+	@IBOutlet weak var whichGhostLabel: UILabel!
 	
-	func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
-		circleTime.isActive = false
+	@IBAction func finishWorkout(_ sender: Any) {
 		circleTime.isHidden = true
-		workoutStartsIn.isHidden = true
+		circleTime.isActive = false
+		if nextGhost == "FR"{
+			writeValueFR(data: "0")
+		}
+		if nextGhost == "FL"{
+			writeValueFL(data: "0")
+		}
+		if nextGhost == "CR"{
+			writeValueCR(data: "0")
+		}
+		if nextGhost == "CL"{
+			writeValueCL(data: "0")
+		}
+		if nextGhost == "LR"{
+			writeValueLR(data: "0")
+		}
+		if nextGhost == "LL"{
+			writeValueLL(data: "0")
+		}
+		circleTime.stop()
+		centralManager.stopScan()
+		disconnectAllConnection()
+		if numSets == setsToGo && isRest{
+			popBack(4)
+		}
+		else{
+			performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+		}
 	}
 	
+	@IBOutlet weak var pauseButton: UIButton!
+	@IBAction func pause(_ sender: Any) {
+		isPaused = !isPaused
+		if isPaused{
+			pauseButton.setImage( UIImage(named: "play"), for: .normal)
+			pauseStopWatch()
+			stopWatchLabel.textColor = UIColor(red: 75/256, green: 75/256, blue: 75/256, alpha: 1)
+			if nextGhost == "FR"{
+				writeValueFR(data: "0")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "0")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "0")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "0")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "0")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "0")
+			}
+			isWaitingForGhost = false
+			
+		}
+		else{
+			stopWatch = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+			stopWatchIsPlaying = true
+			stopWatchLabel.textColor = UIColor(red: 63/256, green: 219/256, blue: 156/256, alpha: 1)
+			pauseButton.setImage( UIImage(named: "pause"), for: .normal)
+			self.circleTime.stop()
+			self.circleTime.resume()
+			isWaitingForGhost = true
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "1")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "1")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "1")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "1")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "1")
+			}
+			
+		}
+	}
+	func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
+		isRest = false
+		circleTime.isActive = false
+		circleTime.isHidden = true
+		ghostsLabel.text = String(ghostsToDo)
+		workoutStartsIn.isHidden = true
+		circleTimer.isHidden = true
+		stopWatchLabel.isHidden = false
+		//stopWatch.
+		stopWatch = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+			stopWatchIsPlaying = true
+		isWaitingForGhost = true
+		nextGhost = getNextGhost()
+		if nextGhost == "FR"{
+			writeValueFR(data: "1")
+			whichGhostLabel.text = "Front Right"
+		}
+		if nextGhost == "FL"{
+			writeValueFL(data: "1")
+			whichGhostLabel.text = "Front Left"
+		}
+		if nextGhost == "CR"{
+			writeValueCR(data: "1")
+			whichGhostLabel.text = "Center Right"
+		}
+		if nextGhost == "CL"{
+			writeValueCL(data: "1")
+			whichGhostLabel.text = "Center Left"
+		}
+		if nextGhost == "LR"{
+			writeValueLR(data: "1")
+			whichGhostLabel.text = "Back Right"
+		}
+		if nextGhost == "LL"{
+			writeValueLL(data: "1")
+			whichGhostLabel.text = "Back Left"
+		}
+	}
+	func pauseStopWatch(){
+		stopWatch.invalidate()
+		stopWatchIsPlaying = false
+	}
+	func resetStopWatch(){
+		stopWatch.invalidate()
+		stopWatchIsPlaying = false
+		counter = 0
+		stopWatchLabel.text = "0 : 0 : 0"
+	}
+	@objc func UpdateTimer(){
+		counter += 1
+		totalTimeinSeconds += 1
+		var seconds = counter
+		var minutes = 0
+		var hours = 0
+		if seconds >= 60{
+			minutes += Int(seconds / 60)
+			seconds -= (Int(seconds / 60) * 60)
+		}
+		if minutes >= 60{
+			hours += Int(minutes / 60)
+			minutes -= (Int(seconds / 60) * 60)
+			stopWatchIsPlaying = true
+		}
+		
+		stopWatchLabel.text = String(hours)
+		stopWatchLabel.text! += " : " + String(minutes) + " : " + String(seconds)
+	}
 	var centralManager : CBCentralManager!
 	var peripheralManager: CBPeripheralManager?
 	var RSSIs = [NSNumber]()
@@ -88,24 +264,43 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var characteristicValue = [CBUUID: NSData]()
 	var timer = Timer()
 	var characteristics = [String : CBCharacteristic]()
+	func getNextGhost() -> String!{
+		var toReturn : String!
+		if isRandom{
+			orderCount = Int.random(in: 0..<order.count)
+			toReturn = order[orderCount]
+		}
+		else{
+			toReturn = order[orderCount % order.count]
+			orderCount += 1
+			
+		}
+		return toReturn
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		workoutStartsIn.isHidden = true
+		whichGhostLabel.text = "Get Ready"
+		setsToGo = numSets
+		stopWatchLabel.text = "0 : 0 : 0"
+		workoutStartsIn.isHidden = false
 		circleTime.delegate = self
 		circleTime.font = UIFont(name: "System", size: 50 )
 		circleTime.isBackwards = true
 		circleTime.isActive = false
 		circleTime.isHidden = true
+		stopWatchLabel.isHidden = true
+		setsLabel.text = String(setsToGo)
+		ghostsLabel.text = String(ghostsToDo)
 		centralManager = CBCentralManager(delegate: self, queue: nil)
 		peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
 		//updateIncomingData()
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { timer in
+		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
-					//add segue
-					self.popBack(3)
+					//self.popBack(3)
+					//circleTime.stop()
 					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
@@ -149,41 +344,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 	}
 	*/
-	@IBOutlet var FRbutton: UIButton!
-	@IBAction func FR(_ sender: Any) {
-		writeValueFR(data: "Hello")
-	}
 	
-	
-	@IBOutlet var FLbutton: UIButton!
-	@IBAction func FL(_ sender: Any) {
-		writeValueFL(data: "Hello")
-	}
-	
-	
-	@IBOutlet var CRbutton: UIButton!
-	@IBAction func CR(_ sender: Any) {
-		writeValueCR(data: "Hello")
-	}
-	
-	
-	@IBOutlet var CLbutton: UIButton!
-	@IBAction func CL(_ sender: Any) {
-		writeValueCL(data: "Hello")
-	}
-	
-	
-	@IBOutlet var LLbutton: UIButton!
-	@IBAction func LL(_ sender: Any) {
-		writeValueLL(data: "Hello")
-	}
-	
-	
-	
-	@IBOutlet var LRbutton: UIButton!
-	@IBAction func LR(_ sender: Any) {
-		writeValueLR(data: "Hello")
-	}
 	
 	
 	func writeValueFR(data: String){
@@ -668,25 +829,393 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		
 		
-		
-		print("Value Recieved: \((characteristicASCIIValue as String))")
-		if peripheral == FRPeripheral{
-			//FRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == FRPeripheral && nextGhost == "FR" && isWaitingForGhost{
+			totalGhosts += 1
+			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
+			nextGhost = getNextGhost()
+			if ghostsLabel.text == "0"{
+				circleTime.isHidden = false
+				isWaitingForGhost = false
+				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+				circleTime.elapsedTime = 0
+				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.start()
+				whichGhostLabel.text = "Rest"
+				isRest = true
+				setsToGo -= 1
+				setsLabel.text = String(setsToGo)
+				if nextGhost == "FR"{
+					writeValueFR(data: "0")
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "0")
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "0")
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "0")
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "0")
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "0")
+				}
+			}
+			else{
+				if nextGhost == "FR"{
+					writeValueFR(data: "1")
+					whichGhostLabel.text = "Front Right"
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "1")
+					whichGhostLabel.text = "Front Left"
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "1")
+					whichGhostLabel.text = "Center Right"
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "1")
+					whichGhostLabel.text = "Center Left"
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "1")
+					whichGhostLabel.text = "Back Right"
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "1")
+					whichGhostLabel.text = "Back Left"
+				}
+			}
+			meet(corner: "FR")
+			
 		}
-		if peripheral == FLPeripheral{
-			//FLbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == FLPeripheral && nextGhost == "FL" && isWaitingForGhost{
+			totalGhosts += 1
+			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
+			nextGhost = getNextGhost()
+			if ghostsLabel.text == "0"{
+				circleTime.isHidden = false
+				isWaitingForGhost = false
+				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+				circleTime.elapsedTime = 0
+				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.start()
+				whichGhostLabel.text = "Rest"
+				isRest = true
+				setsToGo -= 1
+				setsLabel.text = String(setsToGo)
+				if nextGhost == "FR"{
+					writeValueFR(data: "0")
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "0")
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "0")
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "0")
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "0")
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "0")
+				}
+			}
+			else{
+				if nextGhost == "FR"{
+					writeValueFR(data: "1")
+					whichGhostLabel.text = "Front Right"
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "1")
+					whichGhostLabel.text = "Front Left"
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "1")
+					whichGhostLabel.text = "Center Right"
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "1")
+					whichGhostLabel.text = "Center Left"
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "1")
+					whichGhostLabel.text = "Back Right"
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "1")
+					whichGhostLabel.text = "Back Left"
+				}
+			}
+			meet(corner: "FL")
 		}
-		if peripheral == CRPeripheral{
-			//CRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == CRPeripheral && nextGhost == "CR" && isWaitingForGhost{
+			totalGhosts += 1
+			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
+			nextGhost = getNextGhost()
+			if ghostsLabel.text == "0"{
+				circleTime.isHidden = false
+				isWaitingForGhost = false
+				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+				circleTime.elapsedTime = 0
+				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.start()
+				whichGhostLabel.text = "Rest"
+				isRest = true
+				setsToGo -= 1
+				setsLabel.text = String(setsToGo)
+				if nextGhost == "FR"{
+					writeValueFR(data: "0")
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "0")
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "0")
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "0")
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "0")
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "0")
+				}
+			}
+			else{
+				if nextGhost == "FR"{
+					writeValueFR(data: "1")
+					whichGhostLabel.text = "Front Right"
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "1")
+					whichGhostLabel.text = "Front Left"
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "1")
+					whichGhostLabel.text = "Center Right"
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "1")
+					whichGhostLabel.text = "Center Left"
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "1")
+					whichGhostLabel.text = "Back Right"
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "1")
+					whichGhostLabel.text = "Back Left"
+				}
+			}
+			meet(corner: "CR")
 		}
-		if peripheral == CLPeripheral{
-			//CLbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == CLPeripheral && nextGhost == "CL" && isWaitingForGhost{
+			totalGhosts += 1
+			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
+			nextGhost = getNextGhost()
+			if ghostsLabel.text == "0"{
+				circleTime.isHidden = false
+				isWaitingForGhost = false
+				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+				circleTime.elapsedTime = 0
+				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.start()
+				whichGhostLabel.text = "Rest"
+				isRest = true
+				setsToGo -= 1
+				setsLabel.text = String(setsToGo)
+				if nextGhost == "FR"{
+					writeValueFR(data: "0")
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "0")
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "0")
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "0")
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "0")
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "0")
+				}
+			}
+			else{
+				if nextGhost == "FR"{
+					writeValueFR(data: "1")
+					whichGhostLabel.text = "Front Right"
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "1")
+					whichGhostLabel.text = "Front Left"
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "1")
+					whichGhostLabel.text = "Center Right"
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "1")
+					whichGhostLabel.text = "Center Left"
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "1")
+					whichGhostLabel.text = "Back Right"
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "1")
+					whichGhostLabel.text = "Back Left"
+				}
+			}
+			meet(corner: "CL")
 		}
-		if peripheral == LRPeripheral{
-			//LRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == LRPeripheral && nextGhost == "LR" && isWaitingForGhost{
+			totalGhosts += 1
+			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
+			nextGhost = getNextGhost()
+			if ghostsLabel.text == "0"{
+				circleTime.isHidden = false
+				isWaitingForGhost = false
+				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+				circleTime.elapsedTime = 0
+				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.start()
+				whichGhostLabel.text = "Rest"
+				isRest = true
+				setsToGo -= 1
+				setsLabel.text = String(setsToGo)
+				if nextGhost == "FR"{
+					writeValueFR(data: "0")
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "0")
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "0")
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "0")
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "0")
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "0")
+				}
+			}
+			else{
+				if nextGhost == "FR"{
+					writeValueFR(data: "1")
+					whichGhostLabel.text = "Front Right"
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "1")
+					whichGhostLabel.text = "Front Left"
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "1")
+					whichGhostLabel.text = "Center Right"
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "1")
+					whichGhostLabel.text = "Center Left"
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "1")
+					whichGhostLabel.text = "Back Right"
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "1")
+					whichGhostLabel.text = "Back Left"
+				}
+			}
+			meet(corner: "LR")
 		}
-		if peripheral == LLPeripheral{
-			//LLbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == LLPeripheral && nextGhost == "LL" && isWaitingForGhost{
+			totalGhosts += 1
+			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
+			nextGhost = getNextGhost()
+			if ghostsLabel.text == "0"{
+				circleTime.isHidden = false
+				isWaitingForGhost = false
+				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
+				circleTime.elapsedTime = 0
+				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+				circleTime.start()
+				whichGhostLabel.text = "Rest"
+				isRest = true
+				setsToGo -= 1
+				setsLabel.text = String(setsToGo)
+				if nextGhost == "FR"{
+					writeValueFR(data: "0")
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "0")
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "0")
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "0")
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "0")
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "0")
+				}
+			}
+			else{
+				if nextGhost == "FR"{
+					writeValueFR(data: "1")
+					whichGhostLabel.text = "Front Right"
+				}
+				if nextGhost == "FL"{
+					writeValueFL(data: "1")
+					whichGhostLabel.text = "Front Left"
+				}
+				if nextGhost == "CR"{
+					writeValueCR(data: "1")
+					whichGhostLabel.text = "Center Right"
+				}
+				if nextGhost == "CL"{
+					writeValueCL(data: "1")
+					whichGhostLabel.text = "Center Left"
+				}
+				if nextGhost == "LR"{
+					writeValueLR(data: "1")
+					whichGhostLabel.text = "Back Right"
+				}
+				if nextGhost == "LL"{
+					writeValueLL(data: "1")
+					whichGhostLabel.text = "Back Left"
+				}
+			}
+			meet(corner: "LL")
+		}
+		if setsToGo == 0{
+			circleTime.stop()
+			circleTime.isHidden = true
+			circleTime.isActive = false
+			centralManager.stopScan()
+			disconnectAllConnection()
+			isWaitingForGhost = false
+			performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
 		}
 		NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
 	}
@@ -797,15 +1326,87 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 	}
 	
-	/*
+	
 	// MARK: - Navigation
 	
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 	// Get the new view controller using segue.destination.
 	// Pass the selected object to the new view controller.
+		if segue.identifier == "finishNumberedWorkout" {
+			if let childVC = segue.destination as? DoneNumberedWorkoutViewController {
+				
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let workout = Workout(context: context)
+					workout.type = "Number"
+					workout.sets = Int16(numSets - setsToGo)
+					workout.totalGhosts = Int16(totalGhosts)
+					if numSets - setsToGo == 0{
+						workout.avgGhosts = Int16(ghostsToDo - (ghostsLabel.text! as NSString).integerValue)
+					}
+					else{
+						workout.avgGhosts = Int16(totalGhosts/(numSets-setsToGo))
+					}
+					var hours = 0
+					var minutes = 0
+					var seconds = totalTimeinSeconds
+					if seconds >= 60{
+						minutes += Int(seconds / 60)
+						seconds -= (Int(seconds / 60) * 60)
+					}
+					if minutes >= 60{
+						hours += Int(minutes / 60)
+						minutes -= Int(minutes / 60) * 60
+					}
+					workout.totalTimeOn = String(hours) + " : "
+					workout.totalTimeOn! += String(minutes) + " : " + String(seconds)
+					if (numSets - setsToGo) != 0{
+						seconds = seconds / (numSets - setsToGo)
+					}
+					hours = 0
+					minutes = 0
+					if seconds >= 60{
+						minutes += Int(seconds / 60)
+						seconds -= (Int(seconds / 60) * 60)
+					}
+					if minutes >= 60{
+						hours += Int(minutes / 60)
+						minutes -= Int(minutes / 60) * 60
+					}
+					workout.avgTimeOn = String(hours) + " : "
+					workout.avgTimeOn! += String(minutes) + " : " + String(seconds)
+					workout.date = Date()
+					var allCorners = ""
+					for i in cornersMet{
+						allCorners += i + " "
+					}
+					workout.ghostedCorners = allCorners
+					childVC.totalTimeOn = workout.totalTimeOn
+					childVC.avgTime = workout.avgTimeOn
+					childVC.totalGhosts = Int(workout.totalGhosts)
+					childVC.ghostedCorners = allCorners
+					var allGoalsFromCore : [Goal] = []
+					if let goalsFromCore = try? context.fetch(Goal.fetchRequest()){
+						allGoalsFromCore = goalsFromCore as! [Goal]
+						print ()
+						
+					}
+					for goal in allGoalsFromCore{
+						let goalGhosts = goal.ghosts
+						let goalMinutes = goal.minutes
+						let goalSeconds = goal.seconds
+						let goalSets = goal.sets
+						if (numSets - setsToGo) >= goalSets{
+							if totalTimeinSeconds <= goalMinutes*60 + goalSeconds && workout.totalGhosts > goalGhosts*goal.sets{
+								goal.isCompleted = true
+							}
+						}
+					}
+				}
+			}
+			
+		}
 	}
-	*/
 	
 }
 fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {

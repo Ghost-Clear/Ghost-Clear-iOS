@@ -304,7 +304,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
      var characteristics = [String : CBCharacteristic]()
     override func viewDidLoad() {
         super.viewDidLoad()
-		whichGhostLabel.text = ""
+		whichGhostLabel.text = "Get Ready"
 		setsToGo = numSets
 		setsLabel.text = String(setsToGo)
         workoutStartsIn.isHidden = true
@@ -615,7 +615,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					name.key = peripheral.name!
 					name.name = "FR"
 				}
-				//let finalData = joke()
+				
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 				
 			}
@@ -1205,30 +1205,36 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					var mins = childVC.minutesOn!
 					var seconds = childVC.secondsOn!
 					if seconds >= 60{
-						mins += seconds % 60
-						seconds -= (seconds % 60) * 60
+						mins += Int(seconds / 60)
+						seconds -= (Int(seconds / 60) * 60)
 					}
 					if mins >= 60{
-						hours += mins % 60
-						mins -= (mins % 60) * 60
+						hours += Int(mins / 60)
+						mins -= Int(mins / 60) * 60
 					}
 					workout.totalTimeOn = (String(hours) + " : ")
 					workout.totalTimeOn! +=  String(mins) + " : " + String(seconds)
 					var totalSeconds = hours*360 + mins*60 + seconds
 					if childVC.numSets == 0{
-						totalSeconds = 0
+						if isRest{
+							totalSeconds = 0
+						}
+						else{
+							totalSeconds = (numMinutesOn - shownMinutesLeft) * 60
+							totalSeconds += (numSecondsOn - shownSecondsLeft)
+						}
 					}
 					else{
 						totalSeconds /= childVC.numSets
 					}
 					seconds = totalSeconds
 					if seconds >= 60{
-						mins = seconds % 60
-						seconds -= (seconds % 60) * 60
+						mins = Int(seconds / 60)
+						seconds -= Int(seconds / 60) * 60
 					}
 					if mins >= 60{
-						hours += mins % 60
-						mins -= (mins % 60) * 60
+						hours += mins / 60
+						mins -= Int(mins / 60) * 60
 					}
 					workout.avgTimeOn = String(hours) + " : "
 					workout.avgTimeOn! += String(mins) + " : " + String(seconds)
@@ -1247,7 +1253,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 						let goalSeconds = goal.seconds
 						let goalSets = goal.sets
 						if childVC.numSets >= goalSets{
-							if childVC.minutesOn*60 + childVC.secondsOn <= goalMinutes*60 + goalSeconds && currentGhosts > goalGhosts{
+							if childVC.minutesOn*60 + childVC.secondsOn <= goalMinutes*60 + goalSeconds && currentGhosts > goalGhosts*goal.sets{
 								goal.isCompleted = true
 							}
 						}

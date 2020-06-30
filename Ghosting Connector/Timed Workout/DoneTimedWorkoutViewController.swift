@@ -18,12 +18,12 @@ class DoneTimedWorkoutViewController: UIViewController {
         super.viewDidLoad()
 		var hours : Int! = 0
 		if secondsOn >= 60{
-			minutesOn += secondsOn % 60
-			secondsOn -= (secondsOn % 60) * 60
+			minutesOn += Int(secondsOn / 60)
+			secondsOn -= Int(secondsOn / 60) * 60
 		}
 		if minutesOn >= 60{
-			hours = minutesOn % 60
-			minutesOn -= (minutesOn % 60) * 60
+			hours = Int(minutesOn / 60)
+			minutesOn -= Int(minutesOn / 60) * 60
 		}
 		totalTimeLabel.text = String(hours) + " : " + String(minutesOn) + " : " + String(secondsOn)
 		if numSets == 0{

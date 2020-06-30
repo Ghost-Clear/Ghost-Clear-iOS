@@ -196,8 +196,8 @@
 		27B0FCCE24A6397100BCAA2E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				27251F782498B29C0043D52C /* SettingsViewController.swift */,
 				27251F802498C7DC0043D52C /* HowToConnectViewController.swift */,
+				27251F782498B29C0043D52C /* SettingsViewController.swift */,
 				27251F7E2498C3740043D52C /* ChangeNameViewController.swift */,
 			);
 			path = Settings;
