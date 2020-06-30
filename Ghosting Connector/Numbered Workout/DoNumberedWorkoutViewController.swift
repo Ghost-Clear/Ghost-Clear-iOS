@@ -294,6 +294,40 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		centralManager = CBCentralManager(delegate: self, queue: nil)
 		peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
 		//updateIncomingData()
+		if allPeripeheralsExist(id: true){
+			isFirstPair = false
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				if let keysFromCore = try? context.fetch(BLEkey.fetchRequest()){
+					let keyfromcore = keysFromCore as! [BLEkey]
+					for key in keyfromcore {
+						if key.name == "FR"{
+							FRname = key.key
+						}
+						if key.name == "FL"{
+							FLname = key.key
+						}
+						if key.name == "CR"{
+							CRname = key.key
+						}
+						if key.name == "CL"{
+							CLname = key.key
+						}
+						if key.name == "LR"{
+							LRname = key.key
+						}
+						if key.name == "LL"{
+							LLname = key.key
+						}
+						
+					}
+				}
+				
+			}
+		}
+		else{
+			isFirstPair = true
+			
+		}
 		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
