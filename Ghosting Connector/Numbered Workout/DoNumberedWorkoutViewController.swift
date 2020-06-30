@@ -11,8 +11,9 @@ import CoreBluetooth
 import Foundation
 import AppusCircleTimer
 import CoreData
+import AVFoundation
 class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
-
+	var player : AVAudioPlayer?
 	var frtxCharacteristic : CBCharacteristic?
 	var frrxCharacteristic : CBCharacteristic?
 	var fltxCharacteristic : CBCharacteristic?
@@ -74,6 +75,27 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
 				return
 			}
+		}
+	}
+	func playSound(sound : String!) {
+		guard let url = Bundle.main.url(forResource: sound, withExtension: "mp3") else { return }
+		
+		do {
+			try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+			try AVAudioSession.sharedInstance().setActive(true)
+			
+			/* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+			player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+			
+			/* iOS 10 and earlier require the following line:
+			player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+			
+			guard let player = player else { return }
+			
+			player.play()
+			
+		} catch let error {
+			print(error.localizedDescription)
 		}
 	}
 	func meet(corner : String){
@@ -142,25 +164,12 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 			circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 			stopWatchLabel.textColor = UIColor(red: 75/256, green: 75/256, blue: 75/256, alpha: 1)
-			if nextGhost == "FR"{
-				writeValueFR(data: "0")
-			}
-			if nextGhost == "FL"{
-				writeValueFL(data: "0")
-			}
-			if nextGhost == "CR"{
-				writeValueCR(data: "0")
-			}
-			if nextGhost == "CL"{
-				writeValueCL(data: "0")
-			}
-			if nextGhost == "LR"{
-				writeValueLR(data: "0")
-			}
-			if nextGhost == "LL"{
-				writeValueLL(data: "0")
-			}
-			isWaitingForGhost = false
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
 			
 		}
 		else{
@@ -174,23 +183,35 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				self.circleTime.resume()
 			}
 			isWaitingForGhost = true
-			if nextGhost == "FR"{
+			if nextGhost == "FR" && !isRest{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
+				playSound(sound: "Front-Right")
 			}
-			if nextGhost == "FL"{
+			else if nextGhost == "FL" && !isRest{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
+				playSound(sound: "Front-Left")
 			}
-			if nextGhost == "CR"{
+			else if nextGhost == "CR" && !isRest{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
+				playSound(sound: "Center-Right")
 			}
-			if nextGhost == "CL"{
+			else if nextGhost == "CL" && !isRest{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
+				playSound(sound: "Center-Left")
 			}
-			if nextGhost == "LR"{
+			else if nextGhost == "LR" && !isRest{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
+				playSound(sound: "Back-Right")
 			}
-			if nextGhost == "LL"{
+			else if nextGhost == "LL" && !isRest{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
+				playSound(sound: "Back-Left")
 			}
 			
 		}
@@ -212,26 +233,32 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		if nextGhost == "FR"{
 			writeValueFR(data: "1")
 			whichGhostLabel.text = "Front Right"
+			playSound(sound: "Front-Right")
 		}
-		if nextGhost == "FL"{
+		else if nextGhost == "FL"{
 			writeValueFL(data: "1")
 			whichGhostLabel.text = "Front Left"
+			playSound(sound: "Front-Left")
 		}
-		if nextGhost == "CR"{
+		else if nextGhost == "CR"{
 			writeValueCR(data: "1")
 			whichGhostLabel.text = "Center Right"
+			playSound(sound: "Center-Right")
 		}
-		if nextGhost == "CL"{
+		else if nextGhost == "CL"{
 			writeValueCL(data: "1")
 			whichGhostLabel.text = "Center Left"
+			playSound(sound: "Center-Left")
 		}
-		if nextGhost == "LR"{
+		else if nextGhost == "LR"{
 			writeValueLR(data: "1")
 			whichGhostLabel.text = "Back Right"
+			playSound(sound: "Back-Right")
 		}
-		if nextGhost == "LL"{
+		else if nextGhost == "LL"{
 			writeValueLL(data: "1")
 			whichGhostLabel.text = "Back Left"
+			playSound(sound: "Back-Left")
 		}
 	}
 	func pauseStopWatch(){
@@ -873,11 +900,12 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		
 		
-		if peripheral == FRPeripheral && nextGhost == "FR" && isWaitingForGhost && !isRest{
+		if peripheral == FRPeripheral && nextGhost == "FR" && isWaitingForGhost && !isRest && !isPaused{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				playSound(sound: "chime")
 				circleTime.isHidden = false
 				resetStopWatch()
 				stopWatchLabel.isHidden = true
@@ -915,36 +943,43 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				if nextGhost == "FR"{
 					writeValueFR(data: "1")
 					whichGhostLabel.text = "Front Right"
+					playSound(sound: "Front-Right")
 				}
-				if nextGhost == "FL"{
+				else if nextGhost == "FL"{
 					writeValueFL(data: "1")
 					whichGhostLabel.text = "Front Left"
+					playSound(sound: "Front-Left")
 				}
-				if nextGhost == "CR"{
+				else if nextGhost == "CR"{
 					writeValueCR(data: "1")
 					whichGhostLabel.text = "Center Right"
+					playSound(sound: "Center-Right")
 				}
-				if nextGhost == "CL"{
+				else if nextGhost == "CL"{
 					writeValueCL(data: "1")
 					whichGhostLabel.text = "Center Left"
+					playSound(sound: "Center-Left")
 				}
-				if nextGhost == "LR"{
+				else if nextGhost == "LR"{
 					writeValueLR(data: "1")
 					whichGhostLabel.text = "Back Right"
+					playSound(sound: "Back-Right")
 				}
-				if nextGhost == "LL"{
+				else if nextGhost == "LL"{
 					writeValueLL(data: "1")
 					whichGhostLabel.text = "Back Left"
+					playSound(sound: "Back-Left")
 				}
 			}
 			meet(corner: "FR")
 			
 		}
-		if peripheral == FLPeripheral && nextGhost == "FL" && isWaitingForGhost && !isRest{
+		if peripheral == FLPeripheral && nextGhost == "FL" && isWaitingForGhost && !isRest && !isPaused{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				playSound(sound: "chime")
 				resetStopWatch()
 				circleTime.isHidden = false
 				stopWatchLabel.isHidden = true
@@ -982,35 +1017,42 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				if nextGhost == "FR"{
 					writeValueFR(data: "1")
 					whichGhostLabel.text = "Front Right"
+					playSound(sound: "Front-Right")
 				}
-				if nextGhost == "FL"{
+				else if nextGhost == "FL"{
 					writeValueFL(data: "1")
 					whichGhostLabel.text = "Front Left"
+					playSound(sound: "Front-Left")
 				}
-				if nextGhost == "CR"{
+				else if nextGhost == "CR"{
 					writeValueCR(data: "1")
 					whichGhostLabel.text = "Center Right"
+					playSound(sound: "Center-Right")
 				}
-				if nextGhost == "CL"{
+				else if nextGhost == "CL"{
 					writeValueCL(data: "1")
 					whichGhostLabel.text = "Center Left"
+					playSound(sound: "Center-Left")
 				}
-				if nextGhost == "LR"{
+				else if nextGhost == "LR"{
 					writeValueLR(data: "1")
 					whichGhostLabel.text = "Back Right"
+					playSound(sound: "Back-Right")
 				}
-				if nextGhost == "LL"{
+				else if nextGhost == "LL"{
 					writeValueLL(data: "1")
 					whichGhostLabel.text = "Back Left"
+					playSound(sound: "Back-Left")
 				}
 			}
 			meet(corner: "FL")
 		}
-		if peripheral == CRPeripheral && nextGhost == "CR" && isWaitingForGhost && !isRest{
+		if peripheral == CRPeripheral && nextGhost == "CR" && isWaitingForGhost && !isRest && !isPaused{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				playSound(sound: "chime")
 				resetStopWatch()
 				circleTime.isHidden = false
 				stopWatchLabel.isHidden = true
@@ -1048,35 +1090,42 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				if nextGhost == "FR"{
 					writeValueFR(data: "1")
 					whichGhostLabel.text = "Front Right"
+					playSound(sound: "Front-Right")
 				}
-				if nextGhost == "FL"{
+				else if nextGhost == "FL"{
 					writeValueFL(data: "1")
 					whichGhostLabel.text = "Front Left"
+					playSound(sound: "Front-Left")
 				}
-				if nextGhost == "CR"{
+				else if nextGhost == "CR"{
 					writeValueCR(data: "1")
 					whichGhostLabel.text = "Center Right"
+					playSound(sound: "Center-Right")
 				}
-				if nextGhost == "CL"{
+				else if nextGhost == "CL"{
 					writeValueCL(data: "1")
 					whichGhostLabel.text = "Center Left"
+					playSound(sound: "Center-Left")
 				}
-				if nextGhost == "LR"{
+				else if nextGhost == "LR"{
 					writeValueLR(data: "1")
 					whichGhostLabel.text = "Back Right"
+					playSound(sound: "Back-Right")
 				}
-				if nextGhost == "LL"{
+				else if nextGhost == "LL"{
 					writeValueLL(data: "1")
 					whichGhostLabel.text = "Back Left"
+					playSound(sound: "Back-Left")
 				}
 			}
 			meet(corner: "CR")
 		}
-		if peripheral == CLPeripheral && nextGhost == "CL" && isWaitingForGhost && !isRest{
+		if peripheral == CLPeripheral && nextGhost == "CL" && isWaitingForGhost && !isRest && !isPaused{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				playSound(sound: "chime")
 				circleTime.isHidden = false
 				resetStopWatch()
 				stopWatchLabel.isHidden = true
@@ -1114,35 +1163,42 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				if nextGhost == "FR"{
 					writeValueFR(data: "1")
 					whichGhostLabel.text = "Front Right"
+					playSound(sound: "Front-Right")
 				}
-				if nextGhost == "FL"{
+				else if nextGhost == "FL"{
 					writeValueFL(data: "1")
 					whichGhostLabel.text = "Front Left"
+					playSound(sound: "Front-Left")
 				}
-				if nextGhost == "CR"{
+				else if nextGhost == "CR"{
 					writeValueCR(data: "1")
 					whichGhostLabel.text = "Center Right"
+					playSound(sound: "Center-Right")
 				}
-				if nextGhost == "CL"{
+				else if nextGhost == "CL"{
 					writeValueCL(data: "1")
 					whichGhostLabel.text = "Center Left"
+					playSound(sound: "Center-Left")
 				}
-				if nextGhost == "LR"{
+				else if nextGhost == "LR"{
 					writeValueLR(data: "1")
 					whichGhostLabel.text = "Back Right"
+					playSound(sound: "Back-Right")
 				}
-				if nextGhost == "LL"{
+				else if nextGhost == "LL"{
 					writeValueLL(data: "1")
 					whichGhostLabel.text = "Back Left"
+					playSound(sound: "Back-Left")
 				}
 			}
 			meet(corner: "CL")
 		}
-		if peripheral == LRPeripheral && nextGhost == "LR" && isWaitingForGhost && !isRest{
+		if peripheral == LRPeripheral && nextGhost == "LR" && isWaitingForGhost && !isRest && !isPaused{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				playSound(sound: "chime")
 				circleTime.isHidden = false
 				resetStopWatch()
 				stopWatchLabel.isHidden = true
@@ -1180,35 +1236,42 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				if nextGhost == "FR"{
 					writeValueFR(data: "1")
 					whichGhostLabel.text = "Front Right"
+					playSound(sound: "Front-Right")
 				}
-				if nextGhost == "FL"{
+				else if nextGhost == "FL"{
 					writeValueFL(data: "1")
 					whichGhostLabel.text = "Front Left"
+					playSound(sound: "Front-Left")
 				}
-				if nextGhost == "CR"{
+				else if nextGhost == "CR"{
 					writeValueCR(data: "1")
 					whichGhostLabel.text = "Center Right"
+					playSound(sound: "Center-Right")
 				}
-				if nextGhost == "CL"{
+				else if nextGhost == "CL"{
 					writeValueCL(data: "1")
 					whichGhostLabel.text = "Center Left"
+					playSound(sound: "Center-Left")
 				}
-				if nextGhost == "LR"{
+				else if nextGhost == "LR"{
 					writeValueLR(data: "1")
 					whichGhostLabel.text = "Back Right"
+					playSound(sound: "Back-Right")
 				}
-				if nextGhost == "LL"{
+				else if nextGhost == "LL"{
 					writeValueLL(data: "1")
 					whichGhostLabel.text = "Back Left"
+					playSound(sound: "Back-Left")
 				}
 			}
 			meet(corner: "LR")
 		}
-		if peripheral == LLPeripheral && nextGhost == "LL" && isWaitingForGhost && !isRest{
+		if peripheral == LLPeripheral && nextGhost == "LL" && isWaitingForGhost && !isRest && !isPaused{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				playSound(sound: "chime")
 				circleTime.isHidden = false
 				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
@@ -1246,26 +1309,32 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				if nextGhost == "FR"{
 					writeValueFR(data: "1")
 					whichGhostLabel.text = "Front Right"
+					playSound(sound: "Front-Right")
 				}
-				if nextGhost == "FL"{
+				else if nextGhost == "FL"{
 					writeValueFL(data: "1")
 					whichGhostLabel.text = "Front Left"
+					playSound(sound: "Front-Left")
 				}
-				if nextGhost == "CR"{
+				else if nextGhost == "CR"{
 					writeValueCR(data: "1")
 					whichGhostLabel.text = "Center Right"
+					playSound(sound: "Center-Right")
 				}
-				if nextGhost == "CL"{
+				else if nextGhost == "CL"{
 					writeValueCL(data: "1")
 					whichGhostLabel.text = "Center Left"
+					playSound(sound: "Center-Left")
 				}
-				if nextGhost == "LR"{
+				else if nextGhost == "LR"{
 					writeValueLR(data: "1")
 					whichGhostLabel.text = "Back Right"
+					playSound(sound: "Back-Right")
 				}
-				if nextGhost == "LL"{
+				else if nextGhost == "LL"{
 					writeValueLL(data: "1")
 					whichGhostLabel.text = "Back Left"
+					playSound(sound: "Back-Left")
 				}
 			}
 			meet(corner: "LL")

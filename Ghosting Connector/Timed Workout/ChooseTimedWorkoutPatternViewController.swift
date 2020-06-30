@@ -283,7 +283,7 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 						which += 1
 					}
 					if isCL{
-						order[which] = "Cl"
+						order[which] = "CL"
 						which += 1
 					}
 					if isLR{

@@ -13,6 +13,7 @@ import AppusCircleTimer
 import CoreData
 import AVFoundation
 class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
+	var player : AVAudioPlayer?
 	var frtxCharacteristic : CBCharacteristic?
 	var frrxCharacteristic : CBCharacteristic?
 	var fltxCharacteristic : CBCharacteristic?
@@ -60,7 +61,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var order : [String]!
 	var orderCount = 0
 	var nextGhost : String!
-	var isWaitingForGhost : Bool! = false
 	var currentGhosts : Int! = 0
 	var cornersMet : [String]! = []
     @IBOutlet var circleTime: AppusCircleTimer!
@@ -89,6 +89,25 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			}
 		}
 	}
+	func playSound(sound : String!) {
+		guard let url = Bundle.main.url(forResource: sound, withExtension: "mp3") else { return }
+		
+		do {
+			try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+			try AVAudioSession.sharedInstance().setActive(true)
+			
+			
+			player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+			
+					
+			guard let player = player else { return }
+			
+			player.play()
+			
+		} catch let error {
+			print(error.localizedDescription)
+		}
+	}
 	@IBAction func stopWorkout(_ sender: Any) {
         circleTime.isActive = false
         circleTime.isHidden = true
@@ -105,49 +124,46 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		if isPaused{
 			pauseButton.setImage( UIImage(named: "play"), for: .normal)
 			self.circleTime.stop()
-			if nextGhost == "FR"{
-				writeValueFR(data: "0")
-			}
-			if nextGhost == "FL"{
-				writeValueFL(data: "0")
-			}
-			if nextGhost == "CR"{
-				writeValueCR(data: "0")
-			}
-			if nextGhost == "CL"{
-				writeValueCL(data: "0")
-			}
-			if nextGhost == "LR"{
-				writeValueLR(data: "0")
-			}
-			if nextGhost == "LL"{
-				writeValueLL(data: "0")
-			}
-			isWaitingForGhost = false
-			
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+
 		}
 		else{
 			pauseButton.setImage( UIImage(named: "pause"), for: .normal)
-			self.circleTime.stop()
 			self.circleTime.resume()
-			isWaitingForGhost = true
-			if nextGhost == "FR"{
+			if nextGhost == "FR" && !isRest{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
+				whichGhostLabel.text = "Front Right"
 			}
-			if nextGhost == "FL"{
+			if nextGhost == "FL" && !isRest{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
+				whichGhostLabel.text = "Front Left"
 			}
-			if nextGhost == "CR"{
+			if nextGhost == "CR" && !isRest{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
+				whichGhostLabel.text = "Center Right"
 			}
-			if nextGhost == "CL"{
+			if nextGhost == "CL" && !isRest{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
+				whichGhostLabel.text = "Center Left"
 			}
-			if nextGhost == "LR"{
+			if nextGhost == "LR" && !isRest{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
+				whichGhostLabel.text = "Back Right"
 			}
-			if nextGhost == "LL"{
+			if nextGhost == "LL" && !isRest{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
+				whichGhostLabel.text = "Back Left"
 			}
 			
 		}
@@ -199,40 +215,45 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			circleTime.elapsedTime = 0
 			circleTime.activeColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
 			circleTime.pauseColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
+			
 			circleTime.start()
 			isRest = false
 			ghostsDone = 0
 			ghostsLabel.text = String(ghostsDone)
 			nextGhost = getNextGhost()
-			isWaitingForGhost = true
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
 				whichGhostLabel.text = "Front Right"
 			}
-			if nextGhost == "FL"{
+			else if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
 				whichGhostLabel.text = "Front Left"
 			}
-			if nextGhost == "CR"{
+			else if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
 				whichGhostLabel.text = "Center Right"
 			}
-			if nextGhost == "CL"{
+			else if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
 				whichGhostLabel.text = "Center Left"
 			}
-			if nextGhost == "LR"{
+			else if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
 				whichGhostLabel.text = "Back Right"
 			}
-			if nextGhost == "LL"{
+			else  if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
 				whichGhostLabel.text = "Back Left"
 			}
-			
 		}
-		else if setsToGo != 0{
-			isWaitingForGhost = false
+		else if setsToGo != 0 && !isRest{
+			playSound(sound: "chime")
 			circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 			circleTime.elapsedTime = 0
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
@@ -354,7 +375,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				self.circleTime.stop()
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
-				self.circleTime.stop()
 				self.centralManager.stopScan()
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
@@ -894,203 +914,246 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         
         
         print("Value Recieved: \((characteristicASCIIValue as String))")
-		if peripheral == FRPeripheral && isWaitingForGhost && nextGhost == "FR"{
-			isWaitingForGhost = true
+		if peripheral == FRPeripheral && nextGhost == "FR" && !isRest && !isPaused{
 			nextGhost = getNextGhost()
-			if nextGhost == "FR"{
-				writeValueFR(data: "1")
-				whichGhostLabel.text = "Front Right"
-			}
-			if nextGhost == "FL"{
-				writeValueFL(data: "1")
-				whichGhostLabel.text = "Front Left"
-			}
-			if nextGhost == "CR"{
-				writeValueCR(data: "1")
-				whichGhostLabel.text = "Center Right"
-			}
-			if nextGhost == "CL"{
-				writeValueCL(data: "1")
-				whichGhostLabel.text = "Center Left"
-			}
-			if nextGhost == "LR"{
-				writeValueLR(data: "1")
-				whichGhostLabel.text = "Back Right"
-			}
-			if nextGhost == "LL"{
-				writeValueLL(data: "1")
-				whichGhostLabel.text = "Back Left"
-			}
-			
+			isRest = false
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "FR")
 			currentGhosts += 1
-		}
-		if peripheral == FLPeripheral && isWaitingForGhost && nextGhost == "FL"{
-			isWaitingForGhost = true
-			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
 				whichGhostLabel.text = "Front Right"
 			}
-			if nextGhost == "FL"{
+			else if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
 				whichGhostLabel.text = "Front Left"
 			}
-			if nextGhost == "CR"{
+			else if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
 				whichGhostLabel.text = "Center Right"
 			}
-			if nextGhost == "CL"{
+			else if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
 				whichGhostLabel.text = "Center Left"
 			}
-			if nextGhost == "LR"{
+			else if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
 				whichGhostLabel.text = "Back Right"
 			}
-			if nextGhost == "LL"{
+			else if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
 				whichGhostLabel.text = "Back Left"
 			}
 			
+		}
+		else if peripheral == FLPeripheral && nextGhost == "FL" && !isRest && !isPaused{
+			isRest = false
+			nextGhost = getNextGhost()
+			isRest = false
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "FL")
 			currentGhosts += 1
-		}
-		if peripheral == CRPeripheral && isWaitingForGhost && nextGhost == "CR"{
-			isWaitingForGhost = true
-			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
 				whichGhostLabel.text = "Front Right"
 			}
-			if nextGhost == "FL"{
+			else if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
 				whichGhostLabel.text = "Front Left"
 			}
-			if nextGhost == "CR"{
+			else if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
 				whichGhostLabel.text = "Center Right"
 			}
-			if nextGhost == "CL"{
+			else if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
 				whichGhostLabel.text = "Center Left"
 			}
-			if nextGhost == "LR"{
+			else if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
 				whichGhostLabel.text = "Back Right"
 			}
-			if nextGhost == "LL"{
+			else if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
 				whichGhostLabel.text = "Back Left"
 			}
 			
+		}
+		else if peripheral == CRPeripheral && nextGhost == "CR" && !isRest && !isPaused{
+			
+			isRest = false
+			nextGhost = getNextGhost()
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "CR")
 			currentGhosts += 1
-		}
-		if peripheral == CLPeripheral && isWaitingForGhost && nextGhost == "CL"{
-			isWaitingForGhost = true
-			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
 				whichGhostLabel.text = "Front Right"
 			}
-			if nextGhost == "FL"{
+			else if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
 				whichGhostLabel.text = "Front Left"
 			}
-			if nextGhost == "CR"{
+			else if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
 				whichGhostLabel.text = "Center Right"
 			}
-			if nextGhost == "CL"{
+			else if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
 				whichGhostLabel.text = "Center Left"
 			}
-			if nextGhost == "LR"{
+			else if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
 				whichGhostLabel.text = "Back Right"
 			}
-			if nextGhost == "LL"{
+			else if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
 				whichGhostLabel.text = "Back Left"
 			}
+			
+		}
+		else if peripheral == CLPeripheral && nextGhost == "CL" && !isRest && !isPaused{
+			
+			nextGhost = getNextGhost()
 			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "CL")
 			currentGhosts += 1
-		}
-		if peripheral == LRPeripheral && isWaitingForGhost && nextGhost == "LR"{
-			isWaitingForGhost = true
-			nextGhost = getNextGhost()
+			isRest = false
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
 				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
 				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
 				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
 				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
 				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
 				whichGhostLabel.text = "Back Left"
 			}
+			
+		}
+		else if peripheral == LRPeripheral && nextGhost == "LR" && !isRest && !isPaused{
+			
+			isRest = false
+			nextGhost = getNextGhost()
 			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "LR")
 			currentGhosts += 1
-		}
-		if peripheral == LLPeripheral && isWaitingForGhost && nextGhost == "LL"{
-			isWaitingForGhost = true
-			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
 				whichGhostLabel.text = "Front Right"
 			}
-			if nextGhost == "FL"{
+			else if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
 				whichGhostLabel.text = "Front Left"
 			}
-			if nextGhost == "CR"{
+			else if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
 				whichGhostLabel.text = "Center Right"
 			}
-			if nextGhost == "CL"{
+			else if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
 				whichGhostLabel.text = "Center Left"
 			}
-			if nextGhost == "LR"{
+			else if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
 				whichGhostLabel.text = "Back Right"
 			}
-			if nextGhost == "LL"{
+			else if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
 				whichGhostLabel.text = "Back Left"
 			}
 			
+		}
+		else if peripheral == LLPeripheral && nextGhost == "LL" && !isRest && !isPaused{
+			isRest = false
+			nextGhost = getNextGhost()
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "LL")
 			currentGhosts += 1
+			if nextGhost == "FR"{
+				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
+				whichGhostLabel.text = "Front Right"
+			}
+			else if nextGhost == "FL"{
+				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
+				whichGhostLabel.text = "Front Left"
+			}
+			else if nextGhost == "CR"{
+				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
+				whichGhostLabel.text = "Center Right"
+			}
+			else if nextGhost == "CL"{
+				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
+				whichGhostLabel.text = "Center Left"
+			}
+			else if nextGhost == "LR"{
+				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
+				whichGhostLabel.text = "Back Right"
+			}
+			else if nextGhost == "LL"{
+				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
+				whichGhostLabel.text = "Back Left"
+			}
+			
+			
 		}
 		
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)

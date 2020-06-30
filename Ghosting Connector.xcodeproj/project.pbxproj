@@ -35,6 +35,13 @@
 		27D097D624909CDF0073C797 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D524909CDF0073C797 /* AddGoalViewController.swift */; };
 		27D097DA2490E57A0073C797 /* NumberedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D92490E57A0073C797 /* NumberedWorkoutViewController.swift */; };
 		27D097DC249181330073C797 /* TimedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097DB249181330073C797 /* TimedWorkoutViewController.swift */; };
+		27D8E50824AB3125004F99A0 /* Front-Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E50224AB3123004F99A0 /* Front-Right.mp3 */; };
+		27D8E50924AB3125004F99A0 /* Back-Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E50324AB3123004F99A0 /* Back-Right.mp3 */; };
+		27D8E50A24AB3125004F99A0 /* Front-Left.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E50424AB3124004F99A0 /* Front-Left.mp3 */; };
+		27D8E50B24AB3125004F99A0 /* Back-Left.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E50524AB3124004F99A0 /* Back-Left.mp3 */; };
+		27D8E50C24AB3125004F99A0 /* Center-Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E50624AB3124004F99A0 /* Center-Right.mp3 */; };
+		27D8E50D24AB3125004F99A0 /* Center-Left.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E50724AB3125004F99A0 /* Center-Left.mp3 */; };
+		27D8E51724AB3144004F99A0 /* chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27D8E51124AB3144004F99A0 /* chime.mp3 */; };
 		27DCEFF3248EBD1300309DD4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCEFF2248EBD1300309DD4 /* StartViewController.swift */; };
 		27DCEFF5248EC2F300309DD4 /* InitialLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCEFF4248EC2F300309DD4 /* InitialLoginViewController.swift */; };
 		27DCEFF7248ED44200309DD4 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */; };
@@ -73,6 +80,13 @@
 		27D097D524909CDF0073C797 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		27D097D92490E57A0073C797 /* NumberedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberedWorkoutViewController.swift; sourceTree = "<group>"; };
 		27D097DB249181330073C797 /* TimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutViewController.swift; sourceTree = "<group>"; };
+		27D8E50224AB3123004F99A0 /* Front-Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Front-Right.mp3"; sourceTree = "<group>"; };
+		27D8E50324AB3123004F99A0 /* Back-Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Back-Right.mp3"; sourceTree = "<group>"; };
+		27D8E50424AB3124004F99A0 /* Front-Left.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Front-Left.mp3"; sourceTree = "<group>"; };
+		27D8E50524AB3124004F99A0 /* Back-Left.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Back-Left.mp3"; sourceTree = "<group>"; };
+		27D8E50624AB3124004F99A0 /* Center-Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Center-Right.mp3"; sourceTree = "<group>"; };
+		27D8E50724AB3125004F99A0 /* Center-Left.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Center-Left.mp3"; sourceTree = "<group>"; };
+		27D8E51124AB3144004F99A0 /* chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chime.mp3; sourceTree = "<group>"; };
 		27DCEFF2248EBD1300309DD4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		27DCEFF4248EC2F300309DD4 /* InitialLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoginViewController.swift; sourceTree = "<group>"; };
 		27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +113,13 @@
 		272300DA24A844A000DA0D49 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				27D8E51124AB3144004F99A0 /* chime.mp3 */,
+				27D8E50524AB3124004F99A0 /* Back-Left.mp3 */,
+				27D8E50324AB3123004F99A0 /* Back-Right.mp3 */,
+				27D8E50724AB3125004F99A0 /* Center-Left.mp3 */,
+				27D8E50624AB3124004F99A0 /* Center-Right.mp3 */,
+				27D8E50424AB3124004F99A0 /* Front-Left.mp3 */,
+				27D8E50224AB3123004F99A0 /* Front-Right.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -314,8 +335,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2741C6BE2454BDC500EB4944 /* LaunchScreen.storyboard in Resources */,
+				27D8E50924AB3125004F99A0 /* Back-Right.mp3 in Resources */,
+				27D8E50C24AB3125004F99A0 /* Center-Right.mp3 in Resources */,
+				27D8E50824AB3125004F99A0 /* Front-Right.mp3 in Resources */,
+				27D8E50B24AB3125004F99A0 /* Back-Left.mp3 in Resources */,
 				2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */,
 				2741C6B62454BDC400EB4944 /* Main.storyboard in Resources */,
+				27D8E50A24AB3125004F99A0 /* Front-Left.mp3 in Resources */,
+				27D8E50D24AB3125004F99A0 /* Center-Left.mp3 in Resources */,
+				27D8E51724AB3144004F99A0 /* chime.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
