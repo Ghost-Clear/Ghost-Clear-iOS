@@ -21,6 +21,7 @@
 		2726029424A9EE150071B03F /* MainViewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029324A9EE150071B03F /* MainViewWorkoutViewController.swift */; };
 		2726029624A9FF4A0071B03F /* ViewWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029524A9FF4A0071B03F /* ViewWorkoutTableViewController.swift */; };
 		2726029824AA0A750071B03F /* ViewWorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029724AA0A750071B03F /* ViewWorkoutDetailViewController.swift */; };
+		2726029A24AB0F710071B03F /* ChangePreperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029924AB0F710071B03F /* ChangePreperationViewController.swift */; };
 		272BBF8824937C3400529213 /* DoTimedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */; };
 		272BBF8A2495679200529213 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF892495679100529213 /* UUIDKey.swift */; };
 		2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6AE2454BDC400EB4944 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		2726029324A9EE150071B03F /* MainViewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWorkoutViewController.swift; sourceTree = "<group>"; };
 		2726029524A9FF4A0071B03F /* ViewWorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWorkoutTableViewController.swift; sourceTree = "<group>"; };
 		2726029724AA0A750071B03F /* ViewWorkoutDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWorkoutDetailViewController.swift; sourceTree = "<group>"; };
+		2726029924AB0F710071B03F /* ChangePreperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePreperationViewController.swift; sourceTree = "<group>"; };
 		272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTimedWorkoutViewController.swift; sourceTree = "<group>"; };
 		272BBF892495679100529213 /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		2741C6AB2454BDC400EB4944 /* Ghost Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghost Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +201,7 @@
 				27251F802498C7DC0043D52C /* HowToConnectViewController.swift */,
 				27251F782498B29C0043D52C /* SettingsViewController.swift */,
 				27251F7E2498C3740043D52C /* ChangeNameViewController.swift */,
+				2726029924AB0F710071B03F /* ChangePreperationViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				27D097D4249043290073C797 /* MainViewGoalsViewController.swift in Sources */,
 				272300D924A8329700DA0D49 /* DoneNumberedWorkoutViewController.swift in Sources */,
 				27196FE724A463EF00B9A8DC /* EditGoalViewController.swift in Sources */,
+				2726029A24AB0F710071B03F /* ChangePreperationViewController.swift in Sources */,
 				2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */,
 				27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */,
 				27DCEFFD248F57C300309DD4 /* CreateSingularGoalViewController.swift in Sources */,

@@ -352,6 +352,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		}
 		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
+				self.circleTime.stop()
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				self.circleTime.stop()
 				self.centralManager.stopScan()
@@ -1166,7 +1167,18 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
             circleTime.font = UIFont(name: "System", size: 50 )
             circleTime.isHidden = false
             circleTime.isActive = true
-            circleTime.totalTime = 10
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				if let prepTime = try? context.fetch(PrepTime.fetchRequest()){
+					let pTime = prepTime as! [PrepTime]
+					if pTime.count != 0{
+						circleTime.totalTime = Double(pTime[0].minutes * 60 + pTime[0].seconds)
+					}
+					else{
+						circleTime.totalTime = 10
+					}
+				}
+				
+			}
             circleTime.elapsedTime = 0
             circleTime.start()
             return
@@ -1181,7 +1193,18 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
                 circleTime.font = UIFont(name: "System", size: 50 )
                 circleTime.isHidden = false
                 circleTime.isActive = true
-                circleTime.totalTime = 10
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					if let prepTime = try? context.fetch(PrepTime.fetchRequest()){
+						let pTime = prepTime as! [PrepTime]
+						if pTime.count != 0{
+							circleTime.totalTime = Double(pTime[0].minutes * 60 + pTime[0].seconds)
+						}
+						else{
+							circleTime.totalTime = 10
+						}
+					}
+					
+				}
                 circleTime.elapsedTime = 0
                 circleTime.start()
                 startScan()

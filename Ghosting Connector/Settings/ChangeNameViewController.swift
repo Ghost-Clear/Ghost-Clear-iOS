@@ -25,9 +25,7 @@ class ChangeNameViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    @IBAction func goBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+   
     @IBAction func applyChange(_ sender: Any) {
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Name")
 

@@ -18,6 +18,10 @@
     <entity name="Name" representedClassName="Name" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="PrepTime" representedClassName="PrepTime" syncable="YES" codeGenerationType="class">
+        <attribute name="minutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="seconds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="class">
         <attribute name="avgGhosts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="avgTimeOn" optional="YES" attributeType="String"/>
@@ -35,5 +39,6 @@
         <element name="IsFirstLaunch" positionX="236.46484375" positionY="24.43359375" width="128" height="58"/>
         <element name="Name" positionX="-29.1796875" positionY="32.9453125" width="128" height="58"/>
         <element name="Workout" positionX="256.3046875" positionY="120.7421875" width="128" height="178"/>
+        <element name="PrepTime" positionX="108" positionY="144" width="128" height="73"/>
     </elements>
 </model>
