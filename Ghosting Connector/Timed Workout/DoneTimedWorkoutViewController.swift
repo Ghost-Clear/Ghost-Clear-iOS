@@ -35,9 +35,30 @@ class DoneTimedWorkoutViewController: UIViewController {
 		
 		totalGhostsLabel.text = String(totalghosts)
 		ghostedCornersLabel.text = ""
+		var allCorners = ""
 		for i in ghostedCorners{
-			ghostedCornersLabel.text! += i + " "
+			if i == "FR"{
+				allCorners += "Front Right. "
+			}
+			if i == "FL"{
+				allCorners += "Front Left. "
+			}
+			if i == "CR"{
+				allCorners += "Center Right. "
+			}
+			if i == "CL"{
+				allCorners += "Center Left. "
+			}
+			if i == "LR"{
+				allCorners += "Back Right. "
+			}
+			if i == "LL"{
+				allCorners += "Back Left. "
+			}
 		}
+		
+		ghostedCornersLabel.text = allCorners
+		
         // Do any additional setup after loading the view.
     }
     

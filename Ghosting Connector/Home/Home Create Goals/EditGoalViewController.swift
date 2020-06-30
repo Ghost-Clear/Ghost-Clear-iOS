@@ -114,7 +114,7 @@ class EditGoalViewController: UIViewController, UITextFieldDelegate {
 		if (((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numGhostsField.text! != "" && numGhostsField.text! != "0" && numSetsField.text != "0" && numSetsField.text != ""){
 				editingGoal.sets = Int64((numSetsField.text! as NSString).integerValue)
 				editingGoal.seconds = Int64((numSecondsField.text! as NSString).integerValue)
-				editingGoal.minutes = Int64((numSecondsField.text! as NSString).integerValue)
+				editingGoal.minutes = Int64((numMinutesField.text! as NSString).integerValue)
 				editingGoal.ghosts = Int64((numGhostsField.text! as NSString).integerValue)
 				self.dismiss(animated: true, completion: nil)
 				parentView.childView.tableView.reloadData()

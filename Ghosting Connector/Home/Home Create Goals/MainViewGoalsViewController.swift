@@ -18,8 +18,13 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
 	var toEdit : Goal!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "viewGoal", for: indexPath) as!  GoalView
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-                if let goalsFromCore = try? context.fetch(Goal.fetchRequest()){
+        var allWorkoutsFromCore : [Workout] = []
+		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+			if let wFromCore = try? context.fetch(Workout.fetchRequest()){
+				allWorkoutsFromCore = wFromCore as! [Workout]
+			}
+			
+			if let goalsFromCore = try? context.fetch(Goal.fetchRequest()){
                     let goalFromCore = goalsFromCore as! [Goal]
                     print ()
                     count = goalFromCore.count
@@ -31,7 +36,17 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
             goalsFromCoreData.sort{
                 return $0.order < $1.order
             }
-        let currentGoal = goalsFromCoreData[indexPath.row]
+		goalsFromCoreData[indexPath.row].isCompleted = false
+		for workout in allWorkoutsFromCore{
+			if goalsFromCoreData[indexPath.row].sets <= workout.sets && workout.totalGhosts >= goalsFromCoreData[indexPath.row].ghosts * goalsFromCoreData[indexPath.row].sets && (goalsFromCoreData[indexPath.row].minutes*60 + goalsFromCoreData[indexPath.row].seconds) * goalsFromCoreData[indexPath.row].sets >= workout.totalTimeOnInSeconds{
+				goalsFromCoreData[indexPath.row].isCompleted = true
+				break;
+			}
+			else{
+				goalsFromCoreData[indexPath.row].isCompleted = false
+			}
+		}
+		let currentGoal = goalsFromCoreData[indexPath.row]
         if(currentGoal.isCompleted){
             cell.back.image =  UIImage(named: "greenRectangle")
         }

@@ -39,6 +39,9 @@ class MainViewWorkoutViewController: UIViewController,UITableViewDelegate, UITab
 		if currentWorkout.type == "Timed"{
 			cell.icon.image = UIImage(named: "mdi_av_timer")
 		}
+		else if currentWorkout.type == "Number"{
+			cell.icon.image = UIImage(named: "mdi_format_list_numbered")
+		}
 		cell.cellText.text = String(currentWorkout.totalTimeOn!) + "  on per set for "
 		cell.cellText.text! += String(currentWorkout.sets)
 		if currentWorkout.sets == 1{

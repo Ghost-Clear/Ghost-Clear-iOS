@@ -56,7 +56,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var order : [String]!
 	var setsToGo : Int!
 	var ghostsToDo : Int!
-	var counter = 0
+	var counter = 1
 	var stopWatch = Timer()
 	var stopWatchIsPlaying = false
 	var orderCount = 0
@@ -137,6 +137,10 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		if isPaused{
 			pauseButton.setImage( UIImage(named: "play"), for: .normal)
 			pauseStopWatch()
+			if circleTime.isHidden == false{
+				circleTime.stop()
+			}
+			circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 			stopWatchLabel.textColor = UIColor(red: 75/256, green: 75/256, blue: 75/256, alpha: 1)
 			if nextGhost == "FR"{
 				writeValueFR(data: "0")
@@ -160,12 +164,15 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			
 		}
 		else{
+			circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
+			stopWatch = Timer()
 			stopWatch = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
 			stopWatchIsPlaying = true
 			stopWatchLabel.textColor = UIColor(red: 63/256, green: 219/256, blue: 156/256, alpha: 1)
 			pauseButton.setImage( UIImage(named: "pause"), for: .normal)
-			self.circleTime.stop()
-			self.circleTime.resume()
+			if circleTime.isHidden == false{
+				self.circleTime.resume()
+			}
 			isWaitingForGhost = true
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
@@ -196,7 +203,8 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		workoutStartsIn.isHidden = true
 		circleTimer.isHidden = true
 		stopWatchLabel.isHidden = false
-		//stopWatch.
+		resetStopWatch()
+		stopWatch = Timer()
 		stopWatch = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
 			stopWatchIsPlaying = true
 		isWaitingForGhost = true
@@ -233,8 +241,8 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	func resetStopWatch(){
 		stopWatch.invalidate()
 		stopWatchIsPlaying = false
-		counter = 0
-		stopWatchLabel.text = "0 : 0 : 0"
+		counter = 1
+		stopWatchLabel.text = "0 : 0 : 1"
 	}
 	@objc func UpdateTimer(){
 		counter += 1
@@ -249,9 +257,9 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		if minutes >= 60{
 			hours += Int(minutes / 60)
 			minutes -= (Int(seconds / 60) * 60)
-			stopWatchIsPlaying = true
+			
 		}
-		
+		stopWatchIsPlaying = true
 		stopWatchLabel.text = String(hours)
 		stopWatchLabel.text! += " : " + String(minutes) + " : " + String(seconds)
 	}
@@ -281,9 +289,10 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		super.viewDidLoad()
 		whichGhostLabel.text = "Get Ready"
 		setsToGo = numSets
-		stopWatchLabel.text = "0 : 0 : 0"
+		stopWatchLabel.text = "0 : 0 : 1"
 		workoutStartsIn.isHidden = false
 		circleTime.delegate = self
+		circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 		circleTime.font = UIFont(name: "System", size: 50 )
 		circleTime.isBackwards = true
 		circleTime.isActive = false
@@ -333,8 +342,8 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
-					//self.popBack(3)
-					//circleTime.stop()
+					self.popBack(3)
+					self.circleTime.stop()
 					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
@@ -863,18 +872,21 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		
 		
-		if peripheral == FRPeripheral && nextGhost == "FR" && isWaitingForGhost{
+		if peripheral == FRPeripheral && nextGhost == "FR" && isWaitingForGhost && !isRest{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
 				circleTime.isHidden = false
+				resetStopWatch()
+				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
 				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 				circleTime.elapsedTime = 0
 				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.start()
+				circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 				whichGhostLabel.text = "Rest"
 				isRest = true
 				setsToGo -= 1
@@ -927,18 +939,21 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			meet(corner: "FR")
 			
 		}
-		if peripheral == FLPeripheral && nextGhost == "FL" && isWaitingForGhost{
+		if peripheral == FLPeripheral && nextGhost == "FL" && isWaitingForGhost && !isRest{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				resetStopWatch()
 				circleTime.isHidden = false
+				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
 				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 				circleTime.elapsedTime = 0
 				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.start()
+				circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 				whichGhostLabel.text = "Rest"
 				isRest = true
 				setsToGo -= 1
@@ -990,18 +1005,21 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 			meet(corner: "FL")
 		}
-		if peripheral == CRPeripheral && nextGhost == "CR" && isWaitingForGhost{
+		if peripheral == CRPeripheral && nextGhost == "CR" && isWaitingForGhost && !isRest{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
+				resetStopWatch()
 				circleTime.isHidden = false
+				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
 				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 				circleTime.elapsedTime = 0
 				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.start()
+				circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 				whichGhostLabel.text = "Rest"
 				isRest = true
 				setsToGo -= 1
@@ -1053,18 +1071,21 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 			meet(corner: "CR")
 		}
-		if peripheral == CLPeripheral && nextGhost == "CL" && isWaitingForGhost{
+		if peripheral == CLPeripheral && nextGhost == "CL" && isWaitingForGhost && !isRest{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
 				circleTime.isHidden = false
+				resetStopWatch()
+				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
 				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 				circleTime.elapsedTime = 0
 				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.start()
+				circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 				whichGhostLabel.text = "Rest"
 				isRest = true
 				setsToGo -= 1
@@ -1116,18 +1137,21 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 			meet(corner: "CL")
 		}
-		if peripheral == LRPeripheral && nextGhost == "LR" && isWaitingForGhost{
+		if peripheral == LRPeripheral && nextGhost == "LR" && isWaitingForGhost && !isRest{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
 				circleTime.isHidden = false
+				resetStopWatch()
+				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
 				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 				circleTime.elapsedTime = 0
 				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.start()
+				circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 				whichGhostLabel.text = "Rest"
 				isRest = true
 				setsToGo -= 1
@@ -1179,18 +1203,21 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 			meet(corner: "LR")
 		}
-		if peripheral == LLPeripheral && nextGhost == "LL" && isWaitingForGhost{
+		if peripheral == LLPeripheral && nextGhost == "LL" && isWaitingForGhost && !isRest{
 			totalGhosts += 1
 			ghostsLabel.text = String((ghostsLabel.text! as NSString).integerValue - 1)
 			nextGhost = getNextGhost()
 			if ghostsLabel.text == "0"{
 				circleTime.isHidden = false
+				stopWatchLabel.isHidden = true
 				isWaitingForGhost = false
+				resetStopWatch()
 				circleTime.totalTime = Double(numMinutesOff!) * 60 + Double(numSecondsOff)
 				circleTime.elapsedTime = 0
 				circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 				circleTime.start()
+				circleTime.timerLabel?.textColor = UIColor(ciColor: .white)
 				whichGhostLabel.text = "Rest"
 				isRest = true
 				setsToGo -= 1
@@ -1392,6 +1419,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 						hours += Int(minutes / 60)
 						minutes -= Int(minutes / 60) * 60
 					}
+					workout.totalTimeOnInSeconds = Int64(totalTimeinSeconds)
 					workout.totalTimeOn = String(hours) + " : "
 					workout.totalTimeOn! += String(minutes) + " : " + String(seconds)
 					if (numSets - setsToGo) != 0{
@@ -1412,7 +1440,24 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					workout.date = Date()
 					var allCorners = ""
 					for i in cornersMet{
-						allCorners += i + " "
+						if i == "FR"{
+							allCorners += "Front Right. "
+						}
+						if i == "FL"{
+							allCorners += "Front Left. "
+						}
+						if i == "CR"{
+							allCorners += "Center Right. "
+						}
+						if i == "CL"{
+							allCorners += "Center Left. "
+						}
+						if i == "LR"{
+							allCorners += "Back Right. "
+						}
+						if i == "LL"{
+							allCorners += "Back Left. "
+						}
 					}
 					workout.ghostedCorners = allCorners
 					childVC.totalTimeOn = workout.totalTimeOn
@@ -1431,7 +1476,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 						let goalSeconds = goal.seconds
 						let goalSets = goal.sets
 						if (numSets - setsToGo) >= goalSets{
-							if totalTimeinSeconds <= goalMinutes*60 + goalSeconds && workout.totalGhosts > goalGhosts*goal.sets{
+							if totalTimeinSeconds <= (goalMinutes*60 + goalSeconds)*goal.sets && workout.totalGhosts > goalGhosts*goal.sets{
 								goal.isCompleted = true
 							}
 						}

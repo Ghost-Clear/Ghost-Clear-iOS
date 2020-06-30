@@ -898,22 +898,29 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
+			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "FR")
@@ -924,22 +931,29 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
+			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "FL")
@@ -950,22 +964,29 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
+			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "CR")
@@ -976,22 +997,29 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
+			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "CL")
@@ -1002,22 +1030,29 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
+			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "LR")
@@ -1028,22 +1063,29 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			nextGhost = getNextGhost()
 			if nextGhost == "FR"{
 				writeValueFR(data: "1")
+				whichGhostLabel.text = "Front Right"
 			}
 			if nextGhost == "FL"{
 				writeValueFL(data: "1")
+				whichGhostLabel.text = "Front Left"
 			}
 			if nextGhost == "CR"{
 				writeValueCR(data: "1")
+				whichGhostLabel.text = "Center Right"
 			}
 			if nextGhost == "CL"{
 				writeValueCL(data: "1")
+				whichGhostLabel.text = "Center Left"
 			}
 			if nextGhost == "LR"{
 				writeValueLR(data: "1")
+				whichGhostLabel.text = "Back Right"
 			}
 			if nextGhost == "LL"{
 				writeValueLL(data: "1")
+				whichGhostLabel.text = "Back Left"
 			}
+			
 			ghostsDone += 1
 			ghostsLabel.text = String(ghostsDone)
 			meet(corner: "LL")
@@ -1137,7 +1179,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
                 print("Bluetooth Enabled")
                 workoutStartsIn.isHidden = false
                 circleTime.font = UIFont(name: "System", size: 50 )
-				isRest = true
                 circleTime.isHidden = false
                 circleTime.isActive = true
                 circleTime.totalTime = 10
@@ -1190,6 +1231,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					workout.type = "Timed"
 					workout.sets = Int16(childVC.numSets)
 					workout.totalGhosts = Int16(currentGhosts)
+					workout.totalTimeOnInSeconds = Int64(childVC.minutesOn * 60 + childVC.secondsOn)
 					if numSets - setsToGo == 0{
 						workout.avgGhosts = Int16(currentGhosts)
 					}
@@ -1198,7 +1240,24 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					}
 					var allCorners = ""
 					for i in cornersMet{
-						allCorners += i + " "
+						if i == "FR"{
+							allCorners += "Front Right. "
+						}
+						if i == "FL"{
+							allCorners += "Front Left. "
+						}
+						if i == "CR"{
+							allCorners += "Center Right. "
+						}
+						if i == "CL"{
+							allCorners += "Center Left. "
+						}
+						if i == "LR"{
+							allCorners += "Back Right. "
+						}
+						if i == "LL"{
+							allCorners += "Back Left. "
+						}
 					}
 					workout.ghostedCorners = allCorners
 					var hours = 0
@@ -1253,7 +1312,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 						let goalSeconds = goal.seconds
 						let goalSets = goal.sets
 						if childVC.numSets >= goalSets{
-							if childVC.minutesOn*60 + childVC.secondsOn <= goalMinutes*60 + goalSeconds && currentGhosts > goalGhosts*goal.sets{
+							if childVC.minutesOn*60 + childVC.secondsOn <= (goalMinutes*60 + goalSeconds) * goal.sets && currentGhosts > goalGhosts*goal.sets{
 								goal.isCompleted = true
 							}
 						}
