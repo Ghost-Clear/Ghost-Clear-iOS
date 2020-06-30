@@ -1493,6 +1493,9 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					let workout = Workout(context: context)
 					workout.type = "Number"
 					workout.sets = Int16(numSets - setsToGo)
+					if workout.sets == 0{
+						workout.sets = 1
+					}
 					workout.totalGhosts = Int16(totalGhosts)
 					if numSets - setsToGo == 0{
 						workout.avgGhosts = Int16(ghostsToDo - (ghostsLabel.text! as NSString).integerValue)

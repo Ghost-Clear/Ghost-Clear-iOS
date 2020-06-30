@@ -1316,6 +1316,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					let workout = Workout(context: context)
 					workout.type = "Timed"
 					workout.sets = Int16(childVC.numSets)
+					if childVC.numSets == 0{
+						childVC.numSets = 1
+					}
+					if workout.sets == 0{
+						workout.sets = 1
+					}
 					workout.totalGhosts = Int16(currentGhosts)
 					workout.totalTimeOnInSeconds = Int64(childVC.minutesOn * 60 + childVC.secondsOn)
 					if numSets - setsToGo == 0{
