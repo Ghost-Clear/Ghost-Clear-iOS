@@ -10,9 +10,11 @@ import UIKit
 import CoreData
 class ChangeNameViewController: UIViewController, UITextFieldDelegate {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var applyChangesButton: UIButton!
+	override func viewDidLoad() {
         super.viewDidLoad()
         nameField.delegate = self
+		applyChangesButton.imageView?.contentMode = .scaleToFill
         nameField.attributedPlaceholder = NSAttributedString(string: "Your First Name",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         // Do any additional setup after loading the view.
     }

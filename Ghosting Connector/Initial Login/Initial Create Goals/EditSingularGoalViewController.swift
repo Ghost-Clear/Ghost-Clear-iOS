@@ -11,10 +11,12 @@ import UIKit
 class EditSingularGoalViewController: UIViewController {
 	var editingGoal : Goal!
 	var parentView : SetYourGoalsViewController!
+	@IBOutlet weak var applyChangesButton: UIButton!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+		applyChangesButton.imageView?.contentMode = .scaleAspectFit
 		numGhostsField.text = String(editingGoal.ghosts)
 		numSecondsField.text = String(editingGoal.seconds)
 		numMinutesField.text = String(editingGoal.minutes)

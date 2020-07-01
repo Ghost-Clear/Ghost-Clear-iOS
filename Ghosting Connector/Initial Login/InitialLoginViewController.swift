@@ -12,9 +12,11 @@ class InitialLoginViewController: UIViewController, UITextFieldDelegate {
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
     }
-    @IBOutlet weak var nameTextField: UITextField!
+	@IBOutlet weak var nextButton: UIButton!
+	@IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+		nextButton.imageView?.contentMode = .scaleAspectFit
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Your First Name",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)

@@ -17,8 +17,10 @@ class DoneNumberedWorkoutViewController: UIViewController {
 	@IBOutlet weak var avgTimeperSet: UILabel!
 	@IBOutlet weak var totalGhostsLabel: UILabel!
 	@IBOutlet weak var ghostedCornersLabel: UILabel!
+	@IBOutlet weak var doneButton: UIButton!
 	override func viewDidLoad() {
         super.viewDidLoad()
+		doneButton.imageView?.contentMode = .scaleAspectFit
 		totalTimeOnLabel.text = totalTimeOn
 		avgTimeperSet.text = avgTime
 		totalGhostsLabel.text = String(totalGhosts)

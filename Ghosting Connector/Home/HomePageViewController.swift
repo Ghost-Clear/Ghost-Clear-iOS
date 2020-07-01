@@ -26,11 +26,15 @@ class DigitValueFormatter : NSObject, IValueFormatter {
 	}
 }
 class HomePageViewController: UIViewController {
-    var namesFromCore = [Name]()
+	@IBOutlet weak var numberWorkoutButton: UIButton!
+	@IBOutlet weak var timedWorkoutButton: UIButton!
+	@IBOutlet weak var viewGoalsButton: UIButton!
+	@IBOutlet weak var viewWorkoutButton: UIButton!
+	var namesFromCore = [Name]()
     var name = ""
     var days: [String] = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
     @IBOutlet weak var welcomeLabel: UILabel!
-   
+	
     
     //TODO: put real infromation here
     var numWorkouts = [0,0,0,0,0,0,0]
@@ -41,7 +45,11 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var theBarChart: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
-		 numWorkouts = [0,0,0,0,0,0,0]
+		numberWorkoutButton.imageView?.contentMode = .scaleAspectFit
+		timedWorkoutButton.imageView?.contentMode = .scaleAspectFit
+		viewGoalsButton.imageView?.contentMode = .scaleAspectFit
+		viewWorkoutButton.imageView?.contentMode = .scaleAspectFit
+		numWorkouts = [0,0,0,0,0,0,0]
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             if let nameFromCore = try? context.fetch(Name.fetchRequest()){
                 let allNamesFromCore = nameFromCore as! [Name]

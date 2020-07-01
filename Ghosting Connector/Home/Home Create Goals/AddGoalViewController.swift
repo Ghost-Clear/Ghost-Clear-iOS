@@ -17,6 +17,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var numMinutesField: UITextField!
     @IBOutlet weak var numSecondsField: UITextField!
 	@IBOutlet weak var numSetsField: UITextField!
+	@IBOutlet weak var addGoalButton: UIButton!
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
 		if numGhostsField.text == ""{
@@ -109,6 +110,7 @@ class AddGoalViewController: UIViewController, UITextFieldDelegate {
 	}
     override func viewDidLoad() {
         super.viewDidLoad()
+		addGoalButton.imageView?.contentMode = .scaleAspectFit
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
                self.view.addGestureRecognizer(tapGesture)
                numGhostsField.delegate = self

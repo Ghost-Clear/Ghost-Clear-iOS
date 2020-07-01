@@ -14,6 +14,7 @@ class workoutCell : UITableViewCell{
 	
 }
 class MainViewWorkoutViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+	@IBOutlet weak var doneButton: UIButton!
 	var childView : UITableViewController!
 	var workoutsFromCoreData = [Workout]()
 	var indexToSend : Int!
@@ -75,6 +76,7 @@ class MainViewWorkoutViewController: UIViewController,UITableViewDelegate, UITab
 	}
     override func viewDidLoad() {
         super.viewDidLoad()
+		doneButton.imageView?.contentMode = .scaleAspectFit
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
 				let wFromCore = workoutsFromCore as! [Workout]

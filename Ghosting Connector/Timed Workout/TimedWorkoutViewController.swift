@@ -10,7 +10,8 @@ import UIKit
 import CoreBluetooth
 class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = true
-     @IBOutlet var blankRandomize: UIButton!
+	@IBOutlet weak var choosePatternButton: UIButton!
+	@IBOutlet var blankRandomize: UIButton!
      @IBAction func unRandomize(_ sender: Any) {
          isRandomized = true
          blankRandomize.isHidden = true
@@ -189,6 +190,9 @@ class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
 	
          override func viewDidLoad() {
          super.viewDidLoad()
+			choosePatternButton.imageView?.contentMode = .scaleAspectFit
+			randomizeButton.imageView?.contentMode = .scaleAspectFit
+			blankRandomize.imageView?.contentMode = .scaleAspectFit
          blankRandomize.isHidden = true
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)

@@ -67,6 +67,9 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	@IBOutlet weak var setsLabel: UILabel!
 	@IBOutlet weak var ghostsLabel: UILabel!
 	@IBOutlet weak var whichGhostLabel: UILabel!
+	@IBOutlet weak var stopButton: UIButton!
+	@IBOutlet weak var pauseButton: UIButton!
+	@IBOutlet weak var finishButton: UIButton!
 	func getNextGhost() -> String!{
 		var toReturn : String!
 		if isRandom{
@@ -118,7 +121,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		
     }
     
-	@IBOutlet weak var pauseButton: UIButton!
+	
 	@IBAction func pauseWorkout(_ sender: Any) {
 		isPaused = !isPaused
 		if isPaused{
@@ -200,7 +203,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		}
 		
 	}
-	@IBOutlet weak var workoutStartsIn: UIImageView!
 	func meet(corner : String){
 		for c in cornersMet{
 			if c == corner{
@@ -310,7 +312,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			
 			
 		}
-        workoutStartsIn.isHidden = true
 		
     }
     
@@ -325,10 +326,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
      var characteristics = [String : CBCharacteristic]()
     override func viewDidLoad() {
         super.viewDidLoad()
+		stopButton.imageView?.contentMode = .scaleAspectFit
+		pauseButton.imageView?.contentMode = .scaleAspectFit
+		finishButton.imageView?.contentMode = .scaleAspectFit
 		whichGhostLabel.text = "Get Ready"
 		setsToGo = numSets
 		setsLabel.text = String(setsToGo)
-        workoutStartsIn.isHidden = true
         circleTime.delegate = self
          circleTime.font = UIFont(name: "System", size: 50 )
         circleTime.isBackwards = true
@@ -1225,7 +1228,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         if central.state == CBManagerState.poweredOn {
             // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
             print("Bluetooth Enabled")
-            workoutStartsIn.isHidden = false
             startScan()
             circleTime.font = UIFont(name: "System", size: 50 )
             circleTime.isHidden = false
@@ -1252,7 +1254,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			if central.state == CBManagerState.poweredOn && FRPeripheral != nil && FLPeripheral != nil && CRPeripheral != nil && CLPeripheral != nil && FRPeripheral != nil && FLPeripheral != nil {
             // We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
                 print("Bluetooth Enabled")
-                workoutStartsIn.isHidden = false
                 circleTime.font = UIFont(name: "System", size: 50 )
                 circleTime.isHidden = false
                 circleTime.isActive = true

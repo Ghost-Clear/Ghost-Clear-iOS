@@ -15,6 +15,9 @@ class GoalView: UITableViewCell{
 class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var goalsFromCoreData = [Goal]()
 	var count = 0
+	
+	@IBOutlet weak var doneButton: UIButton!
+	@IBOutlet weak var addButton: UIButton!
 	var toEdit : Goal!
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "viewGoal", for: indexPath) as!  GoalView
@@ -95,7 +98,8 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
     var childView: ViewYourGoalsTableViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+		addButton.imageView?.contentMode = .scaleAspectFit
+		doneButton.imageView?.contentMode = .scaleAspectFit
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {

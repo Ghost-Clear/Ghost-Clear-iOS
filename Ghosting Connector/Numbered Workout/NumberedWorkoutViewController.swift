@@ -16,7 +16,8 @@ class NumberedWorkoutViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var secondsOff: UITextField!
 	@IBOutlet weak var minutesOff: UITextField!
 	@IBOutlet var blankRandomize: UIButton!
-    @IBAction func unRandomize(_ sender: Any) {
+	@IBOutlet weak var choosPatternButton: UIButton!
+	@IBAction func unRandomize(_ sender: Any) {
         isRandomized = true
         blankRandomize.isHidden = true
         randomizeButton.isHidden = false
@@ -115,6 +116,9 @@ class NumberedWorkoutViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         blankRandomize.isHidden = true
+		choosPatternButton.imageView?.contentMode = .scaleAspectFit
+		randomizeButton.imageView?.contentMode = .scaleAspectFit
+		blankRandomize.imageView?.contentMode = .scaleAspectFit
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         // Do any additional setup after loading the view.

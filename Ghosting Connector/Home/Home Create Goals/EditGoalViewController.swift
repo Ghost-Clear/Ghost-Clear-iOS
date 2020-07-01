@@ -10,9 +10,11 @@ import UIKit
 import CoreData
 class EditGoalViewController: UIViewController, UITextFieldDelegate {
 	var editingGoal : Goal!
+	@IBOutlet weak var applyChangesButton: UIButton!
 	var parentView : MainViewGoalsViewController!
 	override func viewDidLoad() {
         super.viewDidLoad()
+		applyChangesButton.imageView?.contentMode = .scaleAspectFit
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 		numGhostsField.text = String(editingGoal.ghosts)

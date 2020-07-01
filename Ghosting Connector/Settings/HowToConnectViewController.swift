@@ -10,9 +10,10 @@ import UIKit
 import CoreData
 class HowToConnectViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var resetButton: UIButton!
+	override func viewDidLoad() {
         super.viewDidLoad()
-
+		resetButton.imageView?.contentMode = .scaleAspectFit
         // Do any additional setup after loading the view.
     }
     

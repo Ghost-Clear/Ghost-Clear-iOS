@@ -14,8 +14,10 @@ class DoneTimedWorkoutViewController: UIViewController {
 	var totalghosts : Int!
 	var ghostedCorners : [String]!
 	var numSets : Int!
-    override func viewDidLoad() {
+	@IBOutlet weak var doneButton: UIButton!
+	override func viewDidLoad() {
         super.viewDidLoad()
+		doneButton.imageView?.contentMode = .scaleAspectFit
 		var hours : Int! = 0
 		if secondsOn >= 60{
 			minutesOn += Int(secondsOn / 60)

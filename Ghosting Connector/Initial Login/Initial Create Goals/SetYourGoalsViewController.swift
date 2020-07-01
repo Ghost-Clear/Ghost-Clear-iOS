@@ -13,7 +13,9 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
     var count = 0
 	var toEdit : Goal!
     var childView: CreateGoalsTableViewController? = nil
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	@IBOutlet weak var addButton: UIButton!
+	@IBOutlet weak var FinishButton: UIButton!
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return count
     }
@@ -127,7 +129,8 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+		addButton.imageView?.contentMode = .scaleAspectFit
+		FinishButton.imageView?.contentMode = .scaleAspectFit
     }
     override func viewWillAppear(_ animated: Bool) {
         getGoals()

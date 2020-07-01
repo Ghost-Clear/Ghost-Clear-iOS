@@ -27,10 +27,14 @@ class ChooseNumberedWorkoutViewController: UIViewController {
 	var numSets: Int!
 	var numGhosts : Int!
 	var count = 0
+	@IBOutlet weak var resetButton: UIButton!
+	@IBOutlet weak var startGhostButton: UIButton!
 	@IBOutlet weak var gridImage: UIImageView!
 	@IBOutlet weak var orderLabel: UILabel!
 	override func viewDidLoad() {
         super.viewDidLoad()
+		resetButton.imageView?.contentMode = .scaleAspectFit
+		startGhostButton.imageView?.contentMode = .scaleAspectFit
 		gridImage.image = UIImage(named: "000000")
 		if isRandomized{
 			orderLabel.isHidden = true
@@ -69,6 +73,7 @@ class ChooseNumberedWorkoutViewController: UIViewController {
 		isLR = false
 		isLL = false
 		gridImage.image = UIImage(named: "000000")
+		orderLabel.text = ""
 		count = 0
 	}
 	@IBAction func FL(_ sender: Any) {
