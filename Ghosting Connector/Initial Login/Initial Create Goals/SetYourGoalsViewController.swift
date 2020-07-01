@@ -23,9 +23,8 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newGoal", for: indexPath)
-        var cellText: String
-        cellText = "  "
-        cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
+        var cellText: String  = ""
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
 		if goalsFromCoreData[indexPath.row].sets == 1{
 			cellText = cellText + " set of "
 		}
@@ -33,31 +32,20 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
 			cellText = cellText + " sets of "
 		}
 		cellText = cellText + String(goalsFromCoreData[indexPath.row].ghosts)
-        if goalsFromCoreData[indexPath.row].ghosts == 1{
-             cellText = cellText + " ghost in "
-        }
-        else{
-            cellText = cellText + " ghosts in "
-        }
-        if goalsFromCoreData[indexPath.row].minutes == 1{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes)
-            cellText = cellText + " minute and "
-        }
-        else{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes)
-            cellText = cellText + " minutes and "
-        }
-        if goalsFromCoreData[indexPath.row].seconds == 1{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
-                       cellText = cellText + " second per set"
-        }
-        else{
-            cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds)
-            cellText = cellText + " seconds per set"
-        }
+		if goalsFromCoreData[indexPath.row].ghosts == 1{
+			cellText = cellText + " ghost in "
+		}
+		else{
+			cellText = cellText + " ghosts in  "
+		}
+		cellText += "0 : "
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes) + " : "
+		cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds) + "  per set"
+		
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = cellText
-		cell.textLabel?.font = UIFont(name: "Helvetica", size: 13.5)
+		cell.textLabel?.font = .systemFont(ofSize: 14)
+		cell.textLabel?.adjustsFontSizeToFitWidth = true
 		cell.textLabel?.textAlignment = NSTextAlignment.center
         // Configure the cell...
        

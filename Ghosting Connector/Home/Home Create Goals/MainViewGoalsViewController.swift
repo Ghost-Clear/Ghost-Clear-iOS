@@ -77,8 +77,8 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
 		cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds) + "  per set"
 		
         cell.des?.text = cellText
-		cell.des?.font = .systemFont(ofSize: 15)
-        
+		cell.des?.font = .systemFont(ofSize: 14)
+        cell.des?.adjustsFontSizeToFitWidth = true
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
