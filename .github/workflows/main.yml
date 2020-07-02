@@ -18,11 +18,11 @@ jobs:
     strategy:
       matrix:
         destination:
-          - platform=iOS Simulator,OS=latest,name=iPhone 11
+          - platform=iOS Simulator,OS=13.5,name=iPhone 11
         action: [ build ]
         use-xcpretty: [ true, false ]
     steps:
-      - run: sudo xcode-select -s /Applications/Xcode_11.4.app/Contents/Developer
+      - run: gem install xcode-install && xcversion simulators --install='iOS 13.5' && sudo xcode-select -s /Applications/Xcode_11.4.app/Contents/Developer 
       - uses: actions/checkout@v2
       - uses: sersoft-gmbh/xcodebuild-action@master
         with:
