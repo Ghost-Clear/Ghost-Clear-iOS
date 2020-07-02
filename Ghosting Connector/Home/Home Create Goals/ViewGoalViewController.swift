@@ -24,6 +24,8 @@ class ViewGoalViewController: UIViewController {
 		minutesOnField.text = String(viewingGoal.minutes)
 		setField.text = String(viewingGoal.sets)
 		ghostsField.text = String(viewingGoal.ghosts)
+		checkBox.checkmarkLineWidth = 5.0
+		checkBox.boxLineWidth = 5.0
 		
     }
 	override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +34,8 @@ class ViewGoalViewController: UIViewController {
 			checkBox.tintColor = UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1)
 		}
 		else{
-			checkBox.setCheckState(.mixed, animated: true)
-			checkBox.tintColor = UIColor(red: 26/256, green: 231/256, blue: 48/256, alpha: 1)
+			checkBox.setCheckState(.checked, animated: true)
+			checkBox.tintColor = UIColor(red: 26/256, green: 230/256, blue: 100/256, alpha: 1)
 		}
 	}
 

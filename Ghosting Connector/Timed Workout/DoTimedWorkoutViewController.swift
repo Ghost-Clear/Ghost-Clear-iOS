@@ -199,7 +199,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			popBack(4)
 		}
 		else{
-			performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+			performSegue(withIdentifier: "checkPopUp", sender: nil)
+			let seconds = 1.51
+			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+				self.performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+			}
+			
 		}
 		
 	}
@@ -308,7 +313,11 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			circleTime.stop()
 			centralManager.stopScan()
 			disconnectAllConnection()
-			performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+			performSegue(withIdentifier: "checkPopUp", sender: nil)
+			let seconds = 1.51
+			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+				self.performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+			}
 			
 			
 		}

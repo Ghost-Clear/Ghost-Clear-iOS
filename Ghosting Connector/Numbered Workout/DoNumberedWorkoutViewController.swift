@@ -151,7 +151,12 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			popBack(4)
 		}
 		else{
-			performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+			stopWatch.invalidate()
+			performSegue(withIdentifier: "showCheckBox", sender: nil)
+			let seconds = 1.51
+			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+				self.performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+			}
 		}
 	}
 	
@@ -1349,7 +1354,12 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			centralManager.stopScan()
 			disconnectAllConnection()
 			isWaitingForGhost = false
-			performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+			stopWatch.invalidate()
+			performSegue(withIdentifier: "showCheckBox", sender: nil)
+			let seconds = 1.51
+			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+				self.performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+			}
 		}
 		NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
 	}
