@@ -116,6 +116,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		circleTime.isActive = false
 		circleTime.isHidden = true
 		circleTime.stop()
+		stopWatch.invalidate()
 		centralManager.stopScan()
 		disconnectAllConnection()
 		popBack(3)
@@ -145,6 +146,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			writeValueLL(data: "0")
 		}
 		circleTime.stop()
+		stopWatch.invalidate()
 		centralManager.stopScan()
 		disconnectAllConnection()
 		if numSets == setsToGo && isRest{
@@ -375,6 +377,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
 			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
 				self.circleTime.stop()
+				self.stopWatch.invalidate()
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)

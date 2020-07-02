@@ -435,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUw-XN-6l3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2399" y="-628"/>
+            <point key="canvasLocation" x="2332" y="-638"/>
         </scene>
         <!--Numbered Workout View Controller-->
         <scene sceneID="7wh-8q-o6Z">
@@ -1910,7 +1910,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-Ta-7Kv">
                                 <rect key="frame" x="20" y="156" width="362" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <string key="text">The ghosting devices use bluetooth low energy technology so the devices pair automatically. If you start the workout and the devices do not pair, click the refresh bluetooth data button.</string>
+                                <string key="text">The ghosting devices use bluetooth low energy technology so the devices will pair automatically when you start a workout. If you start the workout and the devices do not pair, click the reset button and try again.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
