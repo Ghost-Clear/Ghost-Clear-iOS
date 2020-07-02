@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         destination:
-          - platform=iOS Simulator,D534FAEB-EC1E-4E6B-A2FD-74A3CD8F4DC6
+          - platform=iOS Simulator,id=D534FAEB-EC1E-4E6B-A2FD-74A3CD8F4DC6
         action: [ build ]
         use-xcpretty: [ true, false ]
     steps:
