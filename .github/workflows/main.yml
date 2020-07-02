@@ -24,7 +24,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: xcodebuild build -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=""
+      run: xcodebuild build -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector CODE_SIGNING_REQUIRED=NO
 
     # Runs a set of commands using the runners shell
   
