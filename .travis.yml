@@ -2,3 +2,5 @@ os: osx
 osx_image: xcode11.4
 language: swift
 script: xattr -cr $pwd && xcodebuild build -workspace Ghosting\ Connector.xcworkspace -scheme Ghosting\ Connector CODE_SIGNING_REQUIRED=NO
+CI=true
+TRAVIS=true
