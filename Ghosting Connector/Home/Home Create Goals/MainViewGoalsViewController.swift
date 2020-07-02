@@ -16,6 +16,8 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
     var goalsFromCoreData = [Goal]()
 	var count = 0
 	var index = 0
+	var achievedCount : [Int] = []
+	var isAchieved : [Bool] = []
 	@IBOutlet weak var doneButton: UIButton!
 	@IBOutlet weak var addButton: UIButton!
 	var toEdit : Goal!
@@ -25,7 +27,9 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
 	}
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "viewGoal", for: indexPath) as!  GoalView
-        var allWorkoutsFromCore : [Workout] = []
+		isAchieved.append(false)
+		achievedCount.append(0)
+		var allWorkoutsFromCore : [Workout] = []
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			if let wFromCore = try? context.fetch(Workout.fetchRequest()){
 				allWorkoutsFromCore = wFromCore as! [Workout]
@@ -47,14 +51,14 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
 		for workout in allWorkoutsFromCore{
 			if goalsFromCoreData[indexPath.row].sets <= workout.sets && workout.totalGhosts >= goalsFromCoreData[indexPath.row].ghosts * goalsFromCoreData[indexPath.row].sets && (goalsFromCoreData[indexPath.row].minutes*60 + goalsFromCoreData[indexPath.row].seconds) * goalsFromCoreData[indexPath.row].sets >= workout.totalTimeOnInSeconds{
 				goalsFromCoreData[indexPath.row].isCompleted = true
-				break;
+				isAchieved[indexPath.row] = true
+				achievedCount[indexPath.row] += 1
 			}
 			else{
 				goalsFromCoreData[indexPath.row].isCompleted = false
 			}
 		}
-		let currentGoal = goalsFromCoreData[indexPath.row]
-        if(currentGoal.isCompleted){
+		if(isAchieved[indexPath.row]){
             cell.back.image =  UIImage(named: "greenRectangle")
         }
         else{
@@ -201,6 +205,8 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
 			if let childVC = segue.destination as? ViewGoalViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.viewingGoal = goalsFromCoreData[index]
+				childVC.goalAcheivedCount = achievedCount[index]
+				
 			}
 		}
     }
