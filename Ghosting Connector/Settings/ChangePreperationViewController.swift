@@ -66,6 +66,15 @@ class ChangePreperationViewController: UIViewController, UITextFieldDelegate {
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
 			}
+		else if (secondsLabel.text! as NSString).integerValue <= 5 && (minutesLabel.text! as NSString).integerValue == 0{
+			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your perperation time is at least 5 seconds.", preferredStyle: UIAlertController.Style.alert)
+			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+				alertVC.dismiss(animated: true, completion: nil)
+				//add segue
+			})
+			alertVC.addAction(action)
+			self.present(alertVC, animated: true, completion: nil)
+		}
 		else{
 		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PrepTime")
 		
