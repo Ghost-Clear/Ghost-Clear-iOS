@@ -27,7 +27,12 @@ class ChangeNameViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-   
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		if (string == " ") {
+			return false
+		}
+		return true
+	}
     @IBAction func applyChange(_ sender: Any) {
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Name")
 
