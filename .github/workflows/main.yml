@@ -27,7 +27,7 @@ jobs:
       - uses: sersoft-gmbh/xcodebuild-action@master
         with:
           workspace: Ghosting Connector.xcworkspace
-          scheme: Ghosting\ Connector
+          scheme: Ghosting Connector
           destination: ${{matrix.destination}}
           skip-testing: ${{matrix.skip-testing}}
           action: ${{matrix.action}}
