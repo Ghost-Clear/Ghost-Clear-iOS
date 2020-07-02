@@ -15,10 +15,14 @@ class GoalView: UITableViewCell{
 class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var goalsFromCoreData = [Goal]()
 	var count = 0
-	
+	var index = 0
 	@IBOutlet weak var doneButton: UIButton!
 	@IBOutlet weak var addButton: UIButton!
 	var toEdit : Goal!
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		index = indexPath.row
+		performSegue(withIdentifier: "viewGoal", sender: nil)
+	}
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "viewGoal", for: indexPath) as!  GoalView
         var allWorkoutsFromCore : [Workout] = []
@@ -94,7 +98,7 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return count
     }
-    
+	
     var childView: ViewYourGoalsTableViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -191,6 +195,12 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
 				//Some property on ChildVC that needs to be set
 				childVC.editingGoal = toEdit
 				childVC.parentView = self
+			}
+		}
+		if segue.identifier == "viewGoal" {
+			if let childVC = segue.destination as? ViewGoalViewController {
+				//Some property on ChildVC that needs to be set
+				childVC.viewingGoal = goalsFromCoreData[index]
 			}
 		}
     }

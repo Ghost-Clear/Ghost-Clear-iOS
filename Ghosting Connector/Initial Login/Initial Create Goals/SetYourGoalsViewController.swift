@@ -12,6 +12,7 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
    var goalsFromCoreData = [Goal]()
     var count = 0
 	var toEdit : Goal!
+	var index = 0
     var childView: CreateGoalsTableViewController? = nil
 	@IBOutlet weak var addButton: UIButton!
 	@IBOutlet weak var FinishButton: UIButton!
@@ -20,7 +21,10 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
         return count
     }
 
-    
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		index = indexPath.row
+		performSegue(withIdentifier: "viewSingularGoal", sender: nil)
+	}
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newGoal", for: indexPath)
         var cellText: String  = ""
@@ -154,6 +158,13 @@ class SetYourGoalsViewController: UIViewController, UITableViewDataSource, UITab
 				childVC.parentView = self
 			}
 		}
+		if segue.identifier == "viewSingularGoal" {
+			if let childVC = segue.destination as? ViewSingularGoalViewController {
+				//Some property on ChildVC that needs to be set
+				childVC.viewingGoal = goalsFromCoreData[index]
+			}
+		}
+		
         
     }
     

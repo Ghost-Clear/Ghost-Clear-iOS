@@ -29,6 +29,8 @@
 		2741C6B62454BDC400EB4944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6B42454BDC400EB4944 /* Main.storyboard */; };
 		2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6B72454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld */; };
 		2741C6BE2454BDC500EB4944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BC2454BDC500EB4944 /* LaunchScreen.storyboard */; };
+		2764A19B24AD7F4500B5EF12 /* ViewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764A19A24AD7F4500B5EF12 /* ViewGoalViewController.swift */; };
+		2764A19D24ADB77500B5EF12 /* ViewSingularGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764A19C24ADB77500B5EF12 /* ViewSingularGoalViewController.swift */; };
 		2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BA2454BDC500EB4944 /* Assets.xcassets */; };
 		27D097D224903C830073C797 /* ViewYourGoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D124903C830073C797 /* ViewYourGoalsTableViewController.swift */; };
 		27D097D4249043290073C797 /* MainViewGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D097D3249043290073C797 /* MainViewGoalsViewController.swift */; };
@@ -75,6 +77,8 @@
 		2741C6BA2454BDC500EB4944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2741C6BD2454BDC500EB4944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2741C6BF2454BDC500EB4944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2764A19A24AD7F4500B5EF12 /* ViewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGoalViewController.swift; sourceTree = "<group>"; };
+		2764A19C24ADB77500B5EF12 /* ViewSingularGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSingularGoalViewController.swift; sourceTree = "<group>"; };
 		27D097D124903C830073C797 /* ViewYourGoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewYourGoalsTableViewController.swift; sourceTree = "<group>"; };
 		27D097D3249043290073C797 /* MainViewGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewGoalsViewController.swift; sourceTree = "<group>"; };
 		27D097D524909CDF0073C797 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				27DCEFFC248F57C300309DD4 /* CreateSingularGoalViewController.swift */,
 				2707C23824A46F72004D383C /* EditSingularGoalViewController.swift */,
 				27DCEFF8248EE00700309DD4 /* SetYourGoalsViewController.swift */,
+				2764A19C24ADB77500B5EF12 /* ViewSingularGoalViewController.swift */,
 			);
 			path = "Initial Create Goals";
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				27D097D3249043290073C797 /* MainViewGoalsViewController.swift */,
 				27D097D524909CDF0073C797 /* AddGoalViewController.swift */,
 				27196FE624A463EF00B9A8DC /* EditGoalViewController.swift */,
+				2764A19A24AD7F4500B5EF12 /* ViewGoalViewController.swift */,
 			);
 			path = "Home Create Goals";
 			sourceTree = "<group>";
@@ -430,11 +436,13 @@
 				2707C23924A46F72004D383C /* EditSingularGoalViewController.swift in Sources */,
 				2726029824AA0A750071B03F /* ViewWorkoutDetailViewController.swift in Sources */,
 				27DCEFF7248ED44200309DD4 /* HomePageViewController.swift in Sources */,
+				2764A19D24ADB77500B5EF12 /* ViewSingularGoalViewController.swift in Sources */,
 				27D097D224903C830073C797 /* ViewYourGoalsTableViewController.swift in Sources */,
 				2726029624A9FF4A0071B03F /* ViewWorkoutTableViewController.swift in Sources */,
 				27D097DA2490E57A0073C797 /* NumberedWorkoutViewController.swift in Sources */,
 				27DCEFF3248EBD1300309DD4 /* StartViewController.swift in Sources */,
 				27D097D624909CDF0073C797 /* AddGoalViewController.swift in Sources */,
+				2764A19B24AD7F4500B5EF12 /* ViewGoalViewController.swift in Sources */,
 				27251F812498C7DC0043D52C /* HowToConnectViewController.swift in Sources */,
 				2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */,
 				27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */,
@@ -603,7 +611,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Ghosting Connector/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"$(inherited)",
@@ -635,7 +643,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Ghosting Connector/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"$(inherited)",

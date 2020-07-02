@@ -6,4 +6,5 @@ target 'Ghosting Connector' do
 pod 'CocoaAsyncSocket'
 pod 'Charts'
 pod 'CircleTimer'
+pod 'M13Checkbox'
 end

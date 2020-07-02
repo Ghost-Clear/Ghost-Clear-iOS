@@ -4,23 +4,27 @@ PODS:
   - Charts/Core (3.4.0)
   - CircleTimer (0.2.2)
   - CocoaAsyncSocket (7.6.4)
+  - M13Checkbox (3.4.0)
 
 DEPENDENCIES:
   - Charts
   - CircleTimer
   - CocoaAsyncSocket
+  - M13Checkbox
 
 SPEC REPOS:
   trunk:
     - Charts
     - CircleTimer
     - CocoaAsyncSocket
+    - M13Checkbox
 
 SPEC CHECKSUMS:
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   CircleTimer: 623db0cf5762db38ac3c940677377df0b94af674
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
 
-PODFILE CHECKSUM: a67ab9c597fe84d1a81df9ec8bb9f6db2ab3344d
+PODFILE CHECKSUM: 8d67a32a5c8dae92fcb5d2e37cdd0b3e33b8783a
 
 COCOAPODS: 1.9.3
