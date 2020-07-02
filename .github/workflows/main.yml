@@ -12,8 +12,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        destination:
-          - platform=iOS Simulator, name=iPhone
+        
         action: [ build ]
         use-xcpretty: [ true, false ]
     steps:
@@ -23,7 +22,7 @@ jobs:
         with:
           workspace:  Ghosting Connector.xcworkspace
           scheme: Ghosting Connector
-          destination: ${{matrix.destination}}
+          
           skip-testing: ${{matrix.skip-testing}}
           action: ${{matrix.action}}
           use-xcpretty: ${{matrix.use-xcpretty}}
