@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         destination:
-          - platform=iOS Simulator,OS=latest,name=iPhone 11
+          - platform=iOS Simulator
         action: [ build ]
         use-xcpretty: [ true, false ]
     steps:
