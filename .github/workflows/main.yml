@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         destination:
-          - platform=iOS Simulator,OS=13.4,name=iPhone 11
+          - platform=iOS Simulator,id=765CEAC1-8A25-41A4-A35A-FE5B239CA466
         action: [ build ]
         use-xcpretty: [ true, false ]
     steps:
