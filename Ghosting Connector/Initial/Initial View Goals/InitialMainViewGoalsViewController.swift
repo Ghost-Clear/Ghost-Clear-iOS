@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreBluetooth
-class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   var goalsFromCoreData = [Goal]()
+import TKSubmitTransition
+class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIViewControllerTransitioningDelegate {
+	var goalsFromCoreData = [Goal]()
     var count = 0
 	var toEdit : Goal!
 	var index = 0
@@ -51,12 +52,15 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 	cell.textLabel?.textAlignment = NSTextAlignment.center
 	return cell
 }
-	@IBAction func FinishCreatingGoals(_ sender: Any) {
-		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-			let firstLaunch = IsFirstLaunch(context: context)
-			firstLaunch.bool = true
-		}
-		(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+	@objc @IBAction func onTapButton(_ button: TKTransitionSubmitButton) {
+		button.animate(1, completion: { () -> () in
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				let firstLaunch = IsFirstLaunch(context: context)
+				firstLaunch.bool = true
+			}
+			(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			self.performSegue(withIdentifier: "HomePageViewControllerSegue", sender: nil)
+		})
 	}
 	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
@@ -101,8 +105,10 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
 		addButton.imageView?.contentMode = .scaleAspectFit
-		FinishButton.imageView?.contentMode = .scaleAspectFit
+		FinishButton.imageView?.contentMode = .scaleAspectFill
+		//UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
     }
+	
     override func viewWillAppear(_ animated: Bool) {
         getGoals()
         childView?.tableView.reloadData()
@@ -132,7 +138,13 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 				childVC.viewingGoal = goalsFromCoreData[index]
 			}
 		}
+		func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+			return TKFadeInAnimator(transitionDuration: 0.3, startingAlpha: 0.8)
+		}
 		
+		func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+			return nil
+		}
         
     }
 }

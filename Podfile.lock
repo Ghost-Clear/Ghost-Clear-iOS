@@ -5,12 +5,14 @@ PODS:
   - CircleTimer (0.2.2)
   - CocoaAsyncSocket (7.6.4)
   - M13Checkbox (3.4.0)
+  - TKSubmitTransition (3.1.1)
 
 DEPENDENCIES:
   - Charts
   - CircleTimer
   - CocoaAsyncSocket
   - M13Checkbox
+  - TKSubmitTransition (from `https://github.com/entotsu/TKSubmitTransition.git`)
 
 SPEC REPOS:
   trunk:
@@ -19,12 +21,22 @@ SPEC REPOS:
     - CocoaAsyncSocket
     - M13Checkbox
 
+EXTERNAL SOURCES:
+  TKSubmitTransition:
+    :git: https://github.com/entotsu/TKSubmitTransition.git
+
+CHECKOUT OPTIONS:
+  TKSubmitTransition:
+    :commit: 1960d8e644c2dd3aa4585b6ed562f90ec8e13065
+    :git: https://github.com/entotsu/TKSubmitTransition.git
+
 SPEC CHECKSUMS:
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   CircleTimer: 623db0cf5762db38ac3c940677377df0b94af674
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  TKSubmitTransition: 644b99291e301a03227fdb9f5709d81e09f6ad18
 
-PODFILE CHECKSUM: 125eac7878102ba849b097648d5a36aa5ea070de
+PODFILE CHECKSUM: 75441eb762b19fbd95ba4ce94353df6e1c0b36c9
 
 COCOAPODS: 1.9.3

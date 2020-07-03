@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/CircleTimer" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket" "${PODS_CONFIGURATION_BUILD_DIR}/M13Checkbox"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/CircleTimer" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket" "${PODS_CONFIGURATION_BUILD_DIR}/M13Checkbox" "${PODS_CONFIGURATION_BUILD_DIR}/TKSubmitTransition"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CircleTimer/AppusCircleTimer.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/M13Checkbox/M13Checkbox.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CircleTimer/AppusCircleTimer.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/M13Checkbox/M13Checkbox.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/TKSubmitTransition/TKSubmitTransition.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "AppusCircleTimer" -framework "CFNetwork" -framework "Charts" -framework "CocoaAsyncSocket" -framework "CoreGraphics" -framework "Foundation" -framework "M13Checkbox" -framework "Security" -framework "UIKit"
+OTHER_LDFLAGS = $(inherited) -framework "AppusCircleTimer" -framework "CFNetwork" -framework "Charts" -framework "CocoaAsyncSocket" -framework "CoreGraphics" -framework "Foundation" -framework "M13Checkbox" -framework "Security" -framework "TKSubmitTransition" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

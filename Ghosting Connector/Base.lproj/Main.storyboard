@@ -141,15 +141,6 @@
                                     <segue destination="Jze-bU-5ex" kind="embed" identifier="InitialMainViewGoalsTableViewControllerSegue" id="zRG-B5-WFn"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jC-YE-pSn">
-                                <rect key="frame" x="41" y="806" width="332" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Goal Button"/>
-                                <connections>
-                                    <action selector="FinishCreatingGoals:" destination="dJi-iQ-vOz" eventType="touchUpInside" id="ebz-hj-wkR"/>
-                                    <segue destination="H9u-zo-5jr" kind="show" identifier="HomePageViewControllerSegue" id="sEJ-BF-7bl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-eI-jtd">
                                 <rect key="frame" x="167" y="670" width="81" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -172,6 +163,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8jC-YE-pSn" customClass="TKTransitionSubmitButton" customModule="TKSubmitTransition">
+                                <rect key="frame" x="32" y="795" width="351" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="greenRectangle">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Finish">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="24" name="AvenirNext-Regular"/>
+                                                <font key="NSOriginalFont" size="29" name="AvenirNext-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onTapButton:" destination="dJi-iQ-vOz" eventType="touchUpInside" id="UjD-fq-98P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6lk-5V-lCU"/>
@@ -182,11 +192,12 @@
                         <outlet property="addButton" destination="2Ct-eI-jtd" id="tcX-Gl-izN"/>
                         <segue destination="FVC-FU-0LJ" kind="showDetail" identifier="InitialEditGoalViewControllerSegue" id="Hrw-Jx-BMJ"/>
                         <segue destination="5Wq-Qv-A6n" kind="showDetail" identifier="InitialViewGoalViewControllerSegue" id="aNy-Ig-BcS"/>
+                        <segue destination="H9u-zo-5jr" kind="show" identifier="HomePageViewControllerSegue" id="7zF-tB-hnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNq-8a-LhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="25"/>
+            <point key="canvasLocation" x="1469.5652173913045" y="24.776785714285712"/>
         </scene>
         <!--Initial Add Goal View Controller-->
         <scene sceneID="piE-bk-pCq">
@@ -606,14 +617,6 @@
                                     <segue destination="at1-VZ-0TC" kind="show" identifier="SettingsViewControllerSegue" id="8Jf-cq-Xqb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMO-XF-OAp" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="21" y="181" width="374" height="146"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                            </view>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-SP-KES">
                                 <rect key="frame" x="32" y="502" width="167" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -660,6 +663,14 @@
                                     <segue destination="G0F-98-OF8" kind="show" identifier="HomeMainViewWorkoutsViewControllerSegue" id="f5a-hb-I1k"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMO-XF-OAp" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="180" width="374" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AiR-5x-EBw"/>
@@ -677,7 +688,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6F-kv-xHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="729"/>
+            <point key="canvasLocation" x="11.594202898550726" y="728.57142857142856"/>
         </scene>
         <!--Home Main View Goals View Controller-->
         <scene sceneID="8Pc-GB-Pe5">
@@ -2834,7 +2845,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sEJ-BF-7bl"/>
+        <segue reference="7zF-tB-hnp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="000000" width="1172" height="2080"/>
@@ -2842,7 +2853,6 @@
         <image name="Choose Pattern" width="680" height="232"/>
         <image name="Create A Goal _" width="336.33334350585938" height="37.666667938232422"/>
         <image name="Edit Goal " width="704" height="113"/>
-        <image name="Goal Button" width="436" height="85.333335876464844"/>
         <image name="Icon" width="76" height="96.5"/>
         <image name="Line-1" width="492" height="4"/>
         <image name="Next_Button" width="326.66665649414062" height="77.333335876464844"/>
