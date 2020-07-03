@@ -154,10 +154,10 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 		}
 		else{
 			stopWatch.invalidate()
-			performSegue(withIdentifier: "showCheckBox", sender: nil)
+			performSegue(withIdentifier: "NumberWorkoutCheckPopupViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-				self.performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+				self.performSegue(withIdentifier: "DoneNumberWorkoutViewControllerSegue", sender: nil)
 			}
 		}
 	}
@@ -1358,10 +1358,10 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 			disconnectAllConnection()
 			isWaitingForGhost = false
 			stopWatch.invalidate()
-			performSegue(withIdentifier: "showCheckBox", sender: nil)
+			performSegue(withIdentifier: "NumberWorkoutCheckPopupViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-				self.performSegue(withIdentifier: "finishNumberedWorkout", sender: nil)
+				self.performSegue(withIdentifier: "DoneNumberWorkoutViewControllerSegue", sender: nil)
 			}
 		}
 		NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
@@ -1500,7 +1500,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 	// Get the new view controller using segue.destination.
 	// Pass the selected object to the new view controller.
-		if segue.identifier == "finishNumberedWorkout" {
+		if segue.identifier == "DoneNumberWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? DoneNumberWorkoutViewController {
 				
 				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{

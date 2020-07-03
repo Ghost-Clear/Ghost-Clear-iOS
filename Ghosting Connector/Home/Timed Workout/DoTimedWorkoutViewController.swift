@@ -199,10 +199,10 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			popBack(4)
 		}
 		else{
-			performSegue(withIdentifier: "checkPopUp", sender: nil)
+			performSegue(withIdentifier: "TimedWorkoutCheckPopUpViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-				self.performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+				self.performSegue(withIdentifier: "DoneTimedWorkoutViewControllerSegue", sender: nil)
 			}
 			
 		}
@@ -313,10 +313,10 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			circleTime.stop()
 			centralManager.stopScan()
 			disconnectAllConnection()
-			performSegue(withIdentifier: "checkPopUp", sender: nil)
+			performSegue(withIdentifier: "TimedWorkoutCheckPopUpViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-				self.performSegue(withIdentifier: "finishTimedWorkout", sender: nil)
+				self.performSegue(withIdentifier: "DoneTimedWorkoutViewControllerSegue", sender: nil)
 			}
 			
 			
@@ -1304,7 +1304,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		if segue.identifier == "finishTimedWorkout" {
+		if segue.identifier == "DoneTimedWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? DoneTimedWorkoutViewController {
 				//Some property on ChildVC that needs to be set
 				var shownMinutesLeft = ((circleTime.timerLabel?.text?.prefix(2))! as NSString).integerValue

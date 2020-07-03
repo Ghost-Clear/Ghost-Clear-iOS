@@ -57,7 +57,7 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		indexToSend = indexPath.row
-		performSegue(withIdentifier: "showWorkoutDetail", sender: nil)
+		performSegue(withIdentifier: "HomeViewWorkoutViewControllerSegue", sender: nil)
 	}
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
@@ -98,7 +98,7 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		if segue.identifier == "showWorkoutTable" {
+		if segue.identifier == "HomeMainViewWorkoutsTableViewControllerSegue" {
 			if let childVC = segue.destination as? HomeMainViewWorkoutsTableViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.tableView.dataSource = self
@@ -107,7 +107,7 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 				childView = childVC
 			}
 		}
-		if segue.identifier == "showWorkoutDetail" {
+		if segue.identifier == "HomeViewWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? HomeViewWorkoutViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.viewingWorkout = workoutsFromCoreData[indexToSend]

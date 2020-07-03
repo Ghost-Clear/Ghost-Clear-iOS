@@ -131,7 +131,7 @@ class ChooseTimedWorkoutAttributesViewController: UIViewController, UITextFieldD
 	}
 	@IBAction func choosePattern(_ sender: Any) {
 		if(((secondsField.text! as NSString).integerValue) < 60 && ((secondsField.text! as NSString).integerValue) >= 0 && ((minutesField.text! as NSString).integerValue) < 60 && ((minutesField.text! as NSString).integerValue) >= 0 && secondsField.text! != "" && minutesField.text! != "" && setsField.text != "" && setsField.text != "0" && minutesOffField.text != "" && secondsOffField.text != ""  && ((secondsOffField.text! as NSString).integerValue) < 60 && ((secondsOffField.text! as NSString).integerValue) >= 0 && ((minutesOffField.text! as NSString).integerValue) < 60 && ((minutesOffField.text! as NSString).integerValue) >= 0 && (((secondsField.text! as NSString).integerValue) != 0 || ((minutesField.text! as NSString).integerValue != 0)) && (((secondsOffField.text! as NSString).integerValue) != 0 || ((minutesOffField.text! as NSString).integerValue != 0))){
-			performSegue(withIdentifier: "chooseTimedPattern", sender: nil)
+			performSegue(withIdentifier: "ChooseTimedWorkoutPatternViewControllerSegue", sender: nil)
         }
 		else if((setsField.text! as NSString).integerValue > 9999){
 			let alertVC = UIAlertController(title: "Values too large", message: "Your sets value is to large.", preferredStyle: UIAlertController.Style.alert)
@@ -236,7 +236,7 @@ class ChooseTimedWorkoutAttributesViewController: UIViewController, UITextFieldD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "chooseTimedPattern" {
+        if segue.identifier == "ChooseTimedWorkoutPatternViewControllerSegue" {
           if let childVC = segue.destination as? ChooseTimedWorkoutPatternViewController {
             //Some property on ChildVC that needs to be set
 			childVC.numSets = (setsField.text! as NSString).integerValue

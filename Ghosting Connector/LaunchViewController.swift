@@ -21,7 +21,7 @@ class LaunchViewController: UIViewController {
         if(someEntityExists(id: true)){
            let seconds = 1.0
             DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                self.performSegue(withIdentifier: "goToLogin", sender: nil)
+                self.performSegue(withIdentifier: "InitialPageViewControllerSegue", sender: nil)
             }
             
             
@@ -31,7 +31,7 @@ class LaunchViewController: UIViewController {
             let seconds = 1.0
             DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
                 // Put your code which should be executed with a delay here
-                self.performSegue(withIdentifier: "goToHomePage", sender: nil)
+                self.performSegue(withIdentifier: "HomePageViewControllerSegue", sender: nil)
             }
              
             

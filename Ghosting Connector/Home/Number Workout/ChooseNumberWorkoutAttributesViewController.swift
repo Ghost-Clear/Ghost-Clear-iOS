@@ -150,7 +150,7 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			
 	@IBAction func choosePattern(_ sender: Any) {
 		if(((secondsOff.text! as NSString).integerValue) < 60 && ((secondsOff.text! as NSString).integerValue) >= 0 && ((minutesOff.text! as NSString).integerValue) < 60 && ((minutesOff.text! as NSString).integerValue) >= 0 && secondsOff.text! != "" && minutesOff.text! != "" && setsField.text != "" && setsField.text != "0" && ghostsField.text != "0" && (secondsOff.text != "0" || minutesOff.text != "0")){
-			performSegue(withIdentifier: "chooseNumberedPattern", sender: nil)
+			performSegue(withIdentifier: "ChooseNumberWorkoutPatternViewControllerSegue", sender: nil)
 		}
 		else if((setsField.text! as NSString).integerValue == 9999 || (ghostsField.text! as NSString).integerValue > 9999){
 			let alertVC = UIAlertController(title: "Values too large", message: "Your ghosts or sets values are too large.", preferredStyle: UIAlertController.Style.alert)
@@ -202,7 +202,7 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		if segue.identifier == "chooseNumberedPattern" {
+		if segue.identifier == "ChooseNumberWorkoutPatternViewControllerSegue" {
 			if let childVC = segue.destination as? ChooseNumberWorkoutPatternViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.numSets = (setsField.text! as NSString).integerValue

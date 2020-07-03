@@ -470,7 +470,7 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 			self.present(alertVC, animated: true, completion: nil)
 		}
 		else{
-			performSegue(withIdentifier: "startWorkout", sender: nil)
+			performSegue(withIdentifier: "DoNumberWorkoutViewControllerSegue", sender: nil)
 		}
 	}
 	@IBAction func goBack(_ sender: Any) {
@@ -563,7 +563,7 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-		if segue.identifier == "startWorkout" {
+		if segue.identifier == "DoNumberWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? DoNumberWorkoutViewController {
 				//Some property on ChildVC that needs to be set
 				

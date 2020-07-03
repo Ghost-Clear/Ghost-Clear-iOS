@@ -242,7 +242,7 @@ class HomePageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "goToSettings"{
+        if segue.identifier == "SettingsViewControllerSegue"{
            if let childVC = segue.destination as? SettingsViewController {
               //Some property on ChildVC that needs to be set
             childVC.homeController = self
