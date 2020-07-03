@@ -10,20 +10,19 @@ import UIKit
 import CoreBluetooth
 class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = true
-    
 	@IBOutlet weak var setsField: UITextField!
 	@IBOutlet weak var ghostsField: UITextField!
 	@IBOutlet weak var secondsOff: UITextField!
 	@IBOutlet weak var minutesOff: UITextField!
 	@IBOutlet var blankRandomize: UIButton!
 	@IBOutlet weak var choosPatternButton: UIButton!
+	@IBOutlet var randomizeButton: UIButton!
 	@IBAction func unRandomize(_ sender: Any) {
         isRandomized = true
         blankRandomize.isHidden = true
         randomizeButton.isHidden = false
         print(isRandomized)
     }
-    
 	@IBAction func setFieldSelected(_ sender: Any) {
 		if ghostsField.text == ""{
 			ghostsField.text = "0"
@@ -39,7 +38,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 		}
 		setsField.text = ""
 	}
-	
 	@IBAction func ghostFieldSelected(_ sender: Any) {
 		if ghostsField.text == ""{
 			ghostsField.text = "0"
@@ -85,7 +83,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 		}
 		secondsOff.text = ""
 	}
-	
 	func textFieldDidEndEditing(_ textField: UITextField) {
 		if ghostsField.text == ""{
 			ghostsField.text = "0"
@@ -100,7 +97,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			secondsOff.text = "0"
 		}
 	}
-	@IBOutlet var randomizeButton: UIButton!
     @IBAction func randomize(_ sender: Any) {
         isRandomized = false
         blankRandomize.isHidden = false
@@ -121,7 +117,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 		blankRandomize.imageView?.contentMode = .scaleAspectFit
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        // Do any additional setup after loading the view.
     }
 	@objc func keyboardWillHide(notification: NSNotification) {
 		if self.view.frame.origin.y != 0 {
@@ -147,7 +142,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			}
 		}
 	}
-			
 	@IBAction func choosePattern(_ sender: Any) {
 		if(((secondsOff.text! as NSString).integerValue) < 60 && ((secondsOff.text! as NSString).integerValue) >= 0 && ((minutesOff.text! as NSString).integerValue) < 60 && ((minutesOff.text! as NSString).integerValue) >= 0 && secondsOff.text! != "" && minutesOff.text! != "" && setsField.text != "" && setsField.text != "0" && ghostsField.text != "0" && (secondsOff.text != "0" || minutesOff.text != "0")){
 			performSegue(withIdentifier: "ChooseNumberWorkoutPatternViewControllerSegue", sender: nil)
@@ -156,7 +150,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			let alertVC = UIAlertController(title: "Values too large", message: "Your ghosts or sets values are too large.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -165,7 +158,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your number of sets and ghosts are not equal to 0.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -174,7 +166,6 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your rest time is not equal to 0 minutes and 0 seconds.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -183,28 +174,14 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
 		}
-		
 	}
-	
-    
-    
-    
-    
-    
-        // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
 		if segue.identifier == "ChooseNumberWorkoutPatternViewControllerSegue" {
 			if let childVC = segue.destination as? ChooseNumberWorkoutPatternViewController {
-				//Some property on ChildVC that needs to be set
 				childVC.numSets = (setsField.text! as NSString).integerValue
 				childVC.numGhosts = (ghostsField.text! as NSString).integerValue
 				childVC.isRandomized = isRandomized
@@ -213,6 +190,4 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 			}
 		}
     }
-    
-
 }

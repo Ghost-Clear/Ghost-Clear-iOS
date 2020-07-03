@@ -24,24 +24,11 @@ class DoneNumberWorkoutViewController: UIViewController {
 		totalTimeOnLabel.text = totalTimeOn
 		avgTimeperSet.text = avgTime
 		totalGhostsLabel.text = String(totalGhosts)
-		ghostedCornersLabel.text = ghostedCorners
-		
-        // Do any additional setup after loading the view.
-    }
-    
+		ghostedCornersLabel.text = ghostedCorners		
+	}
 	@IBAction func done(_ sender: Any) {
 		popBack(5)
 	}
-	
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 	func popBack(_ nb: Int) {
 		
 		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {

@@ -10,7 +10,8 @@ import UIKit
 import CoreBluetooth
 class GoalView: UITableViewCell{
     @IBOutlet var back: UIImageView!
-    @IBOutlet weak var des: UILabel!
+	// des is the description of the label
+	@IBOutlet weak var des: UILabel!
 }
 class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var goalsFromCoreData = [Goal]()
@@ -18,6 +19,7 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 	var index = 0
 	var achievedCount : [Int] = []
 	var isAchieved : [Bool] = []
+	var childView: HomeMainViewGoalsTableViewController!
 	@IBOutlet weak var doneButton: UIButton!
 	@IBOutlet weak var addButton: UIButton!
 	var toEdit : Goal!
@@ -43,7 +45,6 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
                 }
                 
             }
-        
             goalsFromCoreData.sort{
                 return $0.order < $1.order
             }
@@ -94,24 +95,19 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
         cellHeight = 80
         return cellHeight
     }
-  
     @IBAction func doneButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return count
     }
-	
-    var childView: HomeMainViewGoalsTableViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
 		addButton.imageView?.contentMode = .scaleAspectFit
 		doneButton.imageView?.contentMode = .scaleAspectFit
-        // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-          getGoals()
+		getGoals()
         childView?.tableView.reloadData()
        }
     func getGoals(){
@@ -121,14 +117,11 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
                 count = goalFromCore.count
                 goalsFromCoreData = goalFromCore
             }
-            
         }
-    
         goalsFromCoreData.sort{
             return $0.order < $1.order
         }
     }
-   
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
           if editingStyle == .delete {
              count -= 1
@@ -136,15 +129,11 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let new = self.goalsFromCoreData[indexPath.row]
             self.goalsFromCoreData.remove(at: indexPath.row)
-                             context.delete(new)
-                             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-                self.getGoals()
-                             
-                         }
-          } else if editingStyle == .insert {
-              // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+			context.delete(new)
+			(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+			self.getGoals()
+			}
           }
-
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
@@ -159,58 +148,41 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 				
 			}
 		}
-			
-			
 		)
 		let editAction = UIContextualAction(style: .normal, title: "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-			//do segue here
 			self.toEdit =  self.goalsFromCoreData[indexPath.row]
 			self.performSegue(withIdentifier: "HomeEditGoalViewControllerSegue", sender: nil)
-			
-			
 		})
 		editAction.backgroundColor = UIColor(red: 255/256, green: 197/256, blue: 66/256, alpha: 1)
 		return UISwipeActionsConfiguration(actions: [deleteAction,editAction])
 	}
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "HomeMainViewGoalsTableViewControllerSegue" {
-          if let childVC = segue.destination as? HomeMainViewGoalsTableViewController {
-            //Some property on ChildVC that needs to be set
-            childVC.tableView.dataSource = self
-            childVC.tableView.delegate = self
-            childVC.tableView.reloadData()
-            childView = childVC
-          }
-        }
-		if segue.identifier == "HomeAddGoalViewControllerSegue" {
-		  if let childVC = segue.destination as? HomeAddGoalViewController {
-			//Some property on ChildVC that needs to be set
-			childVC.mainSetGoalsView = self
-		  }
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	if segue.identifier == "HomeMainViewGoalsTableViewControllerSegue" {
+		if let childVC = segue.destination as? HomeMainViewGoalsTableViewController {
+		childVC.tableView.dataSource = self
+		childVC.tableView.delegate = self
+		childVC.tableView.reloadData()
+		childView = childVC
 		}
-		if segue.identifier == "HomeEditGoalViewControllerSegue" {
-			if let childVC = segue.destination as? HomeEditGoalViewController {
-				//Some property on ChildVC that needs to be set
-				childVC.editingGoal = toEdit
-				childVC.parentView = self
-			}
+	}
+	if segue.identifier == "HomeAddGoalViewControllerSegue" {
+		if let childVC = segue.destination as? HomeAddGoalViewController {
+		childVC.mainSetGoalsView = self
 		}
-		if segue.identifier == "HomeViewGoalViewControllerSegue" {
-			if let childVC = segue.destination as? HomeViewGoalViewController {
-				//Some property on ChildVC that needs to be set
-				childVC.viewingGoal = goalsFromCoreData[index]
-				childVC.goalAcheivedCount = achievedCount[index]
-				
-			}
+	}
+	if segue.identifier == "HomeEditGoalViewControllerSegue" {
+		if let childVC = segue.destination as? HomeEditGoalViewController {
+			childVC.editingGoal = toEdit
+			childVC.parentView = self
 		}
-    }
-    
-
+	}
+	if segue.identifier == "HomeViewGoalViewControllerSegue" {
+		if let childVC = segue.destination as? HomeViewGoalViewController {
+			childVC.viewingGoal = goalsFromCoreData[index]
+			childVC.goalAcheivedCount = achievedCount[index]
+			
+		}
+	}
+}
 }
 

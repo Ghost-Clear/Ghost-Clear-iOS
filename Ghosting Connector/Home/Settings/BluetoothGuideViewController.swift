@@ -9,21 +9,24 @@
 import UIKit
 import CoreData
 class BluetoothGuideViewController: UIViewController {
-
 	@IBOutlet weak var resetButton: UIButton!
 	override func viewDidLoad() {
         super.viewDidLoad()
 		resetButton.imageView?.contentMode = .scaleAspectFit
-        // Do any additional setup after loading the view.
     }
-    
-	//TODO: implement this
     @IBAction func refresh(_ sender: Any) {
+		// deletes all Bluetooth device information from Core Data
 		resetAllRecords(in: "BLEkey");
+		let alertVC = UIAlertController(title: "Bluetooth has been reset", message: "Your bluetooth information has successfully been reset.", preferredStyle: UIAlertController.Style.alert)
+		let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+			alertVC.dismiss(animated: true, completion: nil)
+			self.dismiss(animated: true, completion: nil)
+		})
+		alertVC.addAction(action)
+		self.present(alertVC, animated: true, completion: nil)
     }
-	func resetAllRecords(in entity : String) // entity = Your_Entity_Name
+	func resetAllRecords(in entity : String)
 	{
-		
 		let context = ( UIApplication.shared.delegate as! AppDelegate ).persistentContainer.viewContext
 		let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
 		let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
@@ -37,14 +40,4 @@ class BluetoothGuideViewController: UIViewController {
 			print ("There was an error")
 		}
 	}
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

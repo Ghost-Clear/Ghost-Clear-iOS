@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class ChooseTimedWorkoutPatternViewController: UIViewController {
 	var isFL = false
 	var isFR = false
@@ -32,6 +31,12 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 	var LRcount = 0
 	@IBOutlet weak var gridImage: UIImageView!
 	@IBOutlet weak var orderLabel: UILabel!
+	@IBOutlet var frontLeft: UIButton!
+	@IBOutlet var frontRight: UIButton!
+	@IBOutlet var lowerLeft: UIButton!
+	@IBOutlet var lowerRight: UIButton!
+	@IBOutlet var centerRight: UIButton!
+	@IBOutlet var centerLeft: UIButton!
 	override func viewDidLoad() {
         super.viewDidLoad()
 		resetButton.imageView?.contentMode = .scaleToFill
@@ -44,8 +49,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			orderLabel.isHidden = false
 			orderLabel.text = ""
 		}
-		
-        // Do any additional setup after loading the view.
     }
 	func redoNumbers(number : Int){
 		if isFL && FLcount > number {
@@ -67,10 +70,49 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			LRcount -= 1
 		}
 	}
+	func getImageBinaryName() -> String{
+		var toReturn = ""
+		if isLR{
+			toReturn += "1"
+		}
+		else{
+			toReturn += "0"
+		}
+		if isLL{
+			toReturn += "1"
+		}
+		else{
+			toReturn += "0"
+		}
+		if isCR{
+			toReturn += "1"
+		}
+		else{
+			toReturn += "0"
+		}
+		if isCL{
+			toReturn += "1"
+		}
+		else{
+			toReturn += "0"
+		}
+		if isFR{
+			toReturn += "1"
+		}
+		else{
+			toReturn += "0"
+		}
+		if isFL{
+			toReturn += "1"
+		}
+		else{
+			toReturn += "0"
+		}
+		return toReturn
+	}
 	@IBAction func goBack(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)
 	}
-	@IBOutlet var frontLeft: UIButton!
 	@IBAction func FL(_ sender: Any) {
 		if isFL{
 			isFL = false
@@ -85,45 +127,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			if !isRandomized{
 				FLcount = count
 			}
-			
 		}
-		var getImage : String! = ""
-		if isLR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isLL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
+		let getImage : String! = getImageBinaryName()
 		gridImage.image = UIImage(named: getImage)
 		if count != 0{
 			orderLabel.text = getOrderLabel()
@@ -132,8 +137,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			orderLabel.text = ""
 		}
 	}
-	@IBOutlet var frontRight: UIButton!
-	
 	@IBAction func resetSelection(_ sender: Any) {
 		isFR = false
 		isFL = false
@@ -158,46 +161,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			if !isRandomized{
 				FRcount = count
 			}
-			
-			
 		}
-		var getImage : String! = ""
-		if isLR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isLL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
+		let getImage : String! = getImageBinaryName()
 		gridImage.image = UIImage(named: getImage)
 		if count != 0{
 			orderLabel.text = getOrderLabel()
@@ -206,7 +171,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			orderLabel.text = ""
 		}
 	}
-	
 	@IBAction func CL(_ sender: Any) {
 		if isCL{
 			isCL = false
@@ -220,46 +184,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			if !isRandomized{
 				CLcount = count
 			}
-			
 		}
-		var getImage : String! = ""
-		if isLR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isLL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		
+		let getImage : String! = getImageBinaryName()
 		gridImage.image = UIImage(named: getImage)
 		if count != 0{
 			orderLabel.text = getOrderLabel()
@@ -271,8 +197,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		view.endEditing(true)
 	}
-	@IBOutlet var lowerLeft: UIButton!
-	@IBOutlet var centerLeft: UIButton!
 	@IBAction func LL(_ sender: Any) {
 		if isLL{
 			isLL = false
@@ -286,46 +210,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			if !isRandomized{
 				LLcount = count
 			}
-			
-			
 		}
-		var getImage : String! = ""
-		if isLR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isLL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
+		let getImage : String! = getImageBinaryName()
 		gridImage.image = UIImage(named: getImage)
 		if count != 0{
 			orderLabel.text = getOrderLabel()
@@ -334,9 +220,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			orderLabel.text = ""
 		}
 	}
-	
-	
-	@IBOutlet var centerRight: UIButton!
 	@IBAction func CR(_ sender: Any) {
 		if isCR{
 			isCR = false
@@ -350,46 +233,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			if !isRandomized{
 				CRcount = count
 			}
-			
-			
 		}
-		var getImage : String! = ""
-		if isLR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isLL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
+	let getImage : String! = getImageBinaryName()
 		gridImage.image = UIImage(named: getImage)
 		if count != 0{
 			orderLabel.text = getOrderLabel()
@@ -398,11 +243,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			orderLabel.text = ""
 		}
 	}
-	
-	
-	
-	
-	@IBOutlet var lowerRight: UIButton!
 	@IBAction func LR(_ sender: Any) {
 		if isLR{
 			isLR = false
@@ -416,46 +256,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			if !isRandomized{
 				LRcount = count
 			}
-			
 		}
-		var getImage : String! = ""
-		if isLR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isLL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isCL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFR{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		if isFL{
-			getImage += "1"
-		}
-		else{
-			getImage += "0"
-		}
-		
+		let getImage : String! = getImageBinaryName()
 		gridImage.image = UIImage(named: getImage)
 		if count != 0{
 			orderLabel.text = getOrderLabel()
@@ -464,14 +266,11 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			orderLabel.text = ""
 		}
 	}
-	
 	@IBAction func startGhost(_ sender: Any) {
 		if !isFR && !isFL && !isCR && !isCL && !isLR && !isLL{
 			let alertVC = UIAlertController(title: "Invalid Pattern", message: "Make sure that you choose at least 1 place to ghost to.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
-				self.dismiss(animated: true, completion: nil)
-				//add segue
-		
+				self.dismiss(animated: true, completion: nil)		
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -480,9 +279,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			performSegue(withIdentifier: "DoTimedWorkoutViewControllerSegue", sender: nil)
 		}
 	}
-	
-
-    
 	func getOrderLabel() -> String{
 		let o = getOrderArr()
 		var toReturn = ""
@@ -510,7 +306,6 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 		return toReturn
 	}
-	
 	func getOrderArr() -> [String]{
 		var order : [String]! = []
 		for _ in 0...count-1 {
@@ -565,14 +360,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 		return order
 	}
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
 		if segue.identifier == "DoTimedWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? DoTimedWorkoutViewController {
-				//Some property on ChildVC that needs to be set
-				
 				childVC.numSets = numSets
 				childVC.numMinutesOn = onMinutes
 				childVC.numMinutesOff = offMinutes
@@ -592,6 +382,4 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 			}
 		}
     }
-    
-
 }

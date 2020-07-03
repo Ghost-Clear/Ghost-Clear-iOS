@@ -78,7 +78,6 @@ class InitialAddGoalViewController: UIViewController, UITextFieldDelegate {
 		}
 		numMinutesField.text = ""
 	}
-	
 	@IBAction func secondFieldSelected(_ sender: Any) {
 		if numGhostsField.text == ""{
 			numGhostsField.text = "0"
@@ -131,13 +130,11 @@ class InitialAddGoalViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
     }
-
     @IBAction func addGoal(_ sender: Any) {
 		if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numGhostsField.text! != "" && numGhostsField.text != "0" && numSetsField.text != "0" && numSetsField.text != ""){
             
@@ -152,7 +149,6 @@ class InitialAddGoalViewController: UIViewController, UITextFieldDelegate {
             goal.isCompleted = false
             goal.order = Int64(goalArray.count+1)
             }
-            //let finalData = joke()
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         mainSetGoalsView.getGoals()
         mainSetGoalsView.childView?.tableView.reloadData()
@@ -161,7 +157,6 @@ class InitialAddGoalViewController: UIViewController, UITextFieldDelegate {
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your rest time is not equal to 0 minutes and 0 seconds.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -170,21 +165,9 @@ class InitialAddGoalViewController: UIViewController, UITextFieldDelegate {
              let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts and sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
             let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                 alertVC.dismiss(animated: true, completion: nil)
-                //add segue
             })
             alertVC.addAction(action)
             self.present(alertVC, animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

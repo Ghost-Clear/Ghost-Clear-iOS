@@ -17,46 +17,40 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 	@IBOutlet weak var addButton: UIButton!
 	@IBOutlet weak var FinishButton: UIButton!
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return count
     }
-
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		index = indexPath.row
 		performSegue(withIdentifier: "InitialViewGoalViewControllerSegue", sender: nil)
 	}
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newGoal", for: indexPath)
-        var cellText: String  = ""
-		cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
-		if goalsFromCoreData[indexPath.row].sets == 1{
-			cellText = cellText + " set of "
-		}
-		else{
-			cellText = cellText + " sets of "
-		}
-		cellText = cellText + String(goalsFromCoreData[indexPath.row].ghosts)
-		if goalsFromCoreData[indexPath.row].ghosts == 1{
-			cellText = cellText + " ghost in "
-		}
-		else{
-			cellText = cellText + " ghosts in  "
-		}
-		cellText += "0 : "
-		cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes) + " : "
-		cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds) + "  per set"
-		
-        cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.text = cellText
-		cell.textLabel?.font = .systemFont(ofSize: 15)
-		cell.textLabel?.adjustsFontSizeToFitWidth = true
-		cell.textLabel?.textAlignment = NSTextAlignment.center
-        // Configure the cell...
-       
-        
-       
-        return cell
-    }
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	let cell = tableView.dequeueReusableCell(withIdentifier: "newGoal", for: indexPath)
+	var cellText: String  = ""
+	cellText = cellText + String(goalsFromCoreData[indexPath.row].sets)
+	if goalsFromCoreData[indexPath.row].sets == 1{
+		cellText = cellText + " set of "
+	}
+	else{
+		cellText = cellText + " sets of "
+	}
+	cellText = cellText + String(goalsFromCoreData[indexPath.row].ghosts)
+	if goalsFromCoreData[indexPath.row].ghosts == 1{
+		cellText = cellText + " ghost in "
+	}
+	else{
+		cellText = cellText + " ghosts in  "
+	}
+	cellText += "0 : "
+	cellText = cellText + String(goalsFromCoreData[indexPath.row].minutes) + " : "
+	cellText = cellText + String(goalsFromCoreData[indexPath.row].seconds) + "  per set"
+	
+	cell.textLabel?.textColor = UIColor.white
+	cell.textLabel?.text = cellText
+	cell.textLabel?.font = .systemFont(ofSize: 15)
+	cell.textLabel?.adjustsFontSizeToFitWidth = true
+	cell.textLabel?.textAlignment = NSTextAlignment.center
+	return cell
+}
 	@IBAction func FinishCreatingGoals(_ sender: Any) {
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			let firstLaunch = IsFirstLaunch(context: context)
@@ -74,14 +68,10 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 				context.delete(new)
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 				self.getGoals()
-				
 			}
 		}
-			
-			
 		)
 		let editAction = UIContextualAction(style: .normal, title: "Edit", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-			//do segue here
 			self.toEdit =  self.goalsFromCoreData[indexPath.row]
 			self.performSegue(withIdentifier: "InitialEditGoalViewControllerSegue", sender: nil)
 			
@@ -90,15 +80,6 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 		editAction.backgroundColor = UIColor(red: 255/256, green: 197/256, blue: 66/256, alpha: 1)
 		return UISwipeActionsConfiguration(actions: [deleteAction,editAction])
 	}
-
-     
-	
-	
-	
-	
-	
-	
-	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var cellHeight:CGFloat = CGFloat()
         cellHeight = 80
@@ -112,9 +93,7 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
                 count = goalFromCore.count
                 goalsFromCoreData = goalFromCore
             }
-            
         }
-    
         goalsFromCoreData.sort{
             return $0.order < $1.order
         }
@@ -128,17 +107,9 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
         getGoals()
         childView?.tableView.reloadData()
     }
-    
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "InitialMainViewGoalsTableViewControllerSegue" {
           if let childVC = segue.destination as? InitialMainViewGoalsTableViewController {
-            //Some property on ChildVC that needs to be set
             childVC.tableView.dataSource = self
             childVC.tableView.delegate = self
             childVC.tableView.reloadData()
@@ -147,26 +118,21 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
         }
         if segue.identifier == "InitialAddGoalViewControllerSegue" {
           if let childVC = segue.destination as? InitialAddGoalViewController {
-            //Some property on ChildVC that needs to be set
             childVC.mainSetGoalsView = self
           }
         }
 		if segue.identifier == "InitialEditGoalViewControllerSegue" {
 			if let childVC = segue.destination as? InitialEditGoalViewController {
-				//Some property on ChildVC that needs to be set
 				childVC.editingGoal = toEdit
 				childVC.parentView = self
 			}
 		}
 		if segue.identifier == "InitialViewGoalViewControllerSegue" {
 			if let childVC = segue.destination as? InitialViewGoalViewController {
-				//Some property on ChildVC that needs to be set
 				childVC.viewingGoal = goalsFromCoreData[index]
 			}
 		}
 		
         
     }
-    
-
 }

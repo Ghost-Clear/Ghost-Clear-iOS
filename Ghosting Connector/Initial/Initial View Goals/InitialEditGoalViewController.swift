@@ -21,7 +21,6 @@ class InitialEditGoalViewController: UIViewController {
 		numSecondsField.text = String(editingGoal.seconds)
 		numMinutesField.text = String(editingGoal.minutes)
 		numSetsField.text = String(editingGoal.sets)
-		// Do any additional setup after loading the view.
 	}
 	@objc func keyboardWillShow(notification: NSNotification) {
 		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -30,7 +29,6 @@ class InitialEditGoalViewController: UIViewController {
 			}
 		}
 	}
-	
 	@objc func keyboardWillHide(notification: NSNotification) {
 		if self.view.frame.origin.y != 0 {
 			self.view.frame.origin.y = 0
@@ -125,7 +123,6 @@ class InitialEditGoalViewController: UIViewController {
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your rest time is not equal to 0 minutes and 0 seconds.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -134,7 +131,6 @@ class InitialEditGoalViewController: UIViewController {
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts and sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
-				//add segue
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
@@ -172,14 +168,4 @@ class InitialEditGoalViewController: UIViewController {
 	override func viewWillDisappear(_ animated: Bool) {
 		parentView.childView?.tableView.reloadData()
 	}
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	// Get the new view controller using segue.destination.
-	// Pass the selected object to the new view controller.
-	}
-	*/
-
 }
