@@ -1,0 +1,2 @@
+# Ghosting-Connector
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a5d5ef674334ae29148b0872ed5e0e1)](https://app.codacy.com/manual/varunchitturi/Ghosting-Connector?utm_source=github.com&utm_medium=referral&utm_content=varunchitturi/Ghosting-Connector&utm_campaign=Badge_Grade_Dashboard)
