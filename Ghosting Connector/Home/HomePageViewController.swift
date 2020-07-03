@@ -137,7 +137,7 @@ class HomePageViewController: UIViewController {
         theBarChart.drawValueAboveBarEnabled = true
         theBarChart.data?.setDrawValues(false)
         theBarChart.barData?.setDrawValues(true)
-		theBarChart.barData?.setValueFont(.systemFont(ofSize: 18))
+		theBarChart.barData?.setValueFont(.systemFont(ofSize: 13))
         theBarChart.barData?.setValueTextColor(.white)
 		theBarChart.xAxis.labelTextColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 1)
     }

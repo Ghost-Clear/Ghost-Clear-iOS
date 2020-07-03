@@ -55,6 +55,7 @@
 		27DCEFF9248EE00700309DD4 /* InitialMainViewGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCEFF8248EE00700309DD4 /* InitialMainViewGoalsViewController.swift */; };
 		27DCEFFB248EE7BF00309DD4 /* InitialMainViewGoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCEFFA248EE7BF00309DD4 /* InitialMainViewGoalsTableViewController.swift */; };
 		27DCEFFD248F57C300309DD4 /* InitialAddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCEFFC248F57C300309DD4 /* InitialAddGoalViewController.swift */; };
+		E6E717F17957AA7EBED2D9F4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E6E7186A65C9B6B3CDDA5A2C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		65B98F777AFDF82317099712 /* Pods-Ghosting Connector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ghosting Connector.release.xcconfig"; path = "Target Support Files/Pods-Ghosting Connector/Pods-Ghosting Connector.release.xcconfig"; sourceTree = "<group>"; };
 		C3FBD43442BA88EAE78FB43E /* Pods-Ghosting Connector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ghosting Connector.debug.xcconfig"; path = "Target Support Files/Pods-Ghosting Connector/Pods-Ghosting Connector.debug.xcconfig"; sourceTree = "<group>"; };
 		E398A55B3A6E0FCB4ADC1480 /* Pods_Ghosting_Connector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ghosting_Connector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E7186A65C9B6B3CDDA5A2C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				2741C6AC2454BDC400EB4944 /* Products */,
 				6A1011C760EC1DFB3E9EB70B /* Pods */,
 				BDAB14C91FBBFC34B3797DCE /* Frameworks */,
+				E6E7186A65C9B6B3CDDA5A2C /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -471,6 +474,7 @@
 				2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */,
 				27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */,
 				27196FE524A3C47900B9A8DC /* DoNumberWorkoutViewController.swift in Sources */,
+				E6E717F17957AA7EBED2D9F4 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
