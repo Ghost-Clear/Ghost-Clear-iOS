@@ -33,6 +33,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var LRPeripheral : CBPeripheral?
 	var LLPeripheral : CBPeripheral?
 	var isPaused : Bool! = false
+	var didConnect : Bool!
 	var characteristicASCIIValue = NSString()
 	var FR : Bool!
     var FL : Bool!
@@ -361,10 +362,9 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		else{
 			isFirstPair = true
 		}
-		// timer to see if all the necessary devices are connected
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
-			if (self.FRPeripheral == nil && self.FR) || (self.FLPeripheral == nil && self.FL) || (self.CRPeripheral == nil && self.CR) || (self.CLPeripheral == nil && self.CL) || (self.LRPeripheral == nil && self.LR) || (self.LLPeripheral == nil && self.LL){
-				self.circleTime.stop()
+		performSegue(withIdentifier: "TimedWorkoutConnectionProgressViewControllerViewControllerSegue", sender: nil)
+		DispatchQueue.main.asyncAfter(deadline: .now() + 4.2) {
+			if !self.didConnect{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all the necessary devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				self.centralManager.stopScan()
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
@@ -373,11 +373,13 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
-				if self.navigationController?.visibleViewController == self{
-					self.present(alertVC, animated: true, completion: nil)
-				}
+				self.present(alertVC, animated: true, completion: nil)
 			}
-		})
+			else{
+				self.circleTime.start()
+			}
+			
+		}
     }
 	func allPeripeheralsExist(id: Bool) -> Bool {
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -1090,7 +1092,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				}
 			}
             circleTime.elapsedTime = 0
-            circleTime.start()
             return
         } else {
 			if central.state == CBManagerState.poweredOn && FRPeripheral != nil && FLPeripheral != nil && CRPeripheral != nil && CLPeripheral != nil && FRPeripheral != nil && FLPeripheral != nil {
@@ -1110,7 +1111,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					}
 				}
                 circleTime.elapsedTime = 0
-                circleTime.start()
                 startScan()
             }
             else{
@@ -1239,6 +1239,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 					}
 				}
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+				
+			}
+		}
+		if segue.identifier == "TimedWorkoutConnectionProgressViewControllerViewControllerSegue" {
+			if let childVC = segue.destination as? TimedWorkoutConnectionProgressViewControllerViewController {
+				childVC.parentView = self
 				
 			}
 		}

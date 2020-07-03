@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNq-8a-LhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="50.892857142857139"/>
+            <point key="canvasLocation" x="1470" y="25"/>
         </scene>
         <!--Initial Add Goal View Controller-->
         <scene sceneID="piE-bk-pCq">
@@ -1327,6 +1327,7 @@
                         <outlet property="whichGhostLabel" destination="WJ0-Df-gQD" id="3V1-ey-KKj"/>
                         <segue destination="Ylo-oK-Lm2" kind="show" identifier="DoneTimedWorkoutViewControllerSegue" id="nT1-2M-1GO"/>
                         <segue destination="1hj-Hv-teo" kind="presentation" identifier="TimedWorkoutCheckPopUpViewControllerSegue" id="yok-hN-f4X"/>
+                        <segue destination="e57-zu-dEN" kind="presentation" identifier="TimedWorkoutConnectionProgressViewControllerViewControllerSegue" id="eS7-lg-KSt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80k-SJ-VpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2276,6 +2277,55 @@
             </objects>
             <point key="canvasLocation" x="-3252.1739130434785" y="738.61607142857144"/>
         </scene>
+        <!--Number Workout Connection Progress View Controller-->
+        <scene sceneID="HKN-sW-VbR">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="RaL-cY-PPj" customClass="NumberWorkoutConnectionProgressViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VXN-SN-Wks">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fW7-0P-0dO">
+                                <rect key="frame" x="77" y="318" width="260" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drA-PK-PQK" customClass="CircularProgressView" customModule="Ghost_Connect" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="61" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAK-E1-e4w" customClass="M13Checkbox" customModule="M13Checkbox">
+                                                <rect key="frame" x="15" y="15" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.047852523619999997" green="0.087433807550000006" blue="0.11497741190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connected To Devices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-1N-uJM">
+                                        <rect key="frame" x="8" y="8" width="244" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.05148264021" green="0.085889019070000003" blue="0.10588542369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9v2-UF-xED"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkBox" destination="xAK-E1-e4w" id="VYq-nT-CH9"/>
+                        <outlet property="circleView" destination="drA-PK-PQK" id="l1C-Bp-GpX"/>
+                        <outlet property="connectionLabel" destination="Oae-1N-uJM" id="15R-sr-fi0"/>
+                        <outlet property="containingView" destination="fW7-0P-0dO" id="qQU-hX-wMs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8Y-TU-pze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1614" y="31"/>
+        </scene>
         <!--Do Number Workout View Controller-->
         <scene sceneID="dOs-MA-q9D">
             <objects>
@@ -2384,6 +2434,7 @@
                         <outlet property="whichGhostLabel" destination="6wc-Pf-IBX" id="9On-jp-PWZ"/>
                         <segue destination="6lj-3l-Myb" kind="show" identifier="DoneNumberWorkoutViewControllerSegue" id="epa-pI-oAG"/>
                         <segue destination="HAa-pq-V0O" kind="presentation" identifier="NumberWorkoutCheckPopupViewControllerSegue" id="lwq-so-hmz"/>
+                        <segue destination="RaL-cY-PPj" kind="presentation" identifier="NumberWorkoutConnectionProgressViewControllerViewControllerSegue" id="2Fj-OZ-cX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ey4-Ux-cQY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2731,6 +2782,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGK-do-hED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3111.594202898551" y="27.455357142857142"/>
+        </scene>
+        <!--Timed Workout Connection Progress View Controller View Controller-->
+        <scene sceneID="ikb-6H-QxI">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewControllerViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXn-pl-64h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03b-ei-buy">
+                                <rect key="frame" x="77" y="318" width="260" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRP-tI-mCA" customClass="CircularProgressView" customModule="Ghost_Connect" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="61" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yh-It-OPQ" customClass="M13Checkbox" customModule="M13Checkbox">
+                                                <rect key="frame" x="15" y="15" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.047852523619999997" green="0.087433807550000006" blue="0.11497741190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connected To Devices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMW-qn-HoH">
+                                        <rect key="frame" x="8" y="8" width="244" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.05148264021" green="0.085889019070000003" blue="0.10588542369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Uzu-cK-3sY"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkBox" destination="7Yh-It-OPQ" id="MBV-5g-Uxq"/>
+                        <outlet property="circleView" destination="BRP-tI-mCA" id="erN-Xm-8bJ"/>
+                        <outlet property="connectionLabel" destination="xMW-qn-HoH" id="ism-b0-Ijd"/>
+                        <outlet property="containingView" destination="03b-ei-buy" id="86d-2l-tg3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQi-om-j9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4087" y="1440"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

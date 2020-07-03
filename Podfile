@@ -1,4 +1,4 @@
-platform :ios, '13.4'
+platform :ios, '13.5'
 
 target 'Ghosting Connector' do
 

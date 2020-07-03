@@ -48,6 +48,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 	var peripheralCount = 0
 	var checkTimer : Timer!
 	var isFirstPair : Bool!
+	var didConnect : Bool!
 	var FRname : String!
 	var FLname : String!
 	var CRname : String!
@@ -358,21 +359,24 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 		else{
 			isFirstPair = true
 		}
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { timer in
-			if (self.FRPeripheral == nil && self.FR) || (self.FLPeripheral == nil && self.FL) || (self.CRPeripheral == nil && self.CR) || (self.CLPeripheral == nil && self.CL) || (self.LRPeripheral == nil && self.LR) || (self.LLPeripheral == nil && self.LL){
-				self.circleTime.stop()
-				self.stopWatch.invalidate()
+		performSegue(withIdentifier: "NumberWorkoutConnectionProgressViewControllerViewControllerSegue", sender: nil)
+		DispatchQueue.main.asyncAfter(deadline: .now() + 4.2) {
+			if !self.didConnect{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all the necessary devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
+				self.centralManager.stopScan()
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
 					self.popBack(3)
-					
 					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
 				self.present(alertVC, animated: true, completion: nil)
 			}
-		})
+			else{
+				self.circleTime.start()
+			}
+			
+		}
 	}
 	func allPeripeheralsExist(id: Bool) -> Bool {
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -1301,7 +1305,6 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 				}
 			}
 			circleTime.elapsedTime = 0
-			circleTime.start()
 			return
 		} else {
 			if central.state == CBManagerState.poweredOn && FRPeripheral != nil && FLPeripheral != nil && CRPeripheral != nil && CLPeripheral != nil && FRPeripheral != nil && FLPeripheral != nil {
@@ -1321,7 +1324,6 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 					}
 				}
 				circleTime.elapsedTime = 0
-				circleTime.start()
 				startScan()
 			}
 			else{
@@ -1429,7 +1431,13 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 				}
 			}
 		}
-	}	
+		if segue.identifier == "NumberWorkoutConnectionProgressViewControllerViewControllerSegue" {
+			if let childVC = segue.destination as? NumberWorkoutConnectionProgressViewController {
+				childVC.parentView = self
+				
+			}
+		}
+	}
 }
 fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
 	return input.rawValue
