@@ -8,7 +8,7 @@
 
 import UIKit
 import M13Checkbox
-class TimedCheckPopUpViewController: UIViewController {
+class TimedWorkoutCheckPopUpViewController: UIViewController {
 	@IBOutlet weak var checkBoxContainingView: UIView!
 	@IBOutlet weak var checkBox: M13Checkbox!
 	override func viewDidLoad() {

@@ -12,7 +12,7 @@ import Foundation
 import AppusCircleTimer
 import CoreData
 import AVFoundation
-class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
+class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
 	var player : AVAudioPlayer?
 	var frtxCharacteristic : CBCharacteristic?
 	var frrxCharacteristic : CBCharacteristic?
@@ -1501,7 +1501,7 @@ class DoNumberedWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	// Get the new view controller using segue.destination.
 	// Pass the selected object to the new view controller.
 		if segue.identifier == "finishNumberedWorkout" {
-			if let childVC = segue.destination as? DoneNumberedWorkoutViewController {
+			if let childVC = segue.destination as? DoneNumberWorkoutViewController {
 				
 				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 					let workout = Workout(context: context)

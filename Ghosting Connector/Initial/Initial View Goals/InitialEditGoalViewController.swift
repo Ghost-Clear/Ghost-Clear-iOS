@@ -8,9 +8,9 @@
 
 import UIKit
 
-class EditSingularGoalViewController: UIViewController {
+class InitialEditGoalViewController: UIViewController {
 	var editingGoal : Goal!
-	var parentView : SetYourGoalsViewController!
+	var parentView : InitialMainViewGoalsViewController!
 	@IBOutlet weak var applyChangesButton: UIButton!
 	override func viewDidLoad() {
 		super.viewDidLoad()

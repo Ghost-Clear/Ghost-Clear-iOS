@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ViewWorkoutDetailViewController: UIViewController {
+class HomeViewWorkoutViewController: UIViewController {
 	var viewingWorkout : Workout!
     
 	

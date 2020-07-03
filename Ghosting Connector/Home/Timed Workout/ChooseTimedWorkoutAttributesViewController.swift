@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreBluetooth
-class TimedWorkoutViewController: UIViewController, UITextFieldDelegate {
+class ChooseTimedWorkoutAttributesViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = true
 	@IBOutlet weak var choosePatternButton: UIButton!
 	@IBOutlet var blankRandomize: UIButton!

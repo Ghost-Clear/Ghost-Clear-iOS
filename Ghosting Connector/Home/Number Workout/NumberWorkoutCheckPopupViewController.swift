@@ -8,7 +8,7 @@
 
 import UIKit
 import M13Checkbox
-class NumberedWorkoutCheckPopupViewController: UIViewController {
+class NumberWorkoutCheckPopupViewController: UIViewController {
 
 	@IBOutlet weak var checkBox: M13Checkbox!
 	@IBOutlet weak var checkBoxContainingView: UIView!

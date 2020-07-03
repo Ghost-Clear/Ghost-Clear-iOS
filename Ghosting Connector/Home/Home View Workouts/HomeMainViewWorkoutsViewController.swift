@@ -13,7 +13,7 @@ class workoutCell : UITableViewCell{
 	@IBOutlet var cellText : UILabel!
 	
 }
-class MainViewWorkoutViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 	@IBOutlet weak var doneButton: UIButton!
 	var childView : UITableViewController!
 	var workoutsFromCoreData = [Workout]()
@@ -99,7 +99,7 @@ class MainViewWorkoutViewController: UIViewController,UITableViewDelegate, UITab
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
 		if segue.identifier == "showWorkoutTable" {
-			if let childVC = segue.destination as? ViewWorkoutTableViewController {
+			if let childVC = segue.destination as? HomeMainViewWorkoutsTableViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.tableView.dataSource = self
 				childVC.tableView.delegate = self
@@ -108,7 +108,7 @@ class MainViewWorkoutViewController: UIViewController,UITableViewDelegate, UITab
 			}
 		}
 		if segue.identifier == "showWorkoutDetail" {
-			if let childVC = segue.destination as? ViewWorkoutDetailViewController {
+			if let childVC = segue.destination as? HomeViewWorkoutViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.viewingWorkout = workoutsFromCoreData[indexToSend]
 			}

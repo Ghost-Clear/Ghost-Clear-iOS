@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreBluetooth
-class NumberedWorkoutViewController: UIViewController, UITextFieldDelegate {
+class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextFieldDelegate {
     var isRandomized = true
     
 	@IBOutlet weak var setsField: UITextField!
@@ -203,7 +203,7 @@ class NumberedWorkoutViewController: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
 		if segue.identifier == "chooseNumberedPattern" {
-			if let childVC = segue.destination as? ChooseNumberedWorkoutViewController {
+			if let childVC = segue.destination as? ChooseNumberWorkoutPatternViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.numSets = (setsField.text! as NSString).integerValue
 				childVC.numGhosts = (ghostsField.text! as NSString).integerValue

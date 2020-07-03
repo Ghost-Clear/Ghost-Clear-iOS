@@ -9,7 +9,7 @@
 import UIKit
 import  M13Checkbox
 import CoreData
-class ViewSingularGoalViewController: UIViewController {
+class InitialViewGoalViewController: UIViewController {
 	var viewingGoal : Goal!
 	
 	@IBOutlet weak var setField: UILabel!

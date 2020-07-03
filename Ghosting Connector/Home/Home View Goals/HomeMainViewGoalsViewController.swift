@@ -12,7 +12,7 @@ class GoalView: UITableViewCell{
     @IBOutlet var back: UIImageView!
     @IBOutlet weak var des: UILabel!
 }
-class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var goalsFromCoreData = [Goal]()
 	var count = 0
 	var index = 0
@@ -103,7 +103,7 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
         return count
     }
 	
-    var childView: ViewYourGoalsTableViewController!
+    var childView: HomeMainViewGoalsTableViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
 		addButton.imageView?.contentMode = .scaleAspectFit
@@ -180,7 +180,7 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "showGoalTables" {
-          if let childVC = segue.destination as? ViewYourGoalsTableViewController {
+          if let childVC = segue.destination as? HomeMainViewGoalsTableViewController {
             //Some property on ChildVC that needs to be set
             childVC.tableView.dataSource = self
             childVC.tableView.delegate = self
@@ -189,20 +189,20 @@ class MainViewGoalsViewController: UIViewController, UITableViewDelegate, UITabl
           }
         }
 		if segue.identifier == "addSingular" {
-		  if let childVC = segue.destination as? AddGoalViewController {
+		  if let childVC = segue.destination as? HomeAddGoalViewController {
 			//Some property on ChildVC that needs to be set
 			childVC.mainSetGoalsView = self
 		  }
 		}
 		if segue.identifier == "editGoalSegue" {
-			if let childVC = segue.destination as? EditGoalViewController {
+			if let childVC = segue.destination as? HomeEditGoalViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.editingGoal = toEdit
 				childVC.parentView = self
 			}
 		}
 		if segue.identifier == "viewGoal" {
-			if let childVC = segue.destination as? ViewGoalViewController {
+			if let childVC = segue.destination as? HomeViewGoalViewController {
 				//Some property on ChildVC that needs to be set
 				childVC.viewingGoal = goalsFromCoreData[index]
 				childVC.goalAcheivedCount = achievedCount[index]

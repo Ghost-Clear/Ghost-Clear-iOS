@@ -8,10 +8,10 @@
 
 import UIKit
 import CoreData
-class EditGoalViewController: UIViewController, UITextFieldDelegate {
+class HomeEditGoalViewController: UIViewController, UITextFieldDelegate {
 	var editingGoal : Goal!
 	@IBOutlet weak var applyChangesButton: UIButton!
-	var parentView : MainViewGoalsViewController!
+	var parentView : HomeMainViewGoalsViewController!
 	override func viewDidLoad() {
         super.viewDidLoad()
 		applyChangesButton.imageView?.contentMode = .scaleAspectFit

@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class HowToConnectViewController: UIViewController {
+class BluetoothGuideViewController: UIViewController {
 
 	@IBOutlet weak var resetButton: UIButton!
 	override func viewDidLoad() {

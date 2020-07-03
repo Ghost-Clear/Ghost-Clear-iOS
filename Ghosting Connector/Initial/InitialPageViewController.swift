@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreBluetooth
-class InitialLoginViewController: UIViewController, UITextFieldDelegate {
+class InitialPageViewController: UIViewController, UITextFieldDelegate {
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
     }

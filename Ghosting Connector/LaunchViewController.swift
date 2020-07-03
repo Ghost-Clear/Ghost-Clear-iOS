@@ -10,7 +10,7 @@ import UIKit
 import Darwin
 import CoreData
 import CoreBluetooth
-class StartViewController: UIViewController {
+class LaunchViewController: UIViewController {
 
     var bool = false
     override func viewDidLoad() {

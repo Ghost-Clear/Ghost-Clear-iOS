@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DoneNumberedWorkoutViewController: UIViewController {
+class DoneNumberWorkoutViewController: UIViewController {
 	var totalTimeOn : String!
 	var avgTime : String!
 	var totalGhosts : Int!

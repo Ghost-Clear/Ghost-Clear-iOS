@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseNumberedWorkoutViewController: UIViewController {
+class ChooseNumberWorkoutPatternViewController: UIViewController {
 	var isFL = false
 	var isFR = false
 	var isCR = false
@@ -564,7 +564,7 @@ class ChooseNumberedWorkoutViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
 		if segue.identifier == "startWorkout" {
-			if let childVC = segue.destination as? DoNumberedWorkoutViewController {
+			if let childVC = segue.destination as? DoNumberWorkoutViewController {
 				//Some property on ChildVC that needs to be set
 				
 				childVC.numSets = numSets

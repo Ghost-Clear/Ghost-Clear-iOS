@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ChangePreperationViewController: UIViewController, UITextFieldDelegate {
+class ChangePreperationTimeViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var applyChangesButton: UIButton!
 	override func viewDidLoad() {

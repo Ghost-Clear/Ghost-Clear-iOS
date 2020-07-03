@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import M13Checkbox
-class ViewGoalViewController: UIViewController {
+class HomeViewGoalViewController: UIViewController {
 	var viewingGoal : Goal!
 	var goalAcheivedCount : Int!
 	@IBOutlet weak var checkBox: M13Checkbox!

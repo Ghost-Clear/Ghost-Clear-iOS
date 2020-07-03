@@ -9,14 +9,15 @@
 import UIKit
 import CoreData
 import CoreBluetooth
-class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
-    var mainSetGoalsView: SetYourGoalsViewController!
+class HomeAddGoalViewController: UIViewController, UITextFieldDelegate {
+    var mainSetGoalsView: HomeMainViewGoalsViewController!
     var goalArray = [Goal]()
+    
     @IBOutlet weak var numGhostsField: UITextField!
     @IBOutlet weak var numMinutesField: UITextField!
     @IBOutlet weak var numSecondsField: UITextField!
 	@IBOutlet weak var numSetsField: UITextField!
-	@IBOutlet weak var AddGoalButton: UIButton!
+	@IBOutlet weak var addGoalButton: UIButton!
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
 		if numGhostsField.text == ""{
@@ -31,7 +32,6 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
 		if numSetsField.text == ""{
 			numSetsField.text = "0"
 		}
-		
     }
 	@IBAction func setFieldSelected(_ sender: Any) {
 		if numGhostsField.text == ""{
@@ -110,7 +110,7 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
 	}
     override func viewDidLoad() {
         super.viewDidLoad()
-		AddGoalButton.imageView?.contentMode = .scaleAspectFit
+		addGoalButton.imageView?.contentMode = .scaleAspectFit
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard (_:)))
                self.view.addGestureRecognizer(tapGesture)
                numGhostsField.delegate = self
@@ -139,24 +139,30 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addGoal(_ sender: Any) {
-		if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numGhostsField.text! != "" && numGhostsField.text != "0" && numSetsField.text != "0" && numSetsField.text != ""){
-            
-        
-        self.dismiss(animated: true, completion: nil)
-			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+		if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numGhostsField.text! != "" && numGhostsField.text! != "0" && numSetsField.text != "0" && numSetsField.text != ""){
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let goal = Goal(context: context)
             goal.seconds = Int64((numSecondsField.text! as NSString).integerValue)
             goal.minutes = Int64((numMinutesField.text! as NSString).integerValue)
             goal.ghosts = Int64((numGhostsField.text! as NSString).integerValue)
 			goal.sets = Int64((numSetsField.text! as NSString).integerValue)
             goal.isCompleted = false
-            goal.order = Int64(goalArray.count+1)
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+                if let goalsFromCore = try? context.fetch(Goal.fetchRequest()){
+                    let goalFromCore = goalsFromCore as! [Goal]
+                    goalArray = goalFromCore
+                }
+                
             }
-            //let finalData = joke()
+            goal.order = Int64(goalArray.count+1)
+        }
+        //let finalData = joke()
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+
         mainSetGoalsView.getGoals()
         mainSetGoalsView.childView?.tableView.reloadData()
-        }
+        self.dismiss(animated: true, completion: nil)
+    }
 		else if (numSecondsField.text == "0" &&  numMinutesField.text == "0"){
 			let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your rest time is not equal to 0 minutes and 0 seconds.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
@@ -167,7 +173,7 @@ class CreateSingularGoalViewController: UIViewController, UITextFieldDelegate {
 			self.present(alertVC, animated: true, completion: nil)
 		}
         else{
-             let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts and sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
+            let alertVC = UIAlertController(title: "Values not in range", message: "Make sure that your minutes and seconds are between 0 and 59 and your ghosts and sets are greater than 0.", preferredStyle: UIAlertController.Style.alert)
             let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                 alertVC.dismiss(animated: true, completion: nil)
                 //add segue
