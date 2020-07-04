@@ -240,6 +240,6 @@ The libraries used are:
 ## Contributions
 
 1. Make sure to include the file description in the readme if it is a new file
-2. Make sure all segues are named by the "going to" view controller
+2. Make sure all segues are named by the "going to" view controller + "Segue"
 3. Make sure all new libraries used are listed in the readme file
 3. If a new view controller is added, provide a gif of it in the readme. (Use giphy to generate gif)
