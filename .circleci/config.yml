@@ -7,10 +7,11 @@ jobs:
   build:
 
     macos:
-      xcode: 11.4.0 # Specify the Xcode version to use
+      xcode: 11.5.0 # Specify the Xcode version to use
 
     steps:
       - checkout
+      - run: xcrun simctl list
       - run: sudo gem install cocoapods
       - run: pod install # Install CocoaPods dependencies
       - run: fastlane scan # Run tests using Fastlane
