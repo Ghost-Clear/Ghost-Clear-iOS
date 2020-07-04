@@ -23,6 +23,12 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 	@IBOutlet weak var doneButton: UIButton!
 	@IBOutlet weak var addButton: UIButton!
 	var toEdit : Goal!
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.alpha = 0
+		UIView.animate(withDuration: 0.7, delay: 0.07*Double(indexPath.row), options: .curveEaseIn, animations: {
+			cell.alpha = 1
+		}, completion: nil)
+	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		index = indexPath.row
 		performSegue(withIdentifier: "HomeViewGoalViewControllerSegue", sender: nil)

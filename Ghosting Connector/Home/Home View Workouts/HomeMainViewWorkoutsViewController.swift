@@ -17,6 +17,12 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 	var childView : UITableViewController!
 	var workoutsFromCoreData = [Workout]()
 	var indexToSend : Int!
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		cell.alpha = 0
+		UIView.animate(withDuration: 0.7, delay: 0.07*Double(indexPath.row), options: .curveEaseIn, animations: {
+			cell.alpha = 1
+		}, completion: nil)
+	}
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
