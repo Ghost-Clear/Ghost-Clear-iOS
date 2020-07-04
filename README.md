@@ -216,11 +216,12 @@ These table view controllers are located in any file with "Main" in its name.
 
 This app uses cocoa pods for its libraries.
 The libraries used are:
-    1. CocoaAsyncSocket
-    2. Charts - for chart on home page
-    3. CircleTimer - for circle timer used in workouts
-    4. M13Checkbox - for checkbox animation
-    5. TKSubmitTransition - for th animation in the initial login
+
+1. CocoaAsyncSocket
+2. Charts - for chart on home page
+3. CircleTimer - for circle timer used in workouts
+4. M13Checkbox - for checkbox animation
+5. TKSubmitTransition - for th animation in the initial login
 
 ## Notes
 
