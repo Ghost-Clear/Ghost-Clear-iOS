@@ -36,10 +36,10 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 			}
 		}
 		if currentWorkout.type == "Timed"{
-			cell.icon.image = UIImage(named: "mdi_av_timer")
+			cell.icon.image = UIImage(named: "Timer Image")
 		}
 		else if currentWorkout.type == "Number"{
-			cell.icon.image = UIImage(named: "mdi_format_list_numbered")
+			cell.icon.image = UIImage(named: "Number Image")
 		}
 		cell.cellText.text = String(currentWorkout.totalTimeOn!) + "  on per set for "
 		cell.cellText.text! += String(currentWorkout.sets)

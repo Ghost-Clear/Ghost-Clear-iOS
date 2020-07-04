@@ -167,7 +167,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 	@IBAction func pause(_ sender: Any) {
 		isPaused = !isPaused
 		if isPaused{
-			pauseButton.setImage( UIImage(named: "play"), for: .normal)
+			pauseButton.setImage( UIImage(named: "Play Button"), for: .normal)
 			pauseStopWatch()
 			if circleTime.isHidden == false{
 				circleTime.stop()
@@ -187,7 +187,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 			stopWatch = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
 			stopWatchIsPlaying = true
 			stopWatchLabel.textColor = UIColor(red: 63/256, green: 219/256, blue: 156/256, alpha: 1)
-			pauseButton.setImage( UIImage(named: "pause"), for: .normal)
+			pauseButton.setImage( UIImage(named: "Pause Button"), for: .normal)
 			if circleTime.isHidden == false{
 				self.circleTime.resume()
 			}
