@@ -34,7 +34,11 @@ class TimedWorkoutConnectionProgressViewControllerViewController: UIViewControll
 				self.checkBox.tintColor = UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1)
 				self.checkBox.setCheckState(.mixed, animated: true)
 				self.parentView.didConnect = false
+				self.checkBox.stateChangeAnimation = .bounce(.stroke)
 				self.circleView.progressColor = UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1)
+				let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+				notificationFeedbackGenerator.prepare()
+				notificationFeedbackGenerator.notificationOccurred(.error)
 				self.connectionLabel.text = "Connection Failed"
 			}
 			else{
@@ -42,6 +46,9 @@ class TimedWorkoutConnectionProgressViewControllerViewController: UIViewControll
 				self.checkBox.setCheckState(.checked, animated: true)
 				self.parentView.didConnect = true
 				self.circleView.progressColor = UIColor(red: 26/256, green: 230/256, blue: 100/256, alpha: 1)
+				let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+				notificationFeedbackGenerator.prepare()
+				notificationFeedbackGenerator.notificationOccurred(.success)
 				self.connectionLabel.text = "Connected To Devices"
 			}
 			

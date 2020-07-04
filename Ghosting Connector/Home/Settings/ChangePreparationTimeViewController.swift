@@ -71,6 +71,9 @@ class ChangePreparationTimeViewController: UIViewController, UITextFieldDelegate
 		}
 		else{
 		// deletes all preperation time data and initializes a new one
+			let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+			notificationFeedbackGenerator.prepare()
+			notificationFeedbackGenerator.notificationOccurred(.success)
 		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PrepTime")
 		fetchRequest.includesPropertyValues = false
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{

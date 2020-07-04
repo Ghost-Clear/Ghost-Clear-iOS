@@ -53,6 +53,8 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 	return cell
 }
 	@objc @IBAction func onTapButton(_ button: TKTransitionSubmitButton) {
+		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+		selectionFeedbackGenerator.selectionChanged()
 		button.animate(1, completion: { () -> () in
 			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 				let firstLaunch = IsFirstLaunch(context: context)
@@ -60,6 +62,9 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 			}
 			(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			self.performSegue(withIdentifier: "HomePageViewControllerSegue", sender: nil)
+			let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+			notificationFeedbackGenerator.prepare()
+			notificationFeedbackGenerator.notificationOccurred(.success)
 		})
 	}
 	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -123,17 +128,23 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
           }
         }
         if segue.identifier == "InitialAddGoalViewControllerSegue" {
+			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+			selectionFeedbackGenerator.selectionChanged()
           if let childVC = segue.destination as? InitialAddGoalViewController {
             childVC.mainSetGoalsView = self
           }
         }
 		if segue.identifier == "InitialEditGoalViewControllerSegue" {
+			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+			selectionFeedbackGenerator.selectionChanged()
 			if let childVC = segue.destination as? InitialEditGoalViewController {
 				childVC.editingGoal = toEdit
 				childVC.parentView = self
 			}
 		}
 		if segue.identifier == "InitialViewGoalViewControllerSegue" {
+			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+			selectionFeedbackGenerator.selectionChanged()
 			if let childVC = segue.destination as? InitialViewGoalViewController {
 				childVC.viewingGoal = goalsFromCoreData[index]
 			}

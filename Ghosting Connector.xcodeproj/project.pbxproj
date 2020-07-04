@@ -214,12 +214,12 @@
 		27B0FCCC24A638FB00BCAA2E /* Number Workout */ = {
 			isa = PBXGroup;
 			children = (
+				27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */,
 				27196FE424A3C47900B9A8DC /* DoNumberWorkoutViewController.swift */,
 				27D097D92490E57A0073C797 /* ChooseNumberWorkoutAttributesViewController.swift */,
 				27196FE224A3B99900B9A8DC /* ChooseNumberWorkoutPatternViewController.swift */,
 				272300D824A8329700DA0D49 /* DoneNumberWorkoutViewController.swift */,
 				2764A19E24ADEF7100B5EF12 /* NumberWorkoutCheckPopupViewController.swift */,
-				27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */,
 			);
 			path = "Number Workout";
 			sourceTree = "<group>";

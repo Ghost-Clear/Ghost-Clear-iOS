@@ -18,6 +18,9 @@ class ChooseTimedWorkoutAttributesViewController: UIViewController, UITextFieldD
 	@IBOutlet weak var minutesOffField: UITextField!
 	@IBOutlet weak var secondsOffField: UITextField!
 	@IBAction func unRandomize(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		isRandomized = true
 		blankRandomize.isHidden = true
 		randomizeButton.isHidden = false
@@ -172,6 +175,9 @@ class ChooseTimedWorkoutAttributesViewController: UIViewController, UITextFieldD
     }
     @IBOutlet var randomizeButton: UIButton!
 	@IBAction func randomize(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		isRandomized = false
 		blankRandomize.isHidden = false
 		randomizeButton.isHidden = true

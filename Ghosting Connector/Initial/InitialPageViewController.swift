@@ -34,6 +34,8 @@ class InitialPageViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     @IBAction func continueFromLoginbutton(_ sender: Any) {
+		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+		selectionFeedbackGenerator.selectionChanged()
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let name = Name(context: context)
             name.name = nameTextField.text

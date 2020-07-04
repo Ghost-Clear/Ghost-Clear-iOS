@@ -25,6 +25,9 @@ class TimedWorkoutCheckPopUpViewController: UIViewController {
     }
 	override func viewWillAppear(_ animated: Bool) {
 		checkBoxContainingView.layer.cornerRadius = 30
+		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+		notificationFeedbackGenerator.prepare()
+		notificationFeedbackGenerator.notificationOccurred(.success)
 		checkBox.setCheckState(.checked, animated: true)
 	}
 }

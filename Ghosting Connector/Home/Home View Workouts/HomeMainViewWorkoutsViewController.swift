@@ -91,6 +91,8 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 			}
 		}
 		if segue.identifier == "HomeViewWorkoutViewControllerSegue" {
+			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+			selectionFeedbackGenerator.selectionChanged()
 			if let childVC = segue.destination as? HomeViewWorkoutViewController {
 				childVC.viewingWorkout = workoutsFromCoreData[indexToSend]
 			}

@@ -32,6 +32,9 @@ class ChangeNameViewController: UIViewController, UITextFieldDelegate {
 		return true
 	}
     @IBAction func applyChange(_ sender: Any) {
+		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+		notificationFeedbackGenerator.prepare()
+		notificationFeedbackGenerator.notificationOccurred(.success)
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Name")
     fetchRequest.includesPropertyValues = false
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{

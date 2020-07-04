@@ -60,10 +60,10 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 			}
 		}
 		if(isAchieved[indexPath.row]){
-            cell.back.image =  UIImage(named: "greenRectangle")
+            cell.back.image =  UIImage(named: "Green Rectangle")
         }
         else{
-            cell.back.image = UIImage(named: "redRectangle")
+            cell.back.image = UIImage(named: "Red Rectangle")
         }
         var cellText: String
 		cellText = " "
@@ -166,17 +166,23 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 		}
 	}
 	if segue.identifier == "HomeAddGoalViewControllerSegue" {
+		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+		selectionFeedbackGenerator.selectionChanged()
 		if let childVC = segue.destination as? HomeAddGoalViewController {
 		childVC.mainSetGoalsView = self
 		}
 	}
 	if segue.identifier == "HomeEditGoalViewControllerSegue" {
+		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+		selectionFeedbackGenerator.selectionChanged()
 		if let childVC = segue.destination as? HomeEditGoalViewController {
 			childVC.editingGoal = toEdit
 			childVC.parentView = self
 		}
 	}
 	if segue.identifier == "HomeViewGoalViewControllerSegue" {
+		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+		selectionFeedbackGenerator.selectionChanged()
 		if let childVC = segue.destination as? HomeViewGoalViewController {
 			childVC.viewingGoal = goalsFromCoreData[index]
 			childVC.goalAcheivedCount = achievedCount[index]

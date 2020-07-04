@@ -16,6 +16,9 @@ class BluetoothGuideViewController: UIViewController {
     }
     @IBAction func refresh(_ sender: Any) {
 		// deletes all Bluetooth device information from Core Data
+		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+		notificationFeedbackGenerator.prepare()
+		notificationFeedbackGenerator.notificationOccurred(.success)
 		resetAllRecords(in: "BLEkey");
 		let alertVC = UIAlertController(title: "Bluetooth has been reset", message: "Your bluetooth information has successfully been reset.", preferredStyle: UIAlertController.Style.alert)
 		let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in

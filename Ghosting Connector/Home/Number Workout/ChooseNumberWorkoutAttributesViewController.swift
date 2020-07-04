@@ -18,6 +18,9 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 	@IBOutlet weak var choosPatternButton: UIButton!
 	@IBOutlet var randomizeButton: UIButton!
 	@IBAction func unRandomize(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
         isRandomized = true
         blankRandomize.isHidden = true
         randomizeButton.isHidden = false
@@ -98,6 +101,9 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 		}
 	}
     @IBAction func randomize(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
         isRandomized = false
         blankRandomize.isHidden = false
         randomizeButton.isHidden = true

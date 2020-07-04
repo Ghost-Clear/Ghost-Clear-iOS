@@ -114,6 +114,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		self.navigationController?.popViewController(animated: true)
 	}
 	@IBAction func FL(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		if isFL{
 			isFL = false
 			count -= 1
@@ -138,6 +141,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 	}
 	@IBAction func resetSelection(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		isFR = false
 		isFL = false
 		isCR = false
@@ -149,6 +155,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		count = 0
 	}
 	@IBAction func FR(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		if isFR{
 			isFR = false
 			count -= 1
@@ -172,6 +181,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 	}
 	@IBAction func CL(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		if isCL{
 			isCL = false
 			count -= 1
@@ -198,6 +210,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		view.endEditing(true)
 	}
 	@IBAction func LL(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		if isLL{
 			isLL = false
 			count -= 1
@@ -221,6 +236,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 	}
 	@IBAction func CR(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		if isCR{
 			isCR = false
 			count -= 1
@@ -244,6 +262,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 	}
 	@IBAction func LR(_ sender: Any) {
+		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
+		impactFeedbackgenerator.prepare()
+		impactFeedbackgenerator.impactOccurred()
 		if isLR{
 			isLR = false
 			count -= 1

@@ -117,6 +117,10 @@ class InitialEditGoalViewController: UIViewController {
 			editingGoal.minutes = Int64((numSecondsField.text! as NSString).integerValue)
 			editingGoal.ghosts = Int64((numGhostsField.text! as NSString).integerValue)
 			self.dismiss(animated: true, completion: nil)
+			let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+			impactFeedbackgenerator.prepare()
+			impactFeedbackgenerator.impactOccurred()
+			self.dismiss(animated: true, completion: nil)
 			parentView.childView?.tableView.reloadData()
 		}
 		else if (numSecondsField.text == "0" &&  numMinutesField.text == "0"){

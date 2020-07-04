@@ -25,6 +25,9 @@ class NumberWorkoutCheckPopupViewController: UIViewController {
 		}
     }
 	override func viewWillAppear(_ animated: Bool) {
+		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+		notificationFeedbackGenerator.prepare()
+		notificationFeedbackGenerator.notificationOccurred(.success)
 		checkBoxContainingView.layer.cornerRadius = 30
 		checkBox.setCheckState(.checked, animated: true)
 	}
