@@ -124,7 +124,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	@IBAction func pauseWorkout(_ sender: Any) {
 		isPaused = !isPaused
 		if isPaused{
-			pauseButton.setImage( UIImage(named: "play"), for: .normal)
+			pauseButton.setImage( UIImage(named: "Play Button"), for: .normal)
 			self.circleTime.stop()
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
@@ -134,7 +134,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			writeValueLL(data: "0")
 		}
 		else{
-			pauseButton.setImage( UIImage(named: "pause"), for: .normal)
+			pauseButton.setImage( UIImage(named: "Pause Button"), for: .normal)
 			self.circleTime.resume()
 			if nextGhost == "FR" && !isRest{
 				writeValueFR(data: "1")

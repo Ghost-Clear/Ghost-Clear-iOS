@@ -226,9 +226,9 @@ The libraries used are:
 ## Notes
 
 1. Peripheral name references
-    1. Front Right is referred to as FR in the code
-    2. Front Left is referred to as FL in the code
-    3. Center Right is referred to as CR in the code
-    4. Center Left is referred to as CL in the code
-    5. Back Right is referred to as LR in the code
-    6. Back Left is referred to as LL in the code
+	1. Front Right is referred to as FR in the code
+	2. Front Left is referred to as FL in the code
+	3. Center Right is referred to as CR in the code
+	4. Center Left is referred to as CL in the code
+	5. Back Right is referred to as LR in the code
+	6. Back Left is referred to as LL in the code
