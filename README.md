@@ -112,10 +112,10 @@ This file controls the view controller that allows the user to choose the detail
 ![](https://media.giphy.com/media/f9Rmxz3YygGMzN2y5g/giphy.gif)
 
 This file controls the view controller that allows the user to choose which corners they want to ghost to.
-To load the image of their current selection - 64 images are used to represent all possible combination of their choice.
+To load the image of their current selection - 64 images are used to represent all possible combinations of their choice.
 To load the image, the images are named in binary representing true or false of a picked corner.
 The binary image is named : isBackRight(LR) - isBackLeft(LL) - isCenterRight(CR) - isCenterLeft(CL) - isFrontRight(FR) - isFrontLeft(FL).
-The boolean values are concatenated in the above order as boolean integer and represented as one single string. Example - "100100".
+The boolean values are concatenated in the above order as boolean integers and represented as one single string. Example - "100100".
 
 ### NumberWorkoutConnectionProgressViewController.swift
 
@@ -125,7 +125,7 @@ This file controls a pop up view controller that shows a small pop up window of 
 
 ![](https://media.giphy.com/media/J3RN8m0Un11qExID8C/giphy.gif)
 
-This file controls the view controller that user will see when they do the number workout. 
+This file controls the view controller that the user will see when they do the number workout. 
 Most of the code in this file is to connect to the 6 peripherals.
 The app uses the detection message received from the peripheral and write values to do the workout.
 The app receives using the rx characteristic and sends using the tx characteristic.
@@ -151,10 +151,10 @@ This file controls the view controller that allows the user to choose the detail
 ![](https://media.giphy.com/media/VeGit12NaNu8b2Avye/giphy.gif)
 
 This file controls the view controller that allows the user to choose which corners they want to ghost to.
-To load the image of their current selection - 64 images are used to represent all possible combination of their choice.
+To load the image of their current selection - 64 images are used to represent all possible combinations of their choice.
 To load the image, the images are named in binary representing true or false of a picked corner.
 The binary image is named : isBackRight(LR) - isBackLeft(LL) - isCenterRight(CR) - isCenterLeft(CL) - isFrontRight(FR) - isFrontLeft(FL).
-The boolean values are concatenated in the above order as boolean integer and represented as one single string. Example - "100100".
+The boolean values are concatenated in the above order as boolean integers and represented as one single string. Example - "100100".
 
 ### TimedWorkoutConnectionProgressViewControllerViewController.swift
 
@@ -243,3 +243,6 @@ The libraries used are:
 2. Make sure all segues are named by the "going to" view controller + "Segue"
 3. Make sure all new libraries used are listed in the readme file
 3. If a new view controller is added, provide a gif of it in the readme. (Use giphy to generate gif)
+
+
+
