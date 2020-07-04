@@ -1606,7 +1606,7 @@
                                 <rect key="frame" x="0.0" y="303" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="Cno-YU-v8y" kind="showDetail" identifier="ChangePreperationTimeViewControllerSegue" id="0b5-Wi-L0E"/>
+                                    <segue destination="Cno-YU-v8y" kind="showDetail" identifier="ChangePreparationTimeViewControllerSegue" id="0b5-Wi-L0E"/>
                                 </connections>
                             </button>
                         </subviews>

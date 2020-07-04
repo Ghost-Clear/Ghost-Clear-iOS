@@ -21,7 +21,7 @@
 		2726029424A9EE150071B03F /* HomeMainViewWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029324A9EE150071B03F /* HomeMainViewWorkoutsViewController.swift */; };
 		2726029624A9FF4A0071B03F /* HomeMainViewWorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029524A9FF4A0071B03F /* HomeMainViewWorkoutsTableViewController.swift */; };
 		2726029824AA0A750071B03F /* HomeViewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029724AA0A750071B03F /* HomeViewWorkoutViewController.swift */; };
-		2726029A24AB0F710071B03F /* ChangePreperationTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029924AB0F710071B03F /* ChangePreperationTimeViewController.swift */; };
+		2726029A24AB0F710071B03F /* ChangePreparationTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726029924AB0F710071B03F /* ChangePreparationTimeViewController.swift */; };
 		272BBF8824937C3400529213 /* DoTimedWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */; };
 		272BBF8A2495679200529213 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BBF892495679100529213 /* UUIDKey.swift */; };
 		2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741C6AE2454BDC400EB4944 /* AppDelegate.swift */; };
@@ -72,7 +72,7 @@
 		2726029324A9EE150071B03F /* HomeMainViewWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewWorkoutsViewController.swift; sourceTree = "<group>"; };
 		2726029524A9FF4A0071B03F /* HomeMainViewWorkoutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewWorkoutsTableViewController.swift; sourceTree = "<group>"; };
 		2726029724AA0A750071B03F /* HomeViewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewWorkoutViewController.swift; sourceTree = "<group>"; };
-		2726029924AB0F710071B03F /* ChangePreperationTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePreperationTimeViewController.swift; sourceTree = "<group>"; };
+		2726029924AB0F710071B03F /* ChangePreparationTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePreparationTimeViewController.swift; sourceTree = "<group>"; };
 		272BBF8724937C3400529213 /* DoTimedWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTimedWorkoutViewController.swift; sourceTree = "<group>"; };
 		272BBF892495679100529213 /* UUIDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		2741C6AB2454BDC400EB4944 /* Ghost Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghost Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,7 +243,7 @@
 				27251F802498C7DC0043D52C /* BluetoothGuideViewController.swift */,
 				27251F782498B29C0043D52C /* SettingsViewController.swift */,
 				27251F7E2498C3740043D52C /* ChangeNameViewController.swift */,
-				2726029924AB0F710071B03F /* ChangePreperationTimeViewController.swift */,
+				2726029924AB0F710071B03F /* ChangePreparationTimeViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -445,7 +445,7 @@
 				272300D924A8329700DA0D49 /* DoneNumberWorkoutViewController.swift in Sources */,
 				27BC2CD424AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift in Sources */,
 				27196FE724A463EF00B9A8DC /* HomeEditGoalViewController.swift in Sources */,
-				2726029A24AB0F710071B03F /* ChangePreperationTimeViewController.swift in Sources */,
+				2726029A24AB0F710071B03F /* ChangePreparationTimeViewController.swift in Sources */,
 				2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */,
 				27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */,
 				27DCEFFD248F57C300309DD4 /* InitialAddGoalViewController.swift in Sources */,

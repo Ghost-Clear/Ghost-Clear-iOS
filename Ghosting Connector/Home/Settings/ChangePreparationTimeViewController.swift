@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class ChangePreperationTimeViewController: UIViewController, UITextFieldDelegate {
+class ChangePreparationTimeViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var applyChangesButton: UIButton!
 	@IBOutlet weak var minutesLabel: UITextField!
 	@IBOutlet weak var secondsLabel: UITextField!
