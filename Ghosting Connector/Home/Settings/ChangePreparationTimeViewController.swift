@@ -92,7 +92,7 @@ class ChangePreparationTimeViewController: UIViewController, UITextFieldDelegate
 			prep.seconds = Int16((secondsLabel.text! as NSString).integerValue)
 		}
 		(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-			let alertVC = UIAlertController(title: "Preparation Time Changed", message: "Your preparation time has successfully been changed.", preferredStyle: UIAlertController.Style.alert)
+			let alertVC = UIAlertController(title: "Preparation time changed", message: "Your preparation time has successfully been changed.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
 				self.dismiss(animated: true, completion: nil)
