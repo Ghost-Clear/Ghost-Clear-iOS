@@ -7,6 +7,10 @@
 
 The ghost connect app is an app for squash that connects to up to 6 devices to help a player ghost and enhance game quality.
 
+## Ghosting Device
+
+For the repository for the ghosting devices, refer to https://github.com/varunchitturi/Ghosting-Device
+
 ## File descriptions
 
 ### LaunchViewController.swift
@@ -232,3 +236,10 @@ The libraries used are:
 	4. Center Left is referred to as CL in the code
 	5. Back Right is referred to as LR in the code
 	6. Back Left is referred to as LL in the code
+
+## Contributions
+
+1. Make sure to include the file description in the readme if it is a new file
+2. Make sure all segues are named by the "going to" view controller
+3. Make sure all new libraries used are listed in the readme file
+3. If a new view controller is added, provide a gif of it in the readme. (Use giphy to generate gif)
