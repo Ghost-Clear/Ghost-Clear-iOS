@@ -137,11 +137,7 @@ class InitialAddGoalViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func addGoal(_ sender: Any) {
 		if(((numSecondsField.text! as NSString).integerValue) < 60 && ((numSecondsField.text! as NSString).integerValue) >= 0 && ((numMinutesField.text! as NSString).integerValue) < 60 && ((numMinutesField.text! as NSString).integerValue) >= 0 && numMinutesField.text! != "" && numSecondsField.text! != "" && numGhostsField.text! != "" && numGhostsField.text != "0" && numSetsField.text != "0" && numSetsField.text != ""){
-            
-			let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
-			impactFeedbackgenerator.prepare()
-			impactFeedbackgenerator.impactOccurred()
-        self.dismiss(animated: true, completion: nil)
+			self.dismiss(animated: true, completion: nil)
 			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
             let goal = Goal(context: context)
             goal.seconds = Int64((numSecondsField.text! as NSString).integerValue)

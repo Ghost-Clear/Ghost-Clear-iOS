@@ -52,6 +52,12 @@ class ChangeNameViewController: UIViewController, UITextFieldDelegate {
             name.name = nameField.text!
         }
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-        self.dismiss(animated: true, completion: nil)
+		let alertVC = UIAlertController(title: "Name Changed", message: "Your name hss successfully been changed.", preferredStyle: UIAlertController.Style.alert)
+		let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+			alertVC.dismiss(animated: true, completion: nil)
+			self.dismiss(animated: true, completion: nil)
+		})
+		alertVC.addAction(action)
+		self.present(alertVC, animated: true, completion: nil)
     }
 }

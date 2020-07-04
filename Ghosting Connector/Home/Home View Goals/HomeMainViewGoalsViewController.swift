@@ -179,16 +179,12 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 		}
 	}
 	if segue.identifier == "HomeEditGoalViewControllerSegue" {
-		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
-		selectionFeedbackGenerator.selectionChanged()
 		if let childVC = segue.destination as? HomeEditGoalViewController {
 			childVC.editingGoal = toEdit
 			childVC.parentView = self
 		}
 	}
 	if segue.identifier == "HomeViewGoalViewControllerSegue" {
-		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
-		selectionFeedbackGenerator.selectionChanged()
 		if let childVC = segue.destination as? HomeViewGoalViewController {
 			childVC.viewingGoal = goalsFromCoreData[index]
 			childVC.goalAcheivedCount = achievedCount[index]

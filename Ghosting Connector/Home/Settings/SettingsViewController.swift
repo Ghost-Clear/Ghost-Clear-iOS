@@ -17,15 +17,9 @@ class SettingsViewController: UIViewController {
         homeController.reloadInputViews()
     }
 	@IBAction func changeYourName(_ sender: Any) {
-		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
-		selectionFeedbackGenerator.selectionChanged()
 	}
 	@IBAction func Bluetooth(_ sender: Any) {
-		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
-		selectionFeedbackGenerator.selectionChanged()
 	}
 	@IBAction func preparationTime(_ sender: Any) {
-		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
-		selectionFeedbackGenerator.selectionChanged()
 	}
 }
