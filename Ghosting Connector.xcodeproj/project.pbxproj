@@ -34,6 +34,8 @@
 		2764A19F24ADEF7100B5EF12 /* NumberWorkoutCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764A19E24ADEF7100B5EF12 /* NumberWorkoutCheckPopupViewController.swift */; };
 		2764A1A124AE011A00B5EF12 /* TimedWorkoutCheckPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764A1A024AE011A00B5EF12 /* TimedWorkoutCheckPopUpViewController.swift */; };
 		2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BA2454BDC500EB4944 /* Assets.xcassets */; };
+		27901A4224B1B96700189846 /* WorkoutButtonsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A4124B1B96700189846 /* WorkoutButtonsPageViewController.swift */; };
+		27901A4424B1BD2C00189846 /* FirstButtonSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A4324B1BD2C00189846 /* FirstButtonSetViewController.swift */; };
 		27ABC82624AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */; };
 		27BC2CD224AEEFF0007A0589 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */; };
 		27BC2CD424AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */; };
@@ -87,6 +89,8 @@
 		2764A19C24ADB77500B5EF12 /* InitialViewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewGoalViewController.swift; sourceTree = "<group>"; };
 		2764A19E24ADEF7100B5EF12 /* NumberWorkoutCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWorkoutCheckPopupViewController.swift; sourceTree = "<group>"; };
 		2764A1A024AE011A00B5EF12 /* TimedWorkoutCheckPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutCheckPopUpViewController.swift; sourceTree = "<group>"; };
+		27901A4124B1B96700189846 /* WorkoutButtonsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutButtonsPageViewController.swift; sourceTree = "<group>"; };
+		27901A4324B1BD2C00189846 /* FirstButtonSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstButtonSetViewController.swift; sourceTree = "<group>"; };
 		27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWorkoutConnectionProgressViewController.swift; sourceTree = "<group>"; };
 		27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutConnectionProgressViewControllerViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 				2726029224A9ED8D0071B03F /* Home View Workouts */,
 				27B0FCCB24A638C300BCAA2E /* Home View Goals */,
 				27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */,
+				27901A4124B1B96700189846 /* WorkoutButtonsPageViewController.swift */,
+				27901A4324B1BD2C00189846 /* FirstButtonSetViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				272300D924A8329700DA0D49 /* DoneNumberWorkoutViewController.swift in Sources */,
 				27BC2CD424AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift in Sources */,
 				27196FE724A463EF00B9A8DC /* HomeEditGoalViewController.swift in Sources */,
+				27901A4224B1B96700189846 /* WorkoutButtonsPageViewController.swift in Sources */,
 				2726029A24AB0F710071B03F /* ChangePreparationTimeViewController.swift in Sources */,
 				2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */,
 				27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */,
@@ -472,6 +479,7 @@
 				272300D724A8324200DA0D49 /* DoneTimedWorkoutViewController.swift in Sources */,
 				2726029424A9EE150071B03F /* HomeMainViewWorkoutsViewController.swift in Sources */,
 				2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */,
+				27901A4424B1BD2C00189846 /* FirstButtonSetViewController.swift in Sources */,
 				27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */,
 				27196FE524A3C47900B9A8DC /* DoNumberWorkoutViewController.swift in Sources */,
 				E6E717F17957AA7EBED2D9F4 /* README.md in Sources */,

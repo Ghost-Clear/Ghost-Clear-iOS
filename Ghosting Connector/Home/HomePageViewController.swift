@@ -24,8 +24,8 @@ class DigitValueFormatter : NSObject, IValueFormatter {
 	}
 }
 class HomePageViewController: UIViewController {
-	@IBOutlet weak var numberWorkoutButton: UIButton!
-	@IBOutlet weak var timedWorkoutButton: UIButton!
+	//@IBOutlet weak var numberWorkoutButton: UIButton!
+	//@IBOutlet weak var timedWorkoutButton: UIButton!
 	@IBOutlet weak var viewGoalsButton: UIButton!
 	@IBOutlet weak var viewWorkoutButton: UIButton!
 	var namesFromCore = [Name]()
@@ -36,8 +36,8 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var theBarChart: BarChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
-		numberWorkoutButton.imageView?.contentMode = .scaleAspectFit
-		timedWorkoutButton.imageView?.contentMode = .scaleAspectFit
+		//numberWorkoutButton.imageView?.contentMode = .scaleAspectFit
+		//timedWorkoutButton.imageView?.contentMode = .scaleAspectFit
 		viewGoalsButton.imageView?.contentMode = .scaleAspectFit
 		viewWorkoutButton.imageView?.contentMode = .scaleAspectFit
     }
@@ -147,6 +147,11 @@ class HomePageViewController: UIViewController {
             childVC.homeController = self
             }
         }
+		if segue.identifier == "WorkoutButtonsPageViewControllerSegue"{
+			if let childVC = segue.destination as? WorkoutButtonsPageViewController {
+				childVC.parentView = self
+			}
+		}
     }
 }
 

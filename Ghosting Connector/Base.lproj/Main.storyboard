@@ -24,6 +24,52 @@
             </objects>
             <point key="canvasLocation" x="-720" y="31"/>
         </scene>
+        <!--Workout Buttons Page View Controller-->
+        <scene sceneID="WWx-fv-91L">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIW-8y-blT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="-454"/>
+        </scene>
+        <!--First button Set View Controller-->
+        <scene sceneID="JvC-wT-TYM">
+            <objects>
+                <viewController storyboardIdentifier="page1" title="First button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j2H-Eu-8bj" customClass="FirstButtonSetViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdG-Wz-IUg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-BV-bm1">
+                                <rect key="frame" x="0.0" y="44" width="185" height="805"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Timed Workout Button"/>
+                                <connections>
+                                    <action selector="timedWorkout:" destination="j2H-Eu-8bj" eventType="touchUpInside" id="LSg-UH-Hvt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dba-cd-ACF">
+                                <rect key="frame" x="229" y="44" width="185" height="805"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Number Workout"/>
+                                <connections>
+                                    <action selector="numberWorkout:" destination="j2H-Eu-8bj" eventType="touchUpInside" id="ow3-S9-Kh5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="B9L-aP-mne"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BJf-J9-55O"/>
+                    <connections>
+                        <outlet property="numberWorkoutButton" destination="dba-cd-ACF" id="CHT-Yi-yZ5"/>
+                        <outlet property="timedWorkoutButton" destination="ZZS-BV-bm1" id="FSe-Cu-hS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FA-UV-uT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="-927.45535714285711"/>
+        </scene>
         <!--Start Page-->
         <scene sceneID="lyP-E7-8NZ">
             <objects>
@@ -515,13 +561,6 @@
                                     <action selector="minutesOffFieldSelected:" destination="x0X-u5-1M6" eventType="editingDidBegin" id="EMN-Gh-Lnc"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p39-um-IGp">
-                                <rect key="frame" x="58" y="70" width="337" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[0-59]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-K1-eKj">
                                 <rect key="frame" x="51" y="673" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -574,6 +613,13 @@
                                     <action selector="choosePattern:" destination="x0X-u5-1M6" eventType="touchUpInside" id="cff-FU-SXX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p39-um-IGp">
+                                <rect key="frame" x="38" y="79" width="337" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="x1G-gA-G4m"/>
@@ -609,22 +655,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-SP-KES">
-                                <rect key="frame" x="32" y="510" width="167" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Timed Workout Button"/>
-                                <connections>
-                                    <segue destination="OzQ-ta-Cac" kind="show" identifier="ChooseTimedWorkoutAttributesViewController" id="Dan-ig-rDT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tD-Kk-ZKx">
-                                <rect key="frame" x="223" y="510" width="167" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Number Workout"/>
-                                <connections>
-                                    <segue destination="x0X-u5-1M6" kind="show" identifier="ChooseNumberWorkoutAttributesViewControllerSegue" id="SY8-sh-9LY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="g5Z-VG-aLo">
                                 <rect key="frame" x="21" y="64" width="324" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -671,6 +701,13 @@
                                     <segue destination="at1-VZ-0TC" kind="show" identifier="SettingsViewControllerSegue" id="8Jf-cq-Xqb"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hk0-3S-HoM">
+                                <rect key="frame" x="32" y="501" width="358" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="uNC-mK-8wc" kind="embed" identifier="WorkoutButtonsPageViewControllerSegue" id="dff-zi-3Fm"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AiR-5x-EBw"/>
@@ -678,17 +715,17 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="rUy-mm-ch0"/>
                     <connections>
-                        <outlet property="numberWorkoutButton" destination="9tD-Kk-ZKx" id="Hhm-IB-riJ"/>
                         <outlet property="theBarChart" destination="LMO-XF-OAp" id="aSS-DH-MEp"/>
-                        <outlet property="timedWorkoutButton" destination="n7y-SP-KES" id="TxU-gP-rdb"/>
                         <outlet property="viewGoalsButton" destination="Bxy-8C-G5w" id="grU-z7-cGk"/>
                         <outlet property="viewWorkoutButton" destination="jca-eN-xnd" id="Y0a-b0-6ZW"/>
                         <outlet property="welcomeLabel" destination="g5Z-VG-aLo" id="W2B-d9-U5T"/>
+                        <segue destination="OzQ-ta-Cac" kind="show" identifier="ChooseTimedWorkoutAttributesViewControllerSegue" id="sfb-Bj-0Ez"/>
+                        <segue destination="x0X-u5-1M6" kind="show" identifier="ChooseNumberWorkoutAttributesViewControllerSegue" id="36R-sD-5nL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6F-kv-xHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="708"/>
+            <point key="canvasLocation" x="11.594202898550726" y="707.8125"/>
         </scene>
         <!--Home Main View Goals View Controller-->
         <scene sceneID="8Pc-GB-Pe5">
@@ -1405,13 +1442,6 @@
                                     <action selector="goBack:" destination="OzQ-ta-Cac" eventType="touchUpInside" id="cun-vS-iri"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timed Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="287-zp-TuL">
-                                <rect key="frame" x="40" y="36" width="333" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Minutes Off Per Set" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-Op-gma">
                                 <rect key="frame" x="41" y="599" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -1506,6 +1536,13 @@
                                     <action selector="randomize:" destination="OzQ-ta-Cac" eventType="touchUpInside" id="KqA-p4-M3q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timed Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="287-zp-TuL">
+                                <rect key="frame" x="38" y="79" width="337" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="u4U-lS-5IM"/>
@@ -2846,9 +2883,25 @@
             </objects>
             <point key="canvasLocation" x="-3826" y="1414"/>
         </scene>
+        <!--Second Button Set View Controller-->
+        <scene sceneID="uxH-rZ-Wi7">
+            <objects>
+                <viewController storyboardIdentifier="page2" title="Second Button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Am4-Ns-vnF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gxe-i4-kkO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="V1U-8d-VPS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1VC-mP-yTk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NxG-zx-Ww3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="-927"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7zF-tB-hnp"/>
+        <segue reference="EKe-id-vDU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="000000" width="1172" height="2080"/>
