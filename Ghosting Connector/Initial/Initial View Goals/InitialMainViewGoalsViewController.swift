@@ -123,7 +123,6 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
         super.viewDidLoad()
 		addButton.imageView?.contentMode = .scaleAspectFit
 		FinishButton.imageView?.contentMode = .scaleAspectFill
-		//UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
     }
 	
     override func viewWillAppear(_ animated: Bool) {
