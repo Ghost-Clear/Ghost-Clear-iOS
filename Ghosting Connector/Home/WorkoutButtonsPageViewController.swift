@@ -19,7 +19,8 @@ class WorkoutButtonsPageViewController: UIPageViewController, UIPageViewControll
 		
 		let page1: FirstButtonSetViewController! = ((storyboard?.instantiateViewController(withIdentifier: "page1") as! FirstButtonSetViewController))
 		page1.parentView = self
-		let page2: UIViewController! = ((storyboard?.instantiateViewController(withIdentifier: "page2")))
+		let page2: SecondButtonSetViewController! = ((storyboard?.instantiateViewController(withIdentifier: "page2") as! SecondButtonSetViewController))
+		page2.parentView = self
 		
 		pages.append(page1 as UIViewController)
 		pages.append(page2 as UIViewController)

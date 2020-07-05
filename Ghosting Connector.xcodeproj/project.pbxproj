@@ -36,6 +36,7 @@
 		2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2741C6BA2454BDC500EB4944 /* Assets.xcassets */; };
 		27901A4224B1B96700189846 /* WorkoutButtonsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A4124B1B96700189846 /* WorkoutButtonsPageViewController.swift */; };
 		27901A4424B1BD2C00189846 /* FirstButtonSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A4324B1BD2C00189846 /* FirstButtonSetViewController.swift */; };
+		27901A4624B1CD9500189846 /* SecondButtonSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A4524B1CD9500189846 /* SecondButtonSetViewController.swift */; };
 		27ABC82624AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */; };
 		27BC2CD224AEEFF0007A0589 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */; };
 		27BC2CD424AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */; };
@@ -91,6 +92,7 @@
 		2764A1A024AE011A00B5EF12 /* TimedWorkoutCheckPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutCheckPopUpViewController.swift; sourceTree = "<group>"; };
 		27901A4124B1B96700189846 /* WorkoutButtonsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutButtonsPageViewController.swift; sourceTree = "<group>"; };
 		27901A4324B1BD2C00189846 /* FirstButtonSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstButtonSetViewController.swift; sourceTree = "<group>"; };
+		27901A4524B1CD9500189846 /* SecondButtonSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondButtonSetViewController.swift; sourceTree = "<group>"; };
 		27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWorkoutConnectionProgressViewController.swift; sourceTree = "<group>"; };
 		27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutConnectionProgressViewControllerViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */,
 				27901A4124B1B96700189846 /* WorkoutButtonsPageViewController.swift */,
 				27901A4324B1BD2C00189846 /* FirstButtonSetViewController.swift */,
+				27901A4524B1CD9500189846 /* SecondButtonSetViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				27251F812498C7DC0043D52C /* BluetoothGuideViewController.swift in Sources */,
 				2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */,
 				27251F7F2498C3740043D52C /* ChangeNameViewController.swift in Sources */,
+				27901A4624B1CD9500189846 /* SecondButtonSetViewController.swift in Sources */,
 				272300D724A8324200DA0D49 /* DoneTimedWorkoutViewController.swift in Sources */,
 				2726029424A9EE150071B03F /* HomeMainViewWorkoutsViewController.swift in Sources */,
 				2741C6B12454BDC400EB4944 /* SceneDelegate.swift in Sources */,

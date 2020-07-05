@@ -27,7 +27,7 @@
         <!--Workout Buttons Page View Controller-->
         <scene sceneID="WWx-fv-91L">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="45" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIW-8y-blT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="-454"/>
@@ -614,7 +614,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p39-um-IGp">
-                                <rect key="frame" x="38" y="79" width="337" height="48"/>
+                                <rect key="frame" x="38" y="90" width="337" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1537,7 +1537,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timed Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="287-zp-TuL">
-                                <rect key="frame" x="38" y="79" width="337" height="48"/>
+                                <rect key="frame" x="38" y="90" width="337" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2886,18 +2886,28 @@
         <!--Second Button Set View Controller-->
         <scene sceneID="uxH-rZ-Wi7">
             <objects>
-                <viewController storyboardIdentifier="page2" title="Second Button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Am4-Ns-vnF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page2" title="Second Button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Am4-Ns-vnF" customClass="SecondButtonSetViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxe-i4-kkO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BS-Lm-kqb">
+                                <rect key="frame" x="0.0" y="44" width="185" height="805"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Beep Test Button"/>
+                                <connections>
+                                    <action selector="beepTest:" destination="Am4-Ns-vnF" eventType="touchUpInside" id="Uef-bs-JoR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="V1U-8d-VPS"/>
                     </view>
                     <navigationItem key="navigationItem" id="1VC-mP-yTk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxG-zx-Ww3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="-927"/>
+            <point key="canvasLocation" x="734.78260869565224" y="-927.45535714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -2910,6 +2920,7 @@
         <image name="Apply Change Button" width="326.66665649414062" height="77.333335876464844"/>
         <image name="Apply Changes Button" width="1232" height="232"/>
         <image name="Back Button" width="15.666666984558105" height="26.666666030883789"/>
+        <image name="Beep Test Button" width="600" height="840"/>
         <image name="Blank Randomize Button" width="680" height="232"/>
         <image name="Choose Pattern Button" width="680" height="232"/>
         <image name="Create A Goal " width="336.33334350585938" height="37.666667938232422"/>
