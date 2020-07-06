@@ -38,7 +38,6 @@ class WorkoutButtonsPageViewController: UIPageViewController, UIPageViewControll
 		let nextIndex = abs((currentIndex + 1) % pages.count)
 		return pages[nextIndex]
 	}
-	
 	func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
 		return pages.count
 	}

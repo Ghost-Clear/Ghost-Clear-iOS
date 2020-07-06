@@ -16,8 +16,7 @@ class SecondButtonSetViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 	@IBAction func beepTest(_ sender: Any) {
-		//parentView.parentView.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
-		print("do beep test")
+		parentView.parentView.performSegue(withIdentifier: "BeepTestWorkoutDescriptionViewControllerSegue", sender: nil)
 	}
 	
 
