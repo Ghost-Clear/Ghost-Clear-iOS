@@ -11,6 +11,12 @@ import UIKit
 class WorkoutButtonsPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
 	var pages = [UIViewController]()
 	var parentView : HomePageViewController!
+	
+	
+	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+		let pageContentViewController = pageViewController.viewControllers![0]
+		self.parentView.pageControl.currentPage = pages.firstIndex(of: pageContentViewController)!
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		

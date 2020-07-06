@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxd-01-xn6">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-fs-CbR">
-                                <rect key="frame" x="177" y="419.5" width="60" height="57"/>
+                                <rect key="frame" x="177" y="419.66666666666669" width="60" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="H7Z-6h-d26"/>
                                     <constraint firstAttribute="width" secondItem="o7i-fs-CbR" secondAttribute="height" multiplier="20:19" id="bAd-VJ-uRx"/>
@@ -133,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-Fq-Jz6">
-                                <rect key="frame" x="48" y="766" width="327" height="76"/>
+                                <rect key="frame" x="48" y="766.33333333333337" width="327" height="75.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aGD-Fq-Jz6" secondAttribute="height" multiplier="233:54" id="CSz-ax-r1J"/>
                                 </constraints>
@@ -380,7 +380,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yellow Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-TG-XhU">
-                                            <rect key="frame" x="7" y="5.5" width="400" height="68"/>
+                                            <rect key="frame" x="7" y="5.6666666666666643" width="400" height="68"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -708,6 +708,10 @@
                                     <segue destination="uNC-mK-8wc" kind="embed" identifier="WorkoutButtonsPageViewControllerSegue" id="dff-zi-3Fm"/>
                                 </connections>
                             </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="ogK-JZ-MGA">
+                                <rect key="frame" x="188" y="745" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AiR-5x-EBw"/>
@@ -715,6 +719,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="rUy-mm-ch0"/>
                     <connections>
+                        <outlet property="pageControl" destination="ogK-JZ-MGA" id="KCr-5Y-iVU"/>
                         <outlet property="theBarChart" destination="LMO-XF-OAp" id="aSS-DH-MEp"/>
                         <outlet property="viewGoalsButton" destination="Bxy-8C-G5w" id="grU-z7-cGk"/>
                         <outlet property="viewWorkoutButton" destination="jca-eN-xnd" id="Y0a-b0-6ZW"/>
@@ -809,7 +814,7 @@
                                             <rect key="frame" x="7" y="10" width="400" height="68"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-Hc-WZn">
-                                            <rect key="frame" x="20" y="19.5" width="374" height="49"/>
+                                            <rect key="frame" x="20" y="19.666666666666671" width="374" height="49"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1030,7 +1035,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greatest Level Achevied" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r5s-H6-ThX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greatest Level Achieved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r5s-H6-ThX">
                                 <rect key="frame" x="82" y="332" width="251" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>

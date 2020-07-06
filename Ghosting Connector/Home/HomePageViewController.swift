@@ -24,7 +24,7 @@ class DigitValueFormatter : NSObject, IValueFormatter {
 	}
 }
 class HomePageViewController: UIViewController {
-	@IBOutlet weak var pageIndicator: UIImageView!
+	@IBOutlet weak var pageControl: UIPageControl!
 	@IBOutlet weak var viewGoalsButton: UIButton!
 	@IBOutlet weak var viewWorkoutButton: UIButton!
 	var namesFromCore = [Name]()
