@@ -80,7 +80,6 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 	var characteristicValue = [CBUUID: NSData]()
 	var timer = Timer()
 	var characteristics = [String : CBCharacteristic]()
-	// gets the next place to ghost to
 	func getNextGhost() -> String!{
 		var toReturn : String!
 		if isRandom{
@@ -117,6 +116,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         circleTime.isActive = false
         circleTime.isHidden = true
         circleTime.stop()
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
         centralManager.stopScan()
         disconnectAllConnection()
         popBack(3)
@@ -325,7 +330,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		setsToGo = numSets
 		setsLabel.text = String(setsToGo)
         circleTime.delegate = self
-         circleTime.font = UIFont(name: "System", size: 50 )
+		circleTime.font = UIFont(name: "System", size: 50 )
         circleTime.isBackwards = true
         circleTime.isActive = false
         circleTime.isHidden = true
@@ -1145,6 +1150,8 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 					let workout = Workout(context: context)
 					workout.type = "Timed"
+					workout.score = "N/A"
+					workout.greatestLevel = 0
 					workout.sets = Int16(childVC.numSets)
 					if childVC.numSets == 0{
 						childVC.numSets = 1

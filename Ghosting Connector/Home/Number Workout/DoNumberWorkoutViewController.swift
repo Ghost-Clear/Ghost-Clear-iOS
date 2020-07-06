@@ -78,7 +78,6 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 	var timer = Timer()
 	var characteristics = [String : CBCharacteristic]()
 	@IBOutlet weak var finishWorkoutButton: UIButton!
-	@IBOutlet weak var pauseWorkoutButton: UIButton!
 	@IBOutlet weak var stopWorkoutButton: UIButton!
 	@IBOutlet weak var setsLabel: UILabel!
 	@IBOutlet weak var ghostsLabel: UILabel!
@@ -122,6 +121,12 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 		circleTime.isHidden = true
 		circleTime.stop()
 		stopWatch.invalidate()
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
 		centralManager.stopScan()
 		disconnectAllConnection()
 		popBack(3)
@@ -312,7 +317,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		stopWorkoutButton.imageView?.contentMode = .scaleAspectFit
-		pauseWorkoutButton.imageView?.contentMode = .scaleAspectFit
+		pauseButton.imageView?.contentMode = .scaleAspectFit
 		finishWorkoutButton.imageView?.contentMode = .scaleAspectFit
 		whichGhostLabel.text = "Get Ready"
 		setsToGo = numSets
@@ -1345,6 +1350,8 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 					let workout = Workout(context: context)
 					workout.type = "Number"
+					workout.score = "N/A"
+					workout.greatestLevel = 0
 					workout.sets = Int16(numSets - setsToGo)
 					if workout.sets == 0{
 						workout.sets = 1

@@ -11,8 +11,9 @@ import CoreBluetooth
 import Foundation
 import AppusCircleTimer
 import CoreData
+import AVFoundation
 class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate, AppusCircleTimerDelegate {
-	
+	var player : AVAudioPlayer?
 	var frtxCharacteristic : CBCharacteristic?
 	var frrxCharacteristic : CBCharacteristic?
 	var fltxCharacteristic : CBCharacteristic?
@@ -38,12 +39,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var CL : Bool!
 	var LR : Bool!
 	var LL : Bool!
-	var isRandom : Bool!
-	var numSets : Int!
-	var numMinutesOn : Int!
-	var numSecondsOn : Int!
-	var numMinutesOff : Int!
-	var numSecondsOff : Int!
 	var peripheralCount = 0
 	var checkTimer : Timer!
 	var isFirstPair : Bool!
@@ -53,32 +48,18 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var CLname : String!
 	var LRname : String!
 	var LLname : String!
-	@IBOutlet var circleTime: AppusCircleTimer!
-	func popBack(_ nb: Int) {
-		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
-			guard viewControllers.count < nb else {
-				self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
-				return
-			}
-		}
-	}
-	@IBAction func stopWorkout(_ sender: Any) {
-		circleTime.isActive = false
-		circleTime.isHidden = true
-		circleTime.stop()
-		centralManager.stopScan()
-		disconnectAllConnection()
-		popBack(3)
-		
-	}
-	@IBOutlet var workoutStartsIn: UILabel!
-	
-	func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
-		circleTime.isActive = false
-		circleTime.isHidden = true
-		workoutStartsIn.isHidden = true
-	}
-	
+	var isPrep = true
+	var isWaiting = false
+	var didConnect : Bool!
+	var isPaused = false
+	var level = 1
+	var lives = 2
+	var totalGhosts = 0
+	var pendingGhosts = 6
+	var cornersAvailable = ["FR","FL","CR","CL","LL","LR"]
+	var nextGhost = ""
+	var secondsToPlay : Double! = 6
+	var totalTime = 0
 	var centralManager : CBCentralManager!
 	var peripheralManager: CBPeripheralManager?
 	var RSSIs = [NSNumber]()
@@ -88,9 +69,215 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var characteristicValue = [CBUUID: NSData]()
 	var timer = Timer()
 	var characteristics = [String : CBCharacteristic]()
+	var totalTimeTimer : Timer!
+	@IBOutlet var circleTime: AppusCircleTimer!
+	@IBOutlet weak var pauseButton: UIButton!
+	@IBOutlet weak var stopButton: UIButton!
+	@IBOutlet weak var finishButton: UIButton!
+	@IBOutlet weak var livesLabel: UILabel!
+	func getNextGhost() -> String!{
+		var toReturn : String!
+		let orderCount = Int.random(in: 0..<cornersAvailable.count)
+		toReturn = cornersAvailable[orderCount]
+		return toReturn
+	}
+	@IBAction func pause(_ sender: Any) {
+		isPaused = !isPaused
+		if isPaused{
+			totalTimeTimer.invalidate()
+			isWaiting = false
+			pauseButton.setImage( UIImage(named: "Play Button"), for: .normal)
+			self.circleTime.stop()
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+		}
+		else{
+			totalTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+			isWaiting = true
+			pauseButton.setImage( UIImage(named: "Pause Button"), for: .normal)
+			self.circleTime.resume()
+			if nextGhost == "FR" && !isWaiting{
+				writeValueFR(data: "1")
+				playSound(sound: "Front-Right")
+				whichCornerLabel.text = "Front Right"
+			}
+			if nextGhost == "FL" && !isWaiting{
+				writeValueFL(data: "1")
+				playSound(sound: "Front-Left")
+				whichCornerLabel.text = "Front Left"
+			}
+			if nextGhost == "CR" && !isWaiting{
+				writeValueCR(data: "1")
+				playSound(sound: "Center-Right")
+				whichCornerLabel.text = "Center Right"
+			}
+			if nextGhost == "CL" && !isWaiting{
+				writeValueCL(data: "1")
+				playSound(sound: "Center-Left")
+				whichCornerLabel.text = "Center Left"
+			}
+			if nextGhost == "LR" && !isWaiting{
+				writeValueLR(data: "1")
+				playSound(sound: "Back-Right")
+				whichCornerLabel.text = "Back Right"
+			}
+			if nextGhost == "LL" && !isWaiting{
+				writeValueLL(data: "1")
+				playSound(sound: "Back-Left")
+				whichCornerLabel.text = "Back Left"
+			}
+			
+		}
+	}
+	func popBack(_ nb: Int) {
+		if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
+			guard viewControllers.count < nb else {
+				self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
+				return
+			}
+		}
+	}
+	@IBAction func stopWorkout(_ sender: Any) {
+		isWaiting = false
+		circleTime.isActive = false
+		circleTime.isHidden = true
+		circleTime.stop()
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
+		totalTimeTimer.invalidate()
+		centralManager.stopScan()
+		disconnectAllConnection()
+		popBack(3)
+		
+	}
+	func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
+		if isWaiting{
+			lives -= 1
+		}
+		livesLabel.text = String(lives)
+		if lives == 0{
+			circleTime.isActive = false
+			if nextGhost == "FR"{
+				writeValueFR(data: "0")
+			}
+			if nextGhost == "FL"{
+				writeValueFL(data: "0")
+			}
+			if nextGhost == "CR"{
+				writeValueCR(data: "0")
+			}
+			if nextGhost == "CL"{
+				writeValueCL(data: "0")
+			}
+			if nextGhost == "LR"{
+				writeValueLR(data: "0")
+			}
+			if nextGhost == "LL"{
+				writeValueLL(data: "0")
+			}
+			circleTime.stop()
+			centralManager.stopScan()
+			disconnectAllConnection()
+			performSegue(withIdentifier: "BeepTestWorkoutCheckPopUpViewControllerSegue", sender: nil)
+			let seconds = 1.51
+			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+				self.performSegue(withIdentifier: "DoneBeepTestWorkoutViewControllerSegue", sender: nil)
+			}
+		}
+		isPrep = false
+		isWaiting = true
+		ghostsLabel.text = String(pendingGhosts)
+		pendingGhosts = 6
+		levelLabel.text = String(level)
+		circleTime.elapsedTime = 0
+		circleTime.totalTime = secondsToPlay
+		circleTime.activeColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
+		circleTime.start()
+		if nextGhost == "FR"{
+			playSound(sound: "Front-Right")
+			writeValueFR(data: "1")
+			whichCornerLabel.text = "Front Right"
+		}
+		if nextGhost == "FL"{
+			playSound(sound: "Front-Left")
+			writeValueFL(data: "1")
+			whichCornerLabel.text = "Front Left"
+		}
+		if nextGhost == "CR"{
+			playSound(sound: "Center-Right")
+			writeValueCR(data: "1")
+			whichCornerLabel.text = "Center Right"
+		}
+		if nextGhost == "CL"{
+			playSound(sound: "Center-Left")
+			writeValueCL(data: "1")
+			whichCornerLabel.text = "Center Left"
+		}
+		if nextGhost == "LR"{
+			playSound(sound: "Back-Right")
+			writeValueLR(data: "1")
+			whichCornerLabel.text = "Back Right"
+		}
+		if nextGhost == "LL"{
+			playSound(sound: "Back-Left")
+			writeValueLL(data: "1")
+			whichCornerLabel.text = "Back Left"
+		}
+	}
+	@IBOutlet weak var whichCornerLabel: UILabel!
+	@IBOutlet weak var levelLabel: UILabel!
+	@IBOutlet weak var ghostsLabel: UILabel!
+	@IBAction func finish(_ sender: Any) {
+		totalTimeTimer.invalidate()
+		circleTime.isActive = false
+		if nextGhost == "FR"{
+			writeValueFR(data: "0")
+		}
+		if nextGhost == "FL"{
+			writeValueFL(data: "0")
+		}
+		if nextGhost == "CR"{
+			writeValueCR(data: "0")
+		}
+		if nextGhost == "CL"{
+			writeValueCL(data: "0")
+		}
+		if nextGhost == "LR"{
+			writeValueLR(data: "0")
+		}
+		if nextGhost == "LL"{
+			writeValueLL(data: "0")
+		}
+		circleTime.stop()
+		centralManager.stopScan()
+		disconnectAllConnection()
+		if isPrep{
+			popBack(3)
+		}
+		else{
+			performSegue(withIdentifier: "BeepTestWorkoutCheckPopUpViewControllerSegue", sender: nil)
+			let seconds = 1.51
+			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+				self.performSegue(withIdentifier: "DoneBeepTestWorkoutViewControllerSegue", sender: nil)
+			}
+		}
+	}
+	@objc func UpdateTimer(){
+		totalTime += 1
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		workoutStartsIn.isHidden = true
+		pauseButton.contentMode = .scaleAspectFit
+		stopButton.contentMode = .scaleAspectFit
+		finishButton.contentMode = .scaleAspectFit
 		circleTime.delegate = self
 		circleTime.font = UIFont(name: "System", size: 50 )
 		circleTime.isBackwards = true
@@ -98,6 +285,9 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		circleTime.isHidden = true
 		centralManager = CBCentralManager(delegate: self, queue: nil)
 		peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+		circleTime.fontColor = UIColor.white
+		totalTimeTimer = Timer()
+		totalTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
 		if allPeripeheralsExist(id: true){
 			isFirstPair = false
 			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -129,86 +319,59 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		else{
 			isFirstPair = true
 		}
-		checkTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { timer in
-			if self.FRPeripheral == nil || self.FLPeripheral == nil || self.CRPeripheral == nil || self.CLPeripheral == nil || self.LRPeripheral == nil || self.LLPeripheral == nil{
+		DispatchQueue.main.asyncAfter(deadline: .now() + 4.2) {
+			if !self.didConnect{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
+				self.centralManager.stopScan()
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
-					//add segue
-					self.popBack(3)
+					self.popBack(2)
 					self.disconnectAllConnection()
 				})
 				alertVC.addAction(action)
 				self.present(alertVC, animated: true, completion: nil)
 			}
-		})
-		// Do any additional setup after loading the view.
+			else{
+				self.circleTime.start()
+			}			
+		}
+		nextGhost = getNextGhost()
+		cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
+	}
+	func playSound(sound : String!) {
+		guard let url = Bundle.main.url(forResource: sound, withExtension: "mp3") else { return }
+		do {
+			try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+			try AVAudioSession.sharedInstance().setActive(true)
+			player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+			guard let player = player else { return }
+			player.play()
+		} catch let error {
+			print(error.localizedDescription)
+		}
 	}
 	func allPeripeheralsExist(id: Bool) -> Bool {
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BLEkey")
 			fetchRequest.includesSubentities = false
-			
 			var entitiesCount = 0
-			
 			do {
 				entitiesCount = try context.count(for: fetchRequest)
 			}
 			catch {
 				print("error executing fetch request: \(error)")
 			}
-			
 			return entitiesCount == 6
-			
 		}
 		return false
-		
 	}
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		print("Stop Scanning")
 		centralManager?.stopScan()
 	}
-	@IBOutlet var FRbutton: UIButton!
-	@IBAction func FR(_ sender: Any) {
-		writeValueFR(data: "1")
-	}
-	
-	
-	@IBOutlet var FLbutton: UIButton!
-	@IBAction func FL(_ sender: Any) {
-		writeValueFL(data: "1")
-	}
-	
-	
-	@IBOutlet var CRbutton: UIButton!
-	@IBAction func CR(_ sender: Any) {
-		writeValueCR(data: "1")
-	}
-	
-	
-	@IBOutlet var CLbutton: UIButton!
-	@IBAction func CL(_ sender: Any) {
-		writeValueCL(data: "1")
-	}
-	
-	
-	@IBOutlet var LLbutton: UIButton!
-	@IBAction func LL(_ sender: Any) {
-		writeValueLL(data: "1")
-	}
-	
-	
-	
-	@IBOutlet var LRbutton: UIButton!
-	@IBAction func LR(_ sender: Any) {
-		writeValueLR(data: "1")
-	}
-	
-	
 	func writeValueFR(data: String){
 		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
-		//change the "data" to valueString
 		if let blePeripheral = FRPeripheral{
 			if let txCharacteristic = frtxCharacteristic {
 				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
@@ -220,12 +383,9 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
 		FRPeripheral!.writeValue(ns as Data, for: frtxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
 	}
-	
-	
 	func writeValueFL(data: String){
 		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
-		//change the "data" to valueString
-		if let blePeripheral = FLPeripheral{
+				if let blePeripheral = FLPeripheral{
 			if let txCharacteristic = fltxCharacteristic {
 				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
 			}
@@ -236,11 +396,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
 		FLPeripheral!.writeValue(ns as Data, for: fltxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
 	}
-	
-	
 	func writeValueCR(data: String){
 		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
-		//change the "data" to valueString
 		if let blePeripheral = CRPeripheral{
 			if let txCharacteristic = crtxCharacteristic {
 				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
@@ -252,11 +409,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
 		CRPeripheral!.writeValue(ns as Data, for: crtxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
 	}
-	
-	
 	func writeValueCL(data: String){
 		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
-		//change the "data" to valueString
 		if let blePeripheral = CLPeripheral{
 			if let txCharacteristic = cltxCharacteristic {
 				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
@@ -268,11 +422,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
 		CLPeripheral!.writeValue(ns as Data, for: cltxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
 	}
-	
-	
 	func writeValueLL(data: String){
 		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
-		//change the "data" to valueString
 		if let blePeripheral = LLPeripheral{
 			if let txCharacteristic = lltxCharacteristic {
 				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
@@ -284,11 +435,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
 		LLPeripheral!.writeValue(ns as Data, for: lltxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
 	}
-	
-	
 	func writeValueLR(data: String){
 		let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
-		//change the "data" to valueString
 		if let blePeripheral = LRPeripheral{
 			if let txCharacteristic = lrtxCharacteristic {
 				blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
@@ -300,8 +448,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
 		LRPeripheral!.writeValue(ns as Data, for: lrtxCharacteristic!, type: CBCharacteristicWriteType.withResponse)
 	}
-	
-	
 	func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
 		if peripheral.state == .poweredOn {
 			return
@@ -311,7 +457,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
 		print("Device subscribe to characteristic")
 	}
-	
 	func startScan() {
 		peripherals = []
 		print("Now Scanning...")
@@ -328,38 +473,25 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	}
 	func disconnectFromDevice () {
 		if FRPeripheral != nil {
-			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
-			// Therefore, we will just disconnect from the peripheral
 			centralManager?.cancelPeripheralConnection(FRPeripheral!)
 		}
 		if FLPeripheral != nil {
-			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
-			// Therefore, we will just disconnect from the peripheral
 			centralManager?.cancelPeripheralConnection(FLPeripheral!)
 		}
 		if CRPeripheral != nil {
-			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
-			// Therefore, we will just disconnect from the peripheral
 			centralManager?.cancelPeripheralConnection(CRPeripheral!)
 		}
 		if CLPeripheral != nil {
-			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
-			// Therefore, we will just disconnect from the peripheral
 			centralManager?.cancelPeripheralConnection(CLPeripheral!)
 		}
 		if LRPeripheral != nil {
-			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
-			// Therefore, we will just disconnect from the peripheral
 			centralManager?.cancelPeripheralConnection(LRPeripheral!)
 		}
 		if LLPeripheral != nil {
-			// We have a connection to the device but we are not subscribed to the Transfer Characteristic for some reason.
-			// Therefore, we will just disconnect from the peripheral
 			centralManager?.cancelPeripheralConnection(LLPeripheral!)
 		}
 	}
 	func restoreCentralManager() {
-		//Restores Central Manager delegate if something went wrong
 		centralManager?.delegate = self
 	}
 	func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,advertisementData: [String : Any], rssi RSSI: NSNumber) {
@@ -368,7 +500,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				FRPeripheral = peripheral
 				FRPeripheral?.delegate = self
 				centralManager?.connect(FRPeripheral!, options: nil)
-				
 			}
 			if(peripheral.name == FLname){
 				FLPeripheral = peripheral
@@ -401,7 +532,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			print("Peripheral name: \(String(describing: peripheral.name))")
 		}
 		else{
-			
 			if(peripheral.name!.prefix(2) == "FR"){
 				FRname = peripheral.name
 				FRPeripheral = peripheral
@@ -412,9 +542,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					name.key = peripheral.name!
 					name.name = "FR"
 				}
-				//let finalData = joke()
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-				
 			}
 			if(peripheral.name!.prefix(2) == "FL"){
 				FLname = peripheral.name
@@ -426,7 +554,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					name.key = peripheral.name!
 					name.name = "FL"
 				}
-				//let finalData = joke()
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 			if(peripheral.name!.prefix(2) == "CR"){
@@ -439,7 +566,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					name.key = peripheral.name!
 					name.name = "CR"
 				}
-				//let finalData = joke()
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 			if(peripheral.name!.prefix(2) == "CL"){
@@ -452,7 +578,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					name.key = peripheral.name!
 					name.name = "CL"
 				}
-				//let finalData = joke()
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 			if(peripheral.name!.prefix(2) == "LL"){
@@ -465,7 +590,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					name.key = peripheral.name!
 					name.name = "LL"
 				}
-				//let finalData = joke()
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 			if(peripheral.name!.prefix(2) == "LR"){
@@ -478,7 +602,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					name.key = peripheral.name!
 					name.name = "LR"
 				}
-				//let finalData = joke()
 				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 			self.peripherals.append(peripheral)
@@ -486,38 +609,28 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			peripheral.delegate = self
 			print("Peripheral name: \(String(describing: peripheral.name))")
 		}
-		
-		
-		
 	}
 	func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
 		print("*****************************")
 		print("Connection complete")
 		peripheralCount += 1
-		//Stop Scan- We don't need to scan once we've connected to a peripheral. We got what we came for.
 		if peripheralCount == 6{
-			//centralManager?.stopScan()
+			centralManager?.stopScan()
 			print("Scan Stopped")
 		}
-		//Erase data that we might have
 		data.length = 0
 		//Discovery callback
 		peripheral.delegate = self
 		//Only look for services that matches transmit uuid
 		peripheral.discoverServices([BLEService_UUID])
 		
-		
-		//Once connected, move to new view controller to manager incoming and outgoing data
-		
 	}
-	
 	func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
 		if error != nil {
 			print("Failed to connect to peripheral")
 			return
 		}
 	}
-	
 	func disconnectAllConnection() {
 		if(centralManager != nil && FRPeripheral != nil){
 			centralManager.cancelPeripheralConnection(FRPeripheral!)
@@ -540,41 +653,32 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	}
 	func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
 		print("*******************************************************")
-		
 		if ((error) != nil) {
 			print("Error discovering services: \(error!.localizedDescription)")
 			return
 		}
-		
 		guard let services = peripheral.services else {
 			return
 		}
-		//We need to discover the all characteristic
 		for service in services {
 			
 			peripheral.discoverCharacteristics(nil, for: service)
-			// bleService = service
 		}
 		print("Discovered Services: \(services)")
 	}
 	func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-		
-		print("*******************************************************")
+				print("*******************************************************")
 		
 		if ((error) != nil) {
 			print("Error discovering services: \(error!.localizedDescription)")
 			return
 		}
-		
 		guard let characteristics = service.characteristics else {
 			return
 		}
-		
 		print("Found \(characteristics.count) characteristics!")
-		
 		for characteristic in characteristics {
 			//looks for the right characteristic
-			
 			if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Rx)  {
 				if peripheral.name == "FR" || peripheral.name == FRname{
 					frrxCharacteristic = characteristic
@@ -600,11 +704,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					llrxCharacteristic = characteristic
 					peripheral.setNotifyValue(true, for: llrxCharacteristic!)
 				}
-				
-				
-				//Once found, subscribe to the this particular characteristic...
-				// We can return after calling CBPeripheral.setNotifyValue because CBPeripheralDelegate's
-				// didUpdateNotificationStateForCharacteristic method will be called automatically
 				peripheral.readValue(for: characteristic)
 				print("Rx Characteristic: \(characteristic.uuid)")
 			}
@@ -686,69 +785,173 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				else { return }
 			characteristicASCIIValue = ASCIIstring
 		}
-		
-		
-		
 		print("Value Recieved: \((characteristicASCIIValue as String))")
-		if peripheral == FRPeripheral{
-			//FRbutton.titleLabel?.text = characteristicASCIIValue as String
+		if peripheral == FRPeripheral && isWaiting && nextGhost == "FR"{
+			totalGhosts += 1
+			pendingGhosts -= 1
+			ghostsLabel.text = String(pendingGhosts)
+			whichCornerLabel.text = "Rest"
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+			if pendingGhosts == 0{
+				cornersAvailable = ["FR","FL","CR","CL","LR","LL"]
+				level += 1
+				pendingGhosts = 6
+				playSound(sound: "chime")
+				secondsToPlay *= 0.9
+			}
+			isWaiting = false
+			nextGhost = getNextGhost()
+			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		if peripheral == FLPeripheral{
-			//FLbutton.titleLabel?.text = characteristicASCIIValue as String
+		else if peripheral == FLPeripheral && isWaiting && nextGhost == "FL"{
+			totalGhosts += 1
+			pendingGhosts -= 1
+			ghostsLabel.text = String(pendingGhosts)
+			whichCornerLabel.text = "Rest"
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+			if pendingGhosts == 0{
+				cornersAvailable = ["FR","FL","CR","CL","LR","LL"]
+				level += 1
+				pendingGhosts = 6
+				playSound(sound: "chime")
+				secondsToPlay *= 0.9
+			}
+			isWaiting = false
+			nextGhost = getNextGhost()
+			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		if peripheral == CRPeripheral{
-			//CRbutton.titleLabel?.text = characteristicASCIIValue as String
+		 else if peripheral == CRPeripheral && isWaiting && nextGhost == "CR"{
+			totalGhosts += 1
+			pendingGhosts -= 1
+			ghostsLabel.text = String(pendingGhosts)
+			whichCornerLabel.text = "Rest"
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+			if pendingGhosts == 0{
+				cornersAvailable = ["FR","FL","CR","CL","LR","LL"]
+				level += 1
+				pendingGhosts = 6
+				playSound(sound: "chime")
+				secondsToPlay *= 0.9
+			}
+			isWaiting = false
+			nextGhost = getNextGhost()
+			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		if peripheral == CLPeripheral{
-			//CLbutton.titleLabel?.text = characteristicASCIIValue as String
+		else if peripheral == CLPeripheral && isWaiting && nextGhost == "CL"{
+			totalGhosts += 1
+			pendingGhosts -= 1
+			ghostsLabel.text = String(pendingGhosts)
+			whichCornerLabel.text = "Rest"
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+			if pendingGhosts == 0{
+				cornersAvailable = ["FR","FL","CR","CL","LR","LL"]
+				level += 1
+				pendingGhosts = 6
+				playSound(sound: "chime")
+				secondsToPlay *= 0.9
+			}
+			isWaiting = false
+			nextGhost = getNextGhost()
+			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		if peripheral == LRPeripheral{
-			//LRbutton.titleLabel?.text = characteristicASCIIValue as String
+		else if peripheral == LRPeripheral && isWaiting && nextGhost == "LR"{
+			totalGhosts += 1
+			pendingGhosts -= 1
+			ghostsLabel.text = String(pendingGhosts)
+			whichCornerLabel.text = "Rest"
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+			if pendingGhosts == 0{
+				cornersAvailable = ["FR","FL","CR","CL","LR","LL"]
+				level += 1
+				pendingGhosts = 6
+				playSound(sound: "chime")
+				secondsToPlay *= 0.9
+			}
+			isWaiting = false
+			nextGhost = getNextGhost()
+			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		if peripheral == LLPeripheral{
-			//LLbutton.titleLabel?.text = characteristicASCIIValue as String
+		else if peripheral == LLPeripheral && isWaiting && nextGhost == "LL"{
+			totalGhosts += 1
+			pendingGhosts -= 1
+			ghostsLabel.text = String(pendingGhosts)
+			whichCornerLabel.text = "Rest"
+			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			writeValueFR(data: "0")
+			writeValueFL(data: "0")
+			writeValueCR(data: "0")
+			writeValueCL(data: "0")
+			writeValueLR(data: "0")
+			writeValueLL(data: "0")
+			if pendingGhosts == 0{
+				cornersAvailable = ["FR","FL","CR","CL","LR","LL"]
+				level += 1
+				pendingGhosts = 6
+				playSound(sound: "chime")
+				secondsToPlay *= 0.9
+			}
+			isWaiting = false
+			nextGhost = getNextGhost()
+			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
 		NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: self)
 	}
-	
-	
 	func peripheral(_ peripheral: CBPeripheral, didDiscoverDescriptorsFor characteristic: CBCharacteristic, error: Error?) {
 		print("*******************************************************")
-		
 		if error != nil {
 			print("\(error.debugDescription)")
 			return
 		}
 		guard let descriptors = characteristic.descriptors else { return }
-		
 		descriptors.forEach { descript in
 			print("function name: DidDiscoverDescriptorForChar \(String(describing: descript.description))")
 		}
 	}
-	
-	
 	func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
 		print("*******************************************************")
-		
 		if (error != nil) {
 			print("Error changing notification state:\(String(describing: error?.localizedDescription))")
 			
 		} else {
 			print("Characteristic's value subscribed")
 		}
-		
 		if (characteristic.isNotifying) {
 			print ("Subscribed. Notification has begun for: \(characteristic.uuid)")
 		}
 	}
-	
-	
-	
 	func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
 		print("Disconnected")
 	}
-	
-	
 	func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
 		guard error == nil else {
 			print("Error discovering services: error")
@@ -756,7 +959,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		print("Message sent")
 	}
-	
 	func peripheral(_ peripheral: CBPeripheral, didWriteValueFor descriptor: CBDescriptor, error: Error?) {
 		guard error == nil else {
 			print("Error discovering services: error")
@@ -764,50 +966,55 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		print("Succeeded!")
 	}
-	
-	
-	
-	
-	
-	/*
-	Invoked when the central manager’s state is updated.
-	This is where we kick off the scan if Bluetooth is turned on.
-	*/
 	func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		if central.state == CBManagerState.poweredOn {
-			// We will just handle it the easy way here: if Bluetooth is on, proceed...start scan!
 			print("Bluetooth Enabled")
-			workoutStartsIn.isHidden = false
 			startScan()
 			circleTime.font = UIFont(name: "System", size: 50 )
 			circleTime.isHidden = false
 			circleTime.isActive = true
-			circleTime.totalTime = 10
+			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+				if let prepTime = try? context.fetch(PrepTime.fetchRequest()){
+					let pTime = prepTime as! [PrepTime]
+					if pTime.count != 0{
+						circleTime.totalTime = Double(pTime[0].minutes * 60 + pTime[0].seconds)
+						totalTime = Int(circleTime.totalTime * -1) + 1
+					}
+					else{
+						circleTime.totalTime = 10
+						totalTime = Int(circleTime.totalTime * -1) + 1
+					}
+				}
+			}
 			circleTime.elapsedTime = 0
-			circleTime.start()
 			return
-			
 		} else {
-			//If Bluetooth is off, display a UI alert message saying "Bluetooth is not enable" and "Make sure that your bluetooth is turned on"
-			
 			if central.state == CBManagerState.poweredOn && FRPeripheral != nil && FLPeripheral != nil && CRPeripheral != nil && CLPeripheral != nil && FRPeripheral != nil && FLPeripheral != nil {
 				print("Bluetooth Enabled")
-				workoutStartsIn.isHidden = false
 				circleTime.font = UIFont(name: "System", size: 50 )
 				circleTime.isHidden = false
 				circleTime.isActive = true
-				circleTime.totalTime = 10
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					if let prepTime = try? context.fetch(PrepTime.fetchRequest()){
+						let pTime = prepTime as! [PrepTime]
+						if pTime.count != 0{
+							circleTime.totalTime = Double(pTime[0].minutes * 60 + pTime[0].seconds)
+							totalTime = Int(circleTime.totalTime * -1) + 1
+						}
+						else{
+							circleTime.totalTime = 10
+							totalTime = Int(circleTime.totalTime * -1) + 1
+						}
+					}
+				}
 				circleTime.elapsedTime = 0
-				circleTime.start()
 				startScan()
 			}
 			else{
 				print("Bluetooth Disabled- Make sure your Bluetooth is turned on")
-				
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
 				let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 					self.dismiss(animated: true, completion: nil)
-					//add segue
 					self.navigationController?.popViewController(animated: true)
 				})
 				alertVC.addAction(action)
@@ -815,22 +1022,69 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 		}
 	}
-	
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	// Get the new view controller using segue.destination.
-	// Pass the selected object to the new view controller.
+		totalTimeTimer.invalidate()
+		if segue.identifier == "BeepTestWorkoutConnectionProgressViewControllerSegue" {
+			if let childVC = segue.destination as? BeepTestWorkoutConnectionProgressViewController {
+				childVC.parentView = self
+			}
+		}
+		if segue.identifier == "DoneBeepTestWorkoutViewControllerSegue" {
+			if let childVC = segue.destination as? DoneBeepTestWorkoutViewController {
+				childVC.totalGhost = totalGhosts
+				childVC.greatestLevelAcheived = level
+				var score = ""
+				score += String(level) + "." + String(6-pendingGhosts)
+				childVC.beepTestScore = score
+				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+					let workout = Workout(context: context)
+					workout.type = "Beep Test"
+					workout.sets = Int16(level)
+					workout.totalGhosts = Int16(totalGhosts)
+					workout.date = Date()
+					workout.avgGhosts = 6
+					var minutes = 0
+					var hours = 0
+					var seconds = totalTime
+					var timeOnString = ""
+					if seconds >= 60{
+						minutes += Int(seconds/60)
+						seconds -= minutes * 60
+					}
+					if minutes >= 60{
+						hours += Int(minutes/60)
+						minutes -= hours*60
+					}
+					timeOnString = String(hours) + " : "
+					timeOnString += String(minutes) + " : " + String(seconds)
+					workout.totalTimeOn = timeOnString
+					totalTime /= level
+					minutes = 0
+					seconds = totalTime
+					hours = 0
+					timeOnString = ""
+					if seconds >= 60{
+						minutes += Int(seconds/60)
+						seconds -= minutes * 60
+					}
+					if minutes >= 60{
+						hours += Int(minutes/60)
+						minutes -= hours*60
+					}
+					timeOnString = String(hours) + " : "
+					timeOnString += String(minutes) + " : " + String(seconds)
+					workout.avgTimeOn = timeOnString
+					workout.ghostedCorners = "All Corners"
+					childVC.totalTimeOn = workout.totalTimeOn
+					workout.totalTimeOnInSeconds = Int64(totalTime)
+				}
+			}
+		}
 	}
-	*/
-	
 }
 fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
 	return input.rawValue
 }
-
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
 	guard let input = input else { return nil }
