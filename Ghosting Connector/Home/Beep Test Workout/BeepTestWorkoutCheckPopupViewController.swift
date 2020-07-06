@@ -7,24 +7,26 @@
 //
 
 import UIKit
-
+import M13Checkbox
 class BeepTestWorkoutCheckPopupViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+	@IBOutlet weak var checkBoxContainingView: UIView!
+	@IBOutlet weak var checkBox: M13Checkbox!
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		checkBox.isEnabled = false
+		checkBox.tintColor = UIColor(red: 26/256, green: 230/256, blue: 100/256, alpha: 1)
+		checkBox.animationDuration = 1
+		checkBox.checkmarkLineWidth = 5.0
+		checkBox.boxLineWidth = 5.0
+		let seconds = 1.5
+		DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+			self.dismiss(animated: true, completion: nil)
+		}
+	}
+	override func viewWillAppear(_ animated: Bool) {
+		checkBoxContainingView.layer.cornerRadius = 30
+		let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+		notificationFeedbackGenerator.prepare()
+		notificationFeedbackGenerator.notificationOccurred(.success)
+		checkBox.setCheckState(.checked, animated: true)
+	}}
