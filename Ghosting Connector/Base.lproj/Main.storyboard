@@ -1830,15 +1830,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-F7-vNu">
-                                            <rect key="frame" x="10" y="6" width="392" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-F7-vNu">
+                                            <rect key="frame" x="11" y="6" width="392" height="68"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timer Image" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-hO-Aea">
                                             <rect key="frame" x="28" y="19" width="42" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jys-Hv-aZc">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jys-Hv-aZc">
                                             <rect key="frame" x="78" y="24" width="312" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1846,6 +1845,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EIM-F7-vNu" firstAttribute="centerY" secondItem="yrk-Kn-nBE" secondAttribute="centerY" id="ZD1-zN-Pit"/>
+                                        <constraint firstAttribute="bottom" secondItem="EIM-F7-vNu" secondAttribute="bottom" constant="5.5" id="dTc-0f-Sp8"/>
+                                        <constraint firstItem="EIM-F7-vNu" firstAttribute="leading" secondItem="yrk-Kn-nBE" secondAttribute="leading" constant="11" id="eNa-p3-IjS"/>
+                                        <constraint firstAttribute="trailing" secondItem="EIM-F7-vNu" secondAttribute="trailing" constant="11" id="ff6-Oo-QtC"/>
+                                        <constraint firstItem="EIM-F7-vNu" firstAttribute="top" secondItem="yrk-Kn-nBE" secondAttribute="top" constant="5.5" id="jNR-2Q-syw"/>
+                                        <constraint firstItem="EIM-F7-vNu" firstAttribute="centerX" secondItem="yrk-Kn-nBE" secondAttribute="centerX" id="r6G-RC-0MI"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -1862,7 +1869,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p43-wJ-rNM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2265.217391304348" y="2108.7053571428569"/>
+            <point key="canvasLocation" x="-2264" y="2117"/>
         </scene>
         <!--Home Main View Workouts View Controller-->
         <scene sceneID="HGl-p7-Sbe">
