@@ -45,6 +45,9 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
 				let wFromCore = workoutsFromCore as! [Workout]
 				workoutsFromCoreData = wFromCore
+				workoutsFromCoreData = workoutsFromCoreData.sorted(by: {
+					$0.date!.compare($1.date!) == .orderedDescending
+				})
 			}
 		}
 		if currentWorkout.type == "Timed"{
