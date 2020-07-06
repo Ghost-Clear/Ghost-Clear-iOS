@@ -162,6 +162,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 		}
 		else{
 			stopWatch.invalidate()
+			playSound(sound: "success")
 			performSegue(withIdentifier: "NumberWorkoutCheckPopupViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -1239,6 +1240,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 			disconnectAllConnection()
 			isWaitingForGhost = false
 			stopWatch.invalidate()
+			playSound(sound: "success")
 			performSegue(withIdentifier: "NumberWorkoutCheckPopupViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -1436,6 +1438,7 @@ class DoNumberWorkoutViewController:  UIViewController, CBCentralManagerDelegate
 						}
 					}
 				}
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 		}
 		if segue.identifier == "NumberWorkoutConnectionProgressViewControllerViewControllerSegue" {

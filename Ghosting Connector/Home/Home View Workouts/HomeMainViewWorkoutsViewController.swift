@@ -67,7 +67,7 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 			}
 		}
 		else if currentWorkout.type == "Beep Test"{
-			cell.cellText.text! = "Acheived a score of " + currentWorkout.score! + " in " + currentWorkout.totalTimeOn!
+			cell.cellText.text! = "Acheived a score of " + currentWorkout.score! + " in  " + currentWorkout.totalTimeOn!
 		}
 		childView.tableView.rowHeight = 75
 		return cell

@@ -43,6 +43,7 @@
 		27901A5124B2E93D00189846 /* BeepTestWorkoutConnectionProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A5024B2E93D00189846 /* BeepTestWorkoutConnectionProgressViewController.swift */; };
 		27901A5324B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A5224B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift */; };
 		27901A5524B32A3100189846 /* HomeViewBeepTestWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A5424B32A3100189846 /* HomeViewBeepTestWorkoutViewController.swift */; };
+		27901A5D24B351B200189846 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27901A5C24B351B100189846 /* success.mp3 */; };
 		27ABC82624AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */; };
 		27BC2CD224AEEFF0007A0589 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */; };
 		27BC2CD424AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */; };
@@ -105,6 +106,7 @@
 		27901A5024B2E93D00189846 /* BeepTestWorkoutConnectionProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepTestWorkoutConnectionProgressViewController.swift; sourceTree = "<group>"; };
 		27901A5224B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepTestWorkoutCheckPopupViewController.swift; sourceTree = "<group>"; };
 		27901A5424B32A3100189846 /* HomeViewBeepTestWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBeepTestWorkoutViewController.swift; sourceTree = "<group>"; };
+		27901A5C24B351B100189846 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
 		27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWorkoutConnectionProgressViewController.swift; sourceTree = "<group>"; };
 		27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutConnectionProgressViewControllerViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				27D8E51124AB3144004F99A0 /* chime.mp3 */,
+				27901A5C24B351B100189846 /* success.mp3 */,
 				27D8E50524AB3124004F99A0 /* Back-Left.mp3 */,
 				27D8E50324AB3123004F99A0 /* Back-Right.mp3 */,
 				27D8E50724AB3125004F99A0 /* Center-Left.mp3 */,
@@ -405,6 +408,7 @@
 				27D8E50924AB3125004F99A0 /* Back-Right.mp3 in Resources */,
 				27D8E50C24AB3125004F99A0 /* Center-Right.mp3 in Resources */,
 				27D8E50824AB3125004F99A0 /* Front-Right.mp3 in Resources */,
+				27901A5D24B351B200189846 /* success.mp3 in Resources */,
 				27D8E50B24AB3125004F99A0 /* Back-Left.mp3 in Resources */,
 				2768EB0F24997AD40076D0DB /* Assets.xcassets in Resources */,
 				2741C6B62454BDC400EB4944 /* Main.storyboard in Resources */,

@@ -33,14 +33,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var LRPeripheral : CBPeripheral?
 	var LLPeripheral : CBPeripheral?
 	var characteristicASCIIValue = NSString()
-	var FR : Bool!
-	var FL : Bool!
-	var CR : Bool!
-	var CL : Bool!
-	var LR : Bool!
-	var LL : Bool!
+	var FR : Bool! = true
+	var FL : Bool! = true
+	var CR : Bool! = true
+	var CL : Bool! = true
+	var LR : Bool! = true
+	var LL : Bool! = true
 	var peripheralCount = 0
-	var checkTimer : Timer!
 	var isFirstPair : Bool!
 	var FRname : String!
 	var FLname : String!
@@ -69,12 +68,15 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var characteristicValue = [CBUUID: NSData]()
 	var timer = Timer()
 	var characteristics = [String : CBCharacteristic]()
-	var totalTimeTimer : Timer!
+	var totalTimeTimer : Timer! = Timer()
 	@IBOutlet var circleTime: AppusCircleTimer!
 	@IBOutlet weak var pauseButton: UIButton!
 	@IBOutlet weak var stopButton: UIButton!
 	@IBOutlet weak var finishButton: UIButton!
 	@IBOutlet weak var livesLabel: UILabel!
+	func startTimer(){
+		totalTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
+	}
 	func getNextGhost() -> String!{
 		var toReturn : String!
 		let orderCount = Int.random(in: 0..<cornersAvailable.count)
@@ -85,7 +87,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		isPaused = !isPaused
 		if isPaused{
 			totalTimeTimer.invalidate()
-			isWaiting = false
+			isPaused = true
 			pauseButton.setImage( UIImage(named: "Play Button"), for: .normal)
 			self.circleTime.stop()
 			writeValueFR(data: "0")
@@ -97,35 +99,35 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		else{
 			totalTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
-			isWaiting = true
+			isPaused = false
 			pauseButton.setImage( UIImage(named: "Pause Button"), for: .normal)
 			self.circleTime.resume()
-			if nextGhost == "FR" && !isWaiting{
+			if nextGhost == "FR" && isWaiting{
 				writeValueFR(data: "1")
 				playSound(sound: "Front-Right")
 				whichCornerLabel.text = "Front Right"
 			}
-			if nextGhost == "FL" && !isWaiting{
+			if nextGhost == "FL" && isWaiting{
 				writeValueFL(data: "1")
 				playSound(sound: "Front-Left")
 				whichCornerLabel.text = "Front Left"
 			}
-			if nextGhost == "CR" && !isWaiting{
+			if nextGhost == "CR" && isWaiting{
 				writeValueCR(data: "1")
 				playSound(sound: "Center-Right")
 				whichCornerLabel.text = "Center Right"
 			}
-			if nextGhost == "CL" && !isWaiting{
+			if nextGhost == "CL" && isWaiting{
 				writeValueCL(data: "1")
 				playSound(sound: "Center-Left")
 				whichCornerLabel.text = "Center Left"
 			}
-			if nextGhost == "LR" && !isWaiting{
+			if nextGhost == "LR" && isWaiting{
 				writeValueLR(data: "1")
 				playSound(sound: "Back-Right")
 				whichCornerLabel.text = "Back Right"
 			}
-			if nextGhost == "LL" && !isWaiting{
+			if nextGhost == "LL" && isWaiting{
 				writeValueLL(data: "1")
 				playSound(sound: "Back-Left")
 				whichCornerLabel.text = "Back Left"
@@ -159,7 +161,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		
 	}
 	func circleCounterTimeDidExpire(circleTimer: AppusCircleTimer) {
-		if isWaiting{
+		if isWaiting && !isPrep{
 			lives -= 1
 		}
 		livesLabel.text = String(lives)
@@ -186,7 +188,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			circleTime.stop()
 			centralManager.stopScan()
 			disconnectAllConnection()
-			performSegue(withIdentifier: "BeepTestWorkoutCheckPopUpViewControllerSegue", sender: nil)
+			playSound(sound: "success")
+			performSegue(withIdentifier: "BeepTestWorkoutCheckPopupViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
 				self.performSegue(withIdentifier: "DoneBeepTestWorkoutViewControllerSegue", sender: nil)
@@ -194,12 +197,11 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		isPrep = false
 		isWaiting = true
-		ghostsLabel.text = String(pendingGhosts)
-		pendingGhosts = 6
 		levelLabel.text = String(level)
-		circleTime.elapsedTime = 0
 		circleTime.totalTime = secondsToPlay
+		circleTime.elapsedTime = 0
 		circleTime.activeColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
+		circleTime.pauseColor = UIColor(red: 26/256, green: 231/256, blue: 148/256, alpha: 1)
 		circleTime.start()
 		if nextGhost == "FR"{
 			playSound(sound: "Front-Right")
@@ -263,7 +265,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			popBack(3)
 		}
 		else{
-			performSegue(withIdentifier: "BeepTestWorkoutCheckPopUpViewControllerSegue", sender: nil)
+			playSound(sound: "success")
+			performSegue(withIdentifier: "BeepTestWorkoutCheckPopupViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
 				self.performSegue(withIdentifier: "DoneBeepTestWorkoutViewControllerSegue", sender: nil)
@@ -278,6 +281,8 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		pauseButton.contentMode = .scaleAspectFit
 		stopButton.contentMode = .scaleAspectFit
 		finishButton.contentMode = .scaleAspectFit
+		circleTime.fontColor = UIColor.white
+		whichCornerLabel.text = "Get Ready"
 		circleTime.delegate = self
 		circleTime.font = UIFont(name: "System", size: 50 )
 		circleTime.isBackwards = true
@@ -286,8 +291,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		centralManager = CBCentralManager(delegate: self, queue: nil)
 		peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
 		circleTime.fontColor = UIColor.white
-		totalTimeTimer = Timer()
-		totalTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
 		if allPeripeheralsExist(id: true){
 			isFirstPair = false
 			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
@@ -319,6 +322,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		else{
 			isFirstPair = true
 		}
+		performSegue(withIdentifier: "BeepTestWorkoutConnectionProgressViewControllerSegue", sender: nil)
 		DispatchQueue.main.asyncAfter(deadline: .now() + 4.2) {
 			if !self.didConnect{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
@@ -619,7 +623,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			print("Scan Stopped")
 		}
 		data.length = 0
-		//Discovery callback
 		peripheral.delegate = self
 		//Only look for services that matches transmit uuid
 		peripheral.discoverServices([BLEService_UUID])
@@ -786,12 +789,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			characteristicASCIIValue = ASCIIstring
 		}
 		print("Value Recieved: \((characteristicASCIIValue as String))")
-		if peripheral == FRPeripheral && isWaiting && nextGhost == "FR"{
+		if peripheral == FRPeripheral && isWaiting && nextGhost == "FR" && !isPaused{
 			totalGhosts += 1
 			pendingGhosts -= 1
 			ghostsLabel.text = String(pendingGhosts)
 			whichCornerLabel.text = "Rest"
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
 			writeValueCR(data: "0")
@@ -809,12 +813,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			nextGhost = getNextGhost()
 			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		else if peripheral == FLPeripheral && isWaiting && nextGhost == "FL"{
+		else if peripheral == FLPeripheral && isWaiting && nextGhost == "FL" && !isPaused{
 			totalGhosts += 1
 			pendingGhosts -= 1
 			ghostsLabel.text = String(pendingGhosts)
 			whichCornerLabel.text = "Rest"
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
 			writeValueCR(data: "0")
@@ -832,12 +837,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			nextGhost = getNextGhost()
 			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		 else if peripheral == CRPeripheral && isWaiting && nextGhost == "CR"{
+		 else if peripheral == CRPeripheral && isWaiting && nextGhost == "CR" && !isPaused{
 			totalGhosts += 1
 			pendingGhosts -= 1
 			ghostsLabel.text = String(pendingGhosts)
 			whichCornerLabel.text = "Rest"
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
 			writeValueCR(data: "0")
@@ -855,12 +861,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			nextGhost = getNextGhost()
 			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		else if peripheral == CLPeripheral && isWaiting && nextGhost == "CL"{
+		else if peripheral == CLPeripheral && isWaiting && nextGhost == "CL" && !isPaused{
 			totalGhosts += 1
 			pendingGhosts -= 1
 			ghostsLabel.text = String(pendingGhosts)
 			whichCornerLabel.text = "Rest"
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
 			writeValueCR(data: "0")
@@ -878,12 +885,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			nextGhost = getNextGhost()
 			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		else if peripheral == LRPeripheral && isWaiting && nextGhost == "LR"{
+		else if peripheral == LRPeripheral && isWaiting && nextGhost == "LR" && !isPaused{
 			totalGhosts += 1
 			pendingGhosts -= 1
 			ghostsLabel.text = String(pendingGhosts)
 			whichCornerLabel.text = "Rest"
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
 			writeValueCR(data: "0")
@@ -901,12 +909,13 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			nextGhost = getNextGhost()
 			cornersAvailable.remove(at: cornersAvailable.firstIndex(of: nextGhost)!)
 		}
-		else if peripheral == LLPeripheral && isWaiting && nextGhost == "LL"{
+		else if peripheral == LLPeripheral && isWaiting && nextGhost == "LL" && !isPaused{
 			totalGhosts += 1
 			pendingGhosts -= 1
 			ghostsLabel.text = String(pendingGhosts)
 			whichCornerLabel.text = "Rest"
 			circleTime.activeColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
+			circleTime.pauseColor = UIColor(red: 255/256, green: 88/256, blue: 96/256, alpha: 1)
 			writeValueFR(data: "0")
 			writeValueFL(data: "0")
 			writeValueCR(data: "0")
@@ -1023,7 +1032,6 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		totalTimeTimer.invalidate()
 		if segue.identifier == "BeepTestWorkoutConnectionProgressViewControllerSegue" {
 			if let childVC = segue.destination as? BeepTestWorkoutConnectionProgressViewController {
 				childVC.parentView = self
@@ -1031,6 +1039,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 		if segue.identifier == "DoneBeepTestWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? DoneBeepTestWorkoutViewController {
+				totalTimeTimer.invalidate()
 				childVC.totalGhost = totalGhosts
 				childVC.greatestLevelAcheived = level
 				var score = ""
@@ -1038,10 +1047,12 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 				childVC.beepTestScore = score
 				if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 					let workout = Workout(context: context)
+					workout.score = score
 					workout.type = "Beep Test"
 					workout.sets = Int16(level)
 					workout.totalGhosts = Int16(totalGhosts)
 					workout.date = Date()
+					workout.greatestLevel = Int16(level)
 					workout.avgGhosts = 6
 					var minutes = 0
 					var hours = 0
@@ -1077,7 +1088,9 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 					workout.ghostedCorners = "All Corners"
 					childVC.totalTimeOn = workout.totalTimeOn
 					workout.totalTimeOnInSeconds = Int64(totalTime)
+					
 				}
+				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
 		}
 	}

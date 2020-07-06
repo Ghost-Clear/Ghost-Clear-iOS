@@ -55,6 +55,9 @@ class BeepTestWorkoutConnectionProgressViewController: UIViewController {
 		}
 		DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
 			self.dismiss(animated: true, completion: nil)
+			if self.parentView.didConnect{
+				self.parentView.startTimer()
+			}
 		}
 	}
 }

@@ -26,7 +26,8 @@ class HomeViewBeepTestWorkoutViewController: UIViewController {
 		let date = viewingWorkout.date!
 		let dateFormatter = DateFormatter()
 		dateFormatter.locale = Locale.current
-		dateLabel.text = dateFormatter.string(from: date)		
+		dateFormatter.dateStyle = .full
+		dateLabel.text = dateFormatter.string(from: date)
     }
 	@IBAction func goBack(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)

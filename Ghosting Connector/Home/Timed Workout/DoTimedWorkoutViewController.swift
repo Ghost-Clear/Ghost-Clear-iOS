@@ -202,6 +202,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			popBack(4)
 		}
 		else{
+			playSound(sound: "success")
 			performSegue(withIdentifier: "TimedWorkoutCheckPopUpViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -314,6 +315,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 			circleTime.stop()
 			centralManager.stopScan()
 			disconnectAllConnection()
+			playSound(sound: "success")
 			performSegue(withIdentifier: "TimedWorkoutCheckPopUpViewControllerSegue", sender: nil)
 			let seconds = 1.51
 			DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
