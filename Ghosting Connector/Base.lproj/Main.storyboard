@@ -1614,7 +1614,7 @@
                         <outlet property="whichGhostLabel" destination="WJ0-Df-gQD" id="3V1-ey-KKj"/>
                         <segue destination="Ylo-oK-Lm2" kind="show" identifier="DoneTimedWorkoutViewControllerSegue" id="nT1-2M-1GO"/>
                         <segue destination="1hj-Hv-teo" kind="presentation" identifier="TimedWorkoutCheckPopUpViewControllerSegue" id="yok-hN-f4X"/>
-                        <segue destination="e57-zu-dEN" kind="presentation" identifier="TimedWorkoutConnectionProgressViewControllerViewControllerSegue" id="eS7-lg-KSt"/>
+                        <segue destination="e57-zu-dEN" kind="presentation" identifier="TimedWorkoutConnectionProgressViewControllerSegue" id="eS7-lg-KSt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80k-SJ-VpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3080,10 +3080,10 @@
             </objects>
             <point key="canvasLocation" x="2962" y="25"/>
         </scene>
-        <!--Timed Workout Connection Progress View Controller View Controller-->
+        <!--Timed Workout Connection Progress View Controller-->
         <scene sceneID="ikb-6H-QxI">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewControllerViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LXn-pl-64h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

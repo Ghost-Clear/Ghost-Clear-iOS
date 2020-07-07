@@ -1251,8 +1251,8 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 				
 			}
 		}
-		if segue.identifier == "TimedWorkoutConnectionProgressViewControllerViewControllerSegue" {
-			if let childVC = segue.destination as? TimedWorkoutConnectionProgressViewControllerViewController {
+		if segue.identifier == "TimedWorkoutConnectionProgressViewControllerSegue" {
+			if let childVC = segue.destination as? TimedWorkoutConnectionProgressViewController {
 				childVC.parentView = self
 				
 			}

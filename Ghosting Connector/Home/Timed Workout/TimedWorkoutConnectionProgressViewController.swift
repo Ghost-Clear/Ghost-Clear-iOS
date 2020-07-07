@@ -8,7 +8,7 @@
 
 import UIKit
 import M13Checkbox
-class TimedWorkoutConnectionProgressViewControllerViewController: UIViewController {
+class TimedWorkoutConnectionProgressViewController: UIViewController {
 	@IBOutlet var circleView : CircularProgressView!
 	@IBOutlet weak var checkBox: M13Checkbox!
 	@IBOutlet weak var containingView: UIView!
