@@ -100,6 +100,13 @@ The user can tap on a workout to view more detail about it.
 
 This file controls the view controller that shows the details of a workout completed by the user.
 
+### HomeViewBeepTestWorkoutViewController.swift
+
+![](https://media.giphy.com/media/kyWT0fxUks6hLOJlyT/giphy.gif)
+
+A file that controls the view controller that displays information about a finished beep test workout.
+This is file is a variation of the HomeViewWorkoutViewController.swift which supports all the attributes of beep test.
+
 ### ChooseNumberWorkoutAttributesViewController.swift
 
 ![](https://media.giphy.com/media/cMKvCoDZPNSO9H8Pst/giphy.gif)
@@ -201,6 +208,64 @@ This file controls the view controller that allows the user to change their name
 ![](https://media.giphy.com/media/ZCSy9yK3D0TQtGNe06/giphy.gif)
 
 This file controls the view controller that allows the user to change the preparation time before the start of a workout.
+
+### BeepTestWorkoutDescriptionViewController.swift
+
+[](https://media.giphy.com/media/SwxlixzqP24Rd06O6D/giphy.gif)
+
+This file controls the view controller that has descriptions about the beep test.
+
+### BeepTestWorkoutCheckPopupViewController.swift
+
+[](https://media.giphy.com/media/hT6BOeEMd9B67rusk9/giphy.gif)
+
+This file controls the pop up view controller that shows a check when the beep test workout.
+
+### BeepTestWorkoutConnectionProgressViewController.swift
+
+[](https://media.giphy.com/media/PlsxmA86cSuZm8ejuT/giphy.gif)
+
+This file controls the view controller that shows a status check to see if the app has connected to necessary devices.
+
+### DoneBeepTestWorkoutViewController.swift
+
+[](https://media.giphy.com/media/ehs4jazSAfoyY27avC/giphy.gif)
+
+This file controls the view controller that shows the details of a recently finished workout.
+
+### DoBeepTestWorkoutViewController.swift
+
+[](https://media.giphy.com/media/mEgVE6sBbUlQojQkEw/giphy.gif)
+
+This file controls the view controller that does the beep test workout.
+
+### WorkoutButtonsPageViewController.swift
+
+[](https://media.giphy.com/media/kaUDEDUgng8FXaEWwS/giphy.gif!)
+
+This file controls the page view controller that contains a page view of all the workout buttons.
+
+### FirstButtonSetViewController.swift
+
+This file controls the view controller that displays the start timed workout button and the start number workout button.
+
+### SecondButtonSetViewController.swift
+
+This file controls the view controller that displays the start beep test button.
+
+### HomeChartPageViewController.swift
+
+![](https://media.giphy.com/media/Pllw0i2NjJHc4a0NOc/giphy.gif)
+
+This file controls the page view controller that shows the workouts this week chart and the beep test progress chart.
+
+### HomeWorkoutsThisWeekViewController.swift
+
+This file controls the view controller that contains that workouts this week chart.
+
+### BeepTestProgressViewController.swift
+
+This file controls the view controller that contains the beep test progress chart.
 
 ### UUIDKey.swift
 
