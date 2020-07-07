@@ -3229,15 +3229,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aZ-jZ-fkF">
-                                <rect key="frame" x="11" y="797" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Big Start Ghost Button"/>
-                                <connections>
-                                    <action selector="startGhost:" destination="PUG-kh-Pm6" eventType="touchUpInside" id="D92-dF-42i"/>
-                                    <segue destination="xtS-rG-SBs" kind="show" identifier="DoBeepTestWorkoutViewControllerSegue" id="tnq-Qc-n2B"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-mv-2zw">
                                 <rect key="frame" x="20" y="593" width="104" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -3253,6 +3244,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aZ-jZ-fkF">
+                                <rect key="frame" x="20" y="797" width="374" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Big Start Ghost Button"/>
+                                <connections>
+                                    <action selector="startGhost:" destination="PUG-kh-Pm6" eventType="touchUpInside" id="D92-dF-42i"/>
+                                    <segue destination="xtS-rG-SBs" kind="show" identifier="DoBeepTestWorkoutViewControllerSegue" id="tnq-Qc-n2B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="n6q-00-fUU"/>
@@ -3590,7 +3590,7 @@
         <image name="Apply Changes Button" width="1232" height="232"/>
         <image name="Back Button" width="15.666666984558105" height="26.666666030883789"/>
         <image name="Beep Test Button" width="600" height="840"/>
-        <image name="Big Start Ghost Button" width="1489" height="232"/>
+        <image name="Big Start Ghost Button" width="1308" height="232"/>
         <image name="Blank Randomize Button" width="680" height="232"/>
         <image name="Choose Pattern Button" width="680" height="232"/>
         <image name="Create A Goal " width="336.33334350585938" height="37.666667938232422"/>
