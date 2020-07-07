@@ -98,7 +98,7 @@ class HomeWorkoutsThisWeekViewController: UIViewController {
 		theBarChart.xAxis.granularity = 1
 		theBarChart.xAxis.drawLabelsEnabled = true
 		theBarChart.xAxis.labelPosition = .bottom
-		theBarChart.xAxis.labelFont = .systemFont(ofSize: 8)
+		theBarChart.xAxis.labelFont = .systemFont(ofSize: 14)
 		theBarChart.xAxis.drawGridLinesEnabled = false
 		theBarChart.xAxis.drawLimitLinesBehindDataEnabled = false
 		theBarChart.fitBars = true

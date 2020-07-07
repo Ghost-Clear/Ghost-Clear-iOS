@@ -30,26 +30,11 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 		}
 	}
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
-				let wFromCore = workoutsFromCore as! [Workout]
-				workoutsFromCoreData = wFromCore
-			}
-		}
 		return workoutsFromCoreData.count
 	}
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell", for: indexPath) as! workoutCell
 		let currentWorkout = workoutsFromCoreData[indexPath.row]
-		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
-			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
-				let wFromCore = workoutsFromCore as! [Workout]
-				workoutsFromCoreData = wFromCore
-				workoutsFromCoreData = workoutsFromCoreData.sorted(by: {
-					$0.date!.compare($1.date!) == .orderedDescending
-				})
-			}
-		}
 		if currentWorkout.type == "Timed"{
 			cell.icon.image = UIImage(named: "Timer Image")
 		}
@@ -90,8 +75,8 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 				let new = self.workoutsFromCoreData[indexPath.row]
 				self.workoutsFromCoreData.remove(at: indexPath.row)
 				context.delete(new)
-				(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			}
+			(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 			tableView.deleteRows(at: [indexPath], with: .fade)
 		} else if editingStyle == .insert {
 		}
@@ -99,13 +84,19 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 		doneButton.imageView?.contentMode = .scaleAspectFit
+		
+    }
+	override func viewWillAppear(_ animated: Bool) {
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
 				let wFromCore = workoutsFromCore as! [Workout]
 				workoutsFromCoreData = wFromCore
 			}
 		}
-    }
+		workoutsFromCoreData = workoutsFromCoreData.sorted(by: {
+			$0.date!.compare($1.date!) == .orderedDescending
+		})
+	}
 	@IBAction func done(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)
 	}

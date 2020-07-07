@@ -320,6 +320,7 @@
 		27B0FCD124A63A0500BCAA2E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				27C5CCCC24B44F790058E539 /* Graphs */,
 				27901A4924B28FBB00189846 /* Workout Buttons */,
 				27B0FCCE24A6397100BCAA2E /* Settings */,
 				27B0FCCD24A6391500BCAA2E /* Timed Workout */,
@@ -328,11 +329,18 @@
 				2726029224A9ED8D0071B03F /* Home View Workouts */,
 				27B0FCCB24A638C300BCAA2E /* Home View Goals */,
 				27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		27C5CCCC24B44F790058E539 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
 				27901A6024B3631300189846 /* HomeChartPageViewController.swift */,
 				27901A6224B3634400189846 /* HomeWorkoutsThisWeekViewController.swift */,
 				27901A6424B3635F00189846 /* BeepTestProgressChartViewController.swift */,
 			);
-			path = Home;
+			path = Graphs;
 			sourceTree = "<group>";
 		};
 		6A1011C760EC1DFB3E9EB70B /* Pods */ = {

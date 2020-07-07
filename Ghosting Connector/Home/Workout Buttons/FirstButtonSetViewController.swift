@@ -14,6 +14,8 @@ class FirstButtonSetViewController: UIViewController {
 	@IBOutlet weak var timedWorkoutButton: UIButton!
 	override func viewDidLoad() {
         super.viewDidLoad()
+		numberWorkoutButton.contentMode = .scaleAspectFit
+		timedWorkoutButton.contentMode = .scaleAspectFit
     }
 	override func viewWillAppear(_ animated: Bool) {
 		timedWorkoutButton.contentMode = .scaleAspectFit
