@@ -33,6 +33,7 @@
 		1A888E7707178E193E1AA34E0BA40C2D /* PieChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660C5C16EC229FB54E9AD2E9712F7F5 /* PieChartData.swift */; };
 		1E0A404C2B8D6FE4A845B1FF477BE78E /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0D16CA729DCAF155E2D64C3BFBBE4 /* Animator.swift */; };
 		1F292B5410B16DBF60D1F47A48216622 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94040E7CD5780C57634F9614A4C706 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1F508D15801490ABBDA3E019A5F861AC /* Pods-Ghosting Connector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 594993DB74CF19E6E5EE18E659F56BE6 /* Pods-Ghosting Connector-dummy.m */; };
 		1FD73E23DAF5824C436A6DC9687FB208 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ABD6082F934B569195C9B759C7AFBE /* Highlight.swift */; };
 		2035D0D63AD5E4B52741E026D1AE4DC1 /* IAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0AC8427E030AA99F32F2765E52F254 /* IAxisValueFormatter.swift */; };
 		20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE5E552CA2AA78C561610958E20E918 /* CFNetwork.framework */; };
@@ -65,7 +66,6 @@
 		4A68C90FD5FB3151EC2B2D9761800EAC /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C4A19267B248F1FE32E09962F4F716 /* ChartUtils.swift */; };
 		4AE8E21CEDEA8D7DCF8E1A18B13BEA0E /* AnimatedMoveViewJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FEC2D2ED81A0AC0842C5C0DF488FDE /* AnimatedMoveViewJob.swift */; };
 		4B47FB69182D78B21EBC902DC9E19ADD /* AxisRendererBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808955B0FC1D8FEBD7CF2ED78E64F8B5 /* AxisRendererBase.swift */; };
-		4D212FD002E2825AE9E611F9532BA1FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68D0101BAC6D8CD524A3626DCF4C33D /* Foundation.framework */; };
 		4DC29CC941DF6CC8175CD6CC9BB09E12 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842F897B6667D08907A7678C401DEAB /* Transformer.swift */; };
 		4E354ED8946F80210999254F5D1F48F8 /* BubbleChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BA83C2CC56B15AED80815C37CA891D /* BubbleChartDataProvider.swift */; };
 		503F1FDAC289C28619F785F0A8BC8B2A /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A61605AC92FA175398636D7ECCDB4 /* BarChartData.swift */; };
@@ -80,6 +80,7 @@
 		57E33ED57830FE20AE076C1995B83472 /* HorizontalBarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF6E1BE38D407B21F57EBC63EEF0F8 /* HorizontalBarHighlighter.swift */; };
 		583F272C92432106E68A829AF0A53EB6 /* CombinedChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8BF9B16F9943C9372BF261D0897FE /* CombinedChartDataProvider.swift */; };
 		591507304B3DDD5E96816BFA33F44EA7 /* PieHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D4CC8864F6F0F81688D903938408FF /* PieHighlighter.swift */; };
+		59EC21AC27ADF99992990C8485CF5396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68D0101BAC6D8CD524A3626DCF4C33D /* Foundation.framework */; };
 		5AA84E9F68B16B31F26CD0E1B45BE2E4 /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04150DE1E789628068935EB8E121C620 /* ViewPortHandler.swift */; };
 		5CB0A0A5FE6BD457E2CC6440B1556EEE /* DefaultValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1DC1E90D35F43E485CF4EFDDC6F9EC /* DefaultValueFormatter.swift */; };
 		5D0591BE43A8249DBD3BE700539F3FF3 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B3537366ECFC408274F09B174338B6 /* FadeTransition.swift */; };
@@ -92,7 +93,6 @@
 		6BAB3592ABE687430DF8172CE3CC548D /* ICandleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D2488A57D6C290D4151D1163041D4 /* ICandleChartDataSet.swift */; };
 		6C237B7AA6F4A2DD17CA05EB90C83362 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FB6C0F2BD8049EA39AC0EBE2C88276 /* CocoaAsyncSocket-dummy.m */; };
 		6D61B4A01981CB468324843B4412F163 /* BarHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3844EE6804EF82B45576A9577FD0AA33 /* BarHighlighter.swift */; };
-		6FD3DADACB0EC82AD38CDEC0C8FFFBDE /* Pods-Ghosting Connector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 594993DB74CF19E6E5EE18E659F56BE6 /* Pods-Ghosting Connector-dummy.m */; };
 		73035AB32AD5ED622BF171FA640DDA5F /* ChartViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBED2CDC68DC2C372A5636690A5CDA /* ChartViewBase.swift */; };
 		74708EF5C3423D4A03BB4D25F1311862 /* HorizontalBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D0F90DFF9580EAC5FE9AE8EB0AA7F6 /* HorizontalBarChartView.swift */; };
 		74B7A2EA74E00804BC8CF56F8187FB4D /* DataApproximator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8693F0B413E916173121D3A738A090 /* DataApproximator.swift */; };
@@ -115,7 +115,6 @@
 		8961E69203D560A894EEB8C4D1DAAFDD /* PieChartDataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A666A47FDE9E2C2A0E87E9430A99CB1 /* PieChartDataEntry.swift */; };
 		8AD2B159BE27662506667D4EA934D4D3 /* ChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D6DC0F99766B62C3C6331FAB84DD6F /* ChartDataProvider.swift */; };
 		8CC9DA111331D8277AC6625140C07A77 /* YAxisRendererHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C38471DA73D3F60C57784CD2AB6BD /* YAxisRendererHorizontalBarChart.swift */; };
-		8D88D0ABBB3F6AD2D57C2DA187957E07 /* Pods-Ghosting Connector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DA06419033F76A44055299A8CCB174 /* Pods-Ghosting Connector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		911E92246B6C89A14CA7A64D08628905 /* IBubbleChartDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953F51E84FE5482AF8A448A81E46F1B /* IBubbleChartDataSet.swift */; };
 		91DE47E4BCDE92CC97123C314723B3A8 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C07143ADB9DF0AA3DB8D12CB8ED8CF8 /* M13CheckboxDisclosurePathGenerator.swift */; };
 		9278A2AFD4EE79BE58F83BB91CF0EAED /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113FC0F8CB7C04E025BBBABEC5BB0BCF /* TransitionSubmitButton.swift */; };
@@ -162,6 +161,7 @@
 		C56E0EDC14C3EE270709855ACB6A1D69 /* IShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E65371994DB0BA35E2E273DB40F876 /* IShapeRenderer.swift */; };
 		CA7CE5E45BE7388DEACCE2158E96E59C /* TimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BA90F9E2095BD71F3092C915FE050A /* TimerEx.swift */; };
 		CA89E0222ABBC43F957E4F3BF7F46142 /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D31343D41BD26341A173FEAD410F0D /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBF38A2DE0C3FDAAB776C0D41F4B1B42 /* Pods-Ghosting Connector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DA06419033F76A44055299A8CCB174 /* Pods-Ghosting Connector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC8D8F1D66404EB68A9DEB2577083A82 /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEA4E1717F75F154291D225765BB6B3 /* Legend.swift */; };
 		CF2EBF1561C9A4D78125489C249002F6 /* CombinedChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B67B5D9CE867D5A8A593AB2AD7430C /* CombinedChartView.swift */; };
 		D035EDC528DBF5BA980CDF5299828034 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D4596071F3B423B43F1B6B4CF13AC /* M13CheckboxBounceController.swift */; };
@@ -197,40 +197,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0357DA70730726F96C25F28666A367EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
-			remoteInfo = M13Checkbox;
-		};
-		82FC8BE84BD6A03CBA9A5607138F1A48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90872CC6BFB5090C5D367679D6168133;
-			remoteInfo = CircleTimer;
-		};
-		BE6AC512E43CEBE7DCCC2348E864E84F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
-			remoteInfo = CocoaAsyncSocket;
-		};
-		D8A1D3ADD6FA48B522032709DC250A1C /* PBXContainerItemProxy */ = {
+		B631324843354A1F97CC5FCE6CBCD45F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 88457EBD8621B8664A94CAB3710C13EB;
 			remoteInfo = TKSubmitTransition;
 		};
-		FC5EE394555704BEAEED277293355F08 /* PBXContainerItemProxy */ = {
+		D1CA924AC5E8D4047699B4BBBF3D7BE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
+			remoteInfo = CocoaAsyncSocket;
+		};
+		D1E7054DA609022FE70FD5D85AEB996D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF03B0B2B8B052092CB5F90CC5FB3757;
 			remoteInfo = Charts;
+		};
+		DD1B339C3669A7E4BE0FAA20DB924885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
+			remoteInfo = M13Checkbox;
+		};
+		E689D8108A602DA0AB217FB94237F1F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90872CC6BFB5090C5D367679D6168133;
+			remoteInfo = CircleTimer;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -487,6 +487,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A31346D9B3501916BA060A6A72FE9CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EC21AC27ADF99992990C8485CF5396 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF90AEF47A67BAD5BD5CA0185B04114F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,14 +508,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E4008414F3801C66B1513CCC87BAD9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2CFD90860415B68916EC02A3D047A6C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D212FD002E2825AE9E611F9532BA1FF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,14 +891,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8BC556E9A3FDF2D675068DA2045A583F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D88D0ABBB3F6AD2D57C2DA187957E07 /* Pods-Ghosting Connector-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9693B765A8516963EDF9A16B921B42E3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -941,6 +933,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD0FDEF94679F46B58BA33FAC79F5521 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF38A2DE0C3FDAAB776C0D41F4B1B42 /* Pods-Ghosting Connector-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -964,21 +964,21 @@
 		};
 		60F72612E301EDF130BA456C6ACD8641 /* Pods-Ghosting Connector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BCB8678421CA6597374317FC91C0FC6 /* Build configuration list for PBXNativeTarget "Pods-Ghosting Connector" */;
+			buildConfigurationList = 6B6C6077428F7701766244F1FA4757AE /* Build configuration list for PBXNativeTarget "Pods-Ghosting Connector" */;
 			buildPhases = (
-				8BC556E9A3FDF2D675068DA2045A583F /* Headers */,
-				33BDB856FA6687E4DFCC117872B440FF /* Sources */,
-				D2CFD90860415B68916EC02A3D047A6C /* Frameworks */,
-				0F1EB6CA957BFC34DE48A62643C46911 /* Resources */,
+				FD0FDEF94679F46B58BA33FAC79F5521 /* Headers */,
+				1DCC37DF9DCBC0E76D2581DD5D9387C2 /* Sources */,
+				7A31346D9B3501916BA060A6A72FE9CE /* Frameworks */,
+				5C40C6390D8B50E009643F48A20FBECA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				83718B88F30E8224CD1BF8D816C2CF9E /* PBXTargetDependency */,
-				21EC53C1AB4DD9D8F05B936ED2ABE2E3 /* PBXTargetDependency */,
-				3614FD705FE4A6A597BFAC78B28D6E10 /* PBXTargetDependency */,
-				DB3D38474619D135B54BF88A01D4E6D2 /* PBXTargetDependency */,
-				35F983073646EC981EE2762F4D3EDBBE /* PBXTargetDependency */,
+				6CDD54DC5595A1F9A12D6EA2B99739D3 /* PBXTargetDependency */,
+				99C952BB099C3942802400AC6A3A8E71 /* PBXTargetDependency */,
+				70C49AE6C01A294774B02CA8D5F3917E /* PBXTargetDependency */,
+				562FEA2E857395F2941BF9D40B8B65AF /* PBXTargetDependency */,
+				779C0448FC9F8AD51D16359361109E6F /* PBXTargetDependency */,
 			);
 			name = "Pods-Ghosting Connector";
 			productName = "Pods-Ghosting Connector";
@@ -1090,14 +1090,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0F1EB6CA957BFC34DE48A62643C46911 /* Resources */ = {
+		41354EC56682526F1CBEA6AAA08C099A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41354EC56682526F1CBEA6AAA08C099A /* Resources */ = {
+		5C40C6390D8B50E009643F48A20FBECA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1135,11 +1135,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33BDB856FA6687E4DFCC117872B440FF /* Sources */ = {
+		1DCC37DF9DCBC0E76D2581DD5D9387C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD3DADACB0EC82AD38CDEC0C8FFFBDE /* Pods-Ghosting Connector-dummy.m in Sources */,
+				1F508D15801490ABBDA3E019A5F861AC /* Pods-Ghosting Connector-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1349,35 +1349,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		21EC53C1AB4DD9D8F05B936ED2ABE2E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CircleTimer;
-			target = 90872CC6BFB5090C5D367679D6168133 /* CircleTimer */;
-			targetProxy = 82FC8BE84BD6A03CBA9A5607138F1A48 /* PBXContainerItemProxy */;
-		};
-		35F983073646EC981EE2762F4D3EDBBE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TKSubmitTransition;
-			target = 88457EBD8621B8664A94CAB3710C13EB /* TKSubmitTransition */;
-			targetProxy = D8A1D3ADD6FA48B522032709DC250A1C /* PBXContainerItemProxy */;
-		};
-		3614FD705FE4A6A597BFAC78B28D6E10 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = BE6AC512E43CEBE7DCCC2348E864E84F /* PBXContainerItemProxy */;
-		};
-		83718B88F30E8224CD1BF8D816C2CF9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			target = BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */;
-			targetProxy = FC5EE394555704BEAEED277293355F08 /* PBXContainerItemProxy */;
-		};
-		DB3D38474619D135B54BF88A01D4E6D2 /* PBXTargetDependency */ = {
+		562FEA2E857395F2941BF9D40B8B65AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = M13Checkbox;
 			target = 7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */;
-			targetProxy = 0357DA70730726F96C25F28666A367EC /* PBXContainerItemProxy */;
+			targetProxy = DD1B339C3669A7E4BE0FAA20DB924885 /* PBXContainerItemProxy */;
+		};
+		6CDD54DC5595A1F9A12D6EA2B99739D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			target = BF03B0B2B8B052092CB5F90CC5FB3757 /* Charts */;
+			targetProxy = D1E7054DA609022FE70FD5D85AEB996D /* PBXContainerItemProxy */;
+		};
+		70C49AE6C01A294774B02CA8D5F3917E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = D1CA924AC5E8D4047699B4BBBF3D7BE6 /* PBXContainerItemProxy */;
+		};
+		779C0448FC9F8AD51D16359361109E6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TKSubmitTransition;
+			target = 88457EBD8621B8664A94CAB3710C13EB /* TKSubmitTransition */;
+			targetProxy = B631324843354A1F97CC5FCE6CBCD45F /* PBXContainerItemProxy */;
+		};
+		99C952BB099C3942802400AC6A3A8E71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircleTimer;
+			target = 90872CC6BFB5090C5D367679D6168133 /* CircleTimer */;
+			targetProxy = E689D8108A602DA0AB217FB94237F1F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1417,12 +1417,10 @@
 			};
 			name = Debug;
 		};
-		12930ABA9FDF0DF4EFCFB150483CE956 /* Debug */ = {
+		25299D6079B1639DC122EA110A1DBB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55CB9A4B154DB75C1C4835B0B9D574B8 /* Pods-Ghosting Connector.debug.xcconfig */;
+			baseConfigurationReference = 748AB7B26039E83626F5563836974826 /* Charts.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1432,30 +1430,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Ghosting Connector/Pods-Ghosting Connector-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Charts/Charts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Charts/Charts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Ghosting Connector/Pods-Ghosting Connector.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Charts/Charts.modulemap";
+				PRODUCT_MODULE_NAME = Charts;
+				PRODUCT_NAME = Charts;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		1E9D5A85B8385E7DB4EA4CE127FD346C /* Release */ = {
+		2BE0AF7A85812D402E39911D06042CAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 985C084F60A6DDD06D9161D90B2E5D83 /* Pods-Ghosting Connector.release.xcconfig */;
 			buildSettings = {
@@ -1493,41 +1490,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		25299D6079B1639DC122EA110A1DBB26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 748AB7B26039E83626F5563836974826 /* Charts.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Charts/Charts-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Charts/Charts-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Charts/Charts.modulemap";
-				PRODUCT_MODULE_NAME = Charts;
-				PRODUCT_NAME = Charts;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		71232F246ADDF011B771BFEE0C31105C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1938,6 +1900,44 @@
 			};
 			name = Release;
 		};
+		FE53EBF1314D0122045674A8B2EBB07E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CB9A4B154DB75C1C4835B0B9D574B8 /* Pods-Ghosting Connector.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ghosting Connector/Pods-Ghosting Connector-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ghosting Connector/Pods-Ghosting Connector.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1959,15 +1959,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BCB8678421CA6597374317FC91C0FC6 /* Build configuration list for PBXNativeTarget "Pods-Ghosting Connector" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12930ABA9FDF0DF4EFCFB150483CE956 /* Debug */,
-				1E9D5A85B8385E7DB4EA4CE127FD346C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5E8D9041A451DBD0609ACDC82CD3BC9F /* Build configuration list for PBXNativeTarget "TKSubmitTransition" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1982,6 +1973,15 @@
 			buildConfigurations = (
 				7637FCC9AFC67EF2CC046F30A67A0485 /* Debug */,
 				71232F246ADDF011B771BFEE0C31105C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B6C6077428F7701766244F1FA4757AE /* Build configuration list for PBXNativeTarget "Pods-Ghosting Connector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE53EBF1314D0122045674A8B2EBB07E /* Debug */,
+				2BE0AF7A85812D402E39911D06042CAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

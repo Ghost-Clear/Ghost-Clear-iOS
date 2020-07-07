@@ -3083,7 +3083,7 @@
         <!--Timed Workout Connection Progress View Controller-->
         <scene sceneID="ikb-6H-QxI">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LXn-pl-64h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3119,10 +3119,10 @@
                         <viewLayoutGuide key="safeArea" id="Uzu-cK-3sY"/>
                     </view>
                     <connections>
-                        <outlet property="checkBox" destination="7Yh-It-OPQ" id="MBV-5g-Uxq"/>
-                        <outlet property="circleView" destination="BRP-tI-mCA" id="erN-Xm-8bJ"/>
-                        <outlet property="connectionLabel" destination="xMW-qn-HoH" id="ism-b0-Ijd"/>
-                        <outlet property="containingView" destination="03b-ei-buy" id="86d-2l-tg3"/>
+                        <outlet property="checkBox" destination="7Yh-It-OPQ" id="Ud9-HM-yHX"/>
+                        <outlet property="circleView" destination="BRP-tI-mCA" id="5mG-uM-rIy"/>
+                        <outlet property="connectionLabel" destination="xMW-qn-HoH" id="qlx-hd-qUK"/>
+                        <outlet property="containingView" destination="03b-ei-buy" id="BZO-0W-nO5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQi-om-j9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

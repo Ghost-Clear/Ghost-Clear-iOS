@@ -369,7 +369,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		else{
 			isFirstPair = true
 		}
-		performSegue(withIdentifier: "TimedWorkoutConnectionProgressViewControllerViewControllerSegue", sender: nil)
+		performSegue(withIdentifier: "TimedWorkoutConnectionProgressViewControllerSegue", sender: nil)
 		DispatchQueue.main.asyncAfter(deadline: .now() + 4.2) {
 			if !self.didConnect{
 				let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all the necessary devices are available before starting the workout.", preferredStyle: UIAlertController.Style.alert)
