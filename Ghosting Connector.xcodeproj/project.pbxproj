@@ -44,6 +44,9 @@
 		27901A5324B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A5224B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift */; };
 		27901A5524B32A3100189846 /* HomeViewBeepTestWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A5424B32A3100189846 /* HomeViewBeepTestWorkoutViewController.swift */; };
 		27901A5D24B351B200189846 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27901A5C24B351B100189846 /* success.mp3 */; };
+		27901A6124B3631300189846 /* HomeChartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A6024B3631300189846 /* HomeChartPageViewController.swift */; };
+		27901A6324B3634400189846 /* HomeWorkoutsThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A6224B3634400189846 /* HomeWorkoutsThisWeekViewController.swift */; };
+		27901A6524B3635F00189846 /* BeepTestProgressChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27901A6424B3635F00189846 /* BeepTestProgressChartViewController.swift */; };
 		27ABC82624AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */; };
 		27BC2CD224AEEFF0007A0589 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */; };
 		27BC2CD424AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */; };
@@ -107,6 +110,9 @@
 		27901A5224B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepTestWorkoutCheckPopupViewController.swift; sourceTree = "<group>"; };
 		27901A5424B32A3100189846 /* HomeViewBeepTestWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBeepTestWorkoutViewController.swift; sourceTree = "<group>"; };
 		27901A5C24B351B100189846 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		27901A6024B3631300189846 /* HomeChartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChartPageViewController.swift; sourceTree = "<group>"; };
+		27901A6224B3634400189846 /* HomeWorkoutsThisWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkoutsThisWeekViewController.swift; sourceTree = "<group>"; };
+		27901A6424B3635F00189846 /* BeepTestProgressChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepTestProgressChartViewController.swift; sourceTree = "<group>"; };
 		27ABC82524AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWorkoutConnectionProgressViewController.swift; sourceTree = "<group>"; };
 		27BC2CD124AEEFF0007A0589 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		27BC2CD324AEF149007A0589 /* TimedWorkoutConnectionProgressViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedWorkoutConnectionProgressViewControllerViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +328,9 @@
 				2726029224A9ED8D0071B03F /* Home View Workouts */,
 				27B0FCCB24A638C300BCAA2E /* Home View Goals */,
 				27DCEFF6248ED44200309DD4 /* HomePageViewController.swift */,
+				27901A6024B3631300189846 /* HomeChartPageViewController.swift */,
+				27901A6224B3634400189846 /* HomeWorkoutsThisWeekViewController.swift */,
+				27901A6424B3635F00189846 /* BeepTestProgressChartViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -494,6 +503,7 @@
 				27196FE724A463EF00B9A8DC /* HomeEditGoalViewController.swift in Sources */,
 				27901A4224B1B96700189846 /* WorkoutButtonsPageViewController.swift in Sources */,
 				2726029A24AB0F710071B03F /* ChangePreparationTimeViewController.swift in Sources */,
+				27901A6124B3631300189846 /* HomeChartPageViewController.swift in Sources */,
 				2741C6B92454BDC400EB4944 /* Ghosting_Connector.xcdatamodeld in Sources */,
 				27003E3324A3A1FA0018CBC0 /* ChooseTimedWorkoutPatternViewController.swift in Sources */,
 				27DCEFFD248F57C300309DD4 /* InitialAddGoalViewController.swift in Sources */,
@@ -517,6 +527,7 @@
 				27901A4D24B29C5900189846 /* DoBeepTestWorkoutViewController.swift in Sources */,
 				27901A5324B2E95800189846 /* BeepTestWorkoutCheckPopupViewController.swift in Sources */,
 				27901A4B24B28FED00189846 /* BeepTestWorkoutDescriptionViewController.swift in Sources */,
+				27901A6524B3635F00189846 /* BeepTestProgressChartViewController.swift in Sources */,
 				2764A19B24AD7F4500B5EF12 /* HomeViewGoalViewController.swift in Sources */,
 				27251F812498C7DC0043D52C /* BluetoothGuideViewController.swift in Sources */,
 				2741C6AF2454BDC400EB4944 /* AppDelegate.swift in Sources */,
@@ -529,6 +540,7 @@
 				27251F792498B29C0043D52C /* SettingsViewController.swift in Sources */,
 				27901A5124B2E93D00189846 /* BeepTestWorkoutConnectionProgressViewController.swift in Sources */,
 				27196FE524A3C47900B9A8DC /* DoNumberWorkoutViewController.swift in Sources */,
+				27901A6324B3634400189846 /* HomeWorkoutsThisWeekViewController.swift in Sources */,
 				27901A4F24B2E91A00189846 /* DoneBeepTestWorkoutViewController.swift in Sources */,
 				E6E717F17957AA7EBED2D9F4 /* README.md in Sources */,
 			);

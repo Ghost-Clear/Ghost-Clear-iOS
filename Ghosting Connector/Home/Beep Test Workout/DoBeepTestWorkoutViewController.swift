@@ -57,7 +57,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var pendingGhosts = 6
 	var cornersAvailable = ["FR","FL","CR","CL","LL","LR"]
 	var nextGhost = ""
-	var secondsToPlay : Double! = 6
+	var secondsToPlay : Double! = 5.3
 	var totalTime = 0
 	var centralManager : CBCentralManager!
 	var peripheralManager: CBPeripheralManager?

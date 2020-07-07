@@ -7,6 +7,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home Workouts This Week View Controller-->
+        <scene sceneID="6SH-Vy-cJA">
+            <objects>
+                <viewController storyboardIdentifier="chartPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8YY-Gy-JcY" customClass="HomeWorkoutsThisWeekViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0gw-b4-P3L">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMO-XF-OAp" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="43" width="360" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workouts This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7DG-iH-fea">
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="idH-Wn-ZFn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jKO-xT-8vD"/>
+                    <connections>
+                        <outlet property="theBarChart" destination="LMO-XF-OAp" id="bPX-TC-RdE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSH-ly-41L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2236.231884057971" y="95.758928571428569"/>
+        </scene>
+        <!--Beep Test Progress Chart View Controller-->
+        <scene sceneID="nsi-9K-ITb">
+            <objects>
+                <viewController storyboardIdentifier="chartPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yGs-jT-HLa" customClass="BeepTestProgressChartViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n7J-kq-nqh">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BuO-uk-Mr4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iUD-v5-lpa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9G-6f-Afv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1513" y="-122"/>
+        </scene>
+        <!--Home Chart Page View Controller-->
+        <scene sceneID="ygV-aw-yI4">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0iZ-Ja-Vgx" customClass="HomeChartPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Hij-Pn-F8P"/>
+                    <connections>
+                        <segue destination="8YY-Gy-JcY" kind="show" identifier="HomeWorkoutsThisWeekViewControllerSegue" id="jSS-5P-TPf"/>
+                        <segue destination="yGs-jT-HLa" kind="show" identifier="BeepTestProgressChartViewControllerSegue" id="64Z-by-CGZ"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYz-1x-W6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1484" y="97"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Rd-Co-qRw">
             <objects>
@@ -27,7 +93,12 @@
         <!--Workout Buttons Page View Controller-->
         <scene sceneID="WWx-fv-91L">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="45" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="45" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="j2H-Eu-8bj" kind="show" id="Sgo-cc-5uM"/>
+                        <segue destination="Am4-Ns-vnF" kind="show" id="EBm-jD-wh3"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIW-8y-blT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="-454"/>
@@ -37,11 +108,11 @@
             <objects>
                 <viewController storyboardIdentifier="page1" title="First button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j2H-Eu-8bj" customClass="FirstButtonSetViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdG-Wz-IUg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZS-BV-bm1">
-                                <rect key="frame" x="0.0" y="44" width="185" height="805"/>
+                                <rect key="frame" x="0.0" y="13" width="160" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Timed Workout Button"/>
                                 <connections>
@@ -49,7 +120,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dba-cd-ACF">
-                                <rect key="frame" x="229" y="44" width="185" height="805"/>
+                                <rect key="frame" x="198" y="13" width="160" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Number Workout"/>
                                 <connections>
@@ -68,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3FA-UV-uT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="-669"/>
+            <point key="canvasLocation" x="758" y="-455"/>
         </scene>
         <!--Start Page-->
         <scene sceneID="lyP-E7-8NZ">
@@ -648,13 +719,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workouts This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utF-9d-3zU">
-                                <rect key="frame" x="21" y="116" width="363" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="g5Z-VG-aLo">
                                 <rect key="frame" x="21" y="64" width="324" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -662,15 +726,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start a Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-bg-nhV">
-                                <rect key="frame" x="32" y="449" width="149" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-8C-G5w">
-                                <rect key="frame" x="25" y="352" width="365" height="80"/>
+                                <rect key="frame" x="25" y="364" width="365" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="View Goals Button"/>
                                 <connections>
@@ -685,14 +742,6 @@
                                     <segue destination="G0F-98-OF8" kind="show" identifier="HomeMainViewWorkoutsViewControllerSegue" id="f5a-hb-I1k"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMO-XF-OAp" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="180" width="374" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-Mt-h8c">
                                 <rect key="frame" x="342" y="44" width="52" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -712,6 +761,24 @@
                                 <rect key="frame" x="188" y="745" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </pageControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eb-7z-KxA">
+                                <rect key="frame" x="30" y="128" width="360" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="0iZ-Ja-Vgx" kind="embed" identifier="HomeChartPageViewControllerSegue" id="yGb-9G-cop"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-0C-ivT">
+                                <rect key="frame" x="188" y="334" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start a Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-bg-nhV">
+                                <rect key="frame" x="32" y="449" width="149" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="AiR-5x-EBw"/>
@@ -719,8 +786,8 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="rUy-mm-ch0"/>
                     <connections>
+                        <outlet property="chartPageControl" destination="w8d-0C-ivT" id="dcN-Bi-5Yy"/>
                         <outlet property="pageControl" destination="ogK-JZ-MGA" id="KCr-5Y-iVU"/>
-                        <outlet property="theBarChart" destination="LMO-XF-OAp" id="aSS-DH-MEp"/>
                         <outlet property="viewGoalsButton" destination="Bxy-8C-G5w" id="grU-z7-cGk"/>
                         <outlet property="viewWorkoutButton" destination="jca-eN-xnd" id="Y0a-b0-6ZW"/>
                         <outlet property="welcomeLabel" destination="g5Z-VG-aLo" id="W2B-d9-U5T"/>
@@ -1831,7 +1898,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-F7-vNu">
-                                            <rect key="frame" x="11" y="6" width="392" height="68"/>
+                                            <rect key="frame" x="11" y="5.6666666666666643" width="392" height="68"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timer Image" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-hO-Aea">
                                             <rect key="frame" x="28" y="19" width="42" height="42"/>
@@ -3050,11 +3117,11 @@
             <objects>
                 <viewController storyboardIdentifier="page2" title="Second Button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Am4-Ns-vnF" customClass="SecondButtonSetViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxe-i4-kkO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BS-Lm-kqb">
-                                <rect key="frame" x="0.0" y="44" width="185" height="805"/>
+                                <rect key="frame" x="0.0" y="13" width="160" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Beep Test Button"/>
                                 <connections>
@@ -3069,7 +3136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxG-zx-Ww3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="-669"/>
+            <point key="canvasLocation" x="1500" y="-453"/>
         </scene>
         <!--Beep Test Workout Description View Controller-->
         <scene sceneID="Vls-vj-TVT">
