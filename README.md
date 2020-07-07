@@ -241,7 +241,7 @@ This file controls the view controller that does the beep test workout.
 
 ### WorkoutButtonsPageViewController.swift
 
-![](https://media.giphy.com/media/kaUDEDUgng8FXaEWwS/giphy.gif!)
+![](https://media.giphy.com/media/kaUDEDUgng8FXaEWwS/giphy.gif)
 
 This file controls the page view controller that contains a page view of all the workout buttons.
 
