@@ -211,37 +211,37 @@ This file controls the view controller that allows the user to change the prepar
 
 ### BeepTestWorkoutDescriptionViewController.swift
 
-[](https://media.giphy.com/media/SwxlixzqP24Rd06O6D/giphy.gif)
+![](https://media.giphy.com/media/SwxlixzqP24Rd06O6D/giphy.gif)
 
 This file controls the view controller that has descriptions about the beep test.
 
 ### BeepTestWorkoutCheckPopupViewController.swift
 
-[](https://media.giphy.com/media/hT6BOeEMd9B67rusk9/giphy.gif)
+![](https://media.giphy.com/media/hT6BOeEMd9B67rusk9/giphy.gif)
 
 This file controls the pop up view controller that shows a check when the beep test workout.
 
 ### BeepTestWorkoutConnectionProgressViewController.swift
 
-[](https://media.giphy.com/media/PlsxmA86cSuZm8ejuT/giphy.gif)
+![](https://media.giphy.com/media/PlsxmA86cSuZm8ejuT/giphy.gif)
 
 This file controls the view controller that shows a status check to see if the app has connected to necessary devices.
 
 ### DoneBeepTestWorkoutViewController.swift
 
-[](https://media.giphy.com/media/ehs4jazSAfoyY27avC/giphy.gif)
+![](https://media.giphy.com/media/ehs4jazSAfoyY27avC/giphy.gif)
 
 This file controls the view controller that shows the details of a recently finished workout.
 
 ### DoBeepTestWorkoutViewController.swift
 
-[](https://media.giphy.com/media/mEgVE6sBbUlQojQkEw/giphy.gif)
+![](https://media.giphy.com/media/mEgVE6sBbUlQojQkEw/giphy.gif)
 
 This file controls the view controller that does the beep test workout.
 
 ### WorkoutButtonsPageViewController.swift
 
-[](https://media.giphy.com/media/kaUDEDUgng8FXaEWwS/giphy.gif!)
+![](https://media.giphy.com/media/kaUDEDUgng8FXaEWwS/giphy.gif!)
 
 This file controls the page view controller that contains a page view of all the workout buttons.
 
