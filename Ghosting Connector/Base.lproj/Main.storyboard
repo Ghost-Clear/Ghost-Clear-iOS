@@ -43,6 +43,39 @@
             </objects>
             <point key="canvasLocation" x="-2236.231884057971" y="95.424107142857139"/>
         </scene>
+        <!--Workout Composition Graph View Controller-->
+        <scene sceneID="DiQ-wS-d6f">
+            <objects>
+                <viewController storyboardIdentifier="chartPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TqA-ba-bhY" customClass="WorkoutCompositionGraphViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gbx-B6-Yx1">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Composition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-BO-KUu">
+                                <rect key="frame" x="0.0" y="1" width="257" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cP8-QB-v2m" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="44" width="360" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="zlK-2D-DdH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N1v-I2-m7Y"/>
+                    <connections>
+                        <outlet property="thePieChart" destination="cP8-QB-v2m" id="DoP-gS-nNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vM-ao-awi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2228.985507246377" y="-120.20089285714285"/>
+        </scene>
         <!--Beep Test Progress Chart View Controller-->
         <scene sceneID="nsi-9K-ITb">
             <objects>
@@ -84,6 +117,7 @@
                     <connections>
                         <segue destination="8YY-Gy-JcY" kind="show" identifier="HomeWorkoutsThisWeekViewControllerSegue" id="jSS-5P-TPf"/>
                         <segue destination="yGs-jT-HLa" kind="show" identifier="BeepTestProgressChartViewControllerSegue" id="64Z-by-CGZ"/>
+                        <segue destination="TqA-ba-bhY" kind="show" id="OaR-8n-dWd"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYz-1x-W6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -785,7 +819,7 @@
                                     <segue destination="0iZ-Ja-Vgx" kind="embed" identifier="HomeChartPageViewControllerSegue" id="yGb-9G-cop"/>
                                 </connections>
                             </containerView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-0C-ivT">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-0C-ivT">
                                 <rect key="frame" x="188" y="341" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </pageControl>

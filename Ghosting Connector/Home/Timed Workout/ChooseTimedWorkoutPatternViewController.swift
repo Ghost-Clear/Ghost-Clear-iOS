@@ -43,7 +43,8 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		startGhostButton.imageView?.contentMode = .scaleToFill
 		gridImage.image = UIImage(named: "000000")
 		if isRandomized{
-			orderLabel.isHidden = true
+			orderLabel.isHidden = false
+			orderLabel.text = "Randomized"
 		}
 		else{
 			orderLabel.isHidden = false
@@ -139,6 +140,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func resetSelection(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
@@ -152,6 +156,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		isLL = false
 		gridImage.image = UIImage(named: "000000")
 		orderLabel.text = ""
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 		count = 0
 	}
 	@IBAction func FR(_ sender: Any) {
@@ -179,6 +186,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func CL(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -204,6 +214,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 		else{
 			orderLabel.text = ""
+		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
 		}
 	}
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -234,6 +247,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func CR(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -260,6 +276,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func LR(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -285,6 +304,9 @@ class ChooseTimedWorkoutPatternViewController: UIViewController {
 		}
 		else{
 			orderLabel.text = ""
+		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
 		}
 	}
 	@IBAction func startGhost(_ sender: Any) {

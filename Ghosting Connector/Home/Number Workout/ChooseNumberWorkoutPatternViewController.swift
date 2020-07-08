@@ -123,6 +123,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		isLL = false
 		gridImage.image = UIImage(named: "000000")
 		orderLabel.text = ""
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 		count = 0
 	}
 	@IBAction func FL(_ sender: Any) {
@@ -150,6 +153,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func FR(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -176,6 +182,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func CL(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -201,6 +210,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		}
 		else{
 			orderLabel.text = ""
+		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
 		}
 	}
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -231,6 +243,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func CR(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -257,6 +272,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		else{
 			orderLabel.text = ""
 		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
+		}
 	}
 	@IBAction func LR(_ sender: Any) {
 		let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .rigid)
@@ -282,6 +300,9 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		}
 		else{
 			orderLabel.text = ""
+		}
+		if isRandomized{
+			orderLabel.text = "Randomized"
 		}
 	}
 	@IBAction func startGhost(_ sender: Any) {

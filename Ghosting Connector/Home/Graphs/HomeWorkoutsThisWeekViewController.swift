@@ -80,20 +80,32 @@ class HomeWorkoutsThisWeekViewController: UIViewController {
 			}
 		}
 		customizeChart(dataPoints: days, values: numWorkouts)
+		theBarChart.noDataText = "No workouts this week"
+		theBarChart.noDataTextColor = .white
+		theBarChart.noDataFont = .systemFont(ofSize: 15)
 	}
 	func customizeChart(dataPoints: [String], values: [Int]) {
 		theBarChart.animate(xAxisDuration: 1, yAxisDuration: 2, easingOption: ChartEasingOption.easeOutExpo)
 		var dataEntries: [BarChartDataEntry] = []
+		var valuesPresent = false
 		for i in 0..<dataPoints.count {
 			let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
 			dataEntries.append(dataEntry)
+			if values[i] != 0{
+				valuesPresent = true
+			}
 		}
 		let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Workouts")
 		chartDataSet.valueFormatter = DigitValueFormatter()
 		chartDataSet.colors = [UIColor(red: 0, green: 1.0, blue: 0.6, alpha: 1.00)]
 		let chartData = BarChartData(dataSet: chartDataSet)
 		chartData.barWidth = Double(0.25)
-		theBarChart.data = chartData
+		if valuesPresent{
+			theBarChart.data = chartData
+		}
+		else{
+			theBarChart.data = nil
+		}
 		theBarChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:days)
 		theBarChart.xAxis.granularity = 1
 		theBarChart.xAxis.drawLabelsEnabled = true
