@@ -33,7 +33,7 @@ class BeepTestProgressChartViewController: UIViewController {
 			}
 		}
 		workoutsFromCore = workoutsFromCore.sorted(by: {
-			$0.date!.compare($1.date!) == .orderedDescending
+			$0.date!.compare($1.date!) == .orderedAscending
 		})
 		for w in workoutsFromCore{
 			if w.type == "Beep Test"{

@@ -100,7 +100,7 @@ class WorkoutCompositionGraphViewController: UIViewController {
 
 	}
 	private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-		var colors: [UIColor] = [UIColor(red: 0/256, green: 233/256, blue: 143/256, alpha: 1), UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1),UIColor(red: 255/256, green: 118/256, blue: 105/256, alpha: 1)]
+		var colors: [UIColor] = [UIColor(red: 0/256, green: 233/256, blue: 143/256, alpha: 1), UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1),UIColor(red: 295/256, green: 197/256, blue: 66/256, alpha: 1)]
 		for _ in 0..<numbersOfColor {
 			let red = Double(arc4random_uniform(256))
 			let green = Double(arc4random_uniform(256))
