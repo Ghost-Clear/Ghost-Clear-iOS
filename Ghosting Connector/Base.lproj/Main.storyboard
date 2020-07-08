@@ -2100,6 +2100,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="roy-sb-3CI">
+                                <rect key="frame" x="176" y="672" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Iwt-yZ-76Z"/>
@@ -2831,6 +2838,13 @@
                                     <action selector="LR:" destination="Ryd-Gw-Krp" eventType="touchUpInside" id="n5L-Wn-fdu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n1J-i0-qq8">
+                                <rect key="frame" x="176" y="672" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="QbQ-1u-tgH"/>
@@ -3145,6 +3159,11 @@
                                     <action selector="beepTest:" destination="Am4-Ns-vnF" eventType="touchUpInside" id="Uef-bs-JoR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-so-9rx">
+                                <rect key="frame" x="198" y="13" width="160" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Play Pro Workout Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="V1U-8d-VPS"/>
@@ -3152,6 +3171,7 @@
                     <navigationItem key="navigationItem" id="1VC-mP-yTk"/>
                     <connections>
                         <outlet property="beepTestButton" destination="8BS-Lm-kqb" id="gdc-jq-PxZ"/>
+                        <outlet property="playProButton" destination="JcZ-so-9rx" id="LYQ-Eh-P3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxG-zx-Ww3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3611,6 +3631,7 @@
         <image name="Next Button" width="326.66665649414062" height="77.333335876464844"/>
         <image name="Number Workout" width="600" height="840"/>
         <image name="Pause Button" width="400" height="232"/>
+        <image name="Play Pro Workout Button" width="600" height="840"/>
         <image name="Red Rectangle" width="1388" height="232"/>
         <image name="Reset Button" width="1299" height="232"/>
         <image name="Reset Selection Button" width="680" height="232"/>

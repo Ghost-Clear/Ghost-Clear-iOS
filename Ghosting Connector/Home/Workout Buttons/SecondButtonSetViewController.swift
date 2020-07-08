@@ -10,10 +10,12 @@ import UIKit
 
 class SecondButtonSetViewController: UIViewController {
 	@IBOutlet weak var beepTestButton: UIButton!
+	@IBOutlet weak var playProButton: UIButton!
 	var parentView : WorkoutButtonsPageViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
 		beepTestButton.contentMode = .scaleAspectFit
+		playProButton.contentMode = .scaleAspectFit
     }
 	@IBAction func beepTest(_ sender: Any) {
 		parentView.parentView.performSegue(withIdentifier: "BeepTestWorkoutDescriptionViewControllerSegue", sender: nil)

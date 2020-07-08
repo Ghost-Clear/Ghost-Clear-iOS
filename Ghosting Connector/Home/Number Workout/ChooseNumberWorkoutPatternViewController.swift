@@ -43,7 +43,8 @@ class ChooseNumberWorkoutPatternViewController: UIViewController {
 		startGhostButton.imageView?.contentMode = .scaleAspectFit
 		gridImage.image = UIImage(named: "000000")
 		if isRandomized{
-			orderLabel.isHidden = true
+			orderLabel.isHidden = false
+			orderLabel.text = "Randomized"
 		}
 		else{
 			orderLabel.isHidden = false
