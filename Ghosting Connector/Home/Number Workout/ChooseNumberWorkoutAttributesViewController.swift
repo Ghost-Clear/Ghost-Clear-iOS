@@ -152,7 +152,7 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
 		if(((secondsOff.text! as NSString).integerValue) < 60 && ((secondsOff.text! as NSString).integerValue) >= 0 && ((minutesOff.text! as NSString).integerValue) < 60 && ((minutesOff.text! as NSString).integerValue) >= 0 && secondsOff.text! != "" && minutesOff.text! != "" && setsField.text != "" && setsField.text != "0" && ghostsField.text != "0" && (secondsOff.text != "0" || minutesOff.text != "0")){
 			performSegue(withIdentifier: "ChooseNumberWorkoutPatternViewControllerSegue", sender: nil)
 		}
-		else if((setsField.text! as NSString).integerValue == 9999 || (ghostsField.text! as NSString).integerValue > 9999){
+		else if((setsField.text! as NSString).integerValue > 9999 || (ghostsField.text! as NSString).integerValue > 9999){
 			let alertVC = UIAlertController(title: "Values too large", message: "Your ghosts or sets values are too large.", preferredStyle: UIAlertController.Style.alert)
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				alertVC.dismiss(animated: true, completion: nil)
