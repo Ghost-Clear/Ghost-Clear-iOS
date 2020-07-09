@@ -152,6 +152,8 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 			}
 		}
 		if segue.identifier == "InitialViewGoalViewControllerSegue" {
+			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+			selectionFeedbackGenerator.selectionChanged()
 			if let childVC = segue.destination as? InitialViewGoalViewController {
 				childVC.viewingGoal = goalsFromCoreData[index]
 			}
