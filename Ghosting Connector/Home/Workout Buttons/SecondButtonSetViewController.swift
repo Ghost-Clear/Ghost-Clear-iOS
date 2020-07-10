@@ -20,4 +20,7 @@ class SecondButtonSetViewController: UIViewController {
 	@IBAction func beepTest(_ sender: Any) {
 		parentView.parentView.performSegue(withIdentifier: "BeepTestWorkoutDescriptionViewControllerSegue", sender: nil)
 	}
+	@IBAction func playPro(_ sender: Any) {
+		parentView.parentView.performSegue(withIdentifier: "MainChooseMatchViewControllerSegue", sender: nil)
+	}
 }
