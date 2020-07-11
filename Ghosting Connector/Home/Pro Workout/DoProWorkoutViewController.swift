@@ -1600,7 +1600,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 					workout.totalGhosts = Int16(totalGhosts)
 					workout.totalTimeOnInSeconds = Int64(totalTime)
 					workout.totalMissed = Int64(missedGhostCount)
-					workout.sets = Int16(chosenMatch.numGames)
+					workout.sets = Int16(whichGameIndex + 1)
 					workout.avgTimeOn = avgTimeString
 					workout.totalTimeOn = totalTimeString
 					workout.avgGhosts = Int16(totalGhosts/(whichGameIndex+1))

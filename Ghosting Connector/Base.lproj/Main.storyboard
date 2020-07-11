@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxd-01-xn6">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSH-ly-41L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2236.231884057971" y="95.424107142857139"/>
+            <point key="canvasLocation" x="-2229" y="95"/>
         </scene>
         <!--Workout Composition Graph View Controller-->
         <scene sceneID="DiQ-wS-d6f">
@@ -76,6 +76,65 @@
             </objects>
             <point key="canvasLocation" x="-2228.985507246377" y="-120.20089285714285"/>
         </scene>
+        <!--Player Stats View Controller-->
+        <scene sceneID="eHI-E5-kQY">
+            <objects>
+                <viewController storyboardIdentifier="chartPage4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vwz-40-qM3" customClass="PlayerStatsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNu-uf-51E">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LMm-DM-tub">
+                                <rect key="frame" x="0.0" y="1" width="129" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Ghosts : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-nn-krJ">
+                                <rect key="frame" x="41" y="86" width="279" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Time Ghosted : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uSK-o5-Z38">
+                                <rect key="frame" x="41" y="44" width="279" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Workouts : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BBS-E0-YKv">
+                                <rect key="frame" x="41" y="130" width="279" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Beep Test Score : 11.4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JTc-Yg-rPu">
+                                <rect key="frame" x="41" y="173" width="279" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="mMC-RY-g5a"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HLw-a5-zGJ"/>
+                    <connections>
+                        <outlet property="beepTestScoreLabel" destination="JTc-Yg-rPu" id="wo9-sj-p2K"/>
+                        <outlet property="totalGhostsLabel" destination="d1R-nn-krJ" id="vBM-le-0Sy"/>
+                        <outlet property="totalTimeLabel" destination="uSK-o5-Z38" id="xfn-5o-jek"/>
+                        <outlet property="totalWorkoutsLabel" destination="BBS-E0-YKv" id="92i-3h-eHi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3KG-U7-FQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1485" y="-320.5985915492958"/>
+        </scene>
         <!--Beep Test Progress Chart View Controller-->
         <scene sceneID="nsi-9K-ITb">
             <objects>
@@ -107,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9G-6f-Afv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1484.057971014493" y="-145.64732142857142"/>
+            <point key="canvasLocation" x="-1484" y="-120"/>
         </scene>
         <!--Home Chart Page View Controller-->
         <scene sceneID="ygV-aw-yI4">
@@ -118,11 +177,12 @@
                         <segue destination="8YY-Gy-JcY" kind="show" identifier="HomeWorkoutsThisWeekViewControllerSegue" id="jSS-5P-TPf"/>
                         <segue destination="yGs-jT-HLa" kind="show" identifier="BeepTestProgressChartViewControllerSegue" id="64Z-by-CGZ"/>
                         <segue destination="TqA-ba-bhY" kind="show" id="OaR-8n-dWd"/>
+                        <segue destination="Vwz-40-qM3" kind="show" id="Tko-7L-EnZ"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYz-1x-W6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1484" y="97"/>
+            <point key="canvasLocation" x="-1484" y="95"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Rd-Co-qRw">
@@ -201,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="o7i-fs-CbR">
-                                <rect key="frame" x="177" y="419.5" width="60" height="57"/>
+                                <rect key="frame" x="177" y="419.66666666666669" width="60" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="H7Z-6h-d26"/>
                                     <constraint firstAttribute="width" secondItem="o7i-fs-CbR" secondAttribute="height" multiplier="20:19" id="bAd-VJ-uRx"/>
@@ -255,7 +315,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-Fq-Jz6">
-                                <rect key="frame" x="48" y="766" width="327" height="76"/>
+                                <rect key="frame" x="48" y="766.33333333333337" width="327" height="75.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aGD-Fq-Jz6" secondAttribute="height" multiplier="233:54" id="CSz-ax-r1J"/>
                                 </constraints>
@@ -502,7 +562,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yellow Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-TG-XhU">
-                                            <rect key="frame" x="7" y="5.5" width="400" height="68"/>
+                                            <rect key="frame" x="7" y="5.6666666666666643" width="400" height="68"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -819,7 +879,7 @@
                                     <segue destination="0iZ-Ja-Vgx" kind="embed" identifier="HomeChartPageViewControllerSegue" id="yGb-9G-cop"/>
                                 </connections>
                             </containerView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-0C-ivT">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-0C-ivT">
                                 <rect key="frame" x="188" y="341" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </pageControl>
@@ -933,7 +993,7 @@
                                             <rect key="frame" x="7" y="10" width="400" height="68"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-Hc-WZn">
-                                            <rect key="frame" x="20" y="19.5" width="374" height="49"/>
+                                            <rect key="frame" x="20" y="19.666666666666671" width="374" height="49"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1950,7 +2010,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-F7-vNu">
-                                            <rect key="frame" x="11" y="5.5" width="392" height="68"/>
+                                            <rect key="frame" x="11" y="5.6666666666666643" width="392" height="68"/>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timer Image" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-hO-Aea">
                                             <rect key="frame" x="28" y="19" width="42" height="42"/>
@@ -3352,7 +3412,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="80s-q6-aQX">
-                                            <rect key="frame" x="13.5" y="0.0" width="387" height="80"/>
+                                            <rect key="frame" x="13.666666666666657" y="0.0" width="387" height="80"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tarek Momen vs Mohammed Elshorbagy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="u9V-Vs-wDp">
                                             <rect key="frame" x="52" y="42" width="311" height="21"/>

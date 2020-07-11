@@ -11,7 +11,7 @@ class HomeChartPageViewController: UIPageViewController, UIPageViewControllerDel
 	func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 		let currentIndex = pages.firstIndex(of: viewController)!
 		if currentIndex == 0{
-			return pages[2]
+			return pages[3]
 		}
 		let previousIndex = abs((currentIndex - 1) % pages.count)
 		return pages[previousIndex]
@@ -46,9 +46,12 @@ class HomeChartPageViewController: UIPageViewController, UIPageViewControllerDel
 		page2.parentView = self
 		let page3: WorkoutCompositionGraphViewController! = ((storyboard?.instantiateViewController(withIdentifier: "chartPage3") as! WorkoutCompositionGraphViewController))
 		page3.parentView = self
+		let page4: PlayerStatsViewController! = ((storyboard?.instantiateViewController(withIdentifier: "chartPage4") as! PlayerStatsViewController))
+		page4.parentView = self
 		pages.append(page1 as UIViewController)
 		pages.append(page2 as UIViewController)
 		pages.append(page3 as UIViewController)
+		pages.append(page4 as UIViewController)
 		setViewControllers([page1], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
     }
 }

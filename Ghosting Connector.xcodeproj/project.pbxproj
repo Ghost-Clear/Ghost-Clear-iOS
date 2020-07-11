@@ -52,6 +52,7 @@
 		27AD8C8424B9A94F00EBA3E8 /* DoneProWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD8C8324B9A94F00EBA3E8 /* DoneProWorkoutViewController.swift */; };
 		27AD8C8624B9AE7600EBA3E8 /* ProWorkoutCheckPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD8C8524B9AE7600EBA3E8 /* ProWorkoutCheckPopupViewController.swift */; };
 		27AD8C8824B9BF1C00EBA3E8 /* HomeViewProWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD8C8724B9BF1C00EBA3E8 /* HomeViewProWorkoutViewController.swift */; };
+		27AD8C8A24B9D02E00EBA3E8 /* PlayerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD8C8924B9D02E00EBA3E8 /* PlayerStatsViewController.swift */; };
 		27B4A8BD24B714E600F3608E /* MainChooseMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4A8BC24B714E600F3608E /* MainChooseMatchViewController.swift */; };
 		27B4A8C124B7159E00F3608E /* ChooseMatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4A8C024B7159E00F3608E /* ChooseMatchTableViewController.swift */; };
 		27B4A8E624B87FA200F3608E /* ChooseProWorkoutAttributesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B4A8E524B87FA200F3608E /* ChooseProWorkoutAttributesViewController.swift */; };
@@ -127,6 +128,7 @@
 		27AD8C8324B9A94F00EBA3E8 /* DoneProWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneProWorkoutViewController.swift; sourceTree = "<group>"; };
 		27AD8C8524B9AE7600EBA3E8 /* ProWorkoutCheckPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProWorkoutCheckPopupViewController.swift; sourceTree = "<group>"; };
 		27AD8C8724B9BF1C00EBA3E8 /* HomeViewProWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProWorkoutViewController.swift; sourceTree = "<group>"; };
+		27AD8C8924B9D02E00EBA3E8 /* PlayerStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsViewController.swift; sourceTree = "<group>"; };
 		27B4A8BC24B714E600F3608E /* MainChooseMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChooseMatchViewController.swift; sourceTree = "<group>"; };
 		27B4A8C024B7159E00F3608E /* ChooseMatchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMatchTableViewController.swift; sourceTree = "<group>"; };
 		27B4A8E524B87FA200F3608E /* ChooseProWorkoutAttributesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProWorkoutAttributesViewController.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				27901A6224B3634400189846 /* HomeWorkoutsThisWeekViewController.swift */,
 				27901A6424B3635F00189846 /* BeepTestProgressChartViewController.swift */,
 				27B67EA924B5990C0039E3FD /* WorkoutCompositionGraphViewController.swift */,
+				27AD8C8924B9D02E00EBA3E8 /* PlayerStatsViewController.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27196FE324A3B99900B9A8DC /* ChooseNumberWorkoutPatternViewController.swift in Sources */,
+				27AD8C8A24B9D02E00EBA3E8 /* PlayerStatsViewController.swift in Sources */,
 				27ABC82624AF147200042356 /* NumberWorkoutConnectionProgressViewController.swift in Sources */,
 				27B4A8E624B87FA200F3608E /* ChooseProWorkoutAttributesViewController.swift in Sources */,
 				27D097DC249181330073C797 /* ChooseTimedWorkoutAttributesViewController.swift in Sources */,
