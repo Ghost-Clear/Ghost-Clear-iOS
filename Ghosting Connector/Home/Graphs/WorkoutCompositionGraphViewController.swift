@@ -52,10 +52,11 @@ class WorkoutCompositionGraphViewController: UIViewController {
 	}
 	func customizeGraph(){
 		thePieChart.legend.xEntrySpace = 20
-		let dataPoints = ["Timed", "Number", "Beep Test"]
+		let dataPoints = ["Timed", "Number", "Beep Test", "Play Pro"]
 		var timedCount = 0
 		var numberCount = 0
 		var beepCount = 0
+		var proCount = 0
 		var values : [Double]! = []
 		if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 			if let workoutsFromCore = try? context.fetch(Workout.fetchRequest()){
@@ -73,10 +74,14 @@ class WorkoutCompositionGraphViewController: UIViewController {
 			else if w.type == "Beep Test"{
 				beepCount += 1
 			}
+			else if w.type == "Pro"{
+				proCount += 1
+			}
 		}
 		values.append(Double(timedCount))
 		values.append(Double(numberCount))
 		values.append(Double(beepCount))
+		values.append(Double(proCount))
 		if timedCount != 0 || numberCount != 0 || beepCount != 0{
 		var dataEntries : [ChartDataEntry]! = []
 		for i in 0..<dataPoints.count{
@@ -100,14 +105,8 @@ class WorkoutCompositionGraphViewController: UIViewController {
 
 	}
 	private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-		var colors: [UIColor] = [UIColor(red: 0/256, green: 233/256, blue: 143/256, alpha: 1), UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1),UIColor(red: 295/256, green: 197/256, blue: 66/256, alpha: 1)]
-		for _ in 0..<numbersOfColor {
-			let red = Double(arc4random_uniform(256))
-			let green = Double(arc4random_uniform(256))
-			let blue = Double(arc4random_uniform(256))
-			let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-			colors.append(color)
-		}
+		let colors: [UIColor] = [UIColor(red: 0/256, green: 233/256, blue: 143/256, alpha: 1), UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1),UIColor(red: 295/256, green: 197/256, blue: 66/256, alpha: 1),UIColor(red: 0/256, green: 141/256, blue: 240/256, alpha: 1)]
+		
 		return colors
 	}
 }
