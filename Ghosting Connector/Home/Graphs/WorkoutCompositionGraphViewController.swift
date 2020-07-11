@@ -16,6 +16,7 @@ class WorkoutCompositionGraphViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		customizeGraph()
+		thePieChart.highlightPerTapEnabled = false
 		thePieChart.legend.enabled = true
 		thePieChart.extraTopOffset = 0
 		thePieChart.extraBottomOffset = -10
@@ -34,6 +35,7 @@ class WorkoutCompositionGraphViewController: UIViewController {
     }
 	override func viewWillAppear(_ animated: Bool) {
 		customizeGraph()
+		thePieChart.highlightPerTapEnabled = false
 		thePieChart.legend.enabled = true
 		thePieChart.extraTopOffset = -25
 		thePieChart.extraBottomOffset = 0
