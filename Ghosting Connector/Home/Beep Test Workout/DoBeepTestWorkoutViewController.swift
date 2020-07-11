@@ -64,6 +64,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	var RSSIs = [NSNumber]()
 	var data = NSMutableData()
 	var writeData: String = ""
+	var stopSelected = false
 	var peripherals: [CBPeripheral] = []
 	var characteristicValue = [CBUUID: NSData]()
 	var timer = Timer()
@@ -144,6 +145,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 	}
 	@IBAction func stopWorkout(_ sender: Any) {
+		stopSelected = true
 		isWaiting = false
 		circleTime.isActive = false
 		circleTime.isHidden = true
@@ -476,6 +478,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		print("Number of Peripherals Found: \(peripherals.count)")
 	}
 	func disconnectFromDevice () {
+		stopSelected = true
 		if FRPeripheral != nil {
 			centralManager?.cancelPeripheralConnection(FRPeripheral!)
 		}
@@ -635,6 +638,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 	}
 	func disconnectAllConnection() {
+		stopSelected = true
 		if(centralManager != nil && FRPeripheral != nil){
 			centralManager.cancelPeripheralConnection(FRPeripheral!)
 		}
@@ -959,18 +963,20 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 		}
 	}
 	func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-		print("Disconnected")
-		let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available.", preferredStyle: UIAlertController.Style.alert)
-		self.centralManager.stopScan()
-		let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
-			self.dismiss(animated: true, completion: nil)
-			self.navigationController?.popViewController(animated: true)
+		if !stopSelected{
+			print("Disconnected")
+			let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available.", preferredStyle: UIAlertController.Style.alert)
+			self.centralManager.stopScan()
 			self.circleTime.stop()
 			self.totalTimeTimer.invalidate()
 			self.disconnectAllConnection()
-		})
-		alertVC.addAction(action)
-		self.present(alertVC, animated: true, completion: nil)
+			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+				self.dismiss(animated: true, completion: nil)
+				self.navigationController?.popViewController(animated: true)				
+			})
+			alertVC.addAction(action)
+			self.present(alertVC, animated: true, completion: nil)
+		}
 	}
 	func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
 		guard error == nil else {
@@ -1042,7 +1048,14 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 			}
 		}
 	}
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
 		if segue.identifier == "BeepTestWorkoutConnectionProgressViewControllerSegue" {
 			if let childVC = segue.destination as? BeepTestWorkoutConnectionProgressViewController {
 				childVC.parentView = self

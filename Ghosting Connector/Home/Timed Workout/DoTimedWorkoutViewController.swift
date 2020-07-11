@@ -42,6 +42,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     var LR : Bool!
     var LL : Bool!
     var isRandom : Bool!
+	var stopSelected = false
 	var numSets : Int!
 	var numMinutesOn : Int!
 	var numSecondsOn : Int! = 0
@@ -113,6 +114,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
 		}
 	}
 	@IBAction func stopWorkout(_ sender: Any) {
+		stopSelected = true
         circleTime.isActive = false
         circleTime.isHidden = true
         circleTime.stop()
@@ -512,6 +514,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
            print("Number of Peripherals Found: \(peripherals.count)")
        }
     func disconnectAllConnection() {
+		stopSelected = true
         if FRPeripheral != nil {
             centralManager?.cancelPeripheralConnection(FRPeripheral!)
         }
@@ -1064,18 +1067,20 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         }
     }
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+		if !stopSelected{
         print("Disconnected")
 		if (peripheral == FRPeripheral && FR) || (peripheral == FLPeripheral && FL) || (peripheral == CRPeripheral && CR) || (peripheral == CLPeripheral && CL) || (peripheral == LRPeripheral && LR) || (peripheral == LLPeripheral && LL){
 			let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all the neccessary devices are available.", preferredStyle: UIAlertController.Style.alert)
 			self.centralManager.stopScan()
+			self.circleTime.stop()
+			self.disconnectAllConnection()
 			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
 				self.dismiss(animated: true, completion: nil)
 				self.navigationController?.popViewController(animated: true)
-				self.circleTime.stop()
-				self.disconnectAllConnection()
 			})
 			alertVC.addAction(action)
 			self.present(alertVC, animated: true, completion: nil)
+		}
 		}
     }
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
@@ -1146,6 +1151,12 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
 		if segue.identifier == "DoneTimedWorkoutViewControllerSegue" {
 			if let childVC = segue.destination as? DoneTimedWorkoutViewController {
 				var shownMinutesLeft = ((circleTime.timerLabel?.text?.prefix(2))! as NSString).integerValue

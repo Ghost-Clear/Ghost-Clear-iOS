@@ -55,6 +55,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 	var LRname : String!
 	var totalGhosts = 0
 	var isPrep = true
+	var stopSelected = false
 	@IBOutlet weak var ghostsRemaningLabel: UILabel!
 	@IBOutlet weak var stopButton: UIButton!
 	@IBOutlet weak var pauseButton: UIButton!
@@ -81,6 +82,13 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 		}
 	}
 	@IBAction func stopWorkout(_ sender: Any) {
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
+		stopSelected = true
 		circleTime.isActive = false
 		isWaitingForGhost = false
 		circleTime.isHidden = true
@@ -88,8 +96,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 		totalTimeTimer.invalidate()
 		centralManager.stopScan()
 		disconnectAllConnection()
-		popBack(3)
-		
+		popBack(3)		
 	}
 	@objc func UpdateTimer(){
 		totalTime += 1
@@ -574,6 +581,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 		print("Number of Peripherals Found: \(peripherals.count)")
 	}
 	func disconnectFromDevice () {
+		stopSelected = true
 		if FRPeripheral != nil {
 			centralManager?.cancelPeripheralConnection(FRPeripheral!)
 		}
@@ -739,6 +747,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 	}
 	
 	func disconnectAllConnection() {
+		stopSelected = true
 		if(centralManager != nil && FRPeripheral != nil){
 			centralManager.cancelPeripheralConnection(FRPeripheral!)
 		}
@@ -1469,17 +1478,19 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 	
 	func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
 		print("Disconnected")
+		if !stopSelected{
 		let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all 6 devices are available.", preferredStyle: UIAlertController.Style.alert)
 		self.centralManager.stopScan()
-		let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
-			self.dismiss(animated: true, completion: nil)
-			self.navigationController?.popViewController(animated: true)
 			self.circleTime.stop()
 			self.totalTimeTimer.invalidate()
 			self.disconnectAllConnection()
+		let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+			self.dismiss(animated: true, completion: nil)
+			self.navigationController?.popViewController(animated: true)
 		})
 		alertVC.addAction(action)
 		self.present(alertVC, animated: true, completion: nil)
+		}
 	}
 	
 	
@@ -1557,6 +1568,12 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 		}
 	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		writeValueFR(data: "0")
+		writeValueFL(data: "0")
+		writeValueCR(data: "0")
+		writeValueCL(data: "0")
+		writeValueLR(data: "0")
+		writeValueLL(data: "0")
 		if segue.identifier == "ProWorkoutConnectionProgressViewControllerSegue" {
 			if let childVC = segue.destination as? ProWorkoutConnectionProgressViewController {
 				childVC.parentView = self
