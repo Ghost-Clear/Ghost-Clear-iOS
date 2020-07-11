@@ -1065,6 +1065,18 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     }
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         print("Disconnected")
+		if (peripheral == FRPeripheral && FR) || (peripheral == FLPeripheral && FL) || (peripheral == CRPeripheral && CR) || (peripheral == CLPeripheral && CL) || (peripheral == LRPeripheral && LR) || (peripheral == LLPeripheral && LL){
+			let alertVC = UIAlertController(title: "Not Connected To Devices", message: "Make sure that your bluetooth is turned on and all the neccessary devices are available.", preferredStyle: UIAlertController.Style.alert)
+			self.centralManager.stopScan()
+			let action = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
+				self.dismiss(animated: true, completion: nil)
+				self.navigationController?.popViewController(animated: true)
+				self.circleTime.stop()
+				self.disconnectAllConnection()
+			})
+			alertVC.addAction(action)
+			self.present(alertVC, animated: true, completion: nil)
+		}
     }
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         guard error == nil else {

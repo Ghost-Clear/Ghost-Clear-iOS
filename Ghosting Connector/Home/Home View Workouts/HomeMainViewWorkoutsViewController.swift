@@ -44,6 +44,9 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 		else if currentWorkout.type == "Beep Test"{
 			cell.icon.image = UIImage(named: "Bell Image")
 		}
+		else if currentWorkout.type == "Pro"{
+			cell.icon.image = UIImage(named: "Crown Image")
+		}
 		if currentWorkout.type == "Timed" || currentWorkout.type == "Number"{
 			cell.cellText.text = String(currentWorkout.avgTimeOn!) + "  on per set for "
 			cell.cellText.text! += String(currentWorkout.sets)
@@ -57,6 +60,9 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 		else if currentWorkout.type == "Beep Test"{
 			cell.cellText.text! = "Acheived a score of " + currentWorkout.score! + " in  " + currentWorkout.totalTimeOn!
 		}
+		else if currentWorkout.type == "Pro"{
+			cell.cellText.text! = currentWorkout.matchName!
+		}
 		childView.tableView.rowHeight = 75
 		return cell
 	}
@@ -65,8 +71,11 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 		if workoutsFromCoreData[indexPath.row].type == "Timed" || workoutsFromCoreData[indexPath.row].type == "Number"{
 			performSegue(withIdentifier: "HomeViewWorkoutViewControllerSegue", sender: nil)
 		}
-		else{
+		else if workoutsFromCoreData[indexPath.row].type == "Beep Test"{
 			performSegue(withIdentifier: "HomeViewBeepTestWorkoutViewControllerSegue", sender: nil)
+		}
+		else if workoutsFromCoreData[indexPath.row].type == "Pro"{
+			performSegue(withIdentifier: "HomeViewProWorkoutViewControllerSegue", sender: nil)
 		}
 	}
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -120,6 +129,13 @@ class HomeMainViewWorkoutsViewController: UIViewController,UITableViewDelegate, 
 			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
 			selectionFeedbackGenerator.selectionChanged()
 			if let childVC = segue.destination as? HomeViewBeepTestWorkoutViewController {
+				childVC.viewingWorkout = workoutsFromCoreData[indexToSend]
+			}
+		}
+		if segue.identifier == "HomeViewProWorkoutViewControllerSegue" {
+			let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+			selectionFeedbackGenerator.selectionChanged()
+			if let childVC = segue.destination as? HomeViewProWorkoutViewController {
 				childVC.viewingWorkout = workoutsFromCoreData[indexToSend]
 			}
 		}

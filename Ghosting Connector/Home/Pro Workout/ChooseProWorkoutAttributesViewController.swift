@@ -45,7 +45,7 @@ class ChooseProWorkoutAttributesViewController: UIViewController {
 			hours += minutes / 60
 			minutes -= hours * 60
 		}
-		lengthOfMatchLabel.text = "Length of Match :        "
+		lengthOfMatchLabel.text = " Est. Length of Match :        "
 		lengthOfMatchLabel.text! += String(hours) + " : "
 		lengthOfMatchLabel.text! += String(minutes) +  " : " + String(seconds)
 		numGamesLabel.text = "Number of Games :        "
@@ -129,16 +129,18 @@ class ChooseProWorkoutAttributesViewController: UIViewController {
 		hardButton.setImage(UIImage(named: "blankHard"), for: .normal)
 		proButton.setImage(UIImage(named: "fullPro"), for: .normal)
 	}
-	
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+	@IBAction func startGhost(_ sender: Any) {
+		performSegue(withIdentifier: "DoProWorkoutViewControllerSegue", sender: nil)
+	}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+		if segue.identifier == "DoProWorkoutViewControllerSegue" {
+			if let childVC = segue.destination as? DoProWorkoutViewController {
+				childVC.chosenMatch = chosenMatch
+				childVC.isPlayer1 = player1Selected
+				childVC.difficulty = difficulty
+			}
+		}
     }
-    */
+    
 
 }
