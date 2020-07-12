@@ -1,6 +1,6 @@
 # Contributing
 
-Information to contribute to the Ghsoting Connector App.
+Information to contribute to the Ghosting Connector App.
 
 ## TODO
 
