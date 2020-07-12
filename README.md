@@ -185,6 +185,42 @@ This file controls a pop up view controller that shows a check mark when the wor
 
 This file controls the view controller that shows the details of a recently finished workout.
 
+### MainChooseMatchViewController.swift
+
+![](https://media.giphy.com/media/d8XGzW539UKulK0A7R/giphy.gif)
+
+This file controls the view controller that contains a table view of a ll the matches that can be simulated.
+
+### ChooseProWorkoutAttributesViewController.swift
+
+![](https://media.giphy.com/media/gL3UZBdoxivSOm6faD/giphy.gif)
+
+This file controls the view controller that allows the user to pick the details of a match that will be simulated.
+
+### DoProWorkoutViewController.swift
+
+![](https://media.giphy.com/media/XDRa1RzpPEaKsbLd97/giphy.gif)
+
+This file controls the view controller that shows the details of a pro workout in progress.
+
+### ProWorkoutConnectionProgressViewController.swift
+
+![](https://media.giphy.com/media/dyYDfS1Gat2ne5g0rG/giphy.gif)
+
+This file controls the pop up view controller that shows the connection progress for the phone to the devices
+
+### DoneProWorkoutViewController.swift
+
+![](https://media.giphy.com/media/QAnQlEDjjtaE8MWjo1/giphy.gif)
+
+This file controls the view controller that shows the details of a recently finished pro workout.
+
+### ProWorkoutCheckPopupViewController
+
+![](https://media.giphy.com/media/SSVTmgTsSDJ5SYaWfg/giphy.gif)
+
+This file controls the pop-up view controller that shows an animated check mark when a pro workout is finished.
+
 ### SettingsViewController.swift
 
 ![](https://media.giphy.com/media/VeBIJ60zvzhQalO5Px/giphy.gif)
@@ -258,6 +294,18 @@ This file controls the view controller that displays the start beep test button.
 ![](https://media.giphy.com/media/Pllw0i2NjJHc4a0NOc/giphy.gif)
 
 This file controls the page view controller that shows the workouts this week chart and the beep test progress chart.
+
+### WorkoutCompositionGraphViewController.swift
+
+![](https://media.giphy.com/media/hvReX7NIB3TWELM9UN/giphy.gif)
+
+This file controls the view controller that contains a circular workout composition chart to show a pie chart of each type of workout done.
+
+### PlayerStatsViewController.swift
+
+![](https://media.giphy.com/media/Qa46TnMsXfViUlBI5k/giphy.gif)
+
+This file controls the view controller that displays information about the overall ghosting stats of a player.
 
 ### HomeWorkoutsThisWeekViewController.swift
 
