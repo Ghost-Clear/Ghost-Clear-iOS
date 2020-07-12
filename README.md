@@ -18,4 +18,4 @@ For the repository for the ghosting devices, refer to https://github.com/varunch
 
 ## Contributing
 
-Please look at CONTRIBUTING.md for details.
+Please look at **https://github.com/varunchitturi/Ghosting-Connector/blob/master/CONTRIBUTING.md** for details.
