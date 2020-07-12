@@ -14,7 +14,7 @@ The ghost connect app is an app for squash that connects to up to 6 devices to h
 
 ## Ghosting Device
 
-For the repository for the ghosting devices, refer to https://github.com/varunchitturi/Ghosting-Device
+For the repository for the ghosting devices, refer to **https://github.com/varunchitturi/Ghosting-Device**
 
 ## Contributing
 
