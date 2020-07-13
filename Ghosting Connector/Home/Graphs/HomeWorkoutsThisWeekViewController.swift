@@ -25,10 +25,11 @@ class DigitValueFormatter : NSObject, IValueFormatter {
 }
 class HomeWorkoutsThisWeekViewController: UIViewController {
 	@IBOutlet weak var theBarChart: BarChartView!
-	var days: [String] = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+	var days: [String] = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 	var numWorkouts = [0,0,0,0,0,0,0]
 	var parentView : HomeChartPageViewController!
     override func viewDidLoad() {
+		numWorkouts = [0,0,0,0,0,0,0]
         super.viewDidLoad()
     }
 	override func viewWillAppear(_ animated: Bool) {
@@ -40,42 +41,33 @@ class HomeWorkoutsThisWeekViewController: UIViewController {
 				workoutsFromCore = allwFromCore
 			}
 		}
+		print(Date.today().startOfDay.previous(.monday, considerToday: true))
 		for workout in workoutsFromCore{
-			let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
-			let date1 = NSDate()
-			let date2 = workout.date!
-			let weekOfYear1 = calendar!.component(NSCalendar.Unit.year, from: date1 as Date)
-			let weekOfYear2 = calendar!.component(NSCalendar.Unit.year, from: date2 as Date)
-			
-			let year1 = calendar!.component(NSCalendar.Unit.year, from: date1 as Date)
-			let year2 = calendar!.component(NSCalendar.Unit.year, from: date2 as Date)
-			
-			if (weekOfYear1 == weekOfYear2
-				&& year1 == year2
-				) {
+			let currentDate = workout.date
+			if (Date.today().startOfDay.previous(.monday, considerToday: true) <= currentDate!.startOfDay) {
 				let dateFormatter = DateFormatter()
 				dateFormatter.dateFormat = "EEEE"
 				let dayOfTheWeekString = dateFormatter.string(from: workout.date!)
 				if dayOfTheWeekString == "Sunday"{
-					numWorkouts[0] += 1
+					numWorkouts[6] += 1
 				}
 				if dayOfTheWeekString == "Monday"{
-					numWorkouts[1] += 1
+					numWorkouts[0] += 1
 				}
 				if dayOfTheWeekString == "Tuesday"{
 					numWorkouts[2] += 1
 				}
 				if dayOfTheWeekString == "Wednesday"{
-					numWorkouts[3] += 1
+					numWorkouts[2] += 1
 				}
 				if dayOfTheWeekString == "Thursday"{
-					numWorkouts[4] += 1
+					numWorkouts[3] += 1
 				}
 				if dayOfTheWeekString == "Friday"{
-					numWorkouts[5] += 1
+					numWorkouts[4] += 1
 				}
 				if dayOfTheWeekString == "Saturday"{
-					numWorkouts[6] += 1
+					numWorkouts[5] += 1
 				}
 			}
 		}
@@ -133,5 +125,102 @@ class HomeWorkoutsThisWeekViewController: UIViewController {
 		theBarChart.barData?.setValueFont(.systemFont(ofSize: 13))
 		theBarChart.barData?.setValueTextColor(.white)
 		theBarChart.xAxis.labelTextColor = UIColor(displayP3Red: 1, green: 1, blue: 1, alpha: 1)
+	}
+}
+extension Date {
+	
+	static func today() -> Date {
+		return Date()
+	}
+	
+	func next(_ weekday: Weekday, considerToday: Bool = false) -> Date {
+		return get(.next,
+				   weekday,
+				   considerToday: considerToday)
+	}
+	
+	func previous(_ weekday: Weekday, considerToday: Bool = false) -> Date {
+		return get(.previous,
+				   weekday,
+				   considerToday: considerToday)
+	}
+	
+	func get(_ direction: SearchDirection,
+			 _ weekDay: Weekday,
+			 considerToday consider: Bool = false) -> Date {
+		
+		let dayName = weekDay.rawValue
+		
+		let weekdaysName = getWeekDaysInEnglish().map { $0.lowercased() }
+		
+		assert(weekdaysName.contains(dayName), "weekday symbol should be in form \(weekdaysName)")
+		
+		let searchWeekdayIndex = weekdaysName.firstIndex(of: dayName)! + 1
+		
+		let calendar = Calendar(identifier: .gregorian)
+		
+		if consider && calendar.component(.weekday, from: self) == searchWeekdayIndex {
+			return self
+		}
+		
+		var nextDateComponent = calendar.dateComponents([.hour, .minute, .second], from: self)
+		nextDateComponent.weekday = searchWeekdayIndex
+		
+		let date = calendar.nextDate(after: self,
+									 matching: nextDateComponent,
+									 matchingPolicy: .nextTime,
+									 direction: direction.calendarSearchDirection)
+		
+		return date!
+	}
+	
+}
+extension Date {
+	func getWeekDaysInEnglish() -> [String] {
+		var calendar = Calendar(identifier: .gregorian)
+		calendar.locale =  .current
+		return calendar.weekdaySymbols
+	}
+	
+	enum Weekday: String {
+		case monday, tuesday, wednesday, thursday, friday, saturday, sunday
+	}
+	
+	enum SearchDirection {
+		case next
+		case previous
+		
+		var calendarSearchDirection: Calendar.SearchDirection {
+			switch self {
+			case .next:
+				return .forward
+			case .previous:
+				return .backward
+			}
+		}
+	}
+}
+extension Date {
+	var startOfDay: Date {
+		return Calendar.current.startOfDay(for: self)
+	}
+	
+	var endOfDay: Date {
+		var components = DateComponents()
+		components.day = 1
+		components.second = -1
+		return Calendar.current.date(byAdding: components, to: startOfDay)!
+	}
+	
+	var startOfMonth: Date {
+		let components = Calendar.current.dateComponents([.year, .month], from: startOfDay)
+		return Calendar.current.date(from: components)!
+	}
+	
+	var endOfMonth: Date {
+		var components = DateComponents()
+		components.month = 1
+		components.second = -1
+		return Calendar.current.date(byAdding: components, to: startOfMonth)!
 	}
 }
