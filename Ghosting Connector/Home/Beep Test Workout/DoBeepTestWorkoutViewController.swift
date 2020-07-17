@@ -280,6 +280,7 @@ class DoBeepTestWorkoutViewController:  UIViewController, CBCentralManagerDelega
 	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		UIApplication.shared.isIdleTimerDisabled = true
 		pauseButton.contentMode = .scaleAspectFit
 		stopButton.contentMode = .scaleAspectFit
 		finishButton.contentMode = .scaleAspectFit

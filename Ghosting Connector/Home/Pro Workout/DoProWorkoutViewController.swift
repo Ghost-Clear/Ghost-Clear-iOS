@@ -53,6 +53,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 	var CRname : String!
 	var CLname : String!
 	var LRname : String!
+	var newGame = false
 	var totalGhosts = 0
 	var isPrep = true
 	var stopSelected = false
@@ -223,7 +224,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 				}
 			}
 			else if whichRallyIndex == placeArray[whichGameIndex].count-1{
-				whichGameIndex += 1
+				newGame = true
 				whichRallyIndex = 0
 				whichPointIndex = 0
 				if player1Point > player2Point{
@@ -282,6 +283,10 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 			}
 		}
 		else if !isPrep{
+			if newGame{
+				whichGameIndex += 1
+				newGame = false
+			}
 			isWaitingForGhost = true
 			ghostsRemaning = getGhostCount(gameIndex: whichGameIndex, rallyindex: whichRallyIndex)
 			ghostsRemaningLabel.text = String(ghostsRemaning)
@@ -297,7 +302,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 				circleTime.totalTime *= 1.1
 			}
 			else if difficulty == "pro"{
-				circleTime.totalTime *= 0.9
+				circleTime.totalTime *= 1
 			}
 			if placeArray[whichGameIndex][whichRallyIndex] == "FR"{
 				whichCornerLabel.text = "Front Right"
@@ -362,6 +367,7 @@ class DoProWorkoutViewController: UIViewController, CBCentralManagerDelegate, CB
 	var isWaitingForGhost : Bool! = false
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		UIApplication.shared.isIdleTimerDisabled = true
 		stopButton.contentMode = .scaleAspectFit
 		pauseButton.contentMode = .scaleAspectFit
 		finishButton.contentMode = .scaleAspectFit

@@ -55,7 +55,7 @@ class HomeWorkoutsThisWeekViewController: UIViewController {
 					numWorkouts[0] += 1
 				}
 				if dayOfTheWeekString == "Tuesday"{
-					numWorkouts[2] += 1
+					numWorkouts[1] += 1
 				}
 				if dayOfTheWeekString == "Wednesday"{
 					numWorkouts[2] += 1

@@ -327,6 +327,7 @@ class DoTimedWorkoutViewController: UIViewController, CBCentralManagerDelegate, 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+		UIApplication.shared.isIdleTimerDisabled = true
 		stopButton.imageView?.contentMode = .scaleAspectFit
 		pauseButton.imageView?.contentMode = .scaleAspectFit
 		finishButton.imageView?.contentMode = .scaleAspectFit
