@@ -14,9 +14,13 @@ class SecondButtonSetViewController: UIViewController {
 	var parentView : WorkoutButtonsPageViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
-		beepTestButton.contentMode = .scaleAspectFit
-		playProButton.contentMode = .scaleAspectFit
+		beepTestButton.contentMode = .redraw
+		playProButton.contentMode = .redraw
     }
+	override func viewWillAppear(_ animated: Bool) {
+		beepTestButton.contentMode = .redraw
+		playProButton.contentMode = .redraw
+	}
 	@IBAction func beepTest(_ sender: Any) {
 		parentView.parentView.performSegue(withIdentifier: "BeepTestWorkoutDescriptionViewControllerSegue", sender: nil)
 	}

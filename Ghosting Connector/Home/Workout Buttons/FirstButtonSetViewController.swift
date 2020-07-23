@@ -14,12 +14,12 @@ class FirstButtonSetViewController: UIViewController {
 	@IBOutlet weak var timedWorkoutButton: UIButton!
 	override func viewDidLoad() {
         super.viewDidLoad()
-		numberWorkoutButton.contentMode = .scaleAspectFit
-		timedWorkoutButton.contentMode = .scaleAspectFit
+		numberWorkoutButton.contentMode = .redraw
+		timedWorkoutButton.contentMode = .redraw
     }
 	override func viewWillAppear(_ animated: Bool) {
-		timedWorkoutButton.contentMode = .scaleAspectFit
-		numberWorkoutButton.contentMode = .scaleAspectFit
+		timedWorkoutButton.contentMode = .redraw
+		numberWorkoutButton.contentMode = .redraw
 	}
 	@IBAction func timedWorkout(_ sender: Any) {
 		self.parentView.parentView.performSegue(withIdentifier: "ChooseTimedWorkoutAttributesViewControllerSegue", sender: nil)

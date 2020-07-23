@@ -118,9 +118,9 @@ class ChooseNumberWorkoutAttributesViewController: UIViewController, UITextField
     override func viewDidLoad() {
         super.viewDidLoad()
         blankRandomize.isHidden = true
-		choosPatternButton.imageView?.contentMode = .scaleAspectFit
-		randomizeButton.imageView?.contentMode = .scaleAspectFit
-		blankRandomize.imageView?.contentMode = .scaleAspectFit
+		choosPatternButton.imageView?.contentMode = .redraw
+		randomizeButton.imageView?.contentMode = .redraw
+		blankRandomize.imageView?.contentMode = .redraw
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
     }

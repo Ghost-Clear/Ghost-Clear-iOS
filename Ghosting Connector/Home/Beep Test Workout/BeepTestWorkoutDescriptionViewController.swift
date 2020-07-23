@@ -18,6 +18,6 @@ class BeepTestWorkoutDescriptionViewController: UIViewController {
 	}
 	override func viewDidLoad() {
         super.viewDidLoad()
-		startGhostButton.contentMode = .scaleAspectFit
+		startGhostButton.contentMode = .redraw
     }
 }

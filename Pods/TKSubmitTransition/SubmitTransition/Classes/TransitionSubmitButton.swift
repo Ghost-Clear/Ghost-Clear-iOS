@@ -55,7 +55,7 @@ open class TKTransitionSubmitButton : UIButton, UIViewControllerTransitioningDel
         self.cornerRadius()
         self.shrink()
         _ = Timer.schedule(delay: self.shrinkDuration - 0.25) { timer in
-            self.spiner.animation()
+            //self.spiner.animation()
         }
     }
     
@@ -64,25 +64,25 @@ open class TKTransitionSubmitButton : UIButton, UIViewControllerTransitioningDel
         _ = Timer.schedule(delay: delay) { timer in
             self.didEndFinishAnimation = completion
             self.expand()
-            self.spiner.stopAnimation()
+            //self.spiner.stopAnimation()
         }
     }
     
     open func animate(_ duration: TimeInterval, completion:(()->())?) {
-        startLoadingAnimation()
+        //startLoadingAnimation()
         startFinishAnimation(duration, completion: completion)
     }
     
     open func setOriginalState() {
         self.returnToOriginalState()
-        self.spiner.stopAnimation()
+        //self.spiner.stopAnimation()
     }
     
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         let a = anim as! CABasicAnimation
         if a.keyPath == "transform.scale" {
             didEndFinishAnimation?()
-            _ = Timer.schedule(delay: 1) { timer in
+            _ = Timer.schedule(delay: 0) { timer in
                 self.returnToOriginalState()
             }
         }
@@ -92,7 +92,7 @@ open class TKTransitionSubmitButton : UIButton, UIViewControllerTransitioningDel
         self.spiner.removeFromSuperlayer()
         self.layer.removeAllAnimations()
         self.setTitle(self.cachedTitle, for: UIControl.State())
-        self.spiner.stopAnimation()
+        //self.spiner.stopAnimation()
         self.isAnimating = false
     }
     

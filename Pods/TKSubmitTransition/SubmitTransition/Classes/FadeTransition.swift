@@ -10,7 +10,7 @@ import UIKit
 
 
 open class TKFadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    var transitionDuration: TimeInterval = 0.5
+	var transitionDuration: TimeInterval = 0.0
     var startingAlpha: CGFloat = 0.0
 
     public convenience init(transitionDuration: TimeInterval, startingAlpha: CGFloat){

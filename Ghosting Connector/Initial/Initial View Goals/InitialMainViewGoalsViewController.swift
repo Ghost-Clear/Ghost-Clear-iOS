@@ -55,7 +55,7 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 	@objc @IBAction func onTapButton(_ button: TKTransitionSubmitButton) {
 		let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
 		selectionFeedbackGenerator.selectionChanged()
-		button.animate(1, completion: { () -> () in
+		button.animate(0.3, completion: { () -> () in
 			if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
 				let firstLaunch = IsFirstLaunch(context: context)
 				firstLaunch.bool = true
@@ -147,7 +147,7 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
 			}
 		}
 		func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-			return TKFadeInAnimator(transitionDuration: 0.3, startingAlpha: 0.8)
+			return TKFadeInAnimator(transitionDuration: 0, startingAlpha: 0.9)
 		}
 		
 		func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
