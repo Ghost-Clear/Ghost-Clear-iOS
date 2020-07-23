@@ -8,7 +8,7 @@
 
 scheme("Ghosting Connector")
 
-sdk("iphoneos13.5")
+sdk("iphoneos13.6")
 
 output_directory("./")
 output_name("Ghosting Connector")
