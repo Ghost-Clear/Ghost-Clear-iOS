@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2741C6AA2454BDC400EB4944"
-               BuildableName = "Ghost Connect.app"
+               BuildableName = "Ghost Clear.app"
                BlueprintName = "Ghosting Connector"
                ReferencedContainer = "container:Ghosting Connector.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2741C6AA2454BDC400EB4944"
-            BuildableName = "Ghost Connect.app"
+            BuildableName = "Ghost Clear.app"
             BlueprintName = "Ghosting Connector"
             ReferencedContainer = "container:Ghosting Connector.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2741C6AA2454BDC400EB4944"
-            BuildableName = "Ghost Connect.app"
+            BuildableName = "Ghost Clear.app"
             BlueprintName = "Ghosting Connector"
             ReferencedContainer = "container:Ghosting Connector.xcodeproj">
          </BuildableReference>

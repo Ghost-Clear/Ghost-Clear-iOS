@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxd-01-xn6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cxd-01-xn6">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Home Workouts This Week View Controller-->
         <scene sceneID="6SH-Vy-cJA">
             <objects>
-                <viewController storyboardIdentifier="chartPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8YY-Gy-JcY" customClass="HomeWorkoutsThisWeekViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chartPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8YY-Gy-JcY" customClass="HomeWorkoutsThisWeekViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0gw-b4-P3L">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
         <!--Workout Composition Graph View Controller-->
         <scene sceneID="DiQ-wS-d6f">
             <objects>
-                <viewController storyboardIdentifier="chartPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TqA-ba-bhY" customClass="WorkoutCompositionGraphViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chartPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TqA-ba-bhY" customClass="WorkoutCompositionGraphViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gbx-B6-Yx1">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Player Stats View Controller-->
         <scene sceneID="eHI-E5-kQY">
             <objects>
-                <viewController storyboardIdentifier="chartPage4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vwz-40-qM3" customClass="PlayerStatsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chartPage4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vwz-40-qM3" customClass="PlayerStatsViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BNu-uf-51E">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
         <!--Beep Test Progress Chart View Controller-->
         <scene sceneID="nsi-9K-ITb">
             <objects>
-                <viewController storyboardIdentifier="chartPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yGs-jT-HLa" customClass="BeepTestProgressChartViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chartPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yGs-jT-HLa" customClass="BeepTestProgressChartViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n7J-kq-nqh">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
         <!--Home Chart Page View Controller-->
         <scene sceneID="ygV-aw-yI4">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0iZ-Ja-Vgx" customClass="HomeChartPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0iZ-Ja-Vgx" customClass="HomeChartPageViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Hij-Pn-F8P"/>
                     <connections>
                         <segue destination="8YY-Gy-JcY" kind="show" identifier="HomeWorkoutsThisWeekViewControllerSegue" id="jSS-5P-TPf"/>
@@ -204,7 +204,7 @@
         <!--Workout Buttons Page View Controller-->
         <scene sceneID="WWx-fv-91L">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="45" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="45" navigationOrientation="horizontal" spineLocation="none" id="uNC-mK-8wc" customClass="WorkoutButtonsPageViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="j2H-Eu-8bj" kind="show" id="Sgo-cc-5uM"/>
                         <segue destination="Am4-Ns-vnF" kind="show" id="EBm-jD-wh3"/>
@@ -217,7 +217,7 @@
         <!--First button Set View Controller-->
         <scene sceneID="JvC-wT-TYM">
             <objects>
-                <viewController storyboardIdentifier="page1" title="First button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j2H-Eu-8bj" customClass="FirstButtonSetViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page1" title="First button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j2H-Eu-8bj" customClass="FirstButtonSetViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rdG-Wz-IUg">
                         <rect key="frame" x="0.0" y="0.0" width="358" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +255,7 @@
         <!--Start Page-->
         <scene sceneID="lyP-E7-8NZ">
             <objects>
-                <viewController title="Start Page" id="bwu-1W-6Nv" customClass="LaunchViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Start Page" id="bwu-1W-6Nv" customClass="LaunchViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m0I-I7-ucD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +291,7 @@
         <!--initialLogin-->
         <scene sceneID="BdP-e4-xar">
             <objects>
-                <viewController title="initialLogin" id="a1U-fi-Lwb" customClass="InitialPageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="initialLogin" id="a1U-fi-Lwb" customClass="InitialPageViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HaD-aV-apV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,7 +357,7 @@
         <!--Initial Main View Goals View Controller-->
         <scene sceneID="AAK-Z3-Ea1">
             <objects>
-                <viewController id="dJi-iQ-vOz" customClass="InitialMainViewGoalsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dJi-iQ-vOz" customClass="InitialMainViewGoalsViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5L-zL-PSw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,7 +430,7 @@
         <!--Initial Add Goal View Controller-->
         <scene sceneID="piE-bk-pCq">
             <objects>
-                <viewController id="PDD-oj-JfH" customClass="InitialAddGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PDD-oj-JfH" customClass="InitialAddGoalViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Fj-p4-cAN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -547,7 +547,7 @@
         <!--Initial Main View Goals Table View Controller-->
         <scene sceneID="lR0-T0-p9K">
             <objects>
-                <tableViewController id="Jze-bU-5ex" customClass="InitialMainViewGoalsTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Jze-bU-5ex" customClass="InitialMainViewGoalsTableViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" minimumZoomScale="-1" maximumZoomScale="-1" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bmp-Rf-Aat">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="402"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,7 +591,7 @@
         <!--Initial View Goal View Controller-->
         <scene sceneID="OTp-9F-Grj">
             <objects>
-                <viewController id="5Wq-Qv-A6n" customClass="InitialViewGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5Wq-Qv-A6n" customClass="InitialViewGoalViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wEO-f6-G6e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -679,7 +679,7 @@
         <!--Choose Number Workout Attributes View Controller-->
         <scene sceneID="7wh-8q-o6Z">
             <objects>
-                <viewController id="x0X-u5-1M6" customClass="ChooseNumberWorkoutAttributesViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x0X-u5-1M6" customClass="ChooseNumberWorkoutAttributesViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnv-4u-nry">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -825,7 +825,7 @@
         <!--Home Page-->
         <scene sceneID="bXg-Yu-doi">
             <objects>
-                <viewController title="Home Page" id="H9u-zo-5jr" customClass="HomePageViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home Page" id="H9u-zo-5jr" customClass="HomePageViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUI-V5-8HJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -915,7 +915,7 @@
         <!--Home Main View Goals View Controller-->
         <scene sceneID="8Pc-GB-Pe5">
             <objects>
-                <viewController id="XpF-kv-tTd" customClass="HomeMainViewGoalsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XpF-kv-tTd" customClass="HomeMainViewGoalsViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2JS-gO-Wix">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -976,13 +976,13 @@
         <!--ViewYourGoalsTableViewController-->
         <scene sceneID="Lya-Tw-mPw">
             <objects>
-                <tableViewController title="ViewYourGoalsTableViewController" id="S1J-j2-fSy" customClass="HomeMainViewGoalsTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="ViewYourGoalsTableViewController" id="S1J-j2-fSy" customClass="HomeMainViewGoalsTableViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gdl-Gk-A1q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="viewGoal" rowHeight="88" id="7MS-bD-4EB" customClass="GoalView" customModule="Ghost_Connect" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="viewGoal" rowHeight="88" id="7MS-bD-4EB" customClass="GoalView" customModule="Ghost_Clear" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7MS-bD-4EB" id="sXk-Bj-xZe">
@@ -1036,7 +1036,7 @@
         <!--Home View Goal View Controller-->
         <scene sceneID="cgG-ow-bkc">
             <objects>
-                <viewController id="UHf-0J-9nO" customClass="HomeViewGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UHf-0J-9nO" customClass="HomeViewGoalViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ptq-wx-rov">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1142,7 +1142,7 @@
         <!--Home View Beep Test Workout View Controller-->
         <scene sceneID="aqJ-Vk-Ueh">
             <objects>
-                <viewController id="1Jp-D4-wRe" customClass="HomeViewBeepTestWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Jp-D4-wRe" customClass="HomeViewBeepTestWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KW7-cd-TPr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1291,7 +1291,7 @@
         <!--Home View Workout View Controller-->
         <scene sceneID="6gw-Kl-h6g">
             <objects>
-                <viewController id="uP9-Dy-wjy" customClass="HomeViewWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uP9-Dy-wjy" customClass="HomeViewWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XV7-R1-sMD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1464,7 +1464,7 @@
         <!--Number Workout Check Popup View Controller-->
         <scene sceneID="scX-UX-Ja1">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="HAa-pq-V0O" customClass="NumberWorkoutCheckPopupViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="HAa-pq-V0O" customClass="NumberWorkoutCheckPopupViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mng-T0-CgN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -1497,7 +1497,7 @@
         <!--Done Timed Workout View Controller-->
         <scene sceneID="A4Q-Ej-qT8">
             <objects>
-                <viewController id="Ylo-oK-Lm2" customClass="DoneTimedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ylo-oK-Lm2" customClass="DoneTimedWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f9a-wj-MXd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1613,7 +1613,7 @@
         <!--Do Timed Workout View Controller-->
         <scene sceneID="dhf-Z0-qEF">
             <objects>
-                <viewController id="xlN-GH-EKa" customClass="DoTimedWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xlN-GH-EKa" customClass="DoTimedWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B8R-7J-wK4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1719,7 +1719,7 @@
         <!--Choose Timed Workout Attributes View Controller-->
         <scene sceneID="Mo6-4D-3ut">
             <objects>
-                <viewController id="OzQ-ta-Cac" customClass="ChooseTimedWorkoutAttributesViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OzQ-ta-Cac" customClass="ChooseTimedWorkoutAttributesViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqH-z6-q9K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1901,7 +1901,7 @@
         <!--Settings View Controller-->
         <scene sceneID="wWZ-ON-PPy">
             <objects>
-                <viewController id="at1-VZ-0TC" customClass="SettingsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="at1-VZ-0TC" customClass="SettingsViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugf-ez-u3H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1996,13 +1996,13 @@
         <!--Home Main View Workouts Table View Controller-->
         <scene sceneID="uMB-Jp-4go">
             <objects>
-                <tableViewController id="hOW-Dd-KI1" customClass="HomeMainViewWorkoutsTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hOW-Dd-KI1" customClass="HomeMainViewWorkoutsTableViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8cw-fe-tjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="584"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="79" id="l7A-HR-ulZ" customClass="workoutCell" customModule="Ghost_Connect" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="workoutCell" rowHeight="79" id="l7A-HR-ulZ" customClass="workoutCell" customModule="Ghost_Clear" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l7A-HR-ulZ" id="yrk-Kn-nBE">
@@ -2053,7 +2053,7 @@
         <!--Home Main View Workouts View Controller-->
         <scene sceneID="HGl-p7-Sbe">
             <objects>
-                <viewController id="G0F-98-OF8" customClass="HomeMainViewWorkoutsViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G0F-98-OF8" customClass="HomeMainViewWorkoutsViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b7u-WM-Dsd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2107,7 +2107,7 @@
         <!--Choose Timed Workout Pattern View Controller-->
         <scene sceneID="Ign-p3-1Ia">
             <objects>
-                <viewController id="VNq-xu-Qw5" customClass="ChooseTimedWorkoutPatternViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VNq-xu-Qw5" customClass="ChooseTimedWorkoutPatternViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bkg-ey-2rQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2229,7 +2229,7 @@
         <!--Change Name View Controller-->
         <scene sceneID="shd-dF-sdQ">
             <objects>
-                <viewController id="C3Q-2g-iP5" customClass="ChangeNameViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="C3Q-2g-iP5" customClass="ChangeNameViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4YS-j9-qaq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2284,7 +2284,7 @@
         <!--Bluetooth Guide View Controller-->
         <scene sceneID="KLl-9E-Fca">
             <objects>
-                <viewController id="Ldv-hu-VSK" customClass="BluetoothGuideViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ldv-hu-VSK" customClass="BluetoothGuideViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9S-n7-ILR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2331,7 +2331,7 @@
         <!--Timed Workout Check Pop Up View Controller-->
         <scene sceneID="StO-45-Vvz">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="1hj-Hv-teo" customClass="TimedWorkoutCheckPopUpViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="1hj-Hv-teo" customClass="TimedWorkoutCheckPopUpViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tS0-pr-w9D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2364,7 +2364,7 @@
         <!--Choose Pro Workout Attributes View Controller-->
         <scene sceneID="J8X-D6-IyG">
             <objects>
-                <viewController id="J68-J3-1De" customClass="ChooseProWorkoutAttributesViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J68-J3-1De" customClass="ChooseProWorkoutAttributesViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wne-DE-zst">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2503,7 +2503,7 @@
         <!--Do Pro Workout View Controller-->
         <scene sceneID="htQ-53-dTd">
             <objects>
-                <viewController id="QsT-uv-x4y" customClass="DoProWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QsT-uv-x4y" customClass="DoProWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oZp-qE-Wnd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2639,7 +2639,7 @@
         <!--Change Preparation Time View Controller-->
         <scene sceneID="4x9-tU-Lha">
             <objects>
-                <viewController id="Cno-YU-v8y" customClass="ChangePreparationTimeViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Cno-YU-v8y" customClass="ChangePreparationTimeViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8P-Zo-mlI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2726,7 +2726,7 @@
         <!--Home Add Goal View Controller-->
         <scene sceneID="WLb-am-RWz">
             <objects>
-                <viewController id="WZo-EC-FUV" customClass="HomeAddGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WZo-EC-FUV" customClass="HomeAddGoalViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qhY-XR-q1T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2840,7 +2840,7 @@
         <!--Done Number Workout View Controller-->
         <scene sceneID="mkr-Rd-WuV">
             <objects>
-                <viewController id="6lj-3l-Myb" customClass="DoneNumberWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6lj-3l-Myb" customClass="DoneNumberWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i52-vn-UJ1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2956,7 +2956,7 @@
         <!--Number Workout Connection Progress View Controller-->
         <scene sceneID="HKN-sW-VbR">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="RaL-cY-PPj" customClass="NumberWorkoutConnectionProgressViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="RaL-cY-PPj" customClass="NumberWorkoutConnectionProgressViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VXN-SN-Wks">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2965,7 +2965,7 @@
                                 <rect key="frame" x="77" y="318" width="260" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drA-PK-PQK" customClass="CircularProgressView" customModule="Ghost_Connect" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drA-PK-PQK" customClass="CircularProgressView" customModule="Ghost_Clear" customModuleProvider="target">
                                         <rect key="frame" x="40" y="61" width="180" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -3005,7 +3005,7 @@
         <!--Do Number Workout View Controller-->
         <scene sceneID="dOs-MA-q9D">
             <objects>
-                <viewController id="kTC-vT-pnh" customClass="DoNumberWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kTC-vT-pnh" customClass="DoNumberWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FSq-HR-AsQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3119,7 +3119,7 @@
         <!--Choose Number Workout Pattern View Controller-->
         <scene sceneID="HDc-b2-66i">
             <objects>
-                <viewController id="Ryd-Gw-Krp" customClass="ChooseNumberWorkoutPatternViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ryd-Gw-Krp" customClass="ChooseNumberWorkoutPatternViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGw-wT-5kC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3242,7 +3242,7 @@
         <!--Home Edit Goal View Controller-->
         <scene sceneID="gPM-ek-eND">
             <objects>
-                <viewController id="ktl-FS-3dE" customClass="HomeEditGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ktl-FS-3dE" customClass="HomeEditGoalViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYL-Ri-P6u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3355,7 +3355,7 @@
         <!--Main Choose Match View Controller-->
         <scene sceneID="elP-E5-zZS">
             <objects>
-                <viewController id="7Nd-wR-mdq" customClass="MainChooseMatchViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Nd-wR-mdq" customClass="MainChooseMatchViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9d-Uu-42v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3398,13 +3398,13 @@
         <!--Choose Match Table View Controller-->
         <scene sceneID="QM2-93-GnW">
             <objects>
-                <tableViewController id="mDp-zW-zZo" customClass="ChooseMatchTableViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mDp-zW-zZo" customClass="ChooseMatchTableViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ywe-fd-yKp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.077709756790000001" green="0.1185042635" blue="0.1398680508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="80" id="zOb-cG-0nG" customClass="matchCell" customModule="Ghost_Connect" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="80" id="zOb-cG-0nG" customClass="matchCell" customModule="Ghost_Clear" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zOb-cG-0nG" id="vEG-g8-rxd">
@@ -3458,7 +3458,7 @@
         <!--Initial Edit Goal View Controller-->
         <scene sceneID="HA3-Lw-hjV">
             <objects>
-                <viewController id="FVC-FU-0LJ" customClass="InitialEditGoalViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FVC-FU-0LJ" customClass="InitialEditGoalViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tA-55-A3Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3571,7 +3571,7 @@
         <!--Home View Pro Workout View Controller-->
         <scene sceneID="NuK-i3-3a7">
             <objects>
-                <viewController id="ygo-wQ-xBB" customClass="HomeViewProWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ygo-wQ-xBB" customClass="HomeViewProWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OaH-m4-hV9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3743,7 +3743,7 @@
         <!--Timed Workout Connection Progress View Controller-->
         <scene sceneID="ikb-6H-QxI">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="e57-zu-dEN" customClass="TimedWorkoutConnectionProgressViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LXn-pl-64h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3752,7 +3752,7 @@
                                 <rect key="frame" x="77" y="318" width="260" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRP-tI-mCA" customClass="CircularProgressView" customModule="Ghost_Connect" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRP-tI-mCA" customClass="CircularProgressView" customModule="Ghost_Clear" customModuleProvider="target">
                                         <rect key="frame" x="40" y="61" width="180" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -3792,7 +3792,7 @@
         <!--Second Button Set View Controller-->
         <scene sceneID="uxH-rZ-Wi7">
             <objects>
-                <viewController storyboardIdentifier="page2" title="Second Button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Am4-Ns-vnF" customClass="SecondButtonSetViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page2" title="Second Button Set View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Am4-Ns-vnF" customClass="SecondButtonSetViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxe-i4-kkO">
                         <rect key="frame" x="0.0" y="0.0" width="358" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3830,7 +3830,7 @@
         <!--Beep Test Workout Description View Controller-->
         <scene sceneID="Vls-vj-TVT">
             <objects>
-                <viewController id="PUG-kh-Pm6" customClass="BeepTestWorkoutDescriptionViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PUG-kh-Pm6" customClass="BeepTestWorkoutDescriptionViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2o-fD-YMG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3938,7 +3938,7 @@
         <!--Do Beep Test Workout View Controller-->
         <scene sceneID="dbX-Pf-mDW">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="xtS-rG-SBs" customClass="DoBeepTestWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="xtS-rG-SBs" customClass="DoBeepTestWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjL-uS-Ism">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4056,7 +4056,7 @@
         <!--Beep Test Workout Connection Progress View Controller-->
         <scene sceneID="h08-09-aqm">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Icm-if-99q" customClass="BeepTestWorkoutConnectionProgressViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="Icm-if-99q" customClass="BeepTestWorkoutConnectionProgressViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Swq-3q-M42">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4065,7 +4065,7 @@
                                 <rect key="frame" x="77" y="318" width="260" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzi-lB-wva" customClass="CircularProgressView" customModule="Ghost_Connect" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzi-lB-wva" customClass="CircularProgressView" customModule="Ghost_Clear" customModuleProvider="target">
                                         <rect key="frame" x="40" y="61" width="180" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -4105,7 +4105,7 @@
         <!--Done Beep Test Workout View Controller-->
         <scene sceneID="zty-ka-RWY">
             <objects>
-                <viewController id="yMA-P3-65g" customClass="DoneBeepTestWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yMA-P3-65g" customClass="DoneBeepTestWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZg-yq-GCl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4217,7 +4217,7 @@
         <!--Beep Test Workout Check Popup View Controller-->
         <scene sceneID="7Hs-2S-B8i">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="fcd-0g-Jgz" customClass="BeepTestWorkoutCheckPopupViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="fcd-0g-Jgz" customClass="BeepTestWorkoutCheckPopupViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZDM-6a-96e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4250,7 +4250,7 @@
         <!--Pro Workout Connection Progress View Controller-->
         <scene sceneID="BF1-4Y-F3j">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="AbD-fZ-dsN" customClass="ProWorkoutConnectionProgressViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="AbD-fZ-dsN" customClass="ProWorkoutConnectionProgressViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FyR-qG-U1s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4259,7 +4259,7 @@
                                 <rect key="frame" x="77" y="318" width="260" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-op-yoL" customClass="CircularProgressView" customModule="Ghost_Connect" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-op-yoL" customClass="CircularProgressView" customModule="Ghost_Clear" customModuleProvider="target">
                                         <rect key="frame" x="40" y="61" width="180" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -4299,7 +4299,7 @@
         <!--Done Pro Workout View Controller-->
         <scene sceneID="oqQ-qj-kAy">
             <objects>
-                <viewController id="Dw2-re-yHu" customClass="DoneProWorkoutViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dw2-re-yHu" customClass="DoneProWorkoutViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="juB-bL-6i3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4434,7 +4434,7 @@
         <!--Pro Workout Check Popup View Controller-->
         <scene sceneID="rYy-5d-mzl">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="MWY-1h-5MK" customClass="ProWorkoutCheckPopupViewController" customModule="Ghost_Connect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="MWY-1h-5MK" customClass="ProWorkoutCheckPopupViewController" customModule="Ghost_Clear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pql-Aj-F4K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,18 +17,6 @@ class InitialMainViewGoalsViewController: UIViewController, UITableViewDataSourc
     var childView: InitialMainViewGoalsTableViewController? = nil
 	@IBOutlet weak var addButton: UIButton!
 	@IBOutlet weak var FinishButton: UIButton!
-	var isFirstLoad: Bool! = true
-	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		if isFirstLoad{
-		cell.alpha = 0
-		UIView.animate(withDuration: 0.7, delay: 0.07*Double(indexPath.row), options: .curveEaseIn, animations: {
-			cell.alpha = 1
-		}, completion: nil)
-		}
-		if indexPath.row == goalsFromCoreData.count-1{
-			isFirstLoad = false
-		}
-	}
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return count
     }

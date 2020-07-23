@@ -19,22 +19,10 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 	var index = 0
 	var achievedCount : [Int] = []
 	var isAchieved : [Bool] = []
-	var isFirstLoad : Bool! = true
 	var childView: HomeMainViewGoalsTableViewController!
 	@IBOutlet weak var doneButton: UIButton!
 	@IBOutlet weak var addButton: UIButton!
 	var toEdit : Goal!
-	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		if isFirstLoad{
-		cell.alpha = 0
-		UIView.animate(withDuration: 0.7, delay: 0.07*Double(indexPath.row), options: .curveEaseIn, animations: {
-			cell.alpha = 1
-		}, completion: nil)
-		}
-		if indexPath.row == goalsFromCoreData.count-1{
-			isFirstLoad = false
-		}
-	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		index = indexPath.row
 		performSegue(withIdentifier: "HomeViewGoalViewControllerSegue", sender: nil)
