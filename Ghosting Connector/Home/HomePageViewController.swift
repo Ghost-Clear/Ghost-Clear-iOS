@@ -31,6 +31,9 @@ class HomePageViewController: UIViewController {
                 namesFromCore = allNamesFromCore
                 if namesFromCore.count != 0{
                     welcomeLabel.text = "Welcome " + namesFromCore[0].name! + "!"
+					if namesFromCore[0].name! == ""{
+						welcomeLabel.text = "Welcome!"
+					}
                 }
             }
         }

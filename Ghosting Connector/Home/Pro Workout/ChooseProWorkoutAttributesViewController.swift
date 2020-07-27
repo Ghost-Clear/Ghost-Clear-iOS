@@ -58,6 +58,18 @@ class ChooseProWorkoutAttributesViewController: UIViewController {
 		if chosenMatch.player2Nationality == "egypt"{
 			player2Button.setImage(UIImage(named: "unselectedEgypt"), for: .normal)
 		}
+		if chosenMatch.player1Nationality == "new zealand"{
+			player1Button.setImage(UIImage(named: "selectedNewZealand"), for: .normal)
+		}
+		if chosenMatch.player2Nationality == "new zealand"{
+			player2Button.setImage(UIImage(named: "unselectedNewZealand"), for: .normal)
+		}
+		if chosenMatch.player1Nationality == "france"{
+			player1Button.setImage(UIImage(named: "selectedFrance"), for: .normal)
+		}
+		if chosenMatch.player2Nationality == "france"{
+			player2Button.setImage(UIImage(named: "unselectedFrance"), for: .normal)
+		}
     }
 	@IBAction func goBack(_ sender: Any) {
 		self.navigationController?.popViewController(animated: true)
@@ -71,11 +83,17 @@ class ChooseProWorkoutAttributesViewController: UIViewController {
 		else if chosenMatch.player1Nationality == "france"{
 			player1Button.setImage(UIImage(named: "selectedFrance"), for: .normal)
 		}
+		else if chosenMatch.player1Nationality == "new zealand"{
+			player1Button.setImage(UIImage(named: "selectedNewZealand"), for: .normal)
+		}
 		if chosenMatch.player2Nationality == "egypt"{
 			player2Button.setImage(UIImage(named: "unselectedEgypt"), for: .normal)
 		}
 		else if chosenMatch.player2Nationality == "france"{
 			player2Button.setImage(UIImage(named: "unselectedFrance"), for: .normal)
+		}
+		else if chosenMatch.player2Nationality == "new zealand"{
+			player2Button.setImage(UIImage(named: "unselectedNewZealand"), for: .normal)
 		}
 	}
 	@IBAction func player2Select(_ sender: Any) {
@@ -86,11 +104,17 @@ class ChooseProWorkoutAttributesViewController: UIViewController {
 		else if chosenMatch.player2Nationality == "france"{
 			player2Button.setImage(UIImage(named: "selectedFrance"), for: .normal)
 		}
+		else if chosenMatch.player2Nationality == "new zealand"{
+			player2Button.setImage(UIImage(named: "selectedNewZealand"), for: .normal)
+		}
 		if chosenMatch.player1Nationality == "egypt"{
 			player1Button.setImage(UIImage(named: "unselectedEgypt"), for: .normal)
 		}
 		else if chosenMatch.player1Nationality == "france"{
 			player1Button.setImage(UIImage(named: "unselectedFrance"), for: .normal)
+		}
+		else if chosenMatch.player1Nationality == "new zealand"{
+			player1Button.setImage(UIImage(named: "unselectedNewZealand"), for: .normal)
 		}
 	}
 	@IBAction func easy(_ sender: Any) {
