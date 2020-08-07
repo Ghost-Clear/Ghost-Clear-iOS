@@ -42,7 +42,7 @@ class HomeViewGoalViewController: UIViewController {
 		}
     }
 	override func viewWillAppear(_ animated: Bool) {
-		if !viewingGoal.isCompleted{
+		if goalAcheivedCount == 0{
 			checkBox.setCheckState(.mixed, animated: true)
 			checkBox.tintColor = UIColor(red: 255/256, green: 61/256, blue: 83/256, alpha: 1)
 		}
