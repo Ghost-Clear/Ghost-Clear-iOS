@@ -166,6 +166,11 @@ class HomeEditGoalViewController: UIViewController, UITextFieldDelegate {
 		}
 	}
 	override func viewWillDisappear(_ animated: Bool) {
+		parentView.index = 0
+		parentView.achievedCount = []
+		parentView.isAchieved = []
+		parentView.getGoals()
+		parentView.childView?.tableView.reloadData()
 		parentView.childView.tableView.reloadData()
 	}
 }

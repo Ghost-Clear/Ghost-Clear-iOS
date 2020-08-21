@@ -11,6 +11,7 @@ import CoreData
 import M13Checkbox
 class HomeViewGoalViewController: UIViewController {
 	var viewingGoal : Goal!
+	var parentView : HomeMainViewGoalsViewController!
 	var goalAcheivedCount : Int!
 	@IBOutlet weak var checkBox: M13Checkbox!
 	@IBOutlet weak var setField: UILabel!
@@ -18,6 +19,13 @@ class HomeViewGoalViewController: UIViewController {
 	@IBOutlet weak var minutesOnField: UILabel!
 	@IBOutlet weak var goalAcheivedCountLabel: UILabel!
 	@IBOutlet weak var secondsOnField: UILabel!
+	override func viewWillDisappear(_ animated: Bool) {
+		parentView.index = 0
+		parentView.achievedCount = []
+		parentView.isAchieved = []
+		parentView.getGoals()
+		parentView.childView?.tableView.reloadData()
+	}
 	override func viewDidLoad() {
         super.viewDidLoad()
 		checkBox.isEnabled = false

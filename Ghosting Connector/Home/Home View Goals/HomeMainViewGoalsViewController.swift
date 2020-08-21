@@ -107,6 +107,9 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 		doneButton.imageView?.contentMode = .scaleAspectFit
     }
     override func viewWillAppear(_ animated: Bool) {
+		index = 0
+		achievedCount = []
+		isAchieved = []
 		getGoals()
         childView?.tableView.reloadData()
        }
@@ -184,7 +187,7 @@ class HomeMainViewGoalsViewController: UIViewController, UITableViewDelegate, UI
 		if let childVC = segue.destination as? HomeViewGoalViewController {
 			childVC.viewingGoal = goalsFromCoreData[index]
 			childVC.goalAcheivedCount = achievedCount[index]
-			
+			childVC.parentView = self
 		}
 	}
 }
